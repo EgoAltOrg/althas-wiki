@@ -82,6 +82,31 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?\n)---\n?", re.DOTALL)
 # Frontmatter keys that are presentation/plumbing, never relational claims.
 FM_SKIP_KEYS = {"title", "aliases", "image", "image_caption", "marker", "submap"}
 
+# Cardinal-number words. A title like "The Seven" whose only word after the
+# article is a number must not be matched by that bare number in prose (see
+# title_pattern): "seven" appears in ordinary sentences ("five to seven feet").
+NUMBER_WORDS = {
+    "zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+    "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+    "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty",
+    "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred",
+    "thousand", "million",
+}
+
+# Extra surface forms to also flag for a specific secret title (keyed by the
+# lowercased title). Opt-in per entity, NOT a blanket morphological rule: use it
+# only where the word is archaic enough never to appear in public prose by
+# accident, so matching its singular costs no false positives. 'The Threnodies'
+# qualifies (a threnody is an obscure funeral lament). A common-word secret like
+# 'Heresies' is deliberately NOT here: the singular 'heresy' is ordinary Church
+# vocabulary ('named the claim heresy', 'between faith and heresy') and the
+# public civil war 'Valerion's Heresy' is named across the live wiki, so a y-ies
+# rule there flagged 36 public lines (2026-09-04). The singular/plural split is
+# the firewall that keeps the secret 'Heresies' distinct from the public 'Heresy'.
+EXTRA_TITLE_FORMS = {
+    "the threnodies": ["threnody"],
+}
+
 
 def load_sync_module():
     """Import sync-from-ontos.py (hyphenated name) for NOT_YET_PUBLIC/TITLES:
@@ -128,11 +153,31 @@ def title_pattern(title):
     """Word-boundary, case-insensitive, hyphen/space-tolerant matcher for a
     display title. 'The Hilltop Night Zone' also matches without 'The ', and
     the last word matches with or without a trailing s ('performed a miracle'
-    grounds a link to Miracles; 'a giant' grounds Giants)."""
+    grounds a link to Miracles; 'a giant' grounds Giants).
+
+    There is no blanket y<->ies rule: matching an -ies plural to its -y singular
+    conflates entities the singular/plural split keeps apart (the secret
+    'Heresies' vs the public civil war 'Valerion's Heresy'). EXTRA_TITLE_FORMS
+    instead opts a specific title into extra surface forms where its word is
+    archaic enough to be a safe leak signal ('The Threnodies' also catches the
+    singular 'threnody'); see that constant for the reasoning."""
     parts = re.split(r"[\s-]+", title.strip())
     variants = [parts]
+    # Also match the title without its leading article ('The Hilltop Night Zone'
+    # -> 'Hilltop Night Zone', 'The Stargazers' -> bare 'stargazer' so a leaked
+    # "Castorius is a stargazer" is caught). The one exception: a single-word
+    # remainder that is a NUMBER ('The Seven' -> 'seven') would match the number
+    # in ordinary prose ('five to seven feet', 'seven days'), a false positive
+    # that blocks every publish, so 'The Seven' requires its article. This is
+    # the only remainder class common enough in prose to warrant the exception;
+    # distinctive proper nouns keep their bare-word leak matching.
     if parts and parts[0].lower() == "the" and len(parts) > 1:
-        variants.append(parts[1:])
+        remainder = parts[1:]
+        bare_is_number = len(remainder) == 1 and (
+            remainder[0].isdigit() or remainder[0].lower() in NUMBER_WORDS
+        )
+        if not bare_is_number:
+            variants.append(remainder)
     alts = []
     for v in variants:
         escaped = [re.escape(p) for p in v]
@@ -142,6 +187,8 @@ def title_pattern(title):
         else:
             escaped[-1] = re.escape(last) + "s?"
         alts.append(r"[\s-]+".join(escaped))
+    for form in EXTRA_TITLE_FORMS.get(title.strip().lower(), ()):
+        alts.append(re.escape(form))
     return re.compile(r"(?<![\w-])(" + "|".join(alts) + r")(?![\w-])", re.IGNORECASE)
 
 
