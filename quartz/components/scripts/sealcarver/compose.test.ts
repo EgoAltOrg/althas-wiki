@@ -86,7 +86,10 @@ test("a single-circle compound renders identically to the plain seal", () => {
 
 test("a compound uses a larger square viewBox", () => {
   const svg = composeCompound(twoBeside())
-  const vb = svg.match(/viewBox="([^"]+)"/)![1].split(" ").map(Number)
+  const vb = svg
+    .match(/viewBox="([^"]+)"/)![1]
+    .split(" ")
+    .map(Number)
   assert.equal(vb.length, 4)
   assert.equal(vb[2], vb[3]) // square
   assert.ok(vb[2] > 1000) // larger than a single circle

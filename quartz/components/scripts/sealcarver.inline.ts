@@ -3,27 +3,33 @@
 // (quartz/cli/handlers.js) strips the first literal occurrence from the
 // source before bundling, which silently corrupts whatever contains it
 // (found 2026-08-06 when ".sc-e*-preview" became ".sc--preview").
-import { CANON, findCanon } from "./sealcarver/canon"
-import { compose, composeForSave } from "./sealcarver/compose"
-import { autoName, ELEMENT_NAMES } from "./sealcarver/naming"
-import { decodeSeal, encodeSeal } from "./sealcarver/serialize"
+import { CANON, findCanonCompound } from "./sealcarver/canon"
+import { composeCompound, composeCompoundForSave } from "./sealcarver/compose"
+import { compoundName, ELEMENT_NAMES } from "./sealcarver/naming"
+import { decodeCompound, encodeCompound } from "./sealcarver/serialize"
 import { SIGILS } from "./sealcarver/sigils.gen"
-import { signature } from "./sealcarver/signature"
 import {
+  AUX_PLACEMENTS,
+  CompoundSeal,
   DAGGERS,
   DaggerId,
   DaggerMod,
   ELEMENTS,
   ElementId,
+  LINK_TYPES,
+  LinkType,
+  MAX_CIRCLES,
   MAX_DAGGER_GROUPS,
   MAX_RING_QUALIFIERS,
   MAX_RING_TARGETS,
+  CirclePlacement,
   Seal,
   TARGETS,
   TargetId,
   TriggerId,
+  defaultCompound,
   defaultSeal,
-  isValidSeal,
+  isValidCompound,
 } from "./sealcarver/types"
 
 const STORAGE_KEY = "althas-sealcarver-v1"
@@ -66,6 +72,16 @@ const TRIGGER_LABELS: Record<Exclude<TriggerId, "none">, string> = {
   "casters-will": "Caster's Will",
   "targets-will": "Target's Will",
 }
+const PLACEMENT_LABELS: Record<Exclude<CirclePlacement, "core">, string> = {
+  beside: "Beside",
+  concentric: "Around",
+  inside: "Inside",
+}
+const LINK_LABELS: Record<LinkType, string> = {
+  transfer: "Transfer",
+  disperse: "Disperse",
+  fuse: "Fuse",
+}
 
 function iconFor(element: ElementId): string {
   return element === "caster-self" ? "targets/caster" : `elements/${element}`
@@ -81,26 +97,26 @@ function esc(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;")
 }
 
-function clone(s: Seal): Seal {
-  return JSON.parse(JSON.stringify(s)) as Seal
+function clone(c: CompoundSeal): CompoundSeal {
+  return JSON.parse(JSON.stringify(c)) as CompoundSeal
 }
 
-function loadInitial(): Seal {
+function loadInitial(): CompoundSeal {
   const fromUrl = new URLSearchParams(window.location.search).get("seal")
   if (fromUrl) {
-    const s = decodeSeal(fromUrl)
-    if (s) return s
+    const c = decodeCompound(fromUrl)
+    if (c) return c
   }
   try {
     const stored = window.localStorage.getItem(STORAGE_KEY)
     if (stored) {
-      const s = decodeSeal(stored)
-      if (s) return s
+      const c = decodeCompound(stored)
+      if (c) return c
     }
   } catch {
     // storage unavailable: start fresh
   }
-  return defaultSeal()
+  return defaultCompound()
 }
 
 function pick<T>(xs: readonly T[]): T {
@@ -138,7 +154,22 @@ function randomSeal(): Seal {
               : "none") as TriggerId,
           },
   }
-  return isValidSeal(seal) ? seal : defaultSeal()
+  return seal
+}
+
+// Sometimes surprise the player with a whole compound (a core plus one or two
+// linked circles), otherwise a single circle. Always returns a valid compound.
+function randomCompound(): CompoundSeal {
+  const c = defaultCompound()
+  c.circles[0].seal = randomSeal()
+  if (Math.random() < 0.32) {
+    const nAux = Math.random() < 0.6 ? 1 : 2
+    for (let i = 0; i < nAux; i++) {
+      c.circles.push({ seal: randomSeal(), placement: pick(AUX_PLACEMENTS) })
+      c.links.push({ type: pick(LINK_TYPES), from: c.circles.length - 1, to: 0 })
+    }
+  }
+  return isValidCompound(c) ? c : defaultCompound()
 }
 
 function setupSealcarver() {
@@ -147,6 +178,8 @@ function setupSealcarver() {
 
   const canvasEl = root.querySelector<HTMLElement>(".sc-canvas")!
   const nameEl = root.querySelector<HTMLElement>(".sc-name")!
+  const circlesEl = root.querySelector<HTMLElement>(".sc-circles")!
+  const configEl = root.querySelector<HTMLElement>(".sc-circle-config")!
   const heartEl = root.querySelector<HTMLElement>(".sc-zone-heart")!
   const daggersEl = root.querySelector<HTMLElement>(".sc-zone-daggers")!
   const ringEl = root.querySelector<HTMLElement>(".sc-zone-ring")!
@@ -154,8 +187,18 @@ function setupSealcarver() {
   const previewEl = root.querySelector<HTMLElement>(".sc-save-preview")!
   const shareBtn = root.querySelector<HTMLButtonElement>(".sc-share")!
 
-  let seal = loadInitial()
+  let compound = loadInitial()
+  let active = 0
   const galleryEntries = CANON.filter((c) => c.gallery)
+
+  function activeSeal(): Seal {
+    return compound.circles[active].seal
+  }
+
+  // The single link (if any) joining an auxiliary circle to the core.
+  function auxLink(i: number): CompoundSeal["links"][number] | undefined {
+    return compound.links.find((e) => (e.from === i && e.to === 0) || (e.from === 0 && e.to === i))
+  }
 
   function sigilBtn(act: string, key: string, label: string, selected: boolean): string {
     return (
@@ -167,8 +210,57 @@ function setupSealcarver() {
     return `<button type="button" class="sc-pill${selected ? " sc-selected" : ""}" data-act="${esc(act)}">${esc(label)}</button>`
   }
 
+  function renderCircles(): void {
+    const tabs = compound.circles
+      .map((_node, i) => {
+        const label = i === 0 ? "Core" : `Circle ${i + 1}`
+        return `<button type="button" class="sc-tab${i === active ? " sc-selected" : ""}" data-act="circle:${i}">${esc(label)}</button>`
+      })
+      .join("")
+    const add =
+      compound.circles.length < MAX_CIRCLES
+        ? `<button type="button" class="sc-tab sc-tab-add" data-act="circle:add">+ Add circle</button>`
+        : ""
+    circlesEl.innerHTML = tabs + add
+  }
+
+  function renderCircleConfig(): void {
+    if (active === 0) {
+      configEl.innerHTML =
+        compound.circles.length > 1
+          ? `<p class="sc-config-hint">The core circle. Auxiliary circles link back to it.</p>`
+          : `<p class="sc-config-hint">Add a circle to build a compound seal (linked, nested, or concentric circles), up to five.</p>`
+      return
+    }
+    const node = compound.circles[active]
+    const link = auxLink(active)
+    const placeRow =
+      `<div class="sc-row"><strong>Placement</strong><span class="sc-pill-group">` +
+      AUX_PLACEMENTS.map((p) =>
+        pill(
+          `place:${p}`,
+          PLACEMENT_LABELS[p as Exclude<CirclePlacement, "core">],
+          node.placement === p,
+        ),
+      ).join("") +
+      `</span></div>`
+    const linkTypeRow =
+      `<div class="sc-row"><strong>Link to core</strong><span class="sc-pill-group">` +
+      pill("link:none", "None", !link) +
+      LINK_TYPES.map((t) => pill(`link:type:${t}`, LINK_LABELS[t], link?.type === t)).join("") +
+      `</span></div>`
+    const dirRow = link
+      ? `<div class="sc-row"><strong>Direction</strong><span class="sc-pill-group">` +
+        pill("link:dir:to", "This circle → core", link.to === 0) +
+        pill("link:dir:from", "Core → this circle", link.from === 0) +
+        `</span></div>`
+      : ""
+    const removeRow = `<div class="sc-row">${pill(`circle:remove:${active}`, "Remove this circle", false)}</div>`
+    configEl.innerHTML = placeRow + linkTypeRow + dirRow + removeRow
+  }
+
   function renderHeartZone(): void {
-    const h = seal.heart
+    const h = activeSeal().heart
     heartEl.innerHTML =
       `<div class="sc-grid">` +
       ELEMENTS.filter((e) => e !== "nature-blank")
@@ -186,6 +278,7 @@ function setupSealcarver() {
   }
 
   function renderDaggerZone(): void {
+    const seal = activeSeal()
     const groups = seal.daggers
       .map((g, i) => {
         const grid = DAGGERS.map((d) =>
@@ -218,7 +311,7 @@ function setupSealcarver() {
   }
 
   function renderRingZone(): void {
-    const r = seal.ring
+    const r = activeSeal().ring
     let html =
       `<div class="sc-row"><span class="sc-pill-group">` +
       pill("ring:plain", "Plain ring (fires at once, nearest match)", r.plain) +
@@ -265,7 +358,7 @@ function setupSealcarver() {
           const idx = CANON.indexOf(c)
           return (
             `<button type="button" class="sc-gallery-card" data-act="load:${idx}">` +
-            `${compose(c.seal)}<figcaption>${esc(c.name)}</figcaption></button>`
+            `${composeCompound({ circles: [{ seal: c.seal, placement: "core" }], links: [] })}<figcaption>${esc(c.name)}</figcaption></button>`
           )
         })
         .join("")
@@ -274,20 +367,22 @@ function setupSealcarver() {
   }
 
   function render(): void {
-    canvasEl.innerHTML = compose(seal)
-    const canon = findCanon(signature(seal))
+    canvasEl.innerHTML = composeCompound(compound)
+    const canon = findCanonCompound(compound)
     if (canon) {
       nameEl.textContent = `✦ ${canon.name} · Level ${canon.level} ${canon.domain} ✦`
       nameEl.classList.add("sc-name-canon")
     } else {
-      nameEl.textContent = autoName(seal)
+      nameEl.textContent = compoundName(compound)
       nameEl.classList.remove("sc-name-canon")
     }
+    renderCircles()
+    renderCircleConfig()
     renderHeartZone()
     renderDaggerZone()
     renderRingZone()
     try {
-      window.localStorage.setItem(STORAGE_KEY, encodeSeal(seal))
+      window.localStorage.setItem(STORAGE_KEY, encodeCompound(compound))
     } catch {
       // storage full or unavailable: sharing and saving still work
     }
@@ -307,14 +402,15 @@ function setupSealcarver() {
   }
 
   function saveSvg(): void {
-    const svg = '<?xml version="1.0" encoding="UTF-8"?>\n' + composeForSave(seal, "transparent")
+    const svg =
+      '<?xml version="1.0" encoding="UTF-8"?>\n' + composeCompoundForSave(compound, "transparent")
     const url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }))
     download("seal.svg", url)
     setTimeout(() => URL.revokeObjectURL(url), 10_000)
   }
 
   function savePng(bg: "white" | "transparent"): void {
-    const svg = composeForSave(seal, bg)
+    const svg = composeCompoundForSave(compound, bg)
     const img = new Image()
     img.onload = () => {
       const c = document.createElement("canvas")
@@ -333,7 +429,7 @@ function setupSealcarver() {
 
   function share(): void {
     const url = new URL(window.location.href)
-    url.search = "?seal=" + encodeSeal(seal)
+    url.search = "?seal=" + encodeCompound(compound)
     url.hash = ""
     const flash = () => {
       const prev = shareBtn.textContent
@@ -343,59 +439,160 @@ function setupSealcarver() {
     navigator.clipboard.writeText(url.toString()).then(flash, flash)
   }
 
+  // Replace any existing link between an auxiliary circle and the core with one
+  // of the given type and direction (dir "to" = aux -> core, "from" = core ->
+  // aux). type null removes the link entirely.
+  function setAuxLink(
+    next: CompoundSeal,
+    i: number,
+    type: LinkType | null,
+    dir: "to" | "from",
+  ): void {
+    next.links = next.links.filter(
+      (e) => !((e.from === i && e.to === 0) || (e.from === 0 && e.to === i)),
+    )
+    if (type) {
+      next.links.push(dir === "to" ? { type, from: i, to: 0 } : { type, from: 0, to: i })
+    }
+  }
+
   function apply(act: string): void {
-    const next = clone(seal)
     const [head, ...rest] = act.split(":")
-    if (head === "el") next.heart.element = rest[0] as ElementId
-    else if (head === "mode") next.heart.mode = rest[0] as "create"
-    else if (head === "wrap") next.heart.wrap = rest[0] as "none"
+
+    // Structural and navigation actions operate on the compound / active index.
+    if (head === "circle") {
+      if (rest[0] === "add") {
+        if (compound.circles.length < MAX_CIRCLES) {
+          const next = clone(compound)
+          next.circles.push({ seal: defaultSeal(), placement: "beside" })
+          next.links.push({ type: "transfer", from: next.circles.length - 1, to: 0 })
+          if (isValidCompound(next)) {
+            compound = next
+            active = compound.circles.length - 1
+            render()
+          }
+        }
+        return
+      }
+      if (rest[0] === "remove") {
+        const i = parseInt(rest[1], 10)
+        if (i > 0 && i < compound.circles.length) {
+          const next = clone(compound)
+          next.circles.splice(i, 1)
+          next.links = next.links
+            .filter((e) => e.from !== i && e.to !== i)
+            .map((e) => ({
+              type: e.type,
+              from: e.from > i ? e.from - 1 : e.from,
+              to: e.to > i ? e.to - 1 : e.to,
+            }))
+          if (isValidCompound(next)) {
+            compound = next
+            active = 0
+            render()
+          }
+        }
+        return
+      }
+      const i = parseInt(rest[0], 10)
+      if (i >= 0 && i < compound.circles.length) {
+        active = i
+        render()
+      }
+      return
+    }
+    if (head === "place") {
+      if (active === 0) return
+      const p = rest[0] as CirclePlacement
+      if (!AUX_PLACEMENTS.includes(p)) return
+      const next = clone(compound)
+      next.circles[active].placement = p
+      if (isValidCompound(next)) {
+        compound = next
+        render()
+      }
+      return
+    }
+    if (head === "link") {
+      if (active === 0) return
+      const next = clone(compound)
+      if (rest[0] === "none") setAuxLink(next, active, null, "to")
+      else if (rest[0] === "type") {
+        const existing = auxLink(active)
+        const dir = existing && existing.from === 0 ? "from" : "to"
+        setAuxLink(next, active, rest[1] as LinkType, dir)
+      } else if (rest[0] === "dir") {
+        const existing = auxLink(active)
+        const type = existing ? existing.type : "transfer"
+        setAuxLink(next, active, type, rest[1] as "to" | "from")
+      }
+      if (isValidCompound(next)) {
+        compound = next
+        render()
+      }
+      return
+    }
+    if (head === "load") {
+      const c = CANON[parseInt(rest[0], 10)]
+      if (c) {
+        compound = {
+          circles: [{ seal: JSON.parse(JSON.stringify(c.seal)), placement: "core" }],
+          links: [],
+        }
+        active = 0
+        render()
+        canvasEl.scrollIntoView({ behavior: "smooth", block: "center" })
+      }
+      return
+    }
+    if (head === "surprise") {
+      compound = randomCompound()
+      active = 0
+      render()
+      return
+    }
+
+    // Everything else edits the active circle's seal.
+    const next = clone(compound)
+    const cur = next.circles[active].seal
+    if (head === "el") cur.heart.element = rest[0] as ElementId
+    else if (head === "mode") cur.heart.mode = rest[0] as "create"
+    else if (head === "wrap") cur.heart.wrap = rest[0] as "none"
     else if (head === "g") {
       if (rest[0] === "add") {
-        if (next.daggers.length < MAX_DAGGER_GROUPS)
-          next.daggers.push({ dagger: "surround", mod: "none", count: 4, placement: "symmetric" })
+        if (cur.daggers.length < MAX_DAGGER_GROUPS)
+          cur.daggers.push({ dagger: "surround", mod: "none", count: 4, placement: "symmetric" })
       } else {
         const i = parseInt(rest[0], 10)
-        const g = next.daggers[i]
+        const g = cur.daggers[i]
         if (!g) return
         if (rest[1] === "dagger") g.dagger = rest[2] as DaggerId
         else if (rest[1] === "mod") g.mod = rest[2] as DaggerMod
         else if (rest[1] === "count")
           g.count = Math.min(8, Math.max(1, g.count + parseInt(rest[2], 10)))
         else if (rest[1] === "place") g.placement = rest[2] as "symmetric"
-        else if (rest[1] === "remove" && next.daggers.length > 1) next.daggers.splice(i, 1)
+        else if (rest[1] === "remove" && cur.daggers.length > 1) cur.daggers.splice(i, 1)
       }
     } else if (head === "ring") {
       if (rest[0] === "plain")
-        next.ring = { plain: true, targets: [], qualifiers: [], trigger: "none" }
-      else if (next.ring.plain)
-        next.ring = { plain: false, targets: ["caster"], qualifiers: [], trigger: "none" }
+        cur.ring = { plain: true, targets: [], qualifiers: [], trigger: "none" }
+      else if (cur.ring.plain)
+        cur.ring = { plain: false, targets: ["caster"], qualifiers: [], trigger: "none" }
     } else if (head === "target") {
       const t = rest[0] as TargetId
-      const i = next.ring.targets.indexOf(t)
-      if (i >= 0 && next.ring.targets.length > 1) next.ring.targets.splice(i, 1)
-      else if (i < 0 && next.ring.targets.length < MAX_RING_TARGETS) next.ring.targets.push(t)
+      const i = cur.ring.targets.indexOf(t)
+      if (i >= 0 && cur.ring.targets.length > 1) cur.ring.targets.splice(i, 1)
+      else if (i < 0 && cur.ring.targets.length < MAX_RING_TARGETS) cur.ring.targets.push(t)
     } else if (head === "qual") {
       const q = rest[0] as ElementId
-      const i = next.ring.qualifiers.indexOf(q)
-      if (i >= 0) next.ring.qualifiers.splice(i, 1)
-      else if (next.ring.qualifiers.length < MAX_RING_QUALIFIERS) next.ring.qualifiers.push(q)
+      const i = cur.ring.qualifiers.indexOf(q)
+      if (i >= 0) cur.ring.qualifiers.splice(i, 1)
+      else if (cur.ring.qualifiers.length < MAX_RING_QUALIFIERS) cur.ring.qualifiers.push(q)
     } else if (head === "trigger") {
-      next.ring.trigger = rest.join(":") === "none" ? "none" : (rest.join(":") as TriggerId)
-    } else if (head === "load") {
-      const c = CANON[parseInt(rest[0], 10)]
-      if (c) {
-        seal = clone(c.seal)
-        render()
-        canvasEl.scrollIntoView({ behavior: "smooth", block: "center" })
-        return
-      }
-    } else if (head === "surprise") {
-      seal = randomSeal()
-      render()
-      return
+      cur.ring.trigger = rest.join(":") === "none" ? "none" : (rest.join(":") as TriggerId)
     }
-    if (isValidSeal(next)) {
-      seal = next
+    if (isValidCompound(next)) {
+      compound = next
       render()
     }
   }

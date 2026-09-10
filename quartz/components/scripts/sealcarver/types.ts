@@ -152,7 +152,7 @@ export function defaultSeal(): Seal {
 
 // How an auxiliary circle sits relative to the core. The core itself is "core"
 // and is always circles[0].
-export type Placement = "core" | "concentric" | "inside" | "beside"
+export type CirclePlacement = "core" | "concentric" | "inside" | "beside"
 // The three linking sigils (all live in sigils/functions/). Transfer hands one
 // circle's result to another; Disperse passes information between circles; Fuse
 // treats several things as one.
@@ -164,7 +164,7 @@ export interface LinkEdge {
 }
 export interface CircleNode {
   seal: Seal
-  placement: Placement
+  placement: CirclePlacement
 }
 export interface CompoundSeal {
   circles: CircleNode[]
@@ -172,7 +172,7 @@ export interface CompoundSeal {
 }
 
 // Auxiliary placements a user can pick (the core's placement is implicit).
-export const AUX_PLACEMENTS: Placement[] = ["concentric", "inside", "beside"]
+export const AUX_PLACEMENTS: CirclePlacement[] = ["concentric", "inside", "beside"]
 export const LINK_TYPES: LinkType[] = ["transfer", "disperse", "fuse"]
 export const MAX_CIRCLES = 5 // the five-circle Floating Eye is the ceiling
 

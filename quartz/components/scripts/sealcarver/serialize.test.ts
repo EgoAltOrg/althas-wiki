@@ -56,7 +56,12 @@ function compound(): CompoundSeal {
         seal: {
           heart: { element: "space", mode: "manipulate", wrap: "none" },
           daggers: [{ dagger: "absorption", mod: "none", count: 3, placement: "symmetric" }],
-          ring: { plain: false, targets: ["caster"], qualifiers: ["mind"], trigger: "casters-will" },
+          ring: {
+            plain: false,
+            targets: ["caster"],
+            qualifiers: ["mind"],
+            trigger: "casters-will",
+          },
         },
         placement: "beside",
       },

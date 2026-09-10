@@ -37,6 +37,9 @@ export default (() => {
         </div>
         <div class="sc-save-preview"></div>
 
+        <div class="sc-circles" role="tablist" aria-label="Circles"></div>
+        <div class="sc-circle-config"></div>
+
         <section class="sc-editor">
           <h3>The Heart</h3>
           <div class="sc-zone-heart"></div>

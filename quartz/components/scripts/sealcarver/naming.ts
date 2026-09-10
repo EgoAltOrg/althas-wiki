@@ -5,7 +5,7 @@ import {
   DaggerMod,
   ElementId,
   LinkType,
-  Placement,
+  CirclePlacement,
   Seal,
   TargetId,
   isSingle,
@@ -112,7 +112,7 @@ const LINK_NOUNS: Record<LinkType, string> = {
   fuse: "Fusion",
 }
 
-const PLACEMENT_WORDS: Record<Exclude<Placement, "core">, string> = {
+const PLACEMENT_WORDS: Record<Exclude<CirclePlacement, "core">, string> = {
   concentric: "concentric",
   inside: "nested",
   beside: "adjoining",
@@ -128,9 +128,12 @@ function countPhrase(n: number, noun: string): string {
 export function compoundName(compound: CompoundSeal): string {
   if (isSingle(compound)) return autoName(compound.circles[0].seal)
   const core = autoName(compound.circles[0].seal)
-  const auxTypes = new Set(compound.circles.slice(1).map((n) => PLACEMENT_WORDS[n.placement as Exclude<Placement, "core">]))
-  const auxWord =
-    auxTypes.size === 1 ? [...auxTypes][0] + " " : ""
+  const auxTypes = new Set(
+    compound.circles
+      .slice(1)
+      .map((n) => PLACEMENT_WORDS[n.placement as Exclude<CirclePlacement, "core">]),
+  )
+  const auxWord = auxTypes.size === 1 ? [...auxTypes][0] + " " : ""
   const auxClause = countPhrase(compound.circles.length - 1, `${auxWord}circle`)
   const linkNouns = [...new Set(compound.links.map((e) => LINK_NOUNS[e.type]))].sort()
   const bound = linkNouns.length ? ` bound by ${joinList(linkNouns)}` : ""
