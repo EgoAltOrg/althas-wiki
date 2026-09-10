@@ -1,8 +1,8 @@
 import assert from "node:assert/strict"
 import { test } from "node:test"
-import { CANON, findCanon } from "./canon"
+import { CANON, findCanon, findCanonCompound } from "./canon"
 import { signature } from "./signature"
-import { Seal, isValidSeal } from "./types"
+import { CompoundSeal, Seal, isValidSeal, singleToCompound } from "./types"
 
 test("thirteen Arcana entries", () => {
   assert.equal(CANON.filter((c) => c.domain === "Arcana").length, 13)
@@ -55,4 +55,35 @@ test("nine Codex gallery entries, grouped in three books", () => {
     true,
   )
   assert.equal(new Set(codex.map((c) => c.book)).size, 3)
+})
+
+test("findCanonCompound resolves a single-circle compound against canon", () => {
+  const flight: Seal = {
+    heart: { element: "body", mode: "manipulate", wrap: "loop" },
+    daggers: [
+      { dagger: "movement-omnidirectional", mod: "none", count: 4, placement: "symmetric" },
+    ],
+    ring: { plain: false, targets: ["caster"], qualifiers: ["body"], trigger: "none" },
+  }
+  assert.equal(findCanonCompound(singleToCompound(flight))?.name, "Flight")
+})
+
+test("findCanonCompound returns undefined for a real compound (no compound canon yet)", () => {
+  const c: CompoundSeal = {
+    circles: [
+      {
+        seal: {
+          heart: { element: "body", mode: "manipulate", wrap: "loop" },
+          daggers: [
+            { dagger: "movement-omnidirectional", mod: "none", count: 4, placement: "symmetric" },
+          ],
+          ring: { plain: false, targets: ["caster"], qualifiers: ["body"], trigger: "none" },
+        },
+        placement: "core",
+      },
+      { seal: CANON[0].seal, placement: "beside" },
+    ],
+    links: [{ type: "transfer", from: 1, to: 0 }],
+  }
+  assert.equal(findCanonCompound(c), undefined)
 })

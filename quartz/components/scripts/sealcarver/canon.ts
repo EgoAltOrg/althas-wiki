@@ -1,5 +1,5 @@
-import { signature } from "./signature"
-import { Seal } from "./types"
+import { compoundSignature, signature } from "./signature"
+import { CompoundSeal, Seal } from "./types"
 
 // Canon seal table. Arcana entries transcribe the worked circles in the
 // Codex of Arcane Arts (Roc Humet Vidal, CC-BY 4.0), levels 1-10, single
@@ -197,4 +197,12 @@ export function findCanon(sig: string): CanonSeal | undefined {
     index = new Map(CANON.map((c) => [signature(c.seal), c]))
   }
   return index.get(sig)
+}
+
+// Compound-aware canon lookup. A single-circle compound reduces to its plain
+// signature (compoundSignature), so every existing single-circle canon entry
+// still resolves; a real compound matches only a compound canon entry, of which
+// there are none yet (the gallery stays single-circle Codex canon for now).
+export function findCanonCompound(compound: CompoundSeal): CanonSeal | undefined {
+  return findCanon(compoundSignature(compound))
 }

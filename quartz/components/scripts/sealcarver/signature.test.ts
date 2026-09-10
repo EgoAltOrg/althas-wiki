@@ -1,7 +1,7 @@
 import assert from "node:assert/strict"
 import { test } from "node:test"
-import { signature } from "./signature"
-import { Seal, defaultSeal } from "./types"
+import { compoundSignature, signature } from "./signature"
+import { CompoundSeal, Seal, defaultSeal, singleToCompound } from "./types"
 
 function flightish(): Seal {
   return {
@@ -69,4 +69,54 @@ test("target order does not matter", () => {
   const b = flightish()
   b.ring.targets = ["sensed", "caster"]
   assert.equal(signature(a), signature(b))
+})
+
+// --- Compound signatures ----------------------------------------------------
+
+function compound(): CompoundSeal {
+  return {
+    circles: [
+      { seal: defaultSeal(), placement: "core" },
+      { seal: flightish(), placement: "beside" },
+    ],
+    links: [{ type: "transfer", from: 1, to: 0 }],
+  }
+}
+
+test("a single-circle compound reduces to the plain signature", () => {
+  const s = flightish()
+  assert.equal(compoundSignature(singleToCompound(s)), signature(s))
+})
+
+test("a real compound differs from its core alone", () => {
+  const c = compound()
+  assert.notEqual(compoundSignature(c), signature(c.circles[0].seal))
+})
+
+test("auxiliary dagger count stays decorative in a compound", () => {
+  const a = compound()
+  const b = compound()
+  b.circles[1].seal.daggers[0].count = 7
+  assert.equal(compoundSignature(a), compoundSignature(b))
+})
+
+test("changing a link type changes the compound signature", () => {
+  const a = compound()
+  const b = compound()
+  b.links[0].type = "fuse"
+  assert.notEqual(compoundSignature(a), compoundSignature(b))
+})
+
+test("changing an auxiliary placement changes the compound signature", () => {
+  const a = compound()
+  const b = compound()
+  b.circles[1].placement = "concentric"
+  assert.notEqual(compoundSignature(a), compoundSignature(b))
+})
+
+test("link direction matters (transfer is directional)", () => {
+  const a = compound()
+  const b = compound()
+  b.links[0] = { type: "transfer", from: 0, to: 1 }
+  assert.notEqual(compoundSignature(a), compoundSignature(b))
 })

@@ -141,3 +141,72 @@ export function defaultSeal(): Seal {
     ring: { plain: true, targets: [], qualifiers: [], trigger: "none" },
   }
 }
+
+// --- Compound circles -------------------------------------------------------
+// A compound seal is several single circles joined by link edges. The source
+// (Codex of Arcane Arts, "Compound circles") builds complex spells this way
+// rather than as one dense circle. circles[0] is the core; auxiliaries sit
+// beside it, concentrically around it, or inside it. A single circle is the
+// degenerate one-circle, no-edge compound, which keeps every single-circle
+// share link, saved seal and canon match valid.
+
+// How an auxiliary circle sits relative to the core. The core itself is "core"
+// and is always circles[0].
+export type Placement = "core" | "concentric" | "inside" | "beside"
+// The three linking sigils (all live in sigils/functions/). Transfer hands one
+// circle's result to another; Disperse passes information between circles; Fuse
+// treats several things as one.
+export type LinkType = "transfer" | "disperse" | "fuse"
+export interface LinkEdge {
+  type: LinkType
+  from: number // circle index
+  to: number // circle index
+}
+export interface CircleNode {
+  seal: Seal
+  placement: Placement
+}
+export interface CompoundSeal {
+  circles: CircleNode[]
+  links: LinkEdge[]
+}
+
+// Auxiliary placements a user can pick (the core's placement is implicit).
+export const AUX_PLACEMENTS: Placement[] = ["concentric", "inside", "beside"]
+export const LINK_TYPES: LinkType[] = ["transfer", "disperse", "fuse"]
+export const MAX_CIRCLES = 5 // the five-circle Floating Eye is the ceiling
+
+export function singleToCompound(seal: Seal): CompoundSeal {
+  return { circles: [{ seal, placement: "core" }], links: [] }
+}
+
+export function defaultCompound(): CompoundSeal {
+  return singleToCompound(defaultSeal())
+}
+
+// A one-circle, no-edge compound behaves exactly like the old single seal.
+export function isSingle(c: CompoundSeal): boolean {
+  return c.circles.length === 1 && c.links.length === 0
+}
+
+export function isValidCompound(c: CompoundSeal): boolean {
+  if (!c || !Array.isArray(c.circles) || !Array.isArray(c.links)) return false
+  if (c.circles.length < 1 || c.circles.length > MAX_CIRCLES) return false
+  for (let i = 0; i < c.circles.length; i++) {
+    const node = c.circles[i]
+    if (!node || typeof node !== "object") return false
+    if (!isValidSeal(node.seal)) return false
+    const wantCore = i === 0
+    if (wantCore && node.placement !== "core") return false
+    if (!wantCore && !AUX_PLACEMENTS.includes(node.placement)) return false
+  }
+  if (c.circles.length === 1 && c.links.length !== 0) return false
+  for (const e of c.links) {
+    if (!e || !LINK_TYPES.includes(e.type)) return false
+    if (!Number.isInteger(e.from) || !Number.isInteger(e.to)) return false
+    if (e.from < 0 || e.from >= c.circles.length) return false
+    if (e.to < 0 || e.to >= c.circles.length) return false
+    if (e.from === e.to) return false
+  }
+  return true
+}
