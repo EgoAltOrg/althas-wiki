@@ -1,8 +1,8 @@
 import assert from "node:assert/strict"
 import { test } from "node:test"
-import { compose, composeForSave } from "./compose"
+import { compose, composeCompound, composeCompoundForSave, composeForSave } from "./compose"
 import { SIGILS } from "./sigils.gen"
-import { Seal, defaultSeal } from "./types"
+import { CompoundSeal, Seal, defaultSeal, singleToCompound } from "./types"
 
 function detailed(): Seal {
   return {
@@ -66,4 +66,74 @@ test("caster-self heart composes without pre-composed asset", () => {
   const norm = (x: string) => x.replace(/stroke-width:[\d.]+px/g, "SW")
   assert.ok(norm(svg).includes(norm(SIGILS["targets/caster"].body)))
   assert.ok(norm(svg).includes(norm(SIGILS["modifiers/manipulate"].body)))
+})
+
+// --- Compound composition ---------------------------------------------------
+
+function twoBeside(): CompoundSeal {
+  return {
+    circles: [
+      { seal: defaultSeal(), placement: "core" },
+      { seal: detailed(), placement: "beside" },
+    ],
+    links: [{ type: "transfer", from: 1, to: 0 }],
+  }
+}
+
+test("a single-circle compound renders identically to the plain seal", () => {
+  assert.equal(composeCompound(singleToCompound(detailed())), compose(detailed()))
+})
+
+test("a compound uses a larger square viewBox", () => {
+  const svg = composeCompound(twoBeside())
+  const vb = svg.match(/viewBox="([^"]+)"/)![1].split(" ").map(Number)
+  assert.equal(vb.length, 4)
+  assert.equal(vb[2], vb[3]) // square
+  assert.ok(vb[2] > 1000) // larger than a single circle
+})
+
+test("a compound stays self-contained and themed", () => {
+  const svg = composeCompound(twoBeside())
+  assert.ok(!svg.includes("stroke:black"))
+  assert.ok(!svg.includes("<image"))
+  assert.ok(!svg.includes("xlink:href"))
+  assert.ok(svg.includes("currentColor"))
+})
+
+test("a compound draws its link sigil", () => {
+  const svg = composeCompound(twoBeside())
+  const norm = (s: string) => s.replace(/stroke-width:[\d.]+px/g, "SW")
+  assert.ok(norm(svg).includes(norm(SIGILS["functions/transfer"].body)))
+})
+
+test("a concentric aux shares the core Heart (no second element sigil)", () => {
+  const core = defaultSeal() // Create Fire heart
+  const aux: Seal = {
+    heart: { element: "body", mode: "create", wrap: "none" },
+    daggers: [{ dagger: "absorption", mod: "none", count: 3, placement: "symmetric" }],
+    ring: { plain: false, targets: ["sensed"], qualifiers: [], trigger: "none" },
+  }
+  const c: CompoundSeal = {
+    circles: [
+      { seal: core, placement: "core" },
+      { seal: aux, placement: "concentric" },
+    ],
+    links: [],
+  }
+  const svg = composeCompound(c)
+  const norm = (s: string) => s.replace(/stroke-width:[\d.]+px/g, "SW")
+  // the aux's Body-create Heart sigil must NOT appear (its Heart is suppressed)
+  assert.ok(!norm(svg).includes(norm(SIGILS["elements/body-create"].body)))
+  // but the core's Fire-create Heart does
+  assert.ok(norm(svg).includes(norm(SIGILS["elements/nature-fire-create"].body)))
+})
+
+test("compound export variants are theme independent", () => {
+  const white = composeCompoundForSave(twoBeside(), "white")
+  assert.ok(white.includes("<rect"))
+  assert.ok(white.includes("#000000"))
+  assert.ok(!white.includes("currentColor"))
+  const transparent = composeCompoundForSave(twoBeside(), "transparent")
+  assert.ok(!transparent.includes("<rect"))
+  assert.ok(!transparent.includes("currentColor"))
 })
