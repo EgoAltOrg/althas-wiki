@@ -232,7 +232,8 @@ export function composeForSave(seal: Seal, bg: "white" | "transparent"): string 
 
 const CORE_FOOT = 500 // the core circle's footprint radius
 const CONCENTRIC_BAND = 150 // radial width each concentric ring-band adds
-const SAT_SCALE = 0.5 // satellite circles draw at half size
+const SAT_SCALE = 0.46 // satellite circles draw a little under half size
+const SAT_OVERLAP = 0.6 // satellite centre sits R_OUTER + 0.6*satRing out, so the core ring cuts its inner ~40%
 
 // Compute a Frame per circle, plus a square viewBox that contains them all.
 // Circles work in a centre-origin space; the viewBox is squared and padded so
@@ -287,8 +288,11 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
     }
   })
 
-  const satFoot = CORE_FOOT * SAT_SCALE
-  const dist = CORE_FOOT + satFoot * 0.9 // satellites sit just off the core's edge
+  // Satellites OVERLAP the core: the core ring cuts through each one's inner
+  // portion (the source draws Telekinesis and Floating Eye this way), with the
+  // satellite's centre just outside the core ring and its inner ~40% inside it.
+  const satRing = R_OUTER * SAT_SCALE
+  const dist = R_OUTER + satRing * SAT_OVERLAP
   satellites.forEach((i, slot) => {
     const ang = (slot * (360 / satellites.length) * Math.PI) / 180
     const cx = dist * Math.sin(ang)
@@ -341,14 +345,18 @@ function linkSigil(edge: CompoundSeal["links"][number], frames: Frame[]): string
     const rr = (f.ringOuter + t.ringOuter) / 2
     return onRing(f, key, rr, 35, size)
   }
-  // Anchor on the larger circle's rim facing the smaller one, where the source
-  // draws its link sigils (the arrow into the core edge, floating-eye style).
+  // The overlapping satellite and the core meet in a lens; the source draws the
+  // link sigil in that lens. Anchor at the midpoint (along the centre line) of
+  // the overlap between the larger circle's rim and the smaller circle's inner
+  // edge. When they do not overlap this lands in the gap between them, which is
+  // still the right place.
   const big = f.ringOuter >= t.ringOuter ? f : t
   const small = big === f ? t : f
   const ux = (small.cx - big.cx) / dist
   const uy = (small.cy - big.cy) / dist
-  const px = big.cx + big.ringOuter * ux
-  const py = big.cy + big.ringOuter * uy
+  const along = (big.ringOuter + (dist - small.ringOuter)) / 2
+  const px = big.cx + along * ux
+  const py = big.cy + along * uy
   const angleDeg = (Math.atan2(dx, -dy) * 180) / Math.PI
   const orient = ORIENT[edge.type] ?? 0
   return place(key, px, py, size, angleDeg + orient)
