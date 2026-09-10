@@ -207,7 +207,10 @@ function ringCircle(f: Frame, R: number, stroke: string): string {
   if (!f.satAngles || !f.satAngles.length || !f.satDist || !f.satRadius) {
     return `<circle cx="${f.cx}" cy="${f.cy}" r="${R}" ${stroke}/>`
   }
-  const h = satGapHalf(R, f.satDist, f.satRadius) + 2.5
+  // No pad: the arc must end exactly where the core ring meets the satellite's
+  // circumference, so the two lines touch cleanly with neither a gap nor a
+  // crossing.
+  const h = satGapHalf(R, f.satDist, f.satRadius)
   const skips: [number, number][] = []
   for (const g of f.satAngles) {
     const s = ((g - h) % 360 + 360) % 360
