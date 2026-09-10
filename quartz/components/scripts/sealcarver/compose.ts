@@ -46,6 +46,16 @@ interface Frame {
   scale: number // multiplies sigil sizes (Heart, targets, daggers, ...)
   stroke: number // ring stroke width
   drawHeart: boolean
+  // When this circle carries satellites on its rim (the core of a beside
+  // compound), its ring is drawn as arcs that stop at each satellite instead of
+  // running through it, and band glyphs under a satellite are skipped, so no
+  // line ever crosses a satellite (the source draws Telekinesis / Floating Eye
+  // this way). satAngles are the satellite centre angles (deg, 0 = up), satDist
+  // their distance from this centre, satRadius their outer-ring radius.
+  satAngles?: number[]
+  satDist?: number
+  satRadius?: number
+  daggerBase?: number // extra rotation on this circle's daggers (deg), to clear the satellite/link angles
 }
 
 function baseFrame(cx = C, cy = C): Frame {
@@ -152,8 +162,10 @@ function daggers(f: Frame, seal: Seal): string {
   const n = seal.daggers.length
   const k = f.scale
   const hasDirectional = seal.daggers.some((g) => g.placement === "directional")
+  const daggerBase = f.daggerBase ?? 0
   seal.daggers.forEach((g, gi) => {
-    for (const ang of groupAngles(g, gi, n, hasDirectional)) {
+    for (const ang0 of groupAngles(g, gi, n, hasDirectional)) {
+      const ang = ang0 + daggerBase
       const orient = ORIENT[g.dagger] ?? 0
       const a = (ang * Math.PI) / 180
       const dx = f.cx + f.daggerR * Math.sin(a)
@@ -176,33 +188,95 @@ function daggers(f: Frame, seal: Seal): string {
   return parts.join("")
 }
 
+// Half-angle (deg, seen from the ring centre) that a satellite of radius ra,
+// centred at distance D, cuts out of a ring of radius R. The ring arc must stop
+// this far short of each satellite angle so the two never cross.
+function satGapHalf(R: number, D: number, ra: number): number {
+  const c = Math.max(-1, Math.min(1, (R * R + D * D - ra * ra) / (2 * R * D)))
+  return (Math.acos(c) * 180) / Math.PI
+}
+
+function ptOnRing(cx: number, cy: number, R: number, deg: number): [number, number] {
+  const a = (deg * Math.PI) / 180
+  return [cx + R * Math.sin(a), cy - R * Math.cos(a)]
+}
+
+// A ring circle, drawn whole, or (when the circle carries satellites) as arcs
+// that stop short of each satellite so nothing crosses it.
+function ringCircle(f: Frame, R: number, stroke: string): string {
+  if (!f.satAngles || !f.satAngles.length || !f.satDist || !f.satRadius) {
+    return `<circle cx="${f.cx}" cy="${f.cy}" r="${R}" ${stroke}/>`
+  }
+  const h = satGapHalf(R, f.satDist, f.satRadius) + 2.5
+  const skips: [number, number][] = []
+  for (const g of f.satAngles) {
+    const s = ((g - h) % 360 + 360) % 360
+    const e = ((g + h) % 360 + 360) % 360
+    if (s <= e) skips.push([s, e])
+    else {
+      skips.push([s, 360])
+      skips.push([0, e])
+    }
+  }
+  skips.sort((a, b) => a[0] - b[0])
+  const keeps: [number, number][] = []
+  let cur = 0
+  for (const [s, e] of skips) {
+    if (s > cur) keeps.push([cur, s])
+    cur = Math.max(cur, e)
+  }
+  if (cur < 360) keeps.push([cur, 360])
+  const paths = keeps
+    .filter(([a, b]) => b - a > 0.5)
+    .map(([a, b]) => {
+      const [x1, y1] = ptOnRing(f.cx, f.cy, R, a)
+      const [x2, y2] = ptOnRing(f.cx, f.cy, R, b)
+      const large = b - a > 180 ? 1 : 0
+      return `M${x1.toFixed(2)},${y1.toFixed(2)} A${R},${R} 0 ${large} 1 ${x2.toFixed(2)},${y2.toFixed(2)}`
+    })
+  return `<path d="${paths.join(" ")}" fill="none" ${stroke}/>`
+}
+
+// True when a band glyph at this angle would sit under a satellite.
+function underSatellite(f: Frame, angleDeg: number, R: number): boolean {
+  if (!f.satAngles || !f.satDist || !f.satRadius) return false
+  const h = satGapHalf(R, f.satDist, f.satRadius) + 4
+  const a = ((angleDeg % 360) + 360) % 360
+  return f.satAngles.some((g) => {
+    const d = Math.abs(((a - g + 540) % 360) - 180)
+    return d < h
+  })
+}
+
 function ring(f: Frame, seal: Seal): string {
   const stroke = `style="fill:none;stroke:currentColor;stroke-width:${f.stroke}px;"`
   if (seal.ring.plain) {
-    return `<circle cx="${f.cx}" cy="${f.cy}" r="${f.ringPlain}" ${stroke}/>`
+    return ringCircle(f, f.ringPlain, stroke)
   }
   const k = f.scale
-  const parts = [
-    `<circle cx="${f.cx}" cy="${f.cy}" r="${f.ringOuter}" ${stroke}/>`,
-    `<circle cx="${f.cx}" cy="${f.cy}" r="${f.ringInner}" ${stroke}/>`,
-  ]
+  const parts = [ringCircle(f, f.ringOuter, stroke), ringCircle(f, f.ringInner, stroke)]
   const targets = seal.ring.targets
   targets.forEach((t, i) => {
     const step = 360 / targets.length
     for (const base of [0, 180]) {
       // each target appears twice for symmetry (author's rings repeat strips)
       const ang = base + i * (step / 2)
+      if (underSatellite(f, ang, f.bandR)) continue
       parts.push(onRing(f, `targets/${t}`, f.bandR, ang, TARGET_W * k))
     }
   })
   seal.ring.qualifiers.forEach((q, i) => {
     for (const kk of [0, 1, 2, 3]) {
-      parts.push(onRing(f, `elements/${q}`, f.bandR, 45 + i * 22.5 + kk * 90, QUAL_H * k, "h"))
+      const ang = 45 + i * 22.5 + kk * 90
+      if (underSatellite(f, ang, f.bandR)) continue
+      parts.push(onRing(f, `elements/${q}`, f.bandR, ang, QUAL_H * k, "h"))
     }
   })
   if (seal.ring.trigger !== "none") {
     for (const kk of [0, 1, 2, 3]) {
-      parts.push(onRing(f, `triggers/${seal.ring.trigger}`, f.bandR, 22.5 + kk * 90, TRIGGER_W * k))
+      const ang = 22.5 + kk * 90
+      if (underSatellite(f, ang, f.bandR)) continue
+      parts.push(onRing(f, `triggers/${seal.ring.trigger}`, f.bandR, ang, TRIGGER_W * k))
     }
   }
   return parts.join("")
@@ -230,10 +304,11 @@ export function composeForSave(seal: Seal, bg: "white" | "transparent"): string 
 
 // --- Compound layout --------------------------------------------------------
 
-const CORE_FOOT = 500 // the core circle's footprint radius
 const CONCENTRIC_BAND = 150 // radial width each concentric ring-band adds
-const SAT_SCALE = 0.46 // satellite circles draw a little under half size
-const SAT_OVERLAP = 0.6 // satellite centre sits R_OUTER + 0.6*satRing out, so the core ring cuts its inner ~40%
+// A satellite's centre sits exactly ON the core ring (Telekinesis / Floating
+// Eye), at ~a third of the core's size, so the core ring passes through its
+// centre and is drawn as arcs that stop at it.
+const SAT_SCALE = 0.33
 
 // Compute a Frame per circle, plus a square viewBox that contains them all.
 // Circles work in a centre-origin space; the viewBox is squared and padded so
@@ -288,15 +363,19 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
     }
   })
 
-  // Satellites OVERLAP the core: the core ring cuts through each one's inner
-  // portion (the source draws Telekinesis and Floating Eye this way), with the
-  // satellite's centre just outside the core ring and its inner ~40% inside it.
+  // Satellites sit with their centre exactly ON the core ring, spaced evenly
+  // from the top. The core ring is drawn as arcs that stop at each satellite
+  // (see ringCircle), so a satellite reads as sitting on the rim with no line
+  // crossing it, exactly as the source draws Telekinesis and Floating Eye.
   const satRing = R_OUTER * SAT_SCALE
-  const dist = R_OUTER + satRing * SAT_OVERLAP
+  const satDist = R_OUTER
+  const satAngles: number[] = []
   satellites.forEach((i, slot) => {
-    const ang = (slot * (360 / satellites.length) * Math.PI) / 180
-    const cx = dist * Math.sin(ang)
-    const cy = -dist * Math.cos(ang)
+    const angDeg = slot * (360 / satellites.length)
+    satAngles.push(angDeg)
+    const a = (angDeg * Math.PI) / 180
+    const cx = satDist * Math.sin(a)
+    const cy = -satDist * Math.cos(a)
     const f = baseFrame(cx, cy)
     f.scale = SAT_SCALE
     f.ringOuter *= SAT_SCALE
@@ -308,6 +387,14 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
     f.stroke = 4
     frames[i] = f
   })
+  if (satAngles.length) {
+    frames[0].satAngles = satAngles
+    frames[0].satDist = satDist
+    frames[0].satRadius = satRing
+    // Push the core's daggers onto the diagonals so they clear the satellites
+    // and link arrows sitting on the cardinal axes (the source draws it so).
+    frames[0].daggerBase = 45
+  }
 
   let minX = Infinity
   let minY = Infinity
@@ -329,37 +416,36 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
   return { frames, view }
 }
 
-// The linking sigil for one edge, placed between the two circles it joins. For
-// distinct centres (a satellite link) it sits at the midpoint, its authored
-// "up" pointing from source to target. For a shared centre (concentric/nested)
-// it sits in the band between the two rings at a fixed angle.
+// The linking sigil for one edge. For a satellite link it sits radially in the
+// clear gap between the core's inner content and the satellite, pointing toward
+// the target circle (inward when the target is the core, outward when it is the
+// satellite), the way the source arrows run between the core and each auxiliary.
+// For a shared centre (concentric / nested) it sits in the band between rings.
 function linkSigil(edge: CompoundSeal["links"][number], frames: Frame[]): string {
   const f = frames[edge.from]
   const t = frames[edge.to]
   const key = `functions/${edge.type}`
-  const size = 120 * ((f.scale + t.scale) / 2 + 0.3)
   const dx = t.cx - f.cx
   const dy = t.cy - f.cy
   const dist = Math.hypot(dx, dy)
   if (dist < 5) {
     const rr = (f.ringOuter + t.ringOuter) / 2
-    return onRing(f, key, rr, 35, size)
+    return onRing(f, key, rr, 35, 150)
   }
-  // The overlapping satellite and the core meet in a lens; the source draws the
-  // link sigil in that lens. Anchor at the midpoint (along the centre line) of
-  // the overlap between the larger circle's rim and the smaller circle's inner
-  // edge. When they do not overlap this lands in the gap between them, which is
-  // still the right place.
-  const big = f.ringOuter >= t.ringOuter ? f : t
-  const small = big === f ? t : f
-  const ux = (small.cx - big.cx) / dist
-  const uy = (small.cy - big.cy) / dist
-  const along = (big.ringOuter + (dist - small.ringOuter)) / 2
-  const px = big.cx + along * ux
-  const py = big.cy + along * uy
-  const angleDeg = (Math.atan2(dx, -dy) * 180) / Math.PI
-  const orient = ORIENT[edge.type] ?? 0
-  return place(key, px, py, size, angleDeg + orient)
+  // Satellite link: one endpoint is the core (it carries satAngles), the other a
+  // satellite on the rim. Work from the core centre out along the satellite's
+  // angle.
+  const core = f.satAngles ? f : t
+  const aux = core === f ? t : f
+  const aa = Math.atan2(aux.cx - core.cx, -(aux.cy - core.cy)) // radians, 0 = up
+  const rLink = R_OUTER * 0.46
+  const px = core.cx + rLink * Math.sin(aa)
+  const py = core.cy - rLink * Math.cos(aa)
+  const angleDeg = (aa * 180) / Math.PI
+  // The link sigils are authored pointing right (like expel), so a radial
+  // outward arrow needs angle - 90; inward is the opposite.
+  const pointOut = edge.to !== 0 // target is the satellite -> point outward
+  return place(key, px, py, 150, angleDeg + (pointOut ? -90 : 90))
 }
 
 export function composeCompound(compound: CompoundSeal): string {
