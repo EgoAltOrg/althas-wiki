@@ -442,14 +442,17 @@ function linkSigil(edge: CompoundSeal["links"][number], frames: Frame[]): string
   const core = f.satSpecs ? f : t
   const aux = core === f ? t : f
   const aa = Math.atan2(aux.cx - core.cx, -(aux.cy - core.cy)) // radians, 0 = up
-  const rLink = R_OUTER * 0.46
+  // Sit in the clear band between the core's inner content (heart + any wrap
+  // bracket, out to ~R_DAGGER/2) and the satellite's inner edge, so the arrow
+  // touches neither.
+  const rLink = R_OUTER * 0.52
   const px = core.cx + rLink * Math.sin(aa)
   const py = core.cy - rLink * Math.cos(aa)
   const angleDeg = (aa * 180) / Math.PI
   // The link sigils are authored pointing right (like expel), so a radial
   // outward arrow needs angle - 90; inward is the opposite.
   const pointOut = edge.to !== 0 // target is the satellite -> point outward
-  return place(key, px, py, 150, angleDeg + (pointOut ? -90 : 90))
+  return place(key, px, py, 125, angleDeg + (pointOut ? -90 : 90))
 }
 
 export function composeCompound(compound: CompoundSeal): string {
