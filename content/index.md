@@ -130,6 +130,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[aetheris|Aetheris]]: the angels of Althas, church-bound message carriers, the exalted mirror of Infernis
 - [[elves|Elves]]: long-lived, their old Divine-Age deathlessness faded when the One Above departed
 - [[giants|Giants]]: builders of Polaris's industrial rise, now treated as its lowly working class
+- [[human|Humans]]: the most numerous ancestry, bound to no homeland, filling every nation from the fields to the great houses and the crowns
 - [[infernis|Infernis]]: banned from most settlements, living in traveling caravans that trade goods, news, and rumors
 - [[drakona|The Drakona]]: the dragon-blooded people, a scarce ancestry cut down for lost-to-history Divine-Age crimes, rumored in greater numbers in the Witherwild
 - [[firbolg|Firbolg]]: bovine folk of the Witherwild, brought to Hilltop in bondage and freed, now road-folk among the Caio

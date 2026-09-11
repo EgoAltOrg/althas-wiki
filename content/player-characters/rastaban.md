@@ -7,7 +7,7 @@ pronouns: he/him
 image: rastaban.png
 ---
 
-**Summary**: Player character. A Loreborne Giant, School of Knowledge Wizard.
+**Summary**: Player character. A Loreborne [[giants|Giant]], School of Knowledge Wizard.
 
 ---
 
@@ -22,4 +22,4 @@ Big and strong. His right arm is missing. His left eye is hidden under a headban
 
 ### Character
 
-Ancestry: Giant. Community: Loreborne. Class: Wizard, subclass School of Knowledge.
+Ancestry: [[giants|Giant]]. Community: Loreborne. Class: Wizard, subclass School of Knowledge.

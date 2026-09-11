@@ -148,6 +148,7 @@ export const defaultContentPageLayout: PageLayout = {
         removeSlugs: ["/", "changelog", "dice-roller", "map", "sealcarver", "worldbuilding-checklist"],
       },
       globalGraph: {
+        repelForce: 0.4,
         removeSlugs: ["/", "changelog", "dice-roller", "map", "sealcarver", "worldbuilding-checklist"],
       },
     }),

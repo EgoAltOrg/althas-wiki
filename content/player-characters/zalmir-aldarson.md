@@ -15,3 +15,9 @@ pronouns: he/him
 ## Appearance
 
 A tall, well-built young man who reads as human, with a voice he keeps soft that has begun to fall toward a rasp. A bandage wraps the left of his chest up to the base of his neck, which he passes off as an old war wound.
+
+## Personality
+
+### Character
+
+Ancestry: [[human|Human]].

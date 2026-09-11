@@ -69,6 +69,7 @@ TITLES = {
     "giants.md": "Giants",
     "clanks.md": "Clanks",
     "infernis.md": "Infernis",
+    "human.md": "Human",
     "divine-relics.md": "Divine Relics",
     "miracles.md": "Miracles",
     "splendor-magic.md": "Splendor Magic",
@@ -193,6 +194,7 @@ PAGE_MAP = {
     "giants.md": "ancestries/giants.md",
     "clanks.md": "ancestries/clanks.md",
     "infernis.md": "ancestries/infernis.md",
+    "human.md": "ancestries/human.md",
     # The five nations (Armada, Polaris, Voldaen, Jesthaen, Hilltop) are each
     # a folder whose own index.md IS the nation's page, not a separate file
     # alongside it — [[armada]] resolves to a folder's index.md exactly the

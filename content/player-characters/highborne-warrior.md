@@ -12,7 +12,7 @@ image: mystery-pc-portrait.png
 ---
 
 > [!note] Player character
-> A PC whose identity is not yet public. The campaign hasn't started, so beyond appearance and basic mechanics, nothing is revealed. The other PCs ([[uriel-kenan|Uriel]], [[rastaban|Ras]], [[rosestripe|Rosestripe]]) follow the same limited structure.
+> A PC whose identity is not yet public. The campaign hasn't started, so beyond appearance and basic mechanics, nothing is revealed.
 
 ## Appearance
 
@@ -22,6 +22,6 @@ A tall, athletic young man of pale complexion, with wavy white hair and sky-blue
 
 ### Character
 
-Class: Warrior, "Call of the Slayer". Ancestry: human. Community: highborne.
+Ancestry: [[human|Human]]. Community: Highborne. Class: Warrior, "Call of the Slayer".
 
 ![[mystery-pc-fullbody.jpg|360]]

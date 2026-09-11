@@ -7,7 +7,7 @@ pronouns: he/him
 image: uriel-kenan.png
 ---
 
-**Summary**: Player character. An Orderborne Elf, Divine Wielder Seraph.
+**Summary**: Player character. An Orderborne [[elves|Elf]], Divine Wielder Seraph.
 
 ---
 
@@ -22,4 +22,4 @@ Male, with a scarred face and long white hair.
 
 ### Character
 
-Ancestry: Elf. Community: Orderborne. Class: Seraph, subclass Divine Wielder.
+Ancestry: [[elves|Elf]]. Community: Orderborne. Class: Seraph, subclass Divine Wielder.
