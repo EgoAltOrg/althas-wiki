@@ -136,6 +136,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     fontSize,
     opacityScale,
     removeTags,
+    removeSlugs,
     showTags,
     focusOnHover,
     enableRadial,
@@ -147,6 +148,14 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       v,
     ]),
   )
+
+  // Drop pages that should never appear as graph nodes (hub/utility pages that
+  // otherwise dominate the layout): removing them from `data` also drops every
+  // link to or from them, since validLinks is built from data.keys() below.
+  for (const excluded of removeSlugs ?? []) {
+    data.delete(excluded as SimpleSlug)
+  }
+
   const links: SimpleLinkData[] = []
   const tags: SimpleSlug[] = []
   const validLinks = new Set(data.keys())

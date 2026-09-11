@@ -16,6 +16,7 @@ export interface D3Config {
   fontSize: number
   opacityScale: number
   removeTags: string[]
+  removeSlugs: string[]
   showTags: boolean
   focusOnHover?: boolean
   enableRadial?: boolean
@@ -39,6 +40,7 @@ const defaultOptions: GraphOptions = {
     opacityScale: 1,
     showTags: true,
     removeTags: [],
+    removeSlugs: [],
     focusOnHover: false,
     enableRadial: false,
   },
@@ -54,6 +56,7 @@ const defaultOptions: GraphOptions = {
     opacityScale: 1,
     showTags: true,
     removeTags: [],
+    removeSlugs: [],
     focusOnHover: true,
     enableRadial: true,
   },

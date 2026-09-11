@@ -44,7 +44,7 @@ More of the art that has grown up around Lael, "the Icon of Shame."
 
 ## Related pages
 
-- [[the-ophanim|The Ophanim]]: the being the Five Heroes brought down
-- [[edrion-voldis|Edrion Voldis]]: a fellow Hero who fell
-- [[aldric-voldis|Aldric Voldis]]: a fellow Hero who survived
-- [[miracles|Miracles]]: the Miracle of Rebirth
+- [[the-ophanim|The Ophanim]]
+- [[edrion-voldis|Edrion Voldis]]
+- [[aldric-voldis|Aldric Voldis]]
+- [[miracles|Miracles]]

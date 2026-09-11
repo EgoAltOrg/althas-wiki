@@ -58,4 +58,4 @@ In Althas, Codex magic is understood as a gift from [[the-one-above|the One Abov
 
 ## Related pages
 
-- [[splendor-magic|Splendor Magic]]: the deliberately contrasted domain
+- [[splendor-magic|Splendor Magic]]

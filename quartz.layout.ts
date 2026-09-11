@@ -140,7 +140,17 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.DesktopOnly(Component.Infobox()),
-    Component.Graph(),
+    Component.Graph({
+      // Hub/utility pages that otherwise dominate the force layout (the home
+      // page "/" and the changelog carry a link to nearly everything; the
+      // interactive tools and the checklist do not belong in the lore graph).
+      localGraph: {
+        removeSlugs: ["/", "changelog", "dice-roller", "map", "sealcarver", "worldbuilding-checklist"],
+      },
+      globalGraph: {
+        removeSlugs: ["/", "changelog", "dice-roller", "map", "sealcarver", "worldbuilding-checklist"],
+      },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],

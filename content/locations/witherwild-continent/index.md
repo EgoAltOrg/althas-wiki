@@ -42,5 +42,6 @@ The blight does not spare the Witherwild's peoples. Witherwatch scouts and the o
 - [[haven|Haven]]
 - [[godless-gate|The Godless Gate]]
 - [[the-witherwatch|The Witherwatch]]
-- [[drakona|Drakona]]: the ancestry seen changed in the deep wild
-- [[house-aquila|House Aquila]] and [[the-holy-see|The Holy See]]: the missionary who translated the Faunus
+- [[drakona|Drakona]]
+- [[house-aquila|House Aquila]]
+- [[the-holy-see|The Holy See]]

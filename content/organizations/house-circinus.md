@@ -16,6 +16,12 @@ That one gift made the house twice over. It found the ore, the gemveins, and the
 
 When [[the-ophanim|the Ophanim]] fell and devastated [[hilltop|Hilltop]], House Circinus withdrew with [[the-holy-see|the Holy See]] to central Althas, a See-bound house following its faith and its office rather than staying behind.
 
+## History
+
+### The house at Haven
+
+When [[voldaen|Voldaen]], [[polaris|Polaris]], and [[hilltop|Hilltop]] raised the colony of [[haven|Haven]] in the [[witherwild-continent|Witherwild]], the [[the-holy-see|Holy See]] sent a bearer of Circinus blood alongside its [[house-aquila|Aquila]] missionary. Where Pentecost opened the colonists' ears to that land, Geosensus was to open the ground beneath it, reading the shape of an unmapped country for a colony with no maps of its own. Haven was lost to the Folly like all else Althas built there, but the house keeps the sending among its oldest services to the See.
+
 ## Known bearers
 
 Among the Miracle's known present-day bearers is Abbot [[sabara|Sabara]] of [[andaluria|Andaluria]], whose gift implies a connection to the house.

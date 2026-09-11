@@ -45,5 +45,5 @@ The correct words are fixed and pre-existing, and so is the correct *saying* of 
 
 ## Related pages
 
-- [[codex-magic|Codex Magic]]: deliberately contrasted here
-- [[miracles|Miracles]]: the hereditary counterpart to asking for magic directly
+- [[codex-magic|Codex Magic]]
+- [[miracles|Miracles]]

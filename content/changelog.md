@@ -11,6 +11,7 @@ What's new on the wiki, most recent first.
 - **[[house-circinus|House Circinus]].** A new page for the Hilltop oldblood house whose Miracle finds the shape of the land, made rich off the deep earth and customary head of the Parish of Cartography.
 - **A new player character, [[zalmir-aldarson|Zalmir Aldarson]].** A young traveler newly come to the north. Appearance only for now; the rest is held.
 - **Diplomacy and Organizations, merged.** The register of Althas's powers now lives on the [[diplomacy|Diplomacy]] page, as per-nation cards showing each group's standing beneath the relationship web. The old Organizations page redirects there.
+- **Two houses at Haven.** [[house-aquila|House Aquila]] and [[house-circinus|House Circinus]] each gain a tie to the lost colony of [[haven|Haven]] in the [[witherwild-continent|Witherwild]]: an Aquila carried the faith there and first set down the land's spirits, and a Circinus read the ground for a colony with no maps of its own.
 
 ## 2026-09-03
 
