@@ -148,7 +148,13 @@ export const defaultContentPageLayout: PageLayout = {
         removeSlugs: ["/", "changelog", "dice-roller", "map", "sealcarver", "worldbuilding-checklist"],
       },
       globalGraph: {
-        repelForce: 0.1,
+        repelForce: 0.3,
+        // The default radial force pulls every node out to a ring at ~0.4x the
+        // viewport, which is what actually spread the graph (independent of the
+        // charge, so lowering repelForce did nothing). Disable it and cap the
+        // charge's range so nodes only push their neighbours.
+        enableRadial: false,
+        distanceMax: 220,
         removeSlugs: ["/", "changelog", "dice-roller", "map", "sealcarver", "worldbuilding-checklist"],
       },
     }),

@@ -17,6 +17,7 @@ export interface D3Config {
   opacityScale: number
   removeTags: string[]
   removeSlugs: string[]
+  distanceMax?: number
   showTags: boolean
   focusOnHover?: boolean
   enableRadial?: boolean
