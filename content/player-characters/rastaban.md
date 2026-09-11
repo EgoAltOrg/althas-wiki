@@ -4,6 +4,7 @@ kind: person
 ancestry: giant
 culture: Loreborne
 pronouns: he/him
+image: rastaban.png
 ---
 
 **Summary**: Player character. A Loreborne Giant, School of Knowledge Wizard.

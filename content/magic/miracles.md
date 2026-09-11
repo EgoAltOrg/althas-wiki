@@ -32,6 +32,7 @@ Not all Miracles are directly useful on the battlefield, but those that are cons
 - **The Miracle of Auspex**: lets its bearer read the immediate future of a fight, every blow and maneuver an instant before it comes, so no move against them goes unseen. The signature Miracle of [[house-corvus|House Corvus]], Voldaen's hereditary Ministers of War; borne now by [[augustus-corvus|Augustus Corvus]], "the Red Raven."
 - **The Miracle of Fames**: lets its bearer take the might of the fallen into himself, gaining a strength or faculty matched to what is claimed from the dead, at no small cost. The signature Miracle of [[house-olnir|House Olnir]].
 - **The Miracle of Parashiel**: a Miracle shrouded in mystery that empowers body, mind, and soul through familiar spirits. The signature Miracle of [[house-azimuth|House Azimuth]], its secrets known to them alone.
+- **The Miracle of Geosensus**: lets its bearer feel the natural relief of the land within a reach, the mountains and valleys and the hollows and veins beneath. The signature Miracle of [[house-circinus|House Circinus]]; borne now by Abbot [[sabara|Sabara]].
 
 ### House Voldis's power
 
@@ -61,6 +62,10 @@ House Cruoris is one of the faith's oldblood houses, ancient and bound tightly t
 
 [[house-olnir|House Olnir]] is one of [[voldaen|Voldaen's]] oldest Great Houses, once hereditary Minister of Domestic Affairs. Its signature Miracle is **Fames**, which lets its bearer take the might of the fallen into himself, gaining a strength or faculty matched to what is claimed from the dead. Each of the fallen yields but a single such boon, the claiming exacts a heavy toll, and the fresher the dead the greater the gain. Fames blesses at most one Olnir child in a generation, yet all the House's young are bound to its weekly rite, the Famesfeast, whose nature the Olnir keep to themselves. See [[house-olnir|House Olnir]].
 
+### House Circinus's power
+
+[[house-circinus|House Circinus]] is one of [[hilltop|Hilltop's]] oldblood houses, bound to [[the-holy-see|the Holy See]]. Its signature Miracle is **Geosensus**: the sense of the land's shape and of the hollows and veins beneath it, within a reach. The gift made the house rich off the ore and water it could find where others dug blind, and made it indispensable to the Church's mapmaking, so that Circinus holds the customary headship of the Parish of Cartography. Its best-known living bearer is Abbot [[sabara|Sabara]].
+
 ## Related pages
 
 - [[voldaen|Voldaen]]
@@ -80,3 +85,5 @@ House Cruoris is one of the faith's oldblood houses, ancient and bound tightly t
 - [[house-aquila|House Aquila]]
 - [[cassio-aquila|Cassio Aquila]]
 - [[lyra-aquila|Lyra Aquila]]
+- [[house-circinus|House Circinus]]
+- [[sabara|Sabara]]

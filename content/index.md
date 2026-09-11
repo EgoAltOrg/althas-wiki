@@ -13,7 +13,6 @@ Player-facing reference wiki for the *Ut Supra Sic Infra* campaign, set on the f
 - [[calendar|Calendar]]
 - [[chronicle|Chronicle]]
 - [[diplomacy|Diplomacy]]
-- [[organizations|Organizations]]
 - [[worldbuilding-checklist|Worldbuilding Checklist]]
 - [[dice-roller|Dice Roller]]
 - [[sealcarver|Sealcarver]]
@@ -119,6 +118,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[guild|The Guild]]: governs Armada, seats held by token possession, not inheritance or election
 - [[the-five-heroes|The Five Heroes]]: the five who brought down the Ophanim in 334 VR (Edrion Voldis, Cassio Aquila, Aldric Voldis, Lael the Reborn, Lyra Aquila)
 - [[house-aquila|House Aquila]]: scholar-house of the twins Cassio and Lyra, esteemed in both Polaris and the Holy See, bearer of two Miracles (Pentecost and Anamnesis)
+- [[house-circinus|House Circinus]]: a Hilltop oldblood house bound to the Holy See, bearer of the Miracle of Geosensus and customary head of the Parish of Cartography
 - [[house-corvus|House Corvus]]: Great House of Voldaen holding the hereditary office of Minister of War, risen at [[valerions-heresy|Valerion's Heresy]], bearer of the Miracle of Auspex
 - [[house-azimuth|House Azimuth]]: Great House of Voldaen, hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider; current head Novak Azimuth
 - [[house-olnir|House Olnir]]: ancient Voldaen Great House, bearer of the Miracle of Fames and keeper of the Famesfeast, its ministry stripped after [[lorkhan-olnir|Lorkhan's]] treason
@@ -150,6 +150,7 @@ All communities are available across nations, but some have unique aspects withi
 ## Player characters
 
 - [[rastaban|Rastaban]]: Loreborne Giant, School of Knowledge Wizard. Appearance and mechanics only, campaign hasn't started yet.
+- [[zalmir-aldarson|Zalmir Aldarson]]: a young traveler newly come to the north. Appearance only; the rest is held.
 - [[uriel-kenan|Uriel Kenan]]: Orderborne Elf, Divine Wielder Seraph. Appearance and mechanics only.
 - [[rosestripe|Rosestripe]]: Orderborne Aetheris, Poisoner Assassin. Appearance and mechanics only.
 
@@ -163,6 +164,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[cassio-aquila|Cassio Aquila]]: one of the Five Heroes, scholar of the Holy See, of House Aquila, twin brother to Lyra Aquila, bearer of the Miracle of Pentecost, died fighting the Ophanim
 - [[augustus-corvus|Augustus Corvus]]: Minister of War of Voldaen and lord of [[house-corvus|House Corvus]], called the Red Raven; undefeated commander and bearer of the Miracle of Auspex
 - [[mateo-veyra|Mateo Veyra]]: Archbishop of [[andaluria|Andaluria]] and the highest [[the-holy-see|Holy See]] authority to remain after the Ophanim's fall, betrothed to the Condesa [[ysabela-delamona|Ysabela Delamoña IV]]
+- [[sabara|Sabara]]: cleric of the Holy See's Parish of Cartography, blessed with the Miracle of Geosensus, seated as the Surveyor on [[andaluria|Andaluria's]] [[the-council-of-six|Council of Six]]
 - [[cornelia-azimuth|Cornelia Azimuth]]: late matriarch of [[house-azimuth|House Azimuth]], peerless warrior and master of Splendor magic, fell facing Aldric at Jesthaen in 358 VR
 - [[victerius-azimuth|Victerius Azimuth]]: born of [[house-olnir|House Olnir]], superb duelist and consort-head of House Azimuth, fell in 358 VR cutting down his brother Lorkhan
 - [[agathia-azimuth|Agathia Azimuth]]: the intrepid, martial twin daughter of House Azimuth

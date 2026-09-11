@@ -51,7 +51,6 @@ CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
 # from the filename) so it always matches Lucas's own naming choices exactly.
 TITLES = {
     "diplomacy.md": "Diplomacy",
-    "organizations.md": "Organizations",
     "calendar.md": "Calendar",
     "chronicle.md": "Chronicle",
     "timeline.md": "Timeline",
@@ -117,7 +116,11 @@ TITLES = {
     # 2026-08-27 Andaluria frame decisions
     "mateo-veyra.md": "Mateo Veyra",
     "ysabela-delamona.md": "Ysabela Delamoña",
-    "the-council-of-five.md": "The Council of Five",
+    "the-council-of-six.md": "The Council of Six",
+    # 2026-09-10/11 USSI character-Inbox + retcon additions (this publish)
+    "sabara.md": "Sabara",
+    "house-circinus.md": "House Circinus",
+    "zalmir-aldarson.md": "Zalmir Aldarson",
     # 2026-08-27 Witherwild continent
     "witherwild-continent.md": "The Witherwild",
     "haven.md": "Haven",
@@ -151,7 +154,12 @@ PAGE_MAP = {
     # moved in that reorg has a RENAMES entry below so its old URL keeps
     # redirecting.
     "diplomacy.md": "setting/diplomacy.md",
-    "organizations.md": "setting/organizations.md",
+    # organizations.md merged into diplomacy.md on 2026-09-10 (the org-cards +
+    # diplomacy merge): the register now renders as per-nation faction cards on
+    # setting/diplomacy (quartz/components/OrgCards.tsx + the orgcards
+    # transformer). The old standalone /setting/organizations URL redirects via
+    # RENAMES below. Kept in the Ontos source only as a redirect stub, so it is
+    # deliberately out of PAGE_MAP (a visible decision, not a silent gap).
     "calendar.md": "setting/calendar.md",
     "chronicle.md": "setting/chronicle.md",
     "timeline.md": "setting/timeline.md",
@@ -233,7 +241,14 @@ PAGE_MAP = {
     # true natures (Ysabela the vampire progenitor, the Council the Fallen
     # Houses) stay gm-only on the pages.
     "ysabela-delamona.md": "npcs/ysabela-delamona.md",
-    "the-council-of-five.md": "organizations/the-council-of-five.md",
+    "the-council-of-six.md": "organizations/the-council-of-six.md",
+    # 2026-09-10/11 USSI additions (this publish): Sabara (public Cartography
+    # cleric, seated as the Council of Six's Surveyor), House Circinus (her
+    # Geosensus oldblood house), and the new PC Zalmir. Alcota and Valkas are
+    # fully gm-only, so they go to NOT_YET_PUBLIC below, not here.
+    "sabara.md": "npcs/sabara.md",
+    "house-circinus.md": "organizations/house-circinus.md",
+    "zalmir-aldarson.md": "player-characters/zalmir-aldarson.md",
     # 2026-08-27 Witherwild continent. The Witherwild is a second landmass, its
     # own locations/ folder mirroring the five nations' folder-is-the-page
     # pattern (locations/witherwild/index.md IS the continent page). Its places
@@ -282,6 +297,14 @@ PAGE_MAP = {
 # link ambiguous under the "shortest" strategy and break site-wide. See the
 # comment in quartz/plugins/transformers/frontmatter.ts.
 RENAMES = {
+    # 2026-09-10 org-cards + diplomacy merge: organizations.md folded into the
+    # Diplomacy page (register now renders as faction cards there). Keep the old
+    # standalone URL redirecting so player bookmarks survive.
+    "setting/diplomacy.md": ["setting/organizations"],
+    # 2026-09-10 Council of Five -> Council of Six retcon (the morally-grey
+    # reconstruction government). Keep the old published URL redirecting, and let
+    # carry_forward_source pull the old page's image:/marker: across the rename.
+    "organizations/the-council-of-six.md": ["organizations/the-council-of-five"],
     # 2026-07-18 House Arcturus rename: hesper.md/izar.md -> hesper_arcturus/izar_arcturus
     # (Cowork) -> hesper-arcturus/izar-arcturus (kebab-case, same day). The destination
     # slug moved with each step; keep every prior published URL redirecting.
@@ -382,6 +405,11 @@ NOT_YET_PUBLIC = {
     # house page). Both stay off the map entirely.
     "novak-azimuth.md",
     "parashiel.md",
+    # 2026-09-10 USSI character-Inbox: both fully gm-only, nothing survives the
+    # strip. Alcota (the Beast-of-Alcota town, not widely known in-world) and
+    # Valkas (Zalmir's Witherwild Drakona mentor, all heritage gm-only).
+    "alcota.md",
+    "valkas.md",
 }
 
 # Pages that live in the Ontos setting/ folder but are DELIBERATELY never synced:

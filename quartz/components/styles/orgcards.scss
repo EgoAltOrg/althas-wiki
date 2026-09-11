@@ -1,0 +1,212 @@
+@use "../../styles/variables.scss" as *;
+
+// Faction cards on setting/diplomacy, rendered by OrgCards.tsx below the force
+// graph. The scored-relationship chips reuse the graph's own edge-colour tokens
+// (--dg-alliance / --dg-rivalry / --dg-war-history, defined in
+// diplomacy-graph.scss and dark-aware there), so the two views read as one
+// system: allies green, friction amber, hostility red.
+.org-cards {
+  margin: 2.5rem 0 1rem 0;
+
+  & > h2 {
+    margin-bottom: 0.25rem;
+  }
+
+  & > .org-cards-intro {
+    margin: 0.25rem 0 1rem 0;
+    color: var(--darkgray);
+  }
+
+  .org-cards-nation {
+    margin-top: 1.5rem;
+
+    & > h3 {
+      margin: 0 0 0.6rem 0;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--lightgray);
+      font-size: 1rem;
+    }
+  }
+
+  .org-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    gap: 0.9rem;
+  }
+
+  .org-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 7px;
+    background-color: var(--light);
+    padding: 0.75rem 0.85rem;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .org-card-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .org-card-crest {
+    flex: 0 0 auto;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: color-mix(in srgb, var(--secondary) 8%, var(--light));
+    border: 1px solid var(--lightgray);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .org-card-crest-fallback {
+      font-size: 0.85rem;
+      font-weight: $boldWeight;
+      letter-spacing: 0.03em;
+      color: var(--secondary);
+    }
+  }
+
+  .org-card-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+
+  .org-card-tier {
+    align-self: flex-start;
+    font-size: 0.62rem;
+    font-weight: $semiBoldWeight;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--secondary);
+    background-color: color-mix(in srgb, var(--secondary) 10%, var(--light));
+    border: 1px solid color-mix(in srgb, var(--secondary) 25%, var(--light));
+    border-radius: 3px;
+    padding: 0.05rem 0.35rem;
+  }
+
+  .org-card-name {
+    font-weight: $boldWeight;
+    color: var(--dark);
+    line-height: 1.25;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .org-card-tiernote {
+    font-size: 0.72rem;
+    font-style: italic;
+    color: var(--gray);
+  }
+
+  .org-card-blurb {
+    margin: 0;
+    color: var(--darkgray);
+  }
+
+  dl.org-card-body {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 0.6rem;
+    row-gap: 0.3rem;
+    margin: 0;
+
+    & > dt {
+      font-size: 0.66rem;
+      font-weight: $semiBoldWeight;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray);
+      padding-top: 0.05rem;
+    }
+
+    & > dd {
+      margin: 0;
+      color: var(--darkgray);
+      overflow-wrap: anywhere;
+    }
+  }
+
+  .org-card-rels {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0;
+    padding: 0;
+
+    .org-card-rel {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid var(--stance);
+      background-color: color-mix(in srgb, var(--stance) 12%, var(--light));
+
+      .rel-name {
+        color: var(--dark);
+        a {
+          color: inherit;
+        }
+      }
+
+      .rel-score {
+        font-weight: $boldWeight;
+        color: var(--stance);
+        font-variant-numeric: tabular-nums;
+      }
+    }
+
+    // Diverging scale keyed off the graph's edge hues.
+    .rel-pos1 {
+      --stance: color-mix(in srgb, var(--dg-alliance) 55%, var(--gray));
+    }
+    .rel-pos2 {
+      --stance: color-mix(in srgb, var(--dg-alliance) 80%, var(--gray));
+    }
+    .rel-pos3 {
+      --stance: var(--dg-alliance);
+    }
+    .rel-neg1 {
+      --stance: var(--dg-rivalry);
+    }
+    .rel-neg2 {
+      --stance: color-mix(in srgb, var(--dg-war-history) 80%, var(--dg-rivalry));
+    }
+    .rel-neg3 {
+      --stance: var(--dg-war-history);
+    }
+  }
+
+  .org-card-objective {
+    margin: 0;
+    font-size: 0.76rem;
+    color: var(--darkgray);
+
+    .org-card-objective-label {
+      font-weight: $semiBoldWeight;
+      text-transform: uppercase;
+      font-size: 0.66rem;
+      letter-spacing: 0.05em;
+      color: var(--gray);
+    }
+  }
+}

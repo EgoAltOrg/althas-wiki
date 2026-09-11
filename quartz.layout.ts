@@ -16,6 +16,15 @@ export const sharedPageComponents: SharedLayout = {
   // client script re-binds on the "nav" SPA event and cleans up after itself.
   afterBody: [
     Component.NationIndex(),
+    // OrgCards renders the per-nation faction-card grids below the diplomacy
+    // force graph, from register data the OrgCards transformer extracts into
+    // fileData.orgCards. Slug-gated to setting/diplomacy so it appears nowhere
+    // else. Pure build-time server rendering (like NationIndex): no client
+    // script, so the Explorer sortFn __name serialization trap does not apply.
+    Component.ConditionalRender({
+      component: Component.OrgCards(),
+      condition: (page) => page.fileData.slug === "setting/diplomacy",
+    }),
     Component.ConditionalRender({
       component: Component.DiceRoller(),
       condition: (page) => page.fileData.slug === "dice-roller",
@@ -139,7 +148,18 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  // Nation pages are folder-index pages rendered with THIS list layout, not the
+  // content layout, so the Infobox has to be mounted here too or a typed nation
+  // index (kind: nation) never shows its infobox. The Infobox self-guards
+  // (returns null unless the page has an `image:` or a valid `kind`), so a plain
+  // tag/folder list page renders nothing. Same MobileOnly/DesktopOnly pairing as
+  // defaultContentPageLayout.
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+    Component.MobileOnly(Component.Infobox()),
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
@@ -201,5 +221,5 @@ export const defaultListPageLayout: PageLayout = {
       },
     }),
   ],
-  right: [],
+  right: [Component.DesktopOnly(Component.Infobox())],
 }

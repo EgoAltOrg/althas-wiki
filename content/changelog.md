@@ -4,6 +4,14 @@ title: Changelog
 
 What's new on the wiki, most recent first.
 
+## 2026-09-11
+
+- **Andaluria's Council of Six.** The reconstruction government of [[andaluria|Andaluria]] has its own page: six offices that govern the ruined holy capital from Jesaña's Plaza del Sol, five hereditary and a sixth lately added for the Holy See's own surveyor.
+- **[[sabara|Sabara]], the See's mapmaker.** A new page for the Abbot of the Parish of Cartography, blessed with the Miracle of Geosensus and seated on the Council of Six as its Surveyor.
+- **[[house-circinus|House Circinus]].** A new page for the Hilltop oldblood house whose Miracle finds the shape of the land, made rich off the deep earth and customary head of the Parish of Cartography.
+- **A new player character, [[zalmir-aldarson|Zalmir Aldarson]].** A young traveler newly come to the north. Appearance only for now; the rest is held.
+- **Diplomacy and Organizations, merged.** The register of Althas's powers now lives on the [[diplomacy|Diplomacy]] page, as per-nation cards showing each group's standing beneath the relationship web. The old Organizations page redirects there.
+
 ## 2026-09-03
 
 - **A new ancestry, the [[firbolg|Firbolg]].** The bovine folk of the [[witherwild-continent|Witherwild]], broad-horned and pastel-furred, carried across the sea in bondage to work the southern vineyards and freed generations ago. Most now travel the roads with the Caio, keeping the Wickling faith of their homeland beside the ways of the road.
@@ -14,7 +22,7 @@ What's new on the wiki, most recent first.
 
 - **The [[witherwild-continent|Witherwild]], the blighted second continent.** Beyond the northwestern pass lies a second landmass, a wilderness of endless, choking growth where the seasons have stalled and the wildlife has turned. Four new pages open it up: the continent itself, the lost colony of [[haven|Haven]] that Althas remembers as "the Folly," the [[godless-gate|Godless Gate]] that is the one way in, and the [[the-witherwatch|Witherwatch]], the thankless frontier garrison [[voldaen|Voldaen]] keeps to hold the blight back.
 - **[[mateo-veyra|Archbishop Mateo Veyra]], the shepherd who stayed.** A new page for the spiritual head of [[andaluria|Andaluria]], the highest [[the-holy-see|Holy See]] authority to remain after [[the-ophanim|the Ophanim's]] fall drove the Church to central Althas. Beloved for staying among the ruins, he is betrothed to the Condesa [[ysabela-delamona|Ysabela Delamoña IV]], whose fortune funds the region's rebuilding.
-- **Andaluria's Condesa and its Council.** New pages for [[ysabela-delamona|Condesa Ysabela Delamoña IV]], the wine-lord whose house alone among the great families stayed when the Ophanim fell and who now bankrolls the region's rebuilding, and the [[the-council-of-five|Council of Five]], the hereditary offices that govern the reconstruction from Jesaña's Plaza del Sol.
+- **Andaluria's Condesa and its Council.** New pages for [[ysabela-delamona|Condesa Ysabela Delamoña IV]], the wine-lord whose house alone among the great families stayed when the Ophanim fell and who now bankrolls the region's rebuilding, and the Council of Five, the hereditary offices that govern the reconstruction from Jesaña's Plaza del Sol.
 - **The [[drakona|Drakona]], the dragon-blooded.** A new ancestry: a scaled, horned, long-lived people, once many and now scarce, cut down in ages past for some great wrong the histories no longer record. Of late there are rumors of them gathering, and changed, in the Witherwild.
 - **Two Great Houses of [[voldaen|Voldaen]].** [[house-azimuth|House Azimuth]] (new page), hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider. [[house-olnir|House Olnir]] (new page), keeper of the Miracle of Fames and the Famesfeast, a rite it keeps to itself, stripped of its own ministry after its heir defected to [[aldric-voldis|Aldric]]. Both Miracles now sit on the [[miracles|Miracles]] page.
 - **The House Azimuth family, in six new pages.** The late matriarch [[cornelia-azimuth|Cornelia Azimuth]], a peerless warrior who fell facing Aldric at [[jesthaen|Jesthaen]]; her consort [[victerius-azimuth|Victerius]], the duelist born of House Olnir; the twin daughters [[agathia-azimuth|Agathia]] and [[hestia-azimuth|Hestia]]; the House elder and minister [[zhenya-azimuth|Zhenya]]; and the missing Olnir heir [[lorkhan-olnir|Lorkhan]].
@@ -35,7 +43,7 @@ What's new on the wiki, most recent first.
 - **The old Voldis kings have names.** The founder the histories kept only as the God King is now recorded as [[god-king-voldis|Voldis]], the name his house and his nation both carry. The two reigns that fractured the realm are named too: [[valerion-voldis|Valerion the Mad King]], who declared himself [[the-one-above|the One Above]] returned, and his son [[valeran-voldis|Valeran the Blessed King]], who struck him down. [[castus-voldis|King Castus]] joins the line as well, the monarch under whom the north broke away to become [[polaris|Polaris]].
 - **Two ancient wars, named at last.** The civil war between crown and church is now [[valerions-heresy|Valerion's Heresy]], and the peaceful partition that founded Polaris is [[the-lodestar-pact|the Lodestar Pact]].
 - **The Red Raven of Voldaen.** [[augustus-corvus|Augustus Corvus]] (new page, with a portrait), Minister of War and the undefeated commander who has never made peace with the loss of the south, together with his [[house-corvus|House Corvus]] (new page), the war-house famed for its Miracle of Auspex, the gift of reading a fight before it is fought.
-- **A register of the powers.** A new [[organizations|Organizations]] page maps the known groups of Althas, filed by nation and ranked by standing, a companion to the [[diplomacy|Diplomacy]] web.
+- **A register of the powers.** A new Organizations page maps the known groups of Althas, filed by nation and ranked by standing, a companion to the [[diplomacy|Diplomacy]] web.
 
 ## 2026-08-13
 

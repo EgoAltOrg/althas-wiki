@@ -20,6 +20,7 @@ import Sealcarver from "./Sealcarver"
 import DiplomacyGraph from "./DiplomacyGraph"
 import ChronicleCalendar from "./ChronicleCalendar"
 import NationIndex from "./NationIndex"
+import OrgCards from "./OrgCards"
 import Search from "./Search"
 import Footer from "./Footer"
 import DesktopOnly from "./DesktopOnly"
@@ -52,6 +53,7 @@ export {
   DiplomacyGraph,
   ChronicleCalendar,
   NationIndex,
+  OrgCards,
   Search,
   Footer,
   DesktopOnly,
