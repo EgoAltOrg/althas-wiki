@@ -371,7 +371,7 @@ function setupSealcarver() {
     // A compound draws on a larger canvas, so give it more room on screen or
     // the satellite icons shrink below readability.
     const svgEl = canvasEl.querySelector("svg")
-    if (svgEl) svgEl.style.maxWidth = compound.circles.length > 1 ? "700px" : ""
+    if (svgEl) svgEl.style.maxWidth = compound.circles.length > 1 ? "780px" : ""
     const canon = findCanonCompound(compound)
     if (canon) {
       nameEl.textContent = `✦ ${canon.name} · Level ${canon.level} ${canon.domain} ✦`

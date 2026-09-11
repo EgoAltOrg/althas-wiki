@@ -309,10 +309,10 @@ export function composeForSave(seal: Seal, bg: "white" | "transparent"): string 
 
 const CONCENTRIC_BAND = 150 // radial width each concentric ring-band adds
 // A satellite's centre sits exactly ON the core ring (Telekinesis / Floating
-// Eye), at ~a third of the core's size, so the core ring passes through its
-// centre and is drawn as arcs that stop at it. A touch larger than the source
-// so its inner icons stay readable, still short of crowding the link band.
-const SAT_SCALE = 0.36
+// Eye), so the core ring passes through its centre and is drawn as arcs that
+// stop at it. Larger than the source's ~third so its inner icons stay readable
+// (airy glyphs like magic/grasp otherwise vanish), still short of the link band.
+const SAT_SCALE = 0.4
 
 // Compute a Frame per circle, plus a square viewBox that contains them all.
 // Circles work in a centre-origin space; the viewBox is squared and padded so
@@ -444,16 +444,16 @@ function linkSigil(edge: CompoundSeal["links"][number], frames: Frame[]): string
   const aux = core === f ? t : f
   const aa = Math.atan2(aux.cx - core.cx, -(aux.cy - core.cy)) // radians, 0 = up
   // Sit in the clear band between the core's inner content (the wrap bracket
-  // reaches ~162) and the satellite's inner edge (~308), short enough to touch
-  // neither. Centre ~236, half-length ~48, so it spans ~188..284.
-  const rLink = R_OUTER * 0.49
+  // reaches ~162) and the satellite's inner edge (~280 at this scale), short
+  // enough to touch neither. Centre ~222, half-length ~46, so it spans ~176..268.
+  const rLink = R_OUTER * 0.46
   const px = core.cx + rLink * Math.sin(aa)
   const py = core.cy - rLink * Math.cos(aa)
   const angleDeg = (aa * 180) / Math.PI
   // The link sigils are authored pointing right (like expel), so a radial
   // outward arrow needs angle - 90; inward is the opposite.
   const pointOut = edge.to !== 0 // target is the satellite -> point outward
-  return place(key, px, py, 95, angleDeg + (pointOut ? -90 : 90))
+  return place(key, px, py, 92, angleDeg + (pointOut ? -90 : 90))
 }
 
 export function composeCompound(compound: CompoundSeal): string {
