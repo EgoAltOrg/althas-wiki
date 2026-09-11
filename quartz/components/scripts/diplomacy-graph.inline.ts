@@ -202,7 +202,7 @@ function setupDiplomacyGraph() {
 
   const node = svg
     .append("g")
-    .selectAll("g")
+    .selectAll<SVGGElement, GNode>("g")
     .data(nodes)
     .join("g")
     .attr("class", (d) => `dg-node kind-${d.kind}`)
