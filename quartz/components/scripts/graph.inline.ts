@@ -134,7 +134,6 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     centerForce,
     linkDistance,
     fontSize,
-    opacityScale,
     removeTags,
     removeSlugs,
     distanceMax,
@@ -348,27 +347,22 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     for (const n of nodeRenderData) {
       const nodeId = n.simulationData.id
 
-      if (hoveredNodeId === nodeId) {
-        tweenGroup.add(
-          new Tweened<Text>(n.label).to(
-            {
-              alpha: 1,
-              scale: { x: activeScale, y: activeScale },
-            },
-            100,
-          ),
-        )
-      } else {
-        tweenGroup.add(
-          new Tweened<Text>(n.label).to(
-            {
-              alpha: n.label.alpha,
-              scale: { x: defaultScale, y: defaultScale },
-            },
-            100,
-          ),
-        )
-      }
+      // Labels are hover-scoped: a node's name shows only while it is the
+      // hovered node or a node directly connected to it. `n.active` is true for
+      // both (the hovered node is an endpoint of its own links) and false for
+      // every node when nothing is hovered, so labels stay hidden by default
+      // and never fade in on zoom alone.
+      const targetAlpha = n.active ? 1 : 0
+      const targetScale = hoveredNodeId === nodeId ? activeScale : defaultScale
+      tweenGroup.add(
+        new Tweened<Text>(n.label).to(
+          {
+            alpha: targetAlpha,
+            scale: { x: targetScale, y: targetScale },
+          },
+          100,
+        ),
+      )
     }
 
     tweenGroup.getAll().forEach((tw) => tw.start())
@@ -605,17 +599,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           currentTransform = transform
           stage.scale.set(transform.k, transform.k)
           stage.position.set(transform.x, transform.y)
-
-          // zoom adjusts opacity of labels too
-          const scale = transform.k * opacityScale
-          let scaleOpacity = Math.max((scale - 1) / 3.75, 0)
-          const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
-
-          for (const label of labelsContainer.children) {
-            if (!activeNodes.includes(label)) {
-              label.alpha = scaleOpacity
-            }
-          }
+          // Labels are hover-scoped (see renderLabels): zoom no longer fades
+          // them in, so a node's name appears only when it or one of its
+          // neighbours is hovered, at any zoom level.
         }),
     )
   }

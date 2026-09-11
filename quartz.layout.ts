@@ -1,6 +1,47 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
+// Pages excluded from the force graph. These are hub/utility and tooling pages
+// that either dominate the layout (the home page "/" and the changelog link to
+// nearly everything) or are interactive tools and indices rather than lore (the
+// dice roller, map, sealcarver, the worldbuilding checklist, and the
+// calendar/chronicle/diplomacy/timeline pages). Each slug is dropped as a graph
+// NODE (removeSlugs, so every link to it disappears too) AND the graph box
+// itself is hidden on that page, since a page that isn't in the graph has no
+// reason to show one.
+const graphExcludedSlugs = [
+  "/",
+  "changelog",
+  "dice-roller",
+  "map",
+  "sealcarver",
+  "worldbuilding-checklist",
+  "setting/calendar",
+  "setting/chronicle",
+  "setting/diplomacy",
+  "setting/timeline",
+]
+
+// Shared Graph config: the same local/global force-graph settings are used on
+// every page that shows a graph (single notes AND content-bearing folder-root
+// pages like the nations), so the excluded-slug list and the global force
+// tuning live in one place.
+const graphConfig = {
+  localGraph: {
+    removeSlugs: graphExcludedSlugs,
+  },
+  globalGraph: {
+    repelForce: 0.5,
+    // The default radial force pulls every node out to a ring at ~0.4x the
+    // viewport, which is what actually spread the graph (independent of the
+    // charge, so lowering repelForce did nothing). Disable it and cap the
+    // charge's range so nodes only push their neighbours.
+    enableRadial: false,
+    distanceMax: 220,
+    removeSlugs: graphExcludedSlugs,
+  },
+}
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -140,22 +181,16 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.DesktopOnly(Component.Infobox()),
-    Component.Graph({
-      // Hub/utility pages that otherwise dominate the force layout (the home
-      // page "/" and the changelog carry a link to nearly everything; the
-      // interactive tools and the checklist do not belong in the lore graph).
-      localGraph: {
-        removeSlugs: ["/", "changelog", "dice-roller", "map", "sealcarver", "worldbuilding-checklist"],
-      },
-      globalGraph: {
-        repelForce: 0.5,
-        // The default radial force pulls every node out to a ring at ~0.4x the
-        // viewport, which is what actually spread the graph (independent of the
-        // charge, so lowering repelForce did nothing). Disable it and cap the
-        // charge's range so nodes only push their neighbours.
-        enableRadial: false,
-        distanceMax: 220,
-        removeSlugs: ["/", "changelog", "dice-roller", "map", "sealcarver", "worldbuilding-checklist"],
+    // The graph box is hidden on pages that aren't in the graph themselves
+    // (graphExcludedSlugs): a page dropped as a node has no graph to show. The
+    // home page's FullSlug is "index" while its graph node is "/" (the
+    // simplified slug removeSlugs matches), so normalize it before the check.
+    Component.ConditionalRender({
+      component: Component.Graph(graphConfig),
+      condition: (page) => {
+        const slug = page.fileData.slug ?? ""
+        const normalized = slug === "index" ? "/" : slug
+        return !graphExcludedSlugs.includes(normalized)
       },
     }),
     Component.DesktopOnly(Component.TableOfContents()),
@@ -238,5 +273,18 @@ export const defaultListPageLayout: PageLayout = {
       },
     }),
   ],
-  right: [Component.DesktopOnly(Component.Infobox())],
+  right: [
+    Component.DesktopOnly(Component.Infobox()),
+    // Content-bearing folder-root pages (the nations, the Witherwild: a folder
+    // whose index.md is an authored page carrying a `kind`, not an
+    // auto-generated listing) get the same graph box as single notes. Bare
+    // folder listings and tag pages have no `kind`, so they render no graph.
+    Component.ConditionalRender({
+      component: Component.Graph(graphConfig),
+      condition: (page) => {
+        const kind = (page.fileData.frontmatter as Record<string, unknown> | undefined)?.["kind"]
+        return typeof kind === "string" && kind.length > 0
+      },
+    }),
+  ],
 }
