@@ -213,8 +213,8 @@ function ringCircle(f: Frame, R: number, stroke: string): string {
     // (plain and detailed rings differ), so the two lines touch with neither a
     // gap nor a crossing.
     const h = satGapHalf(R, f.satDist, outerR)
-    const s = ((g - h) % 360 + 360) % 360
-    const e = ((g + h) % 360 + 360) % 360
+    const s = (((g - h) % 360) + 360) % 360
+    const e = (((g + h) % 360) + 360) % 360
     if (s <= e) skips.push([s, e])
     else {
       skips.push([s, 360])

@@ -81,7 +81,11 @@ const fieldTargets = (value: unknown): string[] => {
   return []
 }
 
-const isAttributed = (file: QuartzPluginData, nationBasename: string, nationFolder: string): boolean => {
+const isAttributed = (
+  file: QuartzPluginData,
+  nationBasename: string,
+  nationFolder: string,
+): boolean => {
   const fm = file.frontmatter as Record<string, unknown> | undefined
   if (!fm || !file.slug) {
     return false
@@ -144,7 +148,10 @@ export default (() => {
             <ul>
               {pages.map((page) => (
                 <li>
-                  <a href={resolveRelative(fileData.slug!, page.slug! as FullSlug)} class="internal">
+                  <a
+                    href={resolveRelative(fileData.slug!, page.slug! as FullSlug)}
+                    class="internal"
+                  >
                     {page.frontmatter?.title ?? page.slug}
                   </a>
                 </li>

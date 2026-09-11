@@ -103,7 +103,12 @@ const crestInitials = (name: string): string =>
     .join("")
 
 export default (() => {
-  const OrgCards: QuartzComponent = ({ fileData, allFiles, ctx, displayClass }: QuartzComponentProps) => {
+  const OrgCards: QuartzComponent = ({
+    fileData,
+    allFiles,
+    ctx,
+    displayClass,
+  }: QuartzComponentProps) => {
     const data = fileData.orgCards as OrgCardsData | undefined
     if (!data || !fileData.slug) return null
     const slug = fileData.slug
@@ -162,11 +167,19 @@ export default (() => {
                         {card.relationships.map((rel: OrgRelationship) => {
                           const label = (
                             <>
-                              <span class="rel-name">{renderString(rel.display, slug, allSlugs)}</span>
+                              <span class="rel-name">
+                                {renderString(rel.display, slug, allSlugs)}
+                              </span>
                               <span class="rel-score">{scoreLabel(rel.score)}</span>
                             </>
                           )
-                          return <li class={classNames(undefined, "org-card-rel", stanceClass(rel.score))}>{label}</li>
+                          return (
+                            <li
+                              class={classNames(undefined, "org-card-rel", stanceClass(rel.score))}
+                            >
+                              {label}
+                            </li>
+                          )
                         })}
                       </ul>
                     )}

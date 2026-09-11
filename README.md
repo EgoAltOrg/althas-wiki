@@ -1,6 +1,6 @@
 # Althas — Ut Supra Sic Infra Player Wiki
 
-Public, spoiler-safe wiki and interactive map for the homebrew Daggerheart campaign *Ut Supra Sic Infra*, published with [Quartz v4](https://quartz.jzhao.xyz/).
+Public, spoiler-safe wiki and interactive map for the homebrew Daggerheart campaign _Ut Supra Sic Infra_, published with [Quartz v4](https://quartz.jzhao.xyz/).
 
 Live at: https://egoaltorg.github.io/althas-wiki/
 

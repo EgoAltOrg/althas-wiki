@@ -6,8 +6,16 @@
 // (the publish gate / normalized-event seam).
 
 const ORDINALS = [
-  "First", "Second", "Third", "Fourth", "Fifth",
-  "Sixth", "Seventh", "Eighth", "Ninth", "Tenth",
+  "First",
+  "Second",
+  "Third",
+  "Fourth",
+  "Fifth",
+  "Sixth",
+  "Seventh",
+  "Eighth",
+  "Ninth",
+  "Tenth",
 ]
 const MONTH_HEADING_RE = new RegExp(
   `^Day ([1-9]|[12][0-9]|3[0-3]) of the (${ORDINALS.join("|")}) Month, ([0-9]+) VR$`,
@@ -21,7 +29,9 @@ const mk = (year: number, monthIndex: number): MonthKey => year * 11 + monthInde
 const mkYear = (k: MonthKey) => Math.floor(k / 11)
 const mkIndex = (k: MonthKey) => k % 11
 
-interface DayRef { id: string } // heading element id for deep links
+interface DayRef {
+  id: string
+} // heading element id for deep links
 type DayIndex = Map<string, DayRef> // "363-01-12" / "363-H-02" -> ref
 
 const pad = (n: number) => String(n).padStart(2, "0")
@@ -132,9 +142,22 @@ function setupChronicle() {
     }
   }
 
-  const onPrev = () => { if (view > minKey) { view--; renderMonth() } }
-  const onNext = () => { if (view < maxKey) { view++; renderMonth() } }
-  const onToday = () => { view = todayKey; renderMonth() }
+  const onPrev = () => {
+    if (view > minKey) {
+      view--
+      renderMonth()
+    }
+  }
+  const onNext = () => {
+    if (view < maxKey) {
+      view++
+      renderMonth()
+    }
+  }
+  const onToday = () => {
+    view = todayKey
+    renderMonth()
+  }
   prevBtn.addEventListener("click", onPrev)
   nextBtn.addEventListener("click", onNext)
   todayBtn.addEventListener("click", onToday)

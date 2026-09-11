@@ -13,7 +13,8 @@ import { classNames } from "../util/lang"
 export default (() => {
   const ChronicleCalendar: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
     const fm = fileData.frontmatter as Record<string, unknown> | undefined
-    const currentDate = typeof fm?.["current-date"] === "string" ? (fm["current-date"] as string) : ""
+    const currentDate =
+      typeof fm?.["current-date"] === "string" ? (fm["current-date"] as string) : ""
     return (
       <div class={classNames(displayClass, "chronicle-calendar")} data-current-date={currentDate}>
         <div class="chronicle-nav">
@@ -24,16 +25,26 @@ export default (() => {
           <button type="button" class="chronicle-btn chronicle-next" aria-label="Next month">
             &rarr;
           </button>
-          <button type="button" class="chronicle-btn chronicle-today-btn">Today</button>
+          <button type="button" class="chronicle-btn chronicle-today-btn">
+            Today
+          </button>
         </div>
         <div class="chronicle-grid-wrap">
           <div class="chronicle-grid"></div>
         </div>
         <ul class="chronicle-legend">
-          <li><span class="chronicle-swatch swatch-weekend"></span> Weekend</li>
-          <li><span class="chronicle-swatch swatch-prayer"></span> Prayer</li>
-          <li><span class="chronicle-swatch swatch-event"></span> Recorded day</li>
-          <li><span class="chronicle-swatch swatch-today"></span> Today</li>
+          <li>
+            <span class="chronicle-swatch swatch-weekend"></span> Weekend
+          </li>
+          <li>
+            <span class="chronicle-swatch swatch-prayer"></span> Prayer
+          </li>
+          <li>
+            <span class="chronicle-swatch swatch-event"></span> Recorded day
+          </li>
+          <li>
+            <span class="chronicle-swatch swatch-today"></span> Today
+          </li>
         </ul>
       </div>
     )

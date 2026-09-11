@@ -69,10 +69,10 @@ function renderHistoryItem(entry: HistoryEntry): HTMLLIElement {
           : "fear"
     li.classList.add("dice-history-item--duality")
     li.appendChild(makeEl("span", "dice-history-label", "Duality"))
+    li.appendChild(makeEl("span", "dice-history-detail", `Hope ${entry.hope}, Fear ${entry.fear}`))
     li.appendChild(
-      makeEl("span", "dice-history-detail", `Hope ${entry.hope}, Fear ${entry.fear}`),
+      makeEl("span", `dice-history-verdict dice-verdict--${verdictClass}`, entry.verdict),
     )
-    li.appendChild(makeEl("span", `dice-history-verdict dice-verdict--${verdictClass}`, entry.verdict))
     li.appendChild(makeEl("span", "dice-history-total", String(entry.total)))
   } else {
     li.appendChild(makeEl("span", "dice-history-label", entry.notation))
@@ -160,8 +160,7 @@ function setupDiceRoller() {
   function rollDuality() {
     const hope = new DiceRoll("1d12").total
     const fear = new DiceRoll("1d12").total
-    const verdict =
-      hope === fear ? "Critical Success!" : hope > fear ? "with Hope" : "with Fear"
+    const verdict = hope === fear ? "Critical Success!" : hope > fear ? "with Hope" : "with Fear"
     commit({ kind: "duality", hope, fear, total: hope + fear, verdict })
   }
 
