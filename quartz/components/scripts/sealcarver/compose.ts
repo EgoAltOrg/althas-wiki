@@ -70,6 +70,7 @@ interface Frame {
   // cross-circle overlap among shared-centre circles.
   clampInner?: number
   clampOuter?: number
+  reach?: number // how far this circle's glyphs actually reach from its centre (core only)
 }
 
 function baseFrame(cx = C, cy = C): Frame {
@@ -672,12 +673,15 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
     const { w, h } = drawnWH(b.key, b.target, b.fit)
     coreReach = Math.max(coreReach, Math.hypot(b.cx, b.cy) + 0.5 * Math.hypot(w, h))
   }
+  frames[0].reach = coreReach
   let outer = Math.max(coreReach, satSpecs.length ? satDist + satRadius : 0)
   compound.circles.forEach((node, i) => {
     if (i === 0) return
     if (node.placement !== "concentric" && node.placement !== "inside") return
     const width = node.placement === "inside" ? 128 : CONCENTRIC_BAND
-    const gap = 22
+    // A wider inter-band gap leaves room for a link sigil to sit cleanly in the
+    // ring between two shared-centre circles instead of being pushed to the margin.
+    const gap = 54
     outer += gap + width
     const ringOuter = outer
     frames[i] = {
@@ -719,11 +723,21 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
   return { frames, view }
 }
 
+// This circle's glyph reach from its own centre: the band for an auxiliary, the
+// measured reach for the core, the ring radius as a fallback.
+function radialSpan(f: Frame): { inner: number; outer: number } {
+  if (f.clampInner != null && f.clampOuter != null)
+    return { inner: f.clampInner, outer: f.clampOuter }
+  return { inner: 0, outer: f.reach ?? f.ringOuter }
+}
+
 // The linking sigil for one edge. For a satellite link it sits radially in the
 // clear gap between the core's inner content and the satellite, pointing toward
 // the target circle (inward when the target is the core, outward when it is the
 // satellite), the way the source arrows run between the core and each auxiliary.
-// For a shared centre (concentric / nested) it sits in the band between rings.
+// For a shared centre (concentric / inside) it sits in the empty ring gap between
+// the two circles, sized to that gap, pointing toward the target circle. The
+// resolver then sweeps the angle to a clear spot.
 function linkBox(edge: CompoundSeal["links"][number], frames: Frame[], u: string): Box {
   const f = frames[edge.from]
   const t = frames[edge.to]
@@ -732,16 +746,23 @@ function linkBox(edge: CompoundSeal["links"][number], frames: Frame[], u: string
   const dy = t.cy - f.cy
   const dist = Math.hypot(dx, dy)
   if (dist < 5) {
-    const rr = (f.ringOuter + t.ringOuter) / 2
+    const sf = radialSpan(f)
+    const st = radialSpan(t)
+    const innerOuter = Math.min(sf.outer, st.outer) // outer edge of the inner circle
+    const outerInner = sf.outer >= st.outer ? sf.inner : st.inner // inner edge of the outer circle
+    const gapMid = (innerOuter + outerInner) / 2
+    const gapH = Math.max(16, outerInner - innerOuter)
+    const target = Math.min(130, gapH - 6)
+    const toIsOuter = st.outer >= sf.outer // the target circle is the outer one -> point outward
     const a = (35 * Math.PI) / 180
     return {
       unit: u,
       key,
-      cx: f.cx + rr * Math.sin(a),
-      cy: f.cy - rr * Math.cos(a),
-      target: 150,
-      rot: 35,
-      fit: "w",
+      cx: f.cx + gapMid * Math.sin(a),
+      cy: f.cy - gapMid * Math.cos(a),
+      target,
+      rot: 35 + (toIsOuter ? -90 : 90),
+      fit: "h",
     }
   }
   // Satellite link: one endpoint is the core (it carries satAngles), the other a
@@ -784,19 +805,30 @@ function resolvedLinkBoxes(compound: CompoundSeal, frames: Frame[], glyphs: Box[
     const { w, h } = drawnWH(g.key, g.target, g.fit)
     clearR = Math.max(clearR, Math.hypot(g.cx, g.cy) + 0.5 * Math.hypot(w, h))
   }
+  // Angle offsets to try, nearest the natural direction first, sweeping the whole
+  // circle. A satellite link keeps its spoke (offset 0 is usually clear); a
+  // shared-centre link slides around the empty ring gap to a free angle.
+  const angleOffsets = [0]
+  for (let d = 6; d <= 180; d += 6) angleOffsets.push(d, -d)
+
   const placed: Box[] = []
   compound.links.forEach((e, i) => {
     const nat = linkBox(e, frames, `lnk${i}`)
     const R0 = Math.hypot(nat.cx, nat.cy) || R_OUTER * 0.46
-    const baseAng = Math.atan2(nat.cx, -nat.cy) // radians, 0 = up
+    const baseAngDeg = (Math.atan2(nat.cx, -nat.cy) * 180) / Math.PI
+    // The link's rotation relative to its radial angle stays fixed as it slides,
+    // so the arrow keeps pointing the right way at whatever angle it lands.
+    const rotOffset = nat.rot - baseAngDeg
+    const at = (R: number, angDeg: number): Box => {
+      const a = (angDeg * Math.PI) / 180
+      return { ...nat, cx: R * Math.sin(a), cy: -R * Math.cos(a), rot: angDeg + rotOffset }
+    }
     const clear = (cand: Box) =>
       !placed.some((p) => overlaps(p, cand)) && !glyphs.some((g) => overlaps(g, cand))
     let chosen: Box | null = null
-    search: for (const rMul of [1, 1.12, 0.88, 1.24, 1.36, 1.5, 1.66, 1.84, 2.05]) {
-      for (const dDeg of [0, 14, -14, 28, -28, 42, -42, 56, -56, 70, -70]) {
-        const ang = baseAng + (dDeg * Math.PI) / 180
-        const R = R0 * rMul
-        const cand: Box = { ...nat, cx: R * Math.sin(ang), cy: -R * Math.cos(ang) }
+    search: for (const rMul of [1, 1.1, 0.9, 1.22, 0.8, 1.34]) {
+      for (const dDeg of angleOffsets) {
+        const cand = at(R0 * rMul, baseAngDeg + dDeg)
         if (clear(cand)) {
           chosen = cand
           break search
@@ -804,17 +836,12 @@ function resolvedLinkBoxes(compound: CompoundSeal, frames: Frame[], glyphs: Box[
       }
     }
     if (!chosen) {
-      // Nothing near the natural spot was clear. Park it in the empty outer
-      // margin at an angle spread by link index, which is always free.
-      const R = clearR + 46
-      const ang = (i * 360) / Math.max(compound.links.length, 1) + 10
-      const a = (ang * Math.PI) / 180
-      let cand: Box = { ...nat, cx: R * Math.sin(a), cy: -R * Math.cos(a) }
-      // Nudge outward past any earlier margin-parked link on the same ray.
+      // Nothing anywhere near was clear (rare). Park it in the empty outer margin
+      // at an angle spread by link index, keeping it radial.
+      const angDeg = (i * 360) / Math.max(compound.links.length, 1) + 10
+      let cand = at(clearR + 46, angDeg)
       let guard = 0
-      while (!clear(cand) && guard++ < 8) {
-        cand = { ...cand, cx: cand.cx * 1.12, cy: cand.cy * 1.12 }
-      }
+      while (!clear(cand) && guard++ < 8) cand = at(clearR + 46 + guard * 40, angDeg)
       chosen = cand
     }
     placed.push(chosen)
