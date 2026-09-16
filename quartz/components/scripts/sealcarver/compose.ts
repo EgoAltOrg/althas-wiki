@@ -10,9 +10,16 @@ import { CompoundSeal, DaggerGroup, Seal, isSingle } from "./types"
 //
 // A single circle draws on a 1000x1000 viewBox exactly as before. A compound
 // lays several circles out on a larger square canvas: satellites sit beside the
-// core (each a full small circle), concentric and nested circles add ring-bands
-// that share the core's centre and Heart, and the linking sigils (Transfer,
-// Disperse, Fuse) are drawn between the circles they join.
+// core (each a full small circle), concentric and inside circles add disjoint
+// outward ring-bands that share the core's centre and Heart, and the linking
+// sigils (Transfer, Disperse, Fuse) are drawn between the circles they join.
+//
+// No two sigils ever overlap, for any seal the grammar allows (Sealcarver plan,
+// Task 14). Placement is closed-loop: each circle's glyphs are measured as boxes,
+// then a fit pass shrinks a crowded ring, keeps each auxiliary inside its own
+// band, and clears the core of its satellites, until nothing collides. The
+// no-overlap.test.ts property test fuzzes the whole bounded input space and
+// asserts it. compoundGlyphBoxes / firstOverlap expose the geometry it checks.
 
 const C = 500
 const R_OUTER = 482
@@ -56,6 +63,13 @@ interface Frame {
   satSpecs?: { angle: number; outerR: number }[]
   satDist?: number
   daggerBase?: number // extra rotation on this circle's daggers (deg), to clear the satellite/link angles
+  // When set (shared-centre auxiliaries), every glyph of this circle must stay
+  // within this radial band from its centre. The fit shrinks glyphs until they
+  // do, so an auxiliary can never poke out of its allocated band into the core or
+  // a sibling. The bands are allocated disjoint, so containment guarantees no
+  // cross-circle overlap among shared-centre circles.
+  clampInner?: number
+  clampOuter?: number
 }
 
 function baseFrame(cx = C, cy = C): Frame {
@@ -101,19 +115,6 @@ function place(
   )
 }
 
-// Place a sigil on a ring of the given absolute radius around a frame's centre.
-function onRing(
-  f: Frame,
-  key: string,
-  radius: number,
-  angleDeg: number,
-  target: number,
-  fit: "w" | "h" = "w",
-): string {
-  const a = (angleDeg * Math.PI) / 180
-  return place(key, f.cx + radius * Math.sin(a), f.cy - radius * Math.cos(a), target, angleDeg, fit)
-}
-
 function groupAngles(
   g: DaggerGroup,
   gi: number,
@@ -140,52 +141,259 @@ function groupAngles(
 // its own frame; G2 feedback caught the tangential drift).
 const ORIENT: Partial<Record<string, number>> = { expel: -90 }
 
-function heart(f: Frame, seal: Seal): string {
-  if (!f.drawHeart) return ""
-  const parts: string[] = []
+// A single placed sigil glyph: what to draw and where. Every glyph carries a
+// `unit` tag so the fit pass and the no-overlap test can tell apart glyphs that
+// are MEANT to share space (a dagger and its own modifier; the Heart's
+// element + wrap + mode) from glyphs that must never touch (two different
+// daggers, a dagger and a ring target). Ring circles and arcs are strokes, not
+// glyphs, and are drawn separately, so they are never part of an overlap check.
+export interface Box {
+  unit: string
+  key: string
+  cx: number
+  cy: number
+  target: number
+  rot: number
+  fit: "w" | "h"
+}
+
+function drawnWH(key: string, target: number, fit: "w" | "h"): { w: number; h: number } {
+  const a = SIGILS[key]
+  if (!a) throw new Error(`unknown sigil ${key}`)
+  const s = target / (fit === "w" ? a.w : a.h)
+  return { w: a.w * s, h: a.h * s }
+}
+
+function renderBox(b: Box): string {
+  return place(b.key, b.cx, b.cy, b.target, b.rot, b.fit)
+}
+
+// Oriented-bounding-box corners of a glyph, for the Separating Axis Theorem.
+function corners(b: Box): [number, number][] {
+  const { w, h } = drawnWH(b.key, b.target, b.fit)
+  const r = (b.rot * Math.PI) / 180
+  const c = Math.cos(r)
+  const s = Math.sin(r)
+  const hw = w / 2
+  const hh = h / 2
+  const local: [number, number][] = [
+    [-hw, -hh],
+    [hw, -hh],
+    [hw, hh],
+    [-hw, hh],
+  ]
+  return local.map(([x, y]) => [b.cx + x * c - y * s, b.cy + x * s + y * c])
+}
+
+// True when two glyph boxes overlap. A cheap bounding-circle test rejects the
+// common far-apart case; only near pairs pay for the full SAT on two quads. A
+// tiny epsilon lets glyphs touch exactly at an edge without counting as overlap.
+function overlaps(a: Box, b: Box): boolean {
+  const A = drawnWH(a.key, a.target, a.fit)
+  const B = drawnWH(b.key, b.target, b.fit)
+  const ra = 0.5 * Math.hypot(A.w, A.h)
+  const rb = 0.5 * Math.hypot(B.w, B.h)
+  if (Math.hypot(a.cx - b.cx, a.cy - b.cy) >= ra + rb) return false
+  const pa = corners(a)
+  const pb = corners(b)
+  const EPS = 0.5
+  for (const poly of [pa, pb]) {
+    for (let i = 0; i < 4; i++) {
+      const [x1, y1] = poly[i]
+      const [x2, y2] = poly[(i + 1) % 4]
+      const nx = -(y2 - y1)
+      const ny = x2 - x1
+      let amin = Infinity
+      let amax = -Infinity
+      let bmin = Infinity
+      let bmax = -Infinity
+      for (const [px, py] of pa) {
+        const d = px * nx + py * ny
+        if (d < amin) amin = d
+        if (d > amax) amax = d
+      }
+      for (const [px, py] of pb) {
+        const d = px * nx + py * ny
+        if (d < bmin) bmin = d
+        if (d > bmax) bmax = d
+      }
+      if (amax <= bmin + EPS || bmax <= amin + EPS) return false
+    }
+  }
+  return true
+}
+
+// Any two boxes from DIFFERENT units in one list overlap.
+function overlapWithin(boxes: Box[]): boolean {
+  for (let i = 0; i < boxes.length; i++)
+    for (let j = i + 1; j < boxes.length; j++)
+      if (boxes[i].unit !== boxes[j].unit && overlaps(boxes[i], boxes[j])) return true
+  return false
+}
+
+// Any box in a overlaps any box in b (different unit).
+function overlapBetween(a: Box[], b: Box[]): boolean {
+  for (const x of a) for (const y of b) if (x.unit !== y.unit && overlaps(x, y)) return true
+  return false
+}
+
+// Largest scale in (0.1, 1] for which pred holds. pred is monotone: shrinking a
+// glyph toward its fixed centre can only reduce overlap, so binary search finds
+// the roomiest size that still clears. Returns 1 immediately when nothing needs
+// shrinking, so a seal that already fits renders byte-for-byte as before.
+function fitLargest(pred: (s: number) => boolean): number {
+  if (pred(1)) return 1
+  let lo = 0.1
+  let hi = 1
+  for (let i = 0; i < 20; i++) {
+    const mid = (lo + hi) / 2
+    if (pred(mid)) lo = mid
+    else hi = mid
+  }
+  return lo
+}
+
+function heartBoxes(f: Frame, seal: Seal): Box[] {
+  if (!f.drawHeart) return []
+  const out: Box[] = []
   const { element, mode, wrap } = seal.heart
   const k = f.scale
-  if (wrap !== "none") parts.push(place(`modifiers/${wrap}`, f.cx, f.cy, WRAP_W * k))
+  const u = "heart"
+  if (wrap !== "none")
+    out.push({
+      unit: u,
+      key: `modifiers/${wrap}`,
+      cx: f.cx,
+      cy: f.cy,
+      target: WRAP_W * k,
+      rot: 0,
+      fit: "w",
+    })
   if (element === "caster-self") {
     // Blink Out's construction: the Caster target sigil serves as the Heart,
     // with the bare mode modifier beneath it (no pre-composed asset exists).
-    parts.push(place("targets/caster", f.cx, f.cy - 14 * k, CASTER_HEART_W * k))
-    parts.push(place(`modifiers/${mode}`, f.cx, f.cy + 56 * k, 80 * k))
+    out.push({
+      unit: u,
+      key: "targets/caster",
+      cx: f.cx,
+      cy: f.cy - 14 * k,
+      target: CASTER_HEART_W * k,
+      rot: 0,
+      fit: "w",
+    })
+    out.push({
+      unit: u,
+      key: `modifiers/${mode}`,
+      cx: f.cx,
+      cy: f.cy + 56 * k,
+      target: 80 * k,
+      rot: 0,
+      fit: "w",
+    })
   } else {
-    parts.push(place(`elements/${element}-${mode}`, f.cx, f.cy, HEART_W * k))
+    out.push({
+      unit: u,
+      key: `elements/${element}-${mode}`,
+      cx: f.cx,
+      cy: f.cy,
+      target: HEART_W * k,
+      rot: 0,
+      fit: "w",
+    })
   }
-  return parts.join("")
+  return out
 }
 
-function daggers(f: Frame, seal: Seal): string {
-  const parts: string[] = []
+// Each dagger's angle around its ring, plus which group/slot it came from. When
+// the artful placement puts two daggers on top of each other (e.g. two
+// directional groups both centred at 90 degrees), no amount of shrinking can
+// separate coincident centres, so fall back to an even spread around the whole
+// ring, which always leaves a gap. Each dagger keeps its own sigil and mod; only
+// the angles change.
+function daggerAngles(
+  f: Frame,
+  seal: Seal,
+): { gi: number; slot: number; ang: number; g: DaggerGroup }[] {
   const n = seal.daggers.length
-  const k = f.scale
   const hasDirectional = seal.daggers.some((g) => g.placement === "directional")
-  const daggerBase = f.daggerBase ?? 0
+  const base = f.daggerBase ?? 0
+  const units: { gi: number; slot: number; ang: number; g: DaggerGroup }[] = []
   seal.daggers.forEach((g, gi) => {
-    for (const ang0 of groupAngles(g, gi, n, hasDirectional)) {
-      const ang = ang0 + daggerBase
-      const orient = ORIENT[g.dagger] ?? 0
-      const a = (ang * Math.PI) / 180
-      const dx = f.cx + f.daggerR * Math.sin(a)
-      const dy = f.cy - f.daggerR * Math.cos(a)
-      parts.push(place(`functions/${g.dagger}`, dx, dy, DAGGER_W * k, ang + orient))
-      if (g.mod === "none") continue
-      if (g.mod === "senses") {
-        // Senses sits adjacent to its sigil (Cloaking Blast's construction).
-        parts.push(onRing(f, `modifiers/${g.mod}`, f.modR, ang, MOD_W * k))
-      } else {
-        // Delay WRAPS its sigil (p8: "Expel with Delay" draws the brackets
-        // around the arrow); Shape mods are set INTO the Shape sigil's slot.
-        // Either way the mod shares the sigil's center AND final rotation so
-        // the composite reads as one glyph.
-        const w = (g.mod === "delay" ? 205 : 40) * k
-        parts.push(place(`modifiers/${g.mod}`, dx, dy, w, ang + orient))
-      }
+    groupAngles(g, gi, n, hasDirectional).forEach((a, slot) =>
+      units.push({ gi, slot, ang: (((a + base) % 360) + 360) % 360, g }),
+    )
+  })
+  const sorted = [...units].sort((x, y) => x.ang - y.ang)
+  let minGap = 360
+  for (let i = 0; i < sorted.length; i++) {
+    const gap = (i + 1 < sorted.length ? sorted[i + 1].ang : sorted[0].ang + 360) - sorted[i].ang
+    if (gap < minGap) minGap = gap
+  }
+  if (units.length > 1 && minGap < 6) {
+    units.forEach((u, i) => (u.ang = (base + (i * 360) / units.length) % 360))
+  }
+  return units
+}
+
+// Every dagger glyph (and its modifier) at a given shrink scale. A dagger and
+// its mod share a unit id: they are one composite glyph and are allowed to touch.
+function daggerBoxes(f: Frame, seal: Seal, scale: number): Box[] {
+  const k = f.scale * scale
+  const out: Box[] = []
+  daggerAngles(f, seal).forEach(({ gi, slot, ang, g }) => {
+    // On a core carrying satellites, a dagger whose angle falls near a satellite
+    // would collide with that satellite's inner content and with the link sigil
+    // running along the same spoke. Drop it, the same way band glyphs under a
+    // satellite are dropped (the source draws the core's daggers clear of each
+    // satellite's attachment point). The sector is widened past the satellite's
+    // own arc by the dagger's angular half-width plus the satellite glyph's, so a
+    // dagger only NEAR (not just under) a satellite is cleared too.
+    if (daggerUnderSatellite(f, ang)) return
+    const u = `d${gi}_${slot}`
+    const orient = ORIENT[g.dagger] ?? 0
+    const a = (ang * Math.PI) / 180
+    const dx = f.cx + f.daggerR * Math.sin(a)
+    const dy = f.cy - f.daggerR * Math.cos(a)
+    out.push({
+      unit: u,
+      key: `functions/${g.dagger}`,
+      cx: dx,
+      cy: dy,
+      target: DAGGER_W * k,
+      rot: ang + orient,
+      fit: "w",
+    })
+    if (g.mod === "none") return
+    if (g.mod === "senses") {
+      // Senses sits adjacent to its sigil (Cloaking Blast's construction).
+      const ra = (ang * Math.PI) / 180
+      out.push({
+        unit: u,
+        key: "modifiers/senses",
+        cx: f.cx + f.modR * Math.sin(ra),
+        cy: f.cy - f.modR * Math.cos(ra),
+        target: MOD_W * k,
+        rot: ang,
+        fit: "w",
+      })
+    } else {
+      // Delay WRAPS its sigil (p8: "Expel with Delay" draws the brackets around
+      // the arrow); Shape mods are set INTO the Shape sigil's slot. Either way
+      // the mod shares the sigil's center AND final rotation so the composite
+      // reads as one glyph.
+      const w = (g.mod === "delay" ? 205 : 40) * k
+      out.push({
+        unit: u,
+        key: `modifiers/${g.mod}`,
+        cx: dx,
+        cy: dy,
+        target: w,
+        rot: ang + orient,
+        fit: "w",
+      })
     }
   })
-  return parts.join("")
+  return out
 }
 
 // Half-angle (deg, seen from the ring centre) that a satellite of radius ra,
@@ -240,53 +448,129 @@ function ringCircle(f: Frame, R: number, stroke: string): string {
   return `<path d="${paths.join(" ")}" fill="none" ${stroke}/>`
 }
 
-// True when a band glyph at this angle would sit under a satellite.
-function underSatellite(f: Frame, angleDeg: number, R: number): boolean {
+// True when a core dagger at this angle sits near enough a satellite to collide
+// with its inner content or its link spoke. Wider than underSatellite: it adds
+// the dagger's angular half-width and a margin for the satellite's inner glyphs.
+function daggerUnderSatellite(f: Frame, angleDeg: number): boolean {
   if (!f.satSpecs || !f.satDist) return false
   const a = ((angleDeg % 360) + 360) % 360
+  const extra = (Math.atan2(0.5 * DAGGER_W * f.scale, f.daggerR) * 180) / Math.PI + 12
   return f.satSpecs.some(({ angle: g, outerR }) => {
-    const h = satGapHalf(R, f.satDist!, outerR) + 4
+    const h = satGapHalf(f.daggerR, f.satDist!, outerR) + extra
     const d = Math.abs(((a - g + 540) % 360) - 180)
     return d < h
   })
 }
 
-function ring(f: Frame, seal: Seal): string {
+// True when a band glyph at this angle sits near enough a satellite to collide
+// with it. The +14 margin past the satellite's own arc covers the physical
+// half-widths of both the core band glyph and the satellite's own inner glyphs,
+// so a glyph merely NEAR a satellite is dropped too, not only one dead under it.
+function underSatellite(f: Frame, angleDeg: number, R: number): boolean {
+  if (!f.satSpecs || !f.satDist) return false
+  const a = ((angleDeg % 360) + 360) % 360
+  return f.satSpecs.some(({ angle: g, outerR }) => {
+    const h = satGapHalf(R, f.satDist!, outerR) + 14
+    const d = Math.abs(((a - g + 540) % 360) - 180)
+    return d < h
+  })
+}
+
+// The ring circles/arcs only (strokes, drawn under the glyphs, never part of an
+// overlap check). The band glyphs that sit on the ring are produced by bandBoxes.
+function ringStrokes(f: Frame, seal: Seal): string {
   const stroke = `style="fill:none;stroke:currentColor;stroke-width:${f.stroke}px;"`
-  if (seal.ring.plain) {
-    return ringCircle(f, f.ringPlain, stroke)
+  if (seal.ring.plain) return ringCircle(f, f.ringPlain, stroke)
+  return ringCircle(f, f.ringOuter, stroke) + ringCircle(f, f.ringInner, stroke)
+}
+
+// The target/qualifier/trigger glyphs sitting on the ring band. Each is its own
+// unit: two band glyphs must never touch. Glyphs that would fall under a
+// satellite are dropped (the satellite occupies that arc).
+function bandBoxes(f: Frame, seal: Seal, scale: number): Box[] {
+  if (seal.ring.plain) return []
+  const k = f.scale * scale
+  const out: Box[] = []
+  let bi = 0
+  const put = (key: string, ang: number, target: number, fit: "w" | "h") => {
+    if (underSatellite(f, ang, f.bandR)) return
+    const a = (ang * Math.PI) / 180
+    out.push({
+      unit: `b${bi++}`,
+      key,
+      cx: f.cx + f.bandR * Math.sin(a),
+      cy: f.cy - f.bandR * Math.cos(a),
+      target,
+      rot: ang,
+      fit,
+    })
   }
-  const k = f.scale
-  const parts = [ringCircle(f, f.ringOuter, stroke), ringCircle(f, f.ringInner, stroke)]
   const targets = seal.ring.targets
   targets.forEach((t, i) => {
     const step = 360 / targets.length
-    for (const base of [0, 180]) {
-      // each target appears twice for symmetry (author's rings repeat strips)
-      const ang = base + i * (step / 2)
-      if (underSatellite(f, ang, f.bandR)) continue
-      parts.push(onRing(f, `targets/${t}`, f.bandR, ang, TARGET_W * k))
-    }
+    // each target appears twice for symmetry (author's rings repeat strips)
+    for (const base of [0, 180]) put(`targets/${t}`, base + i * (step / 2), TARGET_W * k, "w")
   })
   seal.ring.qualifiers.forEach((q, i) => {
-    for (const kk of [0, 1, 2, 3]) {
-      const ang = 45 + i * 22.5 + kk * 90
-      if (underSatellite(f, ang, f.bandR)) continue
-      parts.push(onRing(f, `elements/${q}`, f.bandR, ang, QUAL_H * k, "h"))
-    }
+    for (const kk of [0, 1, 2, 3]) put(`elements/${q}`, 45 + i * 22.5 + kk * 90, QUAL_H * k, "h")
   })
   if (seal.ring.trigger !== "none") {
-    for (const kk of [0, 1, 2, 3]) {
-      const ang = 22.5 + kk * 90
-      if (underSatellite(f, ang, f.bandR)) continue
-      parts.push(onRing(f, `triggers/${seal.ring.trigger}`, f.bandR, ang, TRIGGER_W * k))
-    }
+    for (const kk of [0, 1, 2, 3])
+      put(`triggers/${seal.ring.trigger}`, 22.5 + kk * 90, TRIGGER_W * k, "w")
   }
-  return parts.join("")
+  return out
+}
+
+// The closed-loop fit: shrink the crowded glyph rings just enough that nothing
+// overlaps. Daggers shrink first (theirs is the only ring whose count the user
+// can push, up to 24) so they clear each other, the Heart, and the band; then
+// the band shrinks to clear itself, the Heart, and the fitted daggers. A ring
+// that already fits keeps scale 1, so an uncrowded seal is unchanged. Because
+// the grammar is bounded (isValidSeal), this covers every seal a user can build.
+// Every glyph corner stays within the frame's radial band (only enforced when a
+// band is set, i.e. for shared-centre auxiliaries). Keeps a wide glyph (a delay
+// bracket especially) from poking out of its band into a neighbour.
+function withinBand(boxes: Box[], f: Frame): boolean {
+  if (f.clampInner == null || f.clampOuter == null) return true
+  for (const b of boxes)
+    for (const [x, y] of corners(b)) {
+      const r = Math.hypot(x - f.cx, y - f.cy)
+      if (r < f.clampInner || r > f.clampOuter) return false
+    }
+  return true
+}
+
+// obstacles are glyph boxes from OTHER circles that this circle's glyphs must
+// also clear (the core passes its satellites' boxes here, so a core dagger, and
+// especially its wide delay bracket, shrinks until it no longer reaches a
+// satellite). Empty for a standalone or single circle, so nothing changes there.
+function circleBoxes(f: Frame, seal: Seal, obstacles: Box[] = []): Box[] {
+  const heartB = heartBoxes(f, seal)
+  const band1 = bandBoxes(f, seal, 1)
+  const dScale = fitLargest((s) => {
+    const d = daggerBoxes(f, seal, s)
+    return (
+      !overlapWithin(d) &&
+      !overlapBetween(d, [...heartB, ...band1]) &&
+      !overlapBetween(d, obstacles) &&
+      withinBand(d, f)
+    )
+  })
+  const dB = daggerBoxes(f, seal, dScale)
+  const bScale = fitLargest((s) => {
+    const b = bandBoxes(f, seal, s)
+    return (
+      !overlapWithin(b) &&
+      !overlapBetween(b, [...heartB, ...dB]) &&
+      !overlapBetween(b, obstacles) &&
+      withinBand(b, f)
+    )
+  })
+  return [...bandBoxes(f, seal, bScale), ...heartB, ...dB]
 }
 
 function circle(f: Frame, seal: Seal): string {
-  return ring(f, seal) + heart(f, seal) + daggers(f, seal)
+  return ringStrokes(f, seal) + circleBoxes(f, seal).map(renderBox).join("")
 }
 
 export function compose(seal: Seal): string {
@@ -322,56 +606,23 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
   const frames: Frame[] = new Array(compound.circles.length)
   frames[0] = baseFrame(0, 0) // core
 
-  let concentric = 0
-  let nested = 0
   const satellites: number[] = []
   compound.circles.forEach((node, i) => {
     if (i === 0) return
     if (node.placement === "beside") satellites.push(i)
   })
 
-  compound.circles.forEach((node, i) => {
-    if (i === 0) return
-    if (node.placement === "concentric") {
-      const level = ++concentric
-      const ringOuter = R_OUTER + level * CONCENTRIC_BAND
-      frames[i] = {
-        cx: 0,
-        cy: 0,
-        ringOuter,
-        ringInner: ringOuter - 58,
-        ringPlain: ringOuter - 15,
-        daggerR: ringOuter - 96, // daggers sit in the new outer band
-        modR: ringOuter - 40,
-        bandR: ringOuter - 28,
-        scale: 0.72,
-        stroke: 5,
-        drawHeart: false,
-      }
-    } else if (node.placement === "inside") {
-      const level = ++nested
-      const ringOuter = Math.max(120, 250 - (level - 1) * 70) // small ring(s) within the core
-      frames[i] = {
-        cx: 0,
-        cy: 0,
-        ringOuter,
-        ringInner: ringOuter - 40,
-        ringPlain: ringOuter - 12,
-        daggerR: Math.max(64, ringOuter - 64),
-        modR: ringOuter - 22,
-        bandR: ringOuter - 18,
-        scale: 0.42,
-        stroke: 4,
-        drawHeart: false,
-      }
-    }
-  })
-
-  // Satellites sit with their centre exactly ON the core ring, spaced evenly
-  // from the top. The core ring is drawn as arcs that stop at each satellite
-  // (see ringCircle), so a satellite reads as sitting on the rim with no line
-  // crossing it, exactly as the source draws Telekinesis and Floating Eye.
+  // Satellites first, so the outward bands below know how far the satellites
+  // reach and can start clear of them. Satellites sit with their centre exactly
+  // ON the core ring, spaced evenly from the top. The core ring is drawn as arcs
+  // that stop at each satellite (see ringCircle), so a satellite reads as sitting
+  // on the rim with no line crossing it, exactly as the source draws Telekinesis
+  // and Floating Eye.
   const satDist = R_OUTER
+  // A satellite's real footprint is larger than its ring: its band target glyphs
+  // sit at bandR and stick out past the ring by roughly half a target width, so
+  // the outward bands must start beyond THIS radius, not just the ring radius.
+  const satRadius = SAT_SCALE * (R_OUTER + TARGET_W * 0.5) + 12
   const satSpecs: { angle: number; outerR: number }[] = []
   satellites.forEach((i, slot) => {
     const angDeg = slot * (360 / satellites.length)
@@ -401,6 +652,53 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
     frames[0].daggerBase = 45
   }
 
+  // Concentric and inside auxiliaries both share the core's centre and Heart, so
+  // each must occupy its OWN disjoint annular band: two circles centred on the
+  // same point cannot avoid each other any other way. The core already fills its
+  // disk (Heart at the centre, daggers at 300, band at 453), so there is no free
+  // interior annulus for a full circle; every shared-centre aux is therefore an
+  // outward band, allocated by a single radius cursor that walks outward. The
+  // cursor starts beyond the satellites' outer reach so a band never lands in the
+  // satellite zone. Each band contains all of that circle's content (ring,
+  // daggers, band glyphs), so no shared-centre circle can ever overlap the core,
+  // a satellite, or another aux. Inside bands are drawn tighter than concentric
+  // ones to still read as subordinate. (Faithful "nested inside the core"
+  // rendering is impossible for a core that has daggers; folding inside into an
+  // outward band is what makes the no-overlap guarantee hold for every input.)
+  // How far the core's own glyphs actually reach (its band glyphs overhang the
+  // ring), so the first band starts beyond them, not just past the ring radius.
+  let coreReach = R_OUTER
+  for (const b of circleBoxes(frames[0], compound.circles[0].seal)) {
+    const { w, h } = drawnWH(b.key, b.target, b.fit)
+    coreReach = Math.max(coreReach, Math.hypot(b.cx, b.cy) + 0.5 * Math.hypot(w, h))
+  }
+  let outer = Math.max(coreReach, satSpecs.length ? satDist + satRadius : 0)
+  compound.circles.forEach((node, i) => {
+    if (i === 0) return
+    if (node.placement !== "concentric" && node.placement !== "inside") return
+    const width = node.placement === "inside" ? 128 : CONCENTRIC_BAND
+    const gap = 22
+    outer += gap + width
+    const ringOuter = outer
+    frames[i] = {
+      cx: 0,
+      cy: 0,
+      ringOuter,
+      ringInner: ringOuter - width * 0.4,
+      ringPlain: ringOuter - width * 0.1,
+      daggerR: ringOuter - width * 0.55, // daggers sit mid-band, contained
+      modR: ringOuter - width * 0.28,
+      bandR: ringOuter - width * 0.2,
+      scale: node.placement === "inside" ? 0.5 : 0.72,
+      stroke: node.placement === "inside" ? 4 : 5,
+      drawHeart: false,
+      // Every glyph of this circle is kept inside its own band by the fit; the
+      // bands are disjoint, so no shared-centre circle can reach into another.
+      clampInner: ringOuter - width + 6,
+      clampOuter: ringOuter - 4,
+    }
+  })
+
   let minX = Infinity
   let minY = Infinity
   let maxX = -Infinity
@@ -426,7 +724,7 @@ function layout(compound: CompoundSeal): { frames: Frame[]; view: string } {
 // the target circle (inward when the target is the core, outward when it is the
 // satellite), the way the source arrows run between the core and each auxiliary.
 // For a shared centre (concentric / nested) it sits in the band between rings.
-function linkSigil(edge: CompoundSeal["links"][number], frames: Frame[]): string {
+function linkBox(edge: CompoundSeal["links"][number], frames: Frame[], u: string): Box {
   const f = frames[edge.from]
   const t = frames[edge.to]
   const key = `functions/${edge.type}`
@@ -435,7 +733,16 @@ function linkSigil(edge: CompoundSeal["links"][number], frames: Frame[]): string
   const dist = Math.hypot(dx, dy)
   if (dist < 5) {
     const rr = (f.ringOuter + t.ringOuter) / 2
-    return onRing(f, key, rr, 35, 150)
+    const a = (35 * Math.PI) / 180
+    return {
+      unit: u,
+      key,
+      cx: f.cx + rr * Math.sin(a),
+      cy: f.cy - rr * Math.cos(a),
+      target: 150,
+      rot: 35,
+      fit: "w",
+    }
   }
   // Satellite link: one endpoint is the core (it carries satAngles), the other a
   // satellite on the rim. Work from the core centre out along the satellite's
@@ -453,15 +760,123 @@ function linkSigil(edge: CompoundSeal["links"][number], frames: Frame[]): string
   // The link sigils are authored pointing right (like expel), so a radial
   // outward arrow needs angle - 90; inward is the opposite.
   const pointOut = edge.to !== 0 // target is the satellite -> point outward
-  return place(key, px, py, 92, angleDeg + (pointOut ? -90 : 90))
+  return {
+    unit: u,
+    key,
+    cx: px,
+    cy: py,
+    target: 92,
+    rot: angleDeg + (pointOut ? -90 : 90),
+    fit: "w",
+  }
+}
+
+// Place the link sigils so no link overlaps a glyph or another link. Each link
+// starts at its natural spot (linkBox) and, if that is blocked, tries a small
+// fan of nearby radii and angles until it finds a clear spot. The canvas is
+// large and links are few (at most MAX_CIRCLES - 1), so a clear spot always
+// exists. Only the position moves; the arrow keeps its authored rotation.
+function resolvedLinkBoxes(compound: CompoundSeal, frames: Frame[], glyphs: Box[]): Box[] {
+  // Radius that clears every glyph: past this, the outer margin is empty, so a
+  // link parked there is guaranteed not to touch any glyph.
+  let clearR = 0
+  for (const g of glyphs) {
+    const { w, h } = drawnWH(g.key, g.target, g.fit)
+    clearR = Math.max(clearR, Math.hypot(g.cx, g.cy) + 0.5 * Math.hypot(w, h))
+  }
+  const placed: Box[] = []
+  compound.links.forEach((e, i) => {
+    const nat = linkBox(e, frames, `lnk${i}`)
+    const R0 = Math.hypot(nat.cx, nat.cy) || R_OUTER * 0.46
+    const baseAng = Math.atan2(nat.cx, -nat.cy) // radians, 0 = up
+    const clear = (cand: Box) =>
+      !placed.some((p) => overlaps(p, cand)) && !glyphs.some((g) => overlaps(g, cand))
+    let chosen: Box | null = null
+    search: for (const rMul of [1, 1.12, 0.88, 1.24, 1.36, 1.5, 1.66, 1.84, 2.05]) {
+      for (const dDeg of [0, 14, -14, 28, -28, 42, -42, 56, -56, 70, -70]) {
+        const ang = baseAng + (dDeg * Math.PI) / 180
+        const R = R0 * rMul
+        const cand: Box = { ...nat, cx: R * Math.sin(ang), cy: -R * Math.cos(ang) }
+        if (clear(cand)) {
+          chosen = cand
+          break search
+        }
+      }
+    }
+    if (!chosen) {
+      // Nothing near the natural spot was clear. Park it in the empty outer
+      // margin at an angle spread by link index, which is always free.
+      const R = clearR + 46
+      const ang = (i * 360) / Math.max(compound.links.length, 1) + 10
+      const a = (ang * Math.PI) / 180
+      let cand: Box = { ...nat, cx: R * Math.sin(a), cy: -R * Math.cos(a) }
+      // Nudge outward past any earlier margin-parked link on the same ray.
+      let guard = 0
+      while (!clear(cand) && guard++ < 8) {
+        cand = { ...cand, cx: cand.cx * 1.12, cy: cand.cy * 1.12 }
+      }
+      chosen = cand
+    }
+    placed.push(chosen)
+  })
+  return placed
+}
+
+// Frames, viewBox, per-circle glyph boxes (unit tag unique per circle) and the
+// resolved link boxes for a whole compound. The single source of truth: both the
+// renderer and the no-overlap test build from this, so the test checks the real
+// output, not a parallel model.
+function compoundParts(compound: CompoundSeal): {
+  frames: Frame[]
+  view: string
+  circleB: Box[]
+  linkB: Box[]
+} {
+  const { frames, view } = layout(compound)
+  // Auxiliaries first; satellites (beside) become obstacles the core must clear.
+  const auxB: Box[] = []
+  const besideB: Box[] = []
+  compound.circles.forEach((node, i) => {
+    if (i === 0) return
+    const bs = circleBoxes(frames[i], node.seal).map((b) => ({ ...b, unit: `c${i}:${b.unit}` }))
+    auxB.push(...bs)
+    if (node.placement === "beside") besideB.push(...bs)
+  })
+  const coreB = circleBoxes(frames[0], compound.circles[0].seal, besideB).map((b) => ({
+    ...b,
+    unit: `c0:${b.unit}`,
+  }))
+  const circleB = [...coreB, ...auxB]
+  const linkB = resolvedLinkBoxes(compound, frames, circleB)
+  return { frames, view, circleB, linkB }
 }
 
 export function composeCompound(compound: CompoundSeal): string {
   if (isSingle(compound)) return compose(compound.circles[0].seal)
-  const { frames, view } = layout(compound)
-  const circles = compound.circles.map((node, i) => circle(frames[i], node.seal)).join("")
-  const links = compound.links.map((e) => linkSigil(e, frames)).join("")
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${view}">` + circles + links + `</svg>`
+  const { frames, view, circleB, linkB } = compoundParts(compound)
+  const strokes = frames.map((f, i) => ringStrokes(f, compound.circles[i].seal)).join("")
+  const glyphs = [...circleB, ...linkB].map(renderBox).join("")
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${view}">` + strokes + glyphs + `</svg>`
+}
+
+// Every glyph box for a whole compound (single or multi-circle), in one shared
+// coordinate space. Ring circles/arcs are strokes, not glyphs, so they are absent.
+export function compoundGlyphBoxes(compound: CompoundSeal): Box[] {
+  if (isSingle(compound)) return circleBoxes(baseFrame(), compound.circles[0].seal)
+  const { circleB, linkB } = compoundParts(compound)
+  return [...circleB, ...linkB]
+}
+
+// The first pair of different-unit glyphs that overlap, or null when none do.
+// The no-overlap invariant (Sealcarver plan, Task 14) holds exactly when this is
+// null for every seal a user can build.
+export function firstOverlap(compound: CompoundSeal): { a: Box; b: Box } | null {
+  const boxes = compoundGlyphBoxes(compound)
+  for (let i = 0; i < boxes.length; i++)
+    for (let j = i + 1; j < boxes.length; j++)
+      if (boxes[i].unit !== boxes[j].unit && overlaps(boxes[i], boxes[j]))
+        return { a: boxes[i], b: boxes[j] }
+  return null
 }
 
 export function composeCompoundForSave(
