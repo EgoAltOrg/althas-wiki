@@ -1,5 +1,7 @@
 ---
 title: Alys
+aliases:
+  - npcs-minor/drinmery/alys
 kind: person
 role: "Townswoman of [[drinmery|Drinmery]]"
 ancestry: human

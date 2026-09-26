@@ -1,5 +1,7 @@
 ---
 title: Convent of Saint Trefan
+aliases:
+  - locations/jesthaen/convent-of-saint-trefan
 kind: location
 category: Convent
 nation: "[[jesthaen|Jesthaen]]"

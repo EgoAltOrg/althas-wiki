@@ -1,5 +1,7 @@
 ---
 title: Drinmery
+aliases:
+  - locations/jesthaen/drinmery
 kind: location
 category: City
 nation: "[[jesthaen|Jesthaen]]"

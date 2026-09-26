@@ -1,5 +1,7 @@
 ---
 title: Hollis Brand
+aliases:
+  - npcs-minor/drinmery/hollis-brand
 kind: person
 role: "Keeper of the Wakeful Lamp tavern"
 pronouns: she/her

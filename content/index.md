@@ -187,7 +187,7 @@ All communities are available across nations, but some have unique aspects withi
 
 ## NPCs (Minor)
 
-### Drinmery
+### Drinmery Arc
 
 - [[aldous-pike|Aldous Pike]]: gravekeeper of the convent churchyard
 - [[alys|Alys]]: a grieving mother

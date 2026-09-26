@@ -235,8 +235,8 @@ PAGE_MAP = {
     # world-concept pages; the Wickling faith sits with the other beings.
     "caio.md": "setting/caio.md",
     "the-faunus.md": "beings/the-faunus.md",
-    "convent-of-saint-trefan.md": "locations/jesthaen/convent-of-saint-trefan.md",
-    "drinmery.md": "locations/jesthaen/drinmery.md",
+    "convent-of-saint-trefan.md": "locations/jesthaen/drinmery/convent-of-saint-trefan.md",
+    "drinmery.md": "locations/jesthaen/drinmery/index.md",
     "jesthaen.md": "locations/jesthaen/index.md",
     "polaris.md": "locations/polaris/index.md",
     "voldaen.md": "locations/voldaen/index.md",
@@ -324,14 +324,14 @@ PAGE_MAP = {
     # NPCs (Minor), grouped by place: stub pages for the townsfolk the party
     # has met. The Explorer labels npcs-minor/ and its place subfolders in
     # quartz.layout.ts.
-    "aldous-pike.md": "npcs-minor/drinmery/aldous-pike.md",
-    "alys.md": "npcs-minor/drinmery/alys.md",
-    "edric-colvin.md": "npcs-minor/drinmery/edric-colvin.md",
-    "hollis-brand.md": "npcs-minor/drinmery/hollis-brand.md",
-    "inkfeather.md": "npcs-minor/drinmery/inkfeather.md",
-    "maud-tallow.md": "npcs-minor/drinmery/maud-tallow.md",
-    "pell.md": "npcs-minor/drinmery/pell.md",
-    "wick.md": "npcs-minor/drinmery/wick.md",
+    "aldous-pike.md": "npcs-minor/drinmery-arc/aldous-pike.md",
+    "alys.md": "npcs-minor/drinmery-arc/alys.md",
+    "edric-colvin.md": "npcs-minor/drinmery-arc/edric-colvin.md",
+    "hollis-brand.md": "npcs-minor/drinmery-arc/hollis-brand.md",
+    "inkfeather.md": "npcs-minor/drinmery-arc/inkfeather.md",
+    "maud-tallow.md": "npcs-minor/drinmery-arc/maud-tallow.md",
+    "pell.md": "npcs-minor/drinmery-arc/pell.md",
+    "wick.md": "npcs-minor/drinmery-arc/wick.md",
     "index.md": "index.md",
 }
 
@@ -351,6 +351,20 @@ PAGE_MAP = {
 # link ambiguous under the "shortest" strategy and break site-wide. See the
 # comment in quartz/plugins/transformers/frontmatter.ts.
 RENAMES = {
+    # 2026-09-26 Drinmery reorg: the minor-NPC folder becomes "Drinmery Arc",
+    # and Drinmery becomes a Jesthaen folder whose index.md is the town page,
+    # with the convent inside it. Old URLs keep redirecting; carry_forward_source
+    # pulls each page's image:/marker: across.
+    "npcs-minor/drinmery-arc/aldous-pike.md": ["npcs-minor/drinmery/aldous-pike"],
+    "npcs-minor/drinmery-arc/alys.md": ["npcs-minor/drinmery/alys"],
+    "npcs-minor/drinmery-arc/edric-colvin.md": ["npcs-minor/drinmery/edric-colvin"],
+    "npcs-minor/drinmery-arc/hollis-brand.md": ["npcs-minor/drinmery/hollis-brand"],
+    "npcs-minor/drinmery-arc/inkfeather.md": ["npcs-minor/drinmery/inkfeather"],
+    "npcs-minor/drinmery-arc/maud-tallow.md": ["npcs-minor/drinmery/maud-tallow"],
+    "npcs-minor/drinmery-arc/pell.md": ["npcs-minor/drinmery/pell"],
+    "npcs-minor/drinmery-arc/wick.md": ["npcs-minor/drinmery/wick"],
+    "locations/jesthaen/drinmery/index.md": ["locations/jesthaen/drinmery"],
+    "locations/jesthaen/drinmery/convent-of-saint-trefan.md": ["locations/jesthaen/convent-of-saint-trefan"],
     # 2026-09-26 Novak unmasked after session one: the name-free PC slug moves
     # to his real name. Keep the old URL redirecting, and let
     # carry_forward_source pull the old page's image:/marker: across.

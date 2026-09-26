@@ -1,5 +1,7 @@
 ---
 title: Inkfeather
+aliases:
+  - npcs-minor/drinmery/inkfeather
 kind: person
 role: "Librarian and healer of the [[convent-of-saint-trefan|Convent of Saint Trefan]]"
 ancestry: aetheris

@@ -1,5 +1,7 @@
 ---
 title: Maud Tallow
+aliases:
+  - npcs-minor/drinmery/maud-tallow
 kind: person
 role: "Candle-seller in the [[drinmery|Drinmery]] market"
 pronouns: she/her

@@ -1,5 +1,7 @@
 ---
 title: Wick
+aliases:
+  - npcs-minor/drinmery/wick
 kind: person
 role: "Bandit"
 pronouns: he/him

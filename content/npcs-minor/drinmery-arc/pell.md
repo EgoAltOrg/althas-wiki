@@ -1,5 +1,7 @@
 ---
 title: Pell
+aliases:
+  - npcs-minor/drinmery/pell
 kind: person
 role: "Guardsman of [[drinmery|Drinmery]]"
 pronouns: he/him

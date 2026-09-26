@@ -1,5 +1,7 @@
 ---
 title: Edric Colvin
+aliases:
+  - npcs-minor/drinmery/edric-colvin
 kind: person
 role: "Steward to [[guilmore-fleming|Count Fleming]]"
 pronouns: he/him

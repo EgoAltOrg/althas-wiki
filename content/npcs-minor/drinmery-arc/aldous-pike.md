@@ -1,5 +1,7 @@
 ---
 title: Aldous Pike
+aliases:
+  - npcs-minor/drinmery/aldous-pike
 kind: person
 role: "Gravekeeper of the [[convent-of-saint-trefan|Convent of Saint Trefan]]"
 pronouns: he/him
