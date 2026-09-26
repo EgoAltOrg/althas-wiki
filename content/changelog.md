@@ -6,46 +6,27 @@ What's new on the wiki, most recent first.
 
 ## 2026-09-26
 
-The campaign has begun. Everything below covers the first session in Drinmery, plus the smaller updates that went out alongside it.
-
-### The first day in Drinmery
-
-- **The Chronicle's first entry.** The [[chronicle|Chronicle]] opens on Day 12 of Adventus, 366 VR: Uriel and Malak reach the Convent of Saint Trefan, Uriel takes Rastaban into his custody, Novak, Zalmir and Leonard enter the town, bandits raid the market and steal Cornelia Azimuth's ring, Immanuel Greene arrives after the fight, and that night the party opens the sealed tomb beneath the convent. The Chronicle's calendar now opens on the current day.
-- **The Chronicle uses the month names.** Dates now read by the calendar's own months, Vigilia through Vesper ("Day 12 of Adventus"), instead of "the Ninth Month".
-- **[[drinmery|Drinmery]].** Its page gains a History (why the town fears outsiders), its Notable Places (the convent, the market, the Wakeful Lamp tavern, the checkpoints), its Inhabitants, and its own town map. The main map now has a pin for it.
-- **The [[convent-of-saint-trefan|Convent of Saint Trefan]].** A new Notable Places section records the tomb of Saint Trefan behind the cellar wall, the seal that guards it, what the party found inside, and the Lorekeeper left behind. The page now names its one priest, its librarian and its gravekeeper. The convent no longer mentions resident monks: its only residents are its priest and its flock of aetheris. Its info card now lists its nation and faith.
-
-### New pages
-
-- **Four figures of Drinmery:** [[gideon|Gideon]], the Inquisitor resting a wounded hand at the convent; [[tobias-wren|Father Tobias Wren]], the convent's priest; [[immanuel-greene|Immanuel Greene]], whose hired guard keeps the town's peace; and [[guilmore-fleming|Count Guilmore Fleming]], who holds the town.
-- **A new section, NPCs (Minor).** Short pages for the townsfolk the party has met, filed under Drinmery: [[aldous-pike|Aldous Pike]] the gravekeeper, [[alys|Alys]], [[edric-colvin|Edric Colvin]] the Count's steward, [[hollis-brand|Hollis Brand]] of the Wakeful Lamp, [[inkfeather|Inkfeather]] of the convent library, [[maud-tallow|Maud Tallow]] the candle-seller, [[pell|Pell]] of the town guard, and the bandit [[wick|Wick]].
-- **[[novak-azimuth|Novak Azimuth]], unmasked.** The party's masked fourth companion has a name: the young head of [[house-azimuth|House Azimuth]]. His page moved to his own name; the old link still works.
-- **[[leonard-moore|Leonard Moore]]**, Novak's counsellor, and **[[malak|Malak]]**, the courier from Armada, get pages.
-- **[[parashiel|Parashiel]]**, the Miracle of House Azimuth, has its own page, with the first images of it and of one of its familiar spirits. The [[miracles|Miracles]] and [[divine-relics|Divine Relics]] pages now link to it.
-
-### Changes to existing pages
-
-- **[[lorkhan-olnir|Lorkhan Olnir]].** New section on his time in Drinmery during the war, and the desecration of Saint Trefan's tomb laid at his door. His info card now lists his ancestry and nation.
+- **The first day in Drinmery.** The [[chronicle|Chronicle]] opens on Day 12 of Adventus, 366 VR: Uriel and Malak reach the Convent of Saint Trefan, Uriel takes Rastaban into his custody, Novak, Zalmir and Leonard enter the town, bandits raid the market and steal Cornelia Azimuth's ring, General Greene arrives after the fight, and that night the party opens the sealed tomb beneath the convent. The Chronicle's calendar now opens on the current day, and its dates use the calendar's own month names, Vigilia through Vesper, instead of "the Ninth Month".
+- **[[drinmery|Drinmery]].** Its page gains a History (why the town fears outsiders), its Notable Places (the convent, the market, the Wakeful Lamp tavern, the checkpoints) and its Inhabitants, and its info card now shows the town map.
+- **The [[convent-of-saint-trefan|Convent of Saint Trefan]].** A new Notable Places section records the tomb of Saint Trefan behind the cellar wall, the seal that guards it, what the party found inside, and the Lorekeeper left behind, whose image now heads the page. The page names its one priest, its librarian and its gravekeeper, no longer mentions resident monks, and its info card lists its nation and faith.
+- **Four figures of Drinmery.** New pages for [[gideon|Gideon]], the Inquisitor resting a wounded hand at the convent; [[tobias-wren|Father Tobias Wren]], the convent's priest; [[immanuel-greene|Lord Greene]], called General by his men, whose hired guard keeps the town's peace; and [[guilmore-fleming|Count Fleming]], who holds the town.
+- **A new section, NPCs (Minor).** Short pages, with portraits, for the townsfolk the party has met, filed under Drinmery: [[aldous-pike|Aldous Pike]] the gravekeeper, [[alys|Alys]], [[edric-colvin|Edric Colvin]] the Count's steward, [[hollis-brand|Hollis Brand]] of the Wakeful Lamp, [[inkfeather|Inkfeather]] of the convent library, [[maud-tallow|Maud Tallow]] the candle-seller, [[pell|Pell]] of the town guard, and the bandit [[wick|Wick]].
+- **[[novak-azimuth|Novak Azimuth]], unmasked.** The party's masked fourth companion has a name: the young head of [[house-azimuth|House Azimuth]]. His page moved to his own name; the old link still works. The House Azimuth family pages ([[cornelia-azimuth|Cornelia]], [[victerius-azimuth|Victerius]], [[agathia-azimuth|Agathia]], [[hestia-azimuth|Hestia]], [[zhenya-azimuth|Zhenya]] and the House itself) now link to him.
+- **[[leonard-moore|Leonard Moore]] and [[malak|Malak]].** New pages for Novak's counsellor and for the courier from Armada.
+- **[[simiah|The Simiah]].** A new ancestry page, with a portrait: a long-limbed, ape- and monkey-featured people of the Witherwild, carried to Althas as slave-sailors and freed, now mostly Caio in Armada.
+- **[[parashiel|Parashiel]].** The Miracle of House Azimuth has its own page, with its image on the info card and one of its familiar spirits in the text. The [[miracles|Miracles]] and [[divine-relics|Divine Relics]] pages now link to it.
+- **[[lorkhan-olnir|Lorkhan Olnir]].** A new section on his time in Drinmery during the war, and the desecration of Saint Trefan's tomb laid at his door. His info card now lists his ancestry and nation.
 - **[[house-olnir|House Olnir]] and [[miracles|Miracles]].** The Famesfeast is no longer spoken of in whispers: both pages now say plainly that it is a cannibal rite, and how Fames is fed.
 - **[[uriel-kenan|Uriel Kenan]]** gains an Abilities section: he bears a mysterious Miracle of unknown origin.
 - **[[zalmir-aldarson|Zalmir Aldarson]]** is now described as a man in his prime rather than a young man, and his page lists his community and class.
-- **House Azimuth family pages** ([[cornelia-azimuth|Cornelia]], [[victerius-azimuth|Victerius]], [[agathia-azimuth|Agathia]], [[hestia-azimuth|Hestia]], [[zhenya-azimuth|Zhenya]], [[house-azimuth|House Azimuth]]) now link to Novak's page.
 - **[[calendar|Calendar]].** A new line: Althas has no seasons, and only the Witherwild knows them.
 - **The home page** lists Novak by name, the four new Drinmery figures, Leonard, Parashiel, and the new NPCs (Minor) section.
-
-### The map
-
-- **A new map of Althas.** The [[map|Interactive Map]] has new art. The five nation pins moved to match it, and Drinmery has its own pin, which opens its page and town map.
-
-### Info cards
-
-- **Player characters:** [[rastaban|Rastaban]] (class, nation, born 343 VR), [[rosestripe|Rosestripe]] (class, nation), [[uriel-kenan|Uriel Kenan]] (class, nation), [[zalmir-aldarson|Zalmir Aldarson]] (class, community, nation).
-- **Nations:** [[jesthaen|Jesthaen]] (ruler Aldric Voldis, founded 351 VR), [[hilltop|Hilltop]] (founded 117 VR), [[polaris|Polaris]] (founded 167 VR), [[voldaen|Voldaen]] (founded 0 VR).
-- **Places:** [[crater-lake|Crater Lake]] (nation Hilltop), the [[godless-gate|Godless Gate]] (nation Voldaen).
-- **People:** ancestry, nation, allegiance or death dates added for [[aldric-voldis|Aldric Voldis]], [[amalthus-cruoris|Amalthus Cruoris]], [[augustus-corvus|Augustus Corvus]], [[cassio-aquila|Cassio Aquila]], [[castus-voldis|Castus Voldis]], [[cornelia-azimuth|Cornelia Azimuth]], [[edrion-voldis|Edrion Voldis]], [[god-king-voldis|Voldis, the God King]], [[hesper-arcturus|Hesper Arcturus]], [[jestha|Jestha]] (now titled mother of Aldric and namesake of Jesthaen), [[lael|Lael]] (died 334 VR, returned), [[lyra-aquila|Lyra Aquila]], [[mateo-veyra|Mateo Veyra]], [[sabara|Sabara]], [[valeran-voldis|Valeran Voldis]], [[valerion-voldis|Valerion Voldis]], [[valis-voldis|Valis Voldis]], [[valthis-voldis|Valthis Voldis]], [[victerius-azimuth|Victerius Azimuth]], and the Azimuth twins and [[zhenya-azimuth|Zhenya]].
-- **Organizations:** leaders, seats, allegiances, offices or founding dates added for [[house-aquila|House Aquila]], [[house-azimuth|House Azimuth]], [[house-circinus|House Circinus]], [[house-corvus|House Corvus]], the [[guild|Guild]], the [[parish-of-inquisition|Parish of Inquisition]], the [[parish-of-orthodoxy|Parish of Orthodoxy]], [[the-council-of-six|the Council of Six]], [[the-five-heroes|the Five Heroes]], [[the-holy-see|the Holy See]], and [[the-witherwatch|the Witherwatch]].
-- **Beings:** [[the-one-above|the One Above]]'s domain is now given as the Hallows Above, and [[the-ones-below|the Ones Below]]'s as the Circles Below.
-- **Tidied:** the ancestry pages ([[aetheris|Aetheris]], [[drakona|Drakona]], [[firbolg|Firbolg]]) and [[splendor-magic|Splendor Magic]] drop their category line.
+- **A new map of Althas.** The [[map|Interactive Map]] has new art and opens fully zoomed out, with the whole continent in view. Drinmery is its one pin for now, and it opens the town's page.
+- **Fuller info cards.** New entries for the player characters [[rastaban|Rastaban]] (class, nation, born 343 VR), [[rosestripe|Rosestripe]] (class, nation), [[uriel-kenan|Uriel Kenan]] (class, nation) and [[zalmir-aldarson|Zalmir Aldarson]] (class, community, nation); the nations [[jesthaen|Jesthaen]] (ruler Aldric Voldis, founded 351 VR), [[hilltop|Hilltop]] (founded 117 VR), [[polaris|Polaris]] (founded 167 VR) and [[voldaen|Voldaen]] (founded 0 VR); and the places [[crater-lake|Crater Lake]] (nation Hilltop) and the [[godless-gate|Godless Gate]] (nation Voldaen).
+- **People's info cards.** Ancestry, nation, allegiance or death dates added for [[aldric-voldis|Aldric Voldis]], [[amalthus-cruoris|Amalthus Cruoris]], [[augustus-corvus|Augustus Corvus]], [[cassio-aquila|Cassio Aquila]], [[castus-voldis|Castus Voldis]], [[cornelia-azimuth|Cornelia Azimuth]], [[edrion-voldis|Edrion Voldis]], [[god-king-voldis|Voldis, the God King]], [[hesper-arcturus|Hesper Arcturus]], [[jestha|Jestha]] (now titled mother of Aldric and namesake of Jesthaen), [[lael|Lael]] (died 334 VR, returned), [[lyra-aquila|Lyra Aquila]], [[mateo-veyra|Mateo Veyra]], [[sabara|Sabara]], [[valeran-voldis|Valeran Voldis]], [[valerion-voldis|Valerion Voldis]], [[valis-voldis|Valis Voldis]], [[valthis-voldis|Valthis Voldis]], [[victerius-azimuth|Victerius Azimuth]], the Azimuth twins and [[zhenya-azimuth|Zhenya]].
+- **Organizations' info cards.** Leaders, seats, allegiances, offices or founding dates added for [[house-aquila|House Aquila]], [[house-azimuth|House Azimuth]], [[house-circinus|House Circinus]], [[house-corvus|House Corvus]], the [[guild|Guild]], the [[parish-of-inquisition|Parish of Inquisition]], the [[parish-of-orthodoxy|Parish of Orthodoxy]], [[the-council-of-six|the Council of Six]], [[the-five-heroes|the Five Heroes]], [[the-holy-see|the Holy See]] and [[the-witherwatch|the Witherwatch]].
+- **The gods' domains.** [[the-one-above|The One Above]]'s domain is now given as the Hallows Above, and [[the-ones-below|the Ones Below]]'s as the Circles Below.
+- **Tidied.** The ancestry pages ([[aetheris|Aetheris]], [[drakona|Drakona]], [[firbolg|Firbolg]]) and [[splendor-magic|Splendor Magic]] drop their category line.
 
 ## 2026-09-11
 

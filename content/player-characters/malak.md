@@ -9,7 +9,7 @@ nation: "[[armada|Armada]]"
 image: malak.png
 ---
 
-**Summary**: Player character. A Seaborne Simiah Bard, Wordsmith, out of [[armada|Armada]].
+**Summary**: Player character. A Seaborne [[simiah|Simiah]] Bard, Wordsmith, out of [[armada|Armada]].
 
 ---
 
@@ -24,8 +24,9 @@ A simiah with long golden fur that falls past his shoulders and is bound into a 
 
 ### Character
 
-Ancestry: Simiah. Community: Seaborne. Class: Bard, subclass Wordsmith.
+Ancestry: [[simiah|Simiah]]. Community: Seaborne. Class: Bard, subclass Wordsmith.
 
 ## Related pages
 
 - [[armada|Armada]]
+- [[simiah|Simiah]]

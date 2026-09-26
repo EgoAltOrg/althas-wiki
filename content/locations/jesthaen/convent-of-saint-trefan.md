@@ -5,6 +5,8 @@ category: Convent
 nation: "[[jesthaen|Jesthaen]]"
 region: "[[drinmery|Drinmery]]"
 faith: "[[the-one-above|the One Above]]"
+image: st-trefans-lorekeeper.webp
+image_caption: "Saint Trefan's Lorekeeper, the book left behind in the saint's tomb beneath the convent."
 ---
 
 **Summary**: A convent in [[drinmery|Drinmery]], home to a flock of aetheris and prized for its rare library.

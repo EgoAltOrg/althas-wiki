@@ -4,7 +4,7 @@ kind: person
 role: "Keeper of the Wakeful Lamp tavern"
 pronouns: she/her
 nation: "[[jesthaen|Jesthaen]]"
-image: hollis-brand.png
+image: hollis-brand.jpg
 ---
 
 **Summary**: The keeper of the Wakeful Lamp, the tavern at [[drinmery|Drinmery's]] bridgehead.

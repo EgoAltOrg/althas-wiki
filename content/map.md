@@ -10,9 +10,9 @@ views:
     name: Map
     image: assets/althas-map.webp
     height: 700
-    minZoom: -2
+    minZoom: -4
     maxZoom: 2
-    defaultZoom: -1
+    defaultZoom: -4
     zoomDelta: 0.25
     scale: "1"
     unit: km

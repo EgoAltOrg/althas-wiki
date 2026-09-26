@@ -1,13 +1,13 @@
 ---
 title: Edric Colvin
 kind: person
-role: "Steward to [[guilmore-fleming|Count Guilmore Fleming]]"
+role: "Steward to [[guilmore-fleming|Count Fleming]]"
 pronouns: he/him
 nation: "[[jesthaen|Jesthaen]]"
 image: edric-colvin.png
 ---
 
-**Summary**: Steward to [[guilmore-fleming|Count Guilmore Fleming]] of [[drinmery|Drinmery]].
+**Summary**: Steward to [[guilmore-fleming|Count Fleming]] of [[drinmery|Drinmery]].
 
 ---
 

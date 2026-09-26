@@ -134,6 +134,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[infernis|Infernis]]: banned from most settlements, living in traveling caravans that trade goods, news, and rumors
 - [[drakona|The Drakona]]: the dragon-blooded people, a scarce ancestry cut down for lost-to-history Divine-Age crimes, rumored in greater numbers in the Witherwild
 - [[firbolg|Firbolg]]: bovine folk of the Witherwild, brought to Hilltop in bondage and freed, now road-folk among the Caio
+- [[simiah|Simiah]]: ape- and monkey-featured folk of the Witherwild, brought to Althas by the Havenites as slave-sailors and freed, now mostly Caio in Armada
 
 ## Concepts
 

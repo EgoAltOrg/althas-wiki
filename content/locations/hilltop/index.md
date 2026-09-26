@@ -4,11 +4,6 @@ kind: nation
 ruler: "[[the-holy-see|The Holy See]]"
 government: "Theocracy"
 founded: 117 VR
-marker:
-    - coordinates: "1698, 2452"
-      icon: lucide-landmark
-      colour: "#b3aa02"
-      category: nation
 ---
 
 **Summary**: The holy seat of [[the-holy-see|the Holy See]], once home of the One Above, devastated by [[the-ophanim|the Ophanim]]'s landing in 333 VR. Central Hilltop, around the Ophanim's corpse, has never seen daylight since its death.

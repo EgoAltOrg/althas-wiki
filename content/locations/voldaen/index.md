@@ -4,11 +4,6 @@ kind: nation
 ruler: "[[valis-voldis|Valis Voldis]]"
 government: Monarchy
 founded: 0 VR
-marker:
-    - coordinates: "1489, 878"
-      icon: lucide-landmark
-      colour: "#7b97aa"
-      category: nation
 ---
 
 **Summary**: The oldest nation of Althas, a proud monarchy of ancient bloodlines ruled by the House of Voldis, currently governed by [[valis-voldis|Valis Voldis]] after the succession crisis that birthed [[jesthaen|Jesthaen]].

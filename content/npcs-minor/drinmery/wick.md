@@ -4,7 +4,7 @@ kind: person
 role: "Bandit"
 pronouns: he/him
 nation: "[[jesthaen|Jesthaen]]"
-image: wick.png
+image: wick.jpg
 ---
 
 **Summary**: A bandit who led the raid on the [[drinmery|Drinmery]] market.

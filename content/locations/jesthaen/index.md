@@ -4,11 +4,6 @@ kind: nation
 ruler: "[[aldric-voldis|Aldric Voldis]]"
 government: "Republic"
 founded: 351 VR
-marker:
-    - coordinates: "890, 1867"
-      icon: lucide-landmark
-      colour: "#84a59d"
-      category: nation
 ---
 
 **Summary**: The newest nation of Althas, a republic founded by [[aldric-voldis|Aldric Voldis]] out of the Voldis Succession Crisis and named for his mother, [[jestha|Jestha]]. The first nation of Althas to reject the divine right of the Voldis crown.

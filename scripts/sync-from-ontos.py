@@ -157,6 +157,9 @@ TITLES = {
     "maud-tallow.md": "Maud Tallow",
     "pell.md": "Pell",
     "wick.md": "Wick",
+    # 2026-09-24 ingest, first mapped 2026-09-26 (it had public content but
+    # was never added here, so it silently never synced).
+    "simiah.md": "Simiah",
     "index.md": "Althas",
 }
 
@@ -211,6 +214,7 @@ PAGE_MAP = {
     "clanks.md": "ancestries/clanks.md",
     "infernis.md": "ancestries/infernis.md",
     "human.md": "ancestries/human.md",
+    "simiah.md": "ancestries/simiah.md",
     # The five nations (Armada, Polaris, Voldaen, Jesthaen, Hilltop) are each
     # a folder whose own index.md IS the nation's page, not a separate file
     # alongside it — [[armada]] resolves to a folder's index.md exactly the

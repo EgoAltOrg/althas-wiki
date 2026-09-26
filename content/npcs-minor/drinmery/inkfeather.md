@@ -5,7 +5,7 @@ role: "Librarian and healer of the [[convent-of-saint-trefan|Convent of Saint Tr
 ancestry: aetheris
 pronouns: she/her
 nation: "[[jesthaen|Jesthaen]]"
-image: inkfeather.png
+image: inkfeather.jpg
 ---
 
 **Summary**: An [[aetheris|aetheris]] of the [[convent-of-saint-trefan|Convent of Saint Trefan]] who keeps its library and tends its sick.

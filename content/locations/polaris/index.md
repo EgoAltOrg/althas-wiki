@@ -4,11 +4,6 @@ kind: nation
 ruler: "Triumvirate of Archmages"
 government: "Magocracy"
 founded: 167 VR
-marker:
-    - coordinates: "2172, 1602"
-      icon: lucide-sparkles
-      colour: "#5b8dd6"
-      category: nation
 ---
 
 **Summary**: A magocratic nation of scholars and mages who broke away from [[voldaen|Voldaen]], ruled by a Triumvirate of Archmages. Its industrial rise was built on Giant labor.

@@ -3,18 +3,12 @@ title: Drinmery
 kind: location
 category: City
 nation: "[[jesthaen|Jesthaen]]"
+image: drinmery-map.webp
 marker:
     - coordinates: "1285, 1575"
       icon: lucide-castle
       colour: "#84a59d"
       category: settlement
-submap:
-    image: assets/drinmery-map.webp
-    height: 520
-    minZoom: -1.5
-    maxZoom: 1
-    defaultZoom: -1
-    zoomDelta: 0.25
 ---
 
 **Summary**: A medium-sized city in [[jesthaen|Jesthaen]], best known as the home of the [[convent-of-saint-trefan|Convent of Saint Trefan]].
@@ -38,7 +32,7 @@ Drinmery is wary of outsiders. During the [[jesthaen|Jesthaen]] war, [[lorkhan-o
 
 ## Inhabitants
 
-The town is held by [[guilmore-fleming|Count Guilmore Fleming]], and its peace is kept by the hired guard of [[immanuel-greene|Immanuel Greene]]. Among its people:
+The town is held by [[guilmore-fleming|Count Fleming]], and its peace is kept by the hired guard of [[immanuel-greene|Immanuel Greene]]. Among its people:
 
 - [[aldous-pike|Aldous Pike]], gravekeeper of the convent churchyard.
 - [[alys|Alys]], a grieving mother.

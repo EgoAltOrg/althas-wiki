@@ -4,7 +4,7 @@ kind: person
 role: "Guardsman of [[drinmery|Drinmery]]"
 pronouns: he/him
 nation: "[[jesthaen|Jesthaen]]"
-image: pell.png
+image: pell.jpg
 ---
 
 **Summary**: A young guardsman of [[drinmery|Drinmery]] who stands its checkpoints.

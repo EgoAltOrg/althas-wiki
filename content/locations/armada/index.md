@@ -4,11 +4,6 @@ kind: nation
 ruler: "[[guild|The Guild]]"
 government: Merchant federation
 founded: During the Ophanim crisis
-marker:
-    - coordinates: "751, 2257"
-      icon: lucide-anchor
-      colour: "#4b8f8c"
-      category: nation
 ---
 
 **Summary**: A merchant federation founded by the Caio people, who declared the trade cities of southern Hilltop independent during the [[the-ophanim|Ophanim]] crisis. Home to a strong Slyborne presence, looser laws than its neighbors, and a living folk tradition of fortune-telling.

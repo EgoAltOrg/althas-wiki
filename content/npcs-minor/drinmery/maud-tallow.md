@@ -4,7 +4,7 @@ kind: person
 role: "Candle-seller in the [[drinmery|Drinmery]] market"
 pronouns: she/her
 nation: "[[jesthaen|Jesthaen]]"
-image: maud-tallow.png
+image: maud-tallow.jpg
 ---
 
 **Summary**: An old widow who sells candles in the [[drinmery|Drinmery]] market.
