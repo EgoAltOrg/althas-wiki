@@ -155,8 +155,8 @@ All communities are available across nations, but some have unique aspects withi
 
 ## Player characters
 
-- [[rastaban|Rastaban]]: Loreborne Giant, School of Knowledge Wizard. Appearance and mechanics only, campaign hasn't started yet.
-- [[zalmir-aldarson|Zalmir Aldarson]]: a young traveler newly come to the north. Appearance only; the rest is held.
+- [[rastaban|Rastaban]]: Loreborne Giant, School of Knowledge Wizard, a Sinner in the charge of [[uriel-kenan|Uriel Kenan]].
+- [[zalmir-aldarson|Zalmir Aldarson]]: a traveler newly come to the north. Appearance only; the rest is held.
 - [[uriel-kenan|Uriel Kenan]]: Orderborne Elf, Divine Wielder Seraph. Appearance and mechanics only.
 - [[rosestripe|Rosestripe]]: Orderborne Aetheris, Poisoner Assassin. Appearance and mechanics only.
 - [[novak-azimuth|Novak Azimuth]]: Highborne Human, "Call of the Slayer" Warrior, head of [[house-azimuth|House Azimuth]]. Name, appearance and mechanics only.
