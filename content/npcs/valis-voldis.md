@@ -2,6 +2,7 @@
 title: Valis Voldis
 kind: person
 role: "Queen of [[voldaen|Voldaen]]"
+ancestry: human
 pronouns: she/her
 house: "[[house-voldis|House Voldis]]"
 nation: "[[voldaen|Voldaen]]"

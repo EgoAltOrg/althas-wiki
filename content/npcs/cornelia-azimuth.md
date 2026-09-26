@@ -2,6 +2,7 @@
 title: Cornelia Azimuth
 kind: person
 role: "Former Matriarch of House Azimuth"
+ancestry: human
 pronouns: she/her
 house: "[[house-azimuth|House Azimuth]]"
 nation: "[[voldaen|Voldaen]]"
@@ -11,7 +12,7 @@ died: 358 VR
 image: cornelia-azimuth.jpg
 ---
 
-**Summary**: The late matriarch of [[house-azimuth|House Azimuth]], wife of [[victerius-azimuth|Victerius]] and mother of Novak, [[agathia-azimuth|Agathia]], and [[hestia-azimuth|Hestia]]. A peerless warrior, commander, and master of [[splendor-magic|Splendor Magic]] schooled in [[hilltop|Hilltop]], remembered among the greatest of her generation, who fell facing [[aldric-voldis|Aldric Voldis]] on the shores of [[jesthaen|Jesthaen]] in 358 VR.
+**Summary**: The late matriarch of [[house-azimuth|House Azimuth]], wife of [[victerius-azimuth|Victerius]] and mother of [[novak-azimuth|Novak]], [[agathia-azimuth|Agathia]], and [[hestia-azimuth|Hestia]]. A peerless warrior, commander, and master of [[splendor-magic|Splendor Magic]] schooled in [[hilltop|Hilltop]], remembered among the greatest of her generation, who fell facing [[aldric-voldis|Aldric Voldis]] on the shores of [[jesthaen|Jesthaen]] in 358 VR.
 
 ---
 
@@ -25,7 +26,7 @@ When [[the-ophanim|the Ophanim]] descended upon central [[hilltop|Hilltop]] in 3
 
 ### Matriarch and war
 
-An unstable peace followed. King [[valthis-voldis|Valthis Voldis]] was assassinated soon after the Ophanim's defeat, leaving the throne to [[valis-voldis|Valis]], then scarcely old enough to rule. Cornelia married Victerius in 337 VR and bore her firstborn, Novak, in 345 VR, followed five years later by the twins [[agathia-azimuth|Agathia]] and [[hestia-azimuth|Hestia]]. Of her children it was Novak to whom she devoted the most time, for everything she could impart to him would later prove of the utmost value. This was no lack of love for the girls: for all her calculating nature and her skill at bending minds by both pen and sword, she was a genuinely loving mother.
+An unstable peace followed. King [[valthis-voldis|Valthis Voldis]] was assassinated soon after the Ophanim's defeat, leaving the throne to [[valis-voldis|Valis]], then scarcely old enough to rule. Cornelia married Victerius in 337 VR and bore her firstborn, [[novak-azimuth|Novak]], in 345 VR, followed five years later by the twins [[agathia-azimuth|Agathia]] and [[hestia-azimuth|Hestia]]. Of her children it was Novak to whom she devoted the most time, for everything she could impart to him would later prove of the utmost value. This was no lack of love for the girls: for all her calculating nature and her skill at bending minds by both pen and sword, she was a genuinely loving mother.
 
 In 351 VR, war erupted against [[aldric-voldis|Aldric Voldis]], who in the course of his rebellion severed [[voldaen|Voldaen]] and established the [[jesthaen|Jesthaen Republic]]. House Azimuth mustered its forces, and for the greater part of the war their campaigns, overseen by [[augustus-corvus|Augustus Corvus]], Minister of War, were marked by victories sung ever after. Yet in 358 VR Cornelia came to face Aldric himself upon the shores of Jesthaen, and it was there she met her end in battle.
 
@@ -33,6 +34,7 @@ In 351 VR, war erupted against [[aldric-voldis|Aldric Voldis]], who in the cours
 
 - [[house-azimuth|House Azimuth]]
 - [[victerius-azimuth|Victerius Azimuth]]
+- [[novak-azimuth|Novak Azimuth]]
 - [[agathia-azimuth|Agathia Azimuth]]
 - [[hestia-azimuth|Hestia Azimuth]]
 - [[zhenya-azimuth|Zhenya Azimuth]]

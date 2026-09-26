@@ -2,6 +2,7 @@
 title: Parish of Orthodoxy
 kind: organization
 category: Parish
+leader: "[[amalthus-cruoris|Amalthus Cruoris]]"
 allegiance: "[[the-holy-see|the Holy See]]"
 ---
 

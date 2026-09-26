@@ -6,6 +6,8 @@ kind: person
 role: "Saint and scholar of [[the-holy-see|the Holy See]]"
 pronouns: he/him
 house: "[[house-aquila|House Aquila]]"
+nation: "[[polaris|Polaris]]"
+allegiance: "[[the-holy-see|The Holy See]]"
 died: 334 VR
 image: cassio-aquila.png
 ---

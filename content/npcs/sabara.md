@@ -4,6 +4,7 @@ kind: person
 role: "Surveyor of the Council of Six; Abbot of the Parish of Cartography"
 ancestry: elf
 pronouns: she/her
+nation: "[[hilltop|Hilltop]]"
 allegiance: "[[the-holy-see|The Holy See]]"
 image: sabara.jpg
 ---

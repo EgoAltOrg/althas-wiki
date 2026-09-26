@@ -4,9 +4,11 @@ aliases:
   - npcs/the-mad-king
 kind: person
 role: King of Voldaen
+ancestry: human
 pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[voldaen|Voldaen]]"
+allegiance: "[[voldaen|Voldaen]]"
 died: 117 VR
 image: the-mad-king.png
 ---

@@ -5,7 +5,7 @@ ruler: "[[guild|The Guild]]"
 government: Merchant federation
 founded: During the Ophanim crisis
 marker:
-    - coordinates: "695, 2520"
+    - coordinates: "751, 2257"
       icon: lucide-anchor
       colour: "#4b8f8c"
       category: nation

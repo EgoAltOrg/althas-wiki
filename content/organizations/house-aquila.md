@@ -2,6 +2,8 @@
 title: House Aquila
 kind: organization
 category: Noble house
+leader: "[[lyra-aquila|Lyra Aquila]]"
+seat: "[[polaris|Polaris]]"
 ---
 
 **Summary**: The scholar-house of the twins [[cassio-aquila|Cassio Aquila]] and [[lyra-aquila|Lyra Aquila]], esteemed at once in [[polaris|Polaris]] and [[the-holy-see|the Holy See]], and known across Althas for carrying two [[miracles|Miracles]] in one bloodline: Pentecost, the understanding of any word heard, and Anamnesis, perfect and unfading memory.

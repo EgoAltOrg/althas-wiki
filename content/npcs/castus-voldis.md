@@ -2,9 +2,12 @@
 title: Castus Voldis
 kind: person
 role: King of Voldaen
+ancestry: human
 pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[voldaen|Voldaen]]"
+allegiance: "[[voldaen|Voldaen]]"
+died: 180 VR
 ---
 
 **Summary**: **Castus Voldis**, King of [[voldaen|Voldaen]] (r. 149-180 VR), son of [[valeran-voldis|Valeran]] the Blessed King and the monarch under whom the north partitioned away peacefully to become [[polaris|Polaris]] by [[the-lodestar-pact|the Lodestar Pact]] in 167 VR. Elder brother of the prince Castorius, who renounced his claim in that settlement.

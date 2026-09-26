@@ -5,6 +5,7 @@ aliases:
 kind: organization
 category: Governing institution
 seat: "[[armada|Armada]]"
+founded: During the Ophanim crisis
 image: guild.svg
 ---
 

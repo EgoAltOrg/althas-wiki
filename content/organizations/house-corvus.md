@@ -4,6 +4,7 @@ kind: organization
 category: Noble house
 leader: "[[augustus-corvus|Augustus Corvus]]"
 seat: "[[voldaen|Voldaen]]"
+allegiance: "[[voldaen|Voldaen]]"
 office: "Minister of War"
 founded: "Valerion's Heresy"
 ---

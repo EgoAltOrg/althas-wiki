@@ -1,7 +1,6 @@
 ---
 title: Firbolg
 kind: ancestry
-category: Bovine people
 homeland: "[[witherwild-continent|The Witherwild]] by origin; the vineyard country and caravan roads of southern [[hilltop|Hilltop]]"
 standing: "Freed from bondage, now road-folk among the Caio"
 image: firbolg.webp

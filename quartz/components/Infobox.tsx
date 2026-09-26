@@ -1,7 +1,14 @@
 import { JSX } from "preact"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/infobox.scss"
-import { FilePath, FullSlug, joinSegments, pathToRoot, slugifyFilePath, transformLink } from "../util/path"
+import {
+  FilePath,
+  FullSlug,
+  joinSegments,
+  pathToRoot,
+  slugifyFilePath,
+  transformLink,
+} from "../util/path"
 import { classNames } from "../util/lang"
 
 // The typed-infobox schema for the article-templates pilot. Field order here
@@ -9,15 +16,46 @@ import { classNames } from "../util/lang"
 // in scripts/sync-from-ontos.py), the gate (scripts/check-infobox-fields.py),
 // and the authoring reference in the Ontos campaign folder.
 const KIND_FIELDS: Record<string, string[]> = {
-  person: ["role", "ancestry", "culture", "pronouns", "house", "nation", "allegiance", "born", "died"],
+  person: [
+    "role",
+    "ancestry",
+    "culture",
+    "pronouns",
+    "house",
+    "nation",
+    "allegiance",
+    "born",
+    "died",
+  ],
   nation: ["capital", "ruler", "government", "founded"],
   location: ["category", "nation", "region", "ruler", "population", "faith"],
-  organization: ["category", "leader", "seat", "region", "allegiance", "office", "heir", "words", "relic", "founded"],
-  "magic-system": ["category", "source", "practitioners"],
+  organization: [
+    "category",
+    "leader",
+    "seat",
+    "region",
+    "allegiance",
+    "office",
+    "heir",
+    "words",
+    "relic",
+    "founded",
+  ],
+  "magic-system": ["source", "practitioners"],
   being: ["nature", "domain", "fate"],
   artifact: ["category", "origin", "wielder"],
-  event: ["category", "when", "place", "parties", "commanders", "strength", "casualties", "outcome", "part-of"],
-  ancestry: ["category", "homeland", "standing"],
+  event: [
+    "category",
+    "when",
+    "place",
+    "parties",
+    "commanders",
+    "strength",
+    "casualties",
+    "outcome",
+    "part-of",
+  ],
+  ancestry: ["homeland", "standing"],
 }
 
 // Row labels that a plain first-letter capitalization would get wrong.
@@ -164,9 +202,7 @@ export default (() => {
     // page-relative URL (root-relative would break under the deployed base
     // path), the same relative-URL approach Quartz uses for every internal
     // link, so no base path is ever hardcoded here.
-    const imageSrc = image
-      ? joinSegments(pathToRoot(fileData.slug!), "assets", image)
-      : undefined
+    const imageSrc = image ? joinSegments(pathToRoot(fileData.slug!), "assets", image) : undefined
     const title = typeof fm?.["title"] === "string" ? (fm["title"] as string) : ""
 
     return (
@@ -183,7 +219,9 @@ export default (() => {
             {rows.map(([field, value]) => (
               <>
                 <dt>{fieldLabel(field)}</dt>
-                <dd>{renderValue(value, fileData.slug!, ctx.allSlugs, !NO_CAPITALIZE.has(field))}</dd>
+                <dd>
+                  {renderValue(value, fileData.slug!, ctx.allSlugs, !NO_CAPITALIZE.has(field))}
+                </dd>
               </>
             ))}
           </dl>

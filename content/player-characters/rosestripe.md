@@ -1,9 +1,11 @@
 ---
 title: Rosestripe
 kind: person
+role: "Assassin, Poisoner"
 ancestry: aetheris
 culture: Orderborne
 pronouns: she/her
+nation: "[[jesthaen|Jesthaen]]"
 image: rosestripe.webp
 ---
 

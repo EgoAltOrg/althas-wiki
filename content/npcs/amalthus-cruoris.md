@@ -4,6 +4,8 @@ kind: person
 role: Pontiff of the Holy See
 pronouns: he/him
 house: House Cruoris
+nation: "[[hilltop|Hilltop]]"
+allegiance: "[[the-holy-see|The Holy See]]"
 image: amalthus-cruoris.jpg
 ---
 

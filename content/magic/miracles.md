@@ -56,11 +56,11 @@ House Cruoris is one of the faith's oldblood houses, ancient and bound tightly t
 
 ### House Azimuth's power
 
-[[house-azimuth|House Azimuth]] is a [[voldaen|Voldaen]] Great House, hereditary Minister of the Royal Household, whose founder Orion was granted both a Miracle and the Divine Relic to wield with it. The **Miracle of Parashiel** empowers body, mind, and soul through familiar spirits. See Parashiel.
+[[house-azimuth|House Azimuth]] is a [[voldaen|Voldaen]] Great House, hereditary Minister of the Royal Household, whose founder Orion was granted both a Miracle and the Divine Relic to wield with it. The **Miracle of Parashiel** empowers body, mind, and soul through familiar spirits. See [[parashiel|Parashiel]].
 
 ### House Olnir's power
 
-[[house-olnir|House Olnir]] is one of [[voldaen|Voldaen's]] oldest Great Houses, once hereditary Minister of Domestic Affairs. Its signature Miracle is **Fames**, which lets its bearer take the might of the fallen into himself, gaining a strength or faculty matched to what is claimed from the dead. Each of the fallen yields but a single such boon, the claiming exacts a heavy toll, and the fresher the dead the greater the gain. Fames blesses at most one Olnir child in a generation, yet all the House's young are bound to its weekly rite, the Famesfeast, whose nature the Olnir keep to themselves. See [[house-olnir|House Olnir]].
+[[house-olnir|House Olnir]] is one of [[voldaen|Voldaen's]] oldest Great Houses, once hereditary Minister of Domestic Affairs. Its signature Miracle is **Fames**, which lets its bearer take the might of the fallen into himself, gaining a strength or faculty matched to what is claimed from the dead. Each of the fallen yields but a single such boon, the claiming exacts a heavy toll, and the fresher the dead the greater the gain. Fames blesses at most one Olnir child in a generation, yet all the House's young are bound to its weekly rite, the Famesfeast, a cannibal rite the Olnir do little to hide. See [[house-olnir|House Olnir]].
 
 ### House Circinus's power
 

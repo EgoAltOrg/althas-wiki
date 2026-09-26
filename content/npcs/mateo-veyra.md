@@ -3,6 +3,8 @@ title: Mateo Veyra
 kind: person
 role: Archbishop of Andaluria
 pronouns: he/him
+house: House Veyra
+nation: "[[hilltop|Hilltop]]"
 allegiance: "[[the-holy-see|The Holy See]]"
 image: mateo-veyra.webp
 ---

@@ -4,9 +4,11 @@ aliases:
   - npcs/the-god-king
 kind: person
 role: First King of Voldaen
+ancestry: human
 pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[voldaen|Voldaen]]"
+allegiance: "[[voldaen|Voldaen]]"
 image: the-god-king.jpg
 ---
 

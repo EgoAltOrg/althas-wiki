@@ -5,20 +5,22 @@
 // Heading regexes must stay textually equivalent to scripts/check-chronicle.py
 // (the publish gate / normalized-event seam).
 
-const ORDINALS = [
-  "First",
-  "Second",
-  "Third",
-  "Fourth",
-  "Fifth",
-  "Sixth",
-  "Seventh",
-  "Eighth",
-  "Ninth",
-  "Tenth",
+// The ten canon month names, in order (the campaign's setting/calendar.md).
+// The ordinal "of the Ninth Month" heading form was retired 2026-09-26.
+const MONTHS = [
+  "Vigilia",
+  "Sacratio",
+  "Oblatio",
+  "Certamen",
+  "Passio",
+  "Requiem",
+  "Paenitentia",
+  "Gratia",
+  "Adventus",
+  "Vesper",
 ]
 const MONTH_HEADING_RE = new RegExp(
-  `^Day ([1-9]|[12][0-9]|3[0-3]) of the (${ORDINALS.join("|")}) Month, ([0-9]+) VR$`,
+  `^Day ([1-9]|[12][0-9]|3[0-3]) of (${MONTHS.join("|")}), ([0-9]+) VR$`,
 )
 const HOLIDAY_HEADING_RE = /^Day ([1-3]) of the Closing Holidays, ([0-9]+) VR$/
 const DATE_ATTR_RE = /^([0-9]+)-(0[1-9]|10|H)-(0[1-9]|[12][0-9]|3[0-3])$/
@@ -40,7 +42,7 @@ const dayKey = (year: number, monthIndex: number, day: number) =>
 
 function parseHeading(text: string): { year: number; monthIndex: number; day: number } | null {
   const m = MONTH_HEADING_RE.exec(text)
-  if (m) return { year: +m[3], monthIndex: ORDINALS.indexOf(m[2]), day: +m[1] }
+  if (m) return { year: +m[3], monthIndex: MONTHS.indexOf(m[2]), day: +m[1] }
   const h = HOLIDAY_HEADING_RE.exec(text)
   if (h) return { year: +h[2], monthIndex: 10, day: +h[1] }
   return null
@@ -50,7 +52,7 @@ function monthLabel(k: MonthKey): string {
   const year = mkYear(k)
   return mkIndex(k) === 10
     ? `The Closing Holidays, ${year} VR`
-    : `The ${ORDINALS[mkIndex(k)]} Month, ${year} VR`
+    : `${MONTHS[mkIndex(k)]}, ${year} VR`
 }
 
 function roleOfColumn(col: number): "weekend" | "prayer" | "work" {
@@ -85,7 +87,7 @@ function setupChronicle() {
 
   // Index the rendered date sections.
   const index: DayIndex = new Map()
-  let minKey = mk(363, 0) // campaign anchor: the First Month, 363 VR
+  let minKey = mk(363, 0) // campaign anchor: Vigilia, 363 VR
   for (const h2 of Array.from(document.querySelectorAll<HTMLElement>("article h2"))) {
     const parsed = parseHeading(h2.textContent?.trim() ?? "")
     if (!parsed || !h2.id) continue

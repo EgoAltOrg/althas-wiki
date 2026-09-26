@@ -2,6 +2,8 @@
 title: House Circinus
 kind: organization
 category: Noble house
+allegiance: "[[the-holy-see|The Holy See]]"
+office: "Customary head of the Parish of Cartography"
 ---
 
 **Summary**: A [[hilltop|Hilltop]] oldblood house whose [[miracles|Miracle]] of Geosensus, the sense of the land's hidden shape, made it rich off the deep earth and the customary head of [[the-holy-see|the Holy See's]] Parish of Cartography.

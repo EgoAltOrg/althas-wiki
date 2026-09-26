@@ -3,7 +3,9 @@ title: Lael
 kind: person
 role: "One of the Five Heroes"
 pronouns: he/him
+nation: "[[hilltop|Hilltop]]"
 allegiance: "[[the-holy-see|The Holy See]]"
+died: "334 VR (returned)"
 image: lael-portrait.jpg
 image_caption: "Lael, called the Reborn, the Icon of Shame."
 ---

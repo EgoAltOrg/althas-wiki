@@ -120,7 +120,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[house-aquila|House Aquila]]: scholar-house of the twins Cassio and Lyra, esteemed in both Polaris and the Holy See, bearer of two Miracles (Pentecost and Anamnesis)
 - [[house-circinus|House Circinus]]: a Hilltop oldblood house bound to the Holy See, bearer of the Miracle of Geosensus and customary head of the Parish of Cartography
 - [[house-corvus|House Corvus]]: Great House of Voldaen holding the hereditary office of Minister of War, risen at [[valerions-heresy|Valerion's Heresy]], bearer of the Miracle of Auspex
-- [[house-azimuth|House Azimuth]]: Great House of Voldaen, hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider; current head Novak Azimuth
+- [[house-azimuth|House Azimuth]]: Great House of Voldaen, hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider; current head [[novak-azimuth|Novak Azimuth]]
 - [[house-olnir|House Olnir]]: ancient Voldaen Great House, bearer of the Miracle of Fames and keeper of the Famesfeast, its ministry stripped after [[lorkhan-olnir|Lorkhan's]] treason
 - [[the-witherwatch|The Witherwatch]]: Voldaen's grim frontier garrison holding the Godless Gate against the blighted Witherwild
 
@@ -147,6 +147,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[miracles|Miracles]]: hereditary gifts from the One Above
 
 - [[divine-relics|Divine Relics]]: Divine Age relics any Miracle-holder can wield, whatever their Miracle
+- [[parashiel|Parashiel]]: the Miracle of House Azimuth, a mysterious gift said to work through familiar spirits
 
 ## Player characters
 
@@ -154,6 +155,8 @@ All communities are available across nations, but some have unique aspects withi
 - [[zalmir-aldarson|Zalmir Aldarson]]: a young traveler newly come to the north. Appearance only; the rest is held.
 - [[uriel-kenan|Uriel Kenan]]: Orderborne Elf, Divine Wielder Seraph. Appearance and mechanics only.
 - [[rosestripe|Rosestripe]]: Orderborne Aetheris, Poisoner Assassin. Appearance and mechanics only.
+- [[novak-azimuth|Novak Azimuth]]: Highborne Human, "Call of the Slayer" Warrior, head of [[house-azimuth|House Azimuth]]. Name, appearance and mechanics only.
+- [[malak|Malak]]: Seaborne Simiah, Wordsmith Bard, out of Armada. Appearance and mechanics only.
 
 ## NPCs
 
@@ -172,6 +175,24 @@ All communities are available across nations, but some have unique aspects withi
 - [[hestia-azimuth|Hestia Azimuth]]: the quiet, calculating twin daughter of House Azimuth
 - [[zhenya-azimuth|Zhenya Azimuth]]: elder of House Azimuth and Minister of the Royal Household, Novak's grandmother
 - [[lorkhan-olnir|Lorkhan Olnir]]: eldest of House Olnir and bearer of the Miracle of Fames, defected to Aldric and now missing
+- [[guilmore-fleming|Guilmore Fleming]]: the Count who holds Drinmery
+- [[immanuel-greene|Immanuel Greene]]: lord whose hired guard keeps the peace in Drinmery, called "General" by his men
+- [[tobias-wren|Tobias Wren]]: the priest of the Convent of Saint Trefan
+- [[gideon|Gideon]]: a young Inquisitor resting a wounded hand in Drinmery
+- [[leonard-moore|Leonard Moore]]: veteran warrior and strategist raised by [[house-azimuth|House Azimuth]], Novak's counsellor, travelling at his side
+
+## NPCs (Minor)
+
+### Drinmery
+
+- [[aldous-pike|Aldous Pike]]: gravekeeper of the convent churchyard
+- [[alys|Alys]]: a grieving mother
+- [[edric-colvin|Edric Colvin]]: steward to Count Fleming
+- [[hollis-brand|Hollis Brand]]: keeper of the Wakeful Lamp tavern
+- [[inkfeather|Inkfeather]]: the convent's librarian and healer
+- [[maud-tallow|Maud Tallow]]: candle-seller in the market
+- [[pell|Pell]]: a young guardsman
+- [[wick|Wick]]: a bandit
 
 ## Events
 

@@ -2,6 +2,7 @@
 title: Valthis Voldis
 kind: person
 role: "King of [[voldaen|Voldaen]]"
+ancestry: human
 pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[voldaen|Voldaen]]"

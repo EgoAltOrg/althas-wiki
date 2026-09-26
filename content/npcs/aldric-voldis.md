@@ -2,9 +2,11 @@
 title: Aldric Voldis
 kind: person
 role: Founder of the Jesthaen Republic
+ancestry: human
 pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[jesthaen|Jesthaen]]"
+allegiance: "[[jesthaen|Jesthaen]]"
 image: aldric-voldis.jpg
 ---
 

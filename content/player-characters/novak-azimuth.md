@@ -1,18 +1,24 @@
 ---
-title: ???
+title: Novak Azimuth
+aliases:
+  - player-characters/highborne-warrior
 kind: person
+role: "Warrior, Call of the Slayer"
 ancestry: human
 culture: Highborne
 pronouns: he/him
+house: "[[house-azimuth|House Azimuth]]"
+nation: "[[voldaen|Voldaen]]"
+born: 345 VR
 image: mystery-pc-portrait.png
 ---
 
-**Summary**: Player character.
+**Summary**: Player character. Novak Azimuth, head of [[house-azimuth|House Azimuth]], travelling under his first name alone.
 
 ---
 
 > [!note] Player character
-> A PC whose identity is not yet public. The campaign hasn't started, so beyond appearance and basic mechanics, nothing is revealed.
+> Novak Azimuth is a PC, not an NPC. He revealed his name and House in [[drinmery|Drinmery]] on Adventus 12, 366 VR; beyond that, his appearance and basic mechanics, nothing more is public.
 
 ## Appearance
 

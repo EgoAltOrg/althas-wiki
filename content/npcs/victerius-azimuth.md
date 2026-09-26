@@ -2,6 +2,7 @@
 title: Victerius Azimuth
 kind: person
 role: "Former consort-head of House Azimuth"
+ancestry: human
 pronouns: he/him
 house: "[[house-azimuth|House Azimuth]]"
 nation: "[[voldaen|Voldaen]]"
@@ -11,7 +12,7 @@ died: 358 VR
 image: victerius-azimuth.jpg
 ---
 
-**Summary**: Born the second son of [[house-olnir|House Olnir]], Victerius carried none of its Miracle but became a superb duelist, married [[cornelia-azimuth|Cornelia]] and joined [[house-azimuth|House Azimuth]], and fathered Novak and the twins. He fell in 358 VR in the war against [[jesthaen|Jesthaen]], cutting down his own brother [[lorkhan-olnir|Lorkhan]] but dying of his wounds the same day as his wife.
+**Summary**: Born the second son of [[house-olnir|House Olnir]], Victerius carried none of its Miracle but became a superb duelist, married [[cornelia-azimuth|Cornelia]] and joined [[house-azimuth|House Azimuth]], and fathered [[novak-azimuth|Novak]] and the twins. He fell in 358 VR in the war against [[jesthaen|Jesthaen]], cutting down his own brother [[lorkhan-olnir|Lorkhan]] but dying of his wounds the same day as his wife.
 
 ---
 
@@ -25,7 +26,7 @@ Such feelings, well known within the House, might have turned brother against br
 
 In Hilltop, Victerius drew notice for his qualities rather than his heritage. Tall and resilient, strong-framed, with flaxen hair and chestnut eyes and a brim-full wit, he earned a lasting name as a superb duelist. It was there he met [[cornelia-azimuth|Cornelia]], heir to House Azimuth, whose affection he came to cherish and returned in full. The companionship did not go undisturbed for long: [[the-ophanim|the Ophanim]] descended on central Hilltop in 333 VR, and the Houses of Voldaen were summoned. Both Olnir and Azimuth answered, and Victerius fought at last alongside Cornelia beneath deep blue banners. Though he never directly faced the being in its slaying, he, like all who laid eyes on it, would suffer the [[the-ophanim|OphDreams]] to the end of his days.
 
-He married Cornelia in 337 VR, formally joining House Azimuth in perpetuity, and fathered Novak in 345 VR and [[agathia-azimuth|Agathia]] and [[hestia-azimuth|Hestia]] five years later. Through those years he took on the formal duties of head of the House, freeing Cornelia to devote herself to Novak's upbringing, and he grew closest to the twin girls.
+He married Cornelia in 337 VR, formally joining House Azimuth in perpetuity, and fathered [[novak-azimuth|Novak]] in 345 VR and [[agathia-azimuth|Agathia]] and [[hestia-azimuth|Hestia]] five years later. Through those years he took on the formal duties of head of the House, freeing Cornelia to devote herself to Novak's upbringing, and he grew closest to the twin girls.
 
 ### The last campaign
 
@@ -38,6 +39,7 @@ The enemy army was all but decimated, and Victerius fought Lorkhan in single com
 - [[house-azimuth|House Azimuth]]
 - [[house-olnir|House Olnir]]
 - [[cornelia-azimuth|Cornelia Azimuth]]
+- [[novak-azimuth|Novak Azimuth]]
 - [[lorkhan-olnir|Lorkhan Olnir]]
 - [[agathia-azimuth|Agathia Azimuth]]
 - [[hestia-azimuth|Hestia Azimuth]]

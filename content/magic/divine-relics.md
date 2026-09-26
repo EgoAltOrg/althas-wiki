@@ -35,7 +35,7 @@ These Relics are extraordinarily powerful, passed down within families rather th
 
 ### Another example: the Rule of The Divider
 
-[[house-azimuth|House Azimuth's]] own hereditary Relic is the Rule of The Divider, a weapon that takes a different form for each generation that carries it. That the House holds such a Relic is known; what it does is not, guarded as closely as the Miracle it was granted alongside.
+[[house-azimuth|House Azimuth's]] own hereditary Relic is the Rule of The Divider, a weapon that takes a different form for each generation that carries it. That the House holds such a Relic is known; what it does is not, guarded as closely as the [[parashiel|Miracle]] it was granted alongside.
 
 ## Related pages
 

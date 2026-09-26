@@ -8,6 +8,7 @@ role: "Archmage of the Triumvirate of [[polaris|Polaris]]"
 pronouns: she/her
 house: House Arcturus
 nation: "[[polaris|Polaris]]"
+allegiance: "[[polaris|Polaris]]"
 image: hesper.jpg
 ---
 

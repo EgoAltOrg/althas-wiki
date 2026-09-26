@@ -1,7 +1,6 @@
 ---
 title: Drakona
 kind: ancestry
-category: Draconic people
 homeland: the mountains and margins of Althas
 standing: Scarce and diminished
 image: drakona.webp

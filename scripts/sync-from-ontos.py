@@ -138,9 +138,25 @@ TITLES = {
     "victerius-azimuth.md": "Victerius Azimuth",
     "zhenya-azimuth.md": "Zhenya Azimuth",
     "lorkhan-olnir.md": "Lorkhan Olnir",
-    # The hidden-identity fourth PC: name-free public title (source file is
-    # novak-pc-stub.md, but its slug/title must never carry "novak").
-    "novak-pc-stub.md": "???",
+    # The fourth PC, unmasked after session one (2026-09-26): his name and
+    # House went public. Source is still novak-pc-stub.md (the identity-light
+    # public face); the full novak-azimuth dossier stays off the map.
+    "novak-pc-stub.md": "Novak Azimuth",
+    # 2026-09-26 session-one publish: the Drinmery cast the party met, plus
+    # the two PC-side pages that were held while Novak was masked.
+    "gideon.md": "Gideon",
+    "tobias-wren.md": "Tobias Wren",
+    "malak.md": "Malak",
+    "leonard-moore.md": "Leonard Moore",
+    "parashiel.md": "Parashiel",
+    "aldous-pike.md": "Aldous Pike",
+    "alys.md": "Alys",
+    "edric-colvin.md": "Edric Colvin",
+    "hollis-brand.md": "Hollis Brand",
+    "inkfeather.md": "Inkfeather",
+    "maud-tallow.md": "Maud Tallow",
+    "pell.md": "Pell",
+    "wick.md": "Wick",
     "index.md": "Althas",
 }
 
@@ -276,10 +292,32 @@ PAGE_MAP = {
     "victerius-azimuth.md": "npcs/victerius-azimuth.md",
     "zhenya-azimuth.md": "npcs/zhenya-azimuth.md",
     "lorkhan-olnir.md": "npcs/lorkhan-olnir.md",
-    # The hidden-identity fourth PC. Source is novak-pc-stub.md, but the public
-    # slug is name-free (never "novak"): the page and its assets deliberately
-    # carry no identifying name. The novak-azimuth dossier stays off the map.
-    "novak-pc-stub.md": "player-characters/highborne-warrior.md",
+    # The fourth PC. Source is novak-pc-stub.md (name, House, appearance and
+    # mechanics only). Name-free as player-characters/highborne-warrior until
+    # his identity went public after session one (2026-09-26); the old URL
+    # redirects via RENAMES. The novak-azimuth dossier stays off the map.
+    "novak-pc-stub.md": "player-characters/novak-azimuth.md",
+    "malak.md": "player-characters/malak.md",
+    # 2026-09-26 session-one publish. The Drinmery figures the party met (their
+    # secrets stay gm-only on the pages), Novak's counsellor, and the House
+    # Azimuth Miracle's public framing.
+    "gideon.md": "npcs/gideon.md",
+    "tobias-wren.md": "npcs/tobias-wren.md",
+    "guilmore-fleming.md": "npcs/guilmore-fleming.md",
+    "immanuel-greene.md": "npcs/immanuel-greene.md",
+    "leonard-moore.md": "npcs/leonard-moore.md",
+    "parashiel.md": "beings/parashiel.md",
+    # NPCs (Minor), grouped by place: stub pages for the townsfolk the party
+    # has met. The Explorer labels npcs-minor/ and its place subfolders in
+    # quartz.layout.ts.
+    "aldous-pike.md": "npcs-minor/drinmery/aldous-pike.md",
+    "alys.md": "npcs-minor/drinmery/alys.md",
+    "edric-colvin.md": "npcs-minor/drinmery/edric-colvin.md",
+    "hollis-brand.md": "npcs-minor/drinmery/hollis-brand.md",
+    "inkfeather.md": "npcs-minor/drinmery/inkfeather.md",
+    "maud-tallow.md": "npcs-minor/drinmery/maud-tallow.md",
+    "pell.md": "npcs-minor/drinmery/pell.md",
+    "wick.md": "npcs-minor/drinmery/wick.md",
     "index.md": "index.md",
 }
 
@@ -299,6 +337,10 @@ PAGE_MAP = {
 # link ambiguous under the "shortest" strategy and break site-wide. See the
 # comment in quartz/plugins/transformers/frontmatter.ts.
 RENAMES = {
+    # 2026-09-26 Novak unmasked after session one: the name-free PC slug moves
+    # to his real name. Keep the old URL redirecting, and let
+    # carry_forward_source pull the old page's image:/marker: across.
+    "player-characters/novak-azimuth.md": ["player-characters/highborne-warrior"],
     # 2026-09-10 org-cards + diplomacy merge: organizations.md folded into the
     # Diplomacy page (register now renders as faction cards there). Keep the old
     # standalone URL redirecting so player bookmarks survive.
@@ -383,8 +425,6 @@ NOT_YET_PUBLIC = {
     "draconis.md",
     "eltanin.md",
     "thuban.md",
-    "guilmore-fleming.md",
-    "immanuel-greene.md",
     "castorius-voldis.md",
     "the-stargazers.md",
     "sombral-spade.md",
@@ -402,11 +442,9 @@ NOT_YET_PUBLIC = {
     "phylax.md",
     # 2026-08-26 Novak Azimuth ingest, held back. novak-azimuth is the full GM
     # dossier for the PC (personality, designs on the crown); his public face
-    # is the identity-blind PC stub, not this page. parashiel is the House
-    # Azimuth Miracle's true nature (its public outline lives on miracles / the
-    # house page). Both stay off the map entirely.
+    # is the PC stub (novak-pc-stub.md), not this page. (parashiel.md left this
+    # list 2026-09-26: its mysterious public framing is now on the map.)
     "novak-azimuth.md",
-    "parashiel.md",
     # 2026-09-10 USSI character-Inbox: both fully gm-only, nothing survives the
     # strip. Alcota (the Beast-of-Alcota town, not widely known in-world) and
     # Valkas (Zalmir's Witherwild Drakona mentor, all heritage gm-only).
@@ -444,11 +482,11 @@ INFOBOX_KIND_FIELDS = {
     "nation": ("capital", "ruler", "government", "founded"),
     "location": ("category", "nation", "region", "ruler", "population", "faith"),
     "organization": ("category", "leader", "seat", "region", "allegiance", "office", "heir", "words", "relic", "founded"),
-    "magic-system": ("category", "source", "practitioners"),
+    "magic-system": ("source", "practitioners"),
     "being": ("nature", "domain", "fate"),
     "artifact": ("category", "origin", "wielder"),
     "event": ("category", "when", "place", "parties", "commanders", "strength", "casualties", "outcome", "part-of"),
-    "ancestry": ("category", "homeland", "standing"),
+    "ancestry": ("homeland", "standing"),
 }
 
 CALLOUT_START_RE = re.compile(r"^>\s*\[!(gm-only|gm-notes)\]", re.IGNORECASE)

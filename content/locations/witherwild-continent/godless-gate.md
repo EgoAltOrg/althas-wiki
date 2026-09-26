@@ -2,6 +2,7 @@
 title: The Godless Gate
 kind: location
 category: Mountain pass
+nation: "[[voldaen|Voldaen]]"
 ---
 
 **Summary**: **The Godless Gate**, the mountain pass that joins Althas to [[witherwild-continent|the Witherwild]] in the northwest, and the one way between the two. The [[the-witherwatch|Witherwatch]] garrisons it, holding the blighted frontier's wildlife back from Althas.

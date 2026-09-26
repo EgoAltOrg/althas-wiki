@@ -5,6 +5,7 @@ aliases:
   - setting/canton-of-inquisition
 kind: organization
 category: Parish
+leader: "[[lael|Lael]]"
 allegiance: "[[the-holy-see|the Holy See]]"
 ---
 

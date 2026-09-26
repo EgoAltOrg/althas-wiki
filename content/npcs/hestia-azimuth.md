@@ -2,6 +2,7 @@
 title: Hestia Azimuth
 kind: person
 role: "Daughter of House Azimuth"
+ancestry: human
 pronouns: she/her
 house: "[[house-azimuth|House Azimuth]]"
 nation: "[[voldaen|Voldaen]]"
@@ -10,7 +11,7 @@ born: 350 VR
 image: hestia-azimuth.png
 ---
 
-**Summary**: The quiet, calculating one of the twin daughters of [[cornelia-azimuth|Cornelia]] and [[victerius-azimuth|Victerius]] of [[house-azimuth|House Azimuth]], twin to [[agathia-azimuth|Agathia]] and younger sister to Novak. A student of strategy and tactics, trained in both [[codex-magic|Codex]] and [[splendor-magic|Splendor]] magic.
+**Summary**: The quiet, calculating one of the twin daughters of [[cornelia-azimuth|Cornelia]] and [[victerius-azimuth|Victerius]] of [[house-azimuth|House Azimuth]], twin to [[agathia-azimuth|Agathia]] and younger sister to [[novak-azimuth|Novak]]. A student of strategy and tactics, trained in both [[codex-magic|Codex]] and [[splendor-magic|Splendor]] magic.
 
 ---
 
@@ -20,7 +21,7 @@ Of the two, Hestia is the calculating one, with a far greater preference for mil
 
 ## History
 
-Born in [[voldaen|Voldaen]] in 350 VR, Hestia and her twin [[agathia-azimuth|Agathia]] are the daughters of [[cornelia-azimuth|Cornelia]] and [[victerius-azimuth|Victerius]] of [[house-azimuth|House Azimuth]]. From early childhood the twins were educated and trained with the same rigor and breadth as their elder brother Novak, on whom they dote and who returns the fondness. Unlike Novak, their upbringing leaned heavily on the cultivation of both [[codex-magic|Codex]] and [[splendor-magic|Splendor]] magic. They share their father's charisma and flaxen hair, and their mother's regal grace, virtuousness, and bright blue eyes.
+Born in [[voldaen|Voldaen]] in 350 VR, Hestia and her twin [[agathia-azimuth|Agathia]] are the daughters of [[cornelia-azimuth|Cornelia]] and [[victerius-azimuth|Victerius]] of [[house-azimuth|House Azimuth]]. From early childhood the twins were educated and trained with the same rigor and breadth as their elder brother [[novak-azimuth|Novak]], on whom they dote and who returns the fondness. Unlike Novak, their upbringing leaned heavily on the cultivation of both [[codex-magic|Codex]] and [[splendor-magic|Splendor]] magic. They share their father's charisma and flaxen hair, and their mother's regal grace, virtuousness, and bright blue eyes.
 
 ## Depictions
 
@@ -31,6 +32,7 @@ Born in [[voldaen|Voldaen]] in 350 VR, Hestia and her twin [[agathia-azimuth|Aga
 ## Related pages
 
 - [[agathia-azimuth|Agathia Azimuth]]
+- [[novak-azimuth|Novak Azimuth]]
 - [[cornelia-azimuth|Cornelia Azimuth]]
 - [[victerius-azimuth|Victerius Azimuth]]
 - [[house-azimuth|House Azimuth]]

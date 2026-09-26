@@ -3,8 +3,9 @@ title: Polaris
 kind: nation
 ruler: "Triumvirate of Archmages"
 government: "Magocracy"
+founded: 167 VR
 marker:
-    - coordinates: "2075, 1328"
+    - coordinates: "2172, 1602"
       icon: lucide-sparkles
       colour: "#5b8dd6"
       category: nation

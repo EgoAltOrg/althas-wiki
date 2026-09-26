@@ -1,6 +1,8 @@
 ---
 title: The Five Heroes
 kind: organization
+category: Company of heroes
+founded: 333 VR
 ---
 
 **Summary**: The five heroes who fought and brought down [[the-ophanim|the Ophanim]] at [[hilltop|Hilltop]] in 333-334 VR, the event that reshaped Althas's politics and its faith: the Voldaen High Prince [[edrion-voldis|Edrion Voldis]], [[cassio-aquila|Cassio Aquila]] of [[the-holy-see|the Holy See]], [[aldric-voldis|Aldric Voldis]], [[lael|Lael the Reborn]], and [[lyra-aquila|Lyra Aquila]] of [[polaris|Polaris]].

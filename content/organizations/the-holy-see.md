@@ -7,6 +7,7 @@ category: Church
 leader: "[[amalthus-cruoris|Amalthus Cruoris]]"
 seat: central Althas
 office: Divine Regent
+founded: Divine Age
 image: the-holy-see.webp
 ---
 

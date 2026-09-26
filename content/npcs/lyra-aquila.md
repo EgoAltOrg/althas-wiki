@@ -7,6 +7,7 @@ role: "Archmage of the Triumvirate of [[polaris|Polaris]]"
 pronouns: she/her
 house: "[[house-aquila|House Aquila]]"
 nation: "[[polaris|Polaris]]"
+allegiance: "[[polaris|Polaris]]"
 image: lyra-aquila.png
 ---
 

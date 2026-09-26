@@ -2,7 +2,8 @@
 title: House Azimuth
 kind: organization
 category: Noble house
-leader: "Novak Azimuth"
+leader: "[[novak-azimuth|Novak Azimuth]]"
+seat: "[[voldaen|Voldaen]]"
 allegiance: "[[voldaen|Voldaen]]"
 office: "Minister of the Royal Household"
 words: 'Divide et Impera ("divide and rule")'
@@ -11,7 +12,7 @@ founded: Divine Age
 image: house-azimuth-arms.png
 ---
 
-**Summary**: An ancient [[voldaen|Voldaen]] Great House, bearer of the [[miracles|Miracle of Parashiel]] and the [[divine-relics|Rule of The Divider]], and holder of the hereditary office of Minister of the Royal Household. First of the houses to back [[valeran-voldis|the Blessed King]] against the Mad King's heresy; its current head is the young Novak Azimuth.
+**Summary**: An ancient [[voldaen|Voldaen]] Great House, bearer of the [[miracles|Miracle of Parashiel]] and the [[divine-relics|Rule of The Divider]], and holder of the hereditary office of Minister of the Royal Household. First of the houses to back [[valeran-voldis|the Blessed King]] against the Mad King's heresy; its current head is the young [[novak-azimuth|Novak Azimuth]].
 
 ---
 
@@ -19,7 +20,7 @@ image: house-azimuth-arms.png
 
 House Azimuth is an ancient noble [[voldaen|Voldaen]] House that arose during the Divine Age's war against [[the-ones-below|the Ones Below]]. Having fought alongside [[the-one-above|the One Above]], the House's founder, Orion, was granted the [[miracles|Miracle of Parashiel]], the [[divine-relics|Rule of The Divider]], and holyblood, all blessings to be inherited by future generations.
 
-Their coat of arms bears a griffin and a cross in midnight blue and silver, beneath the motto *Divide et Impera*, "divide and rule." The current head of the House is Novak Azimuth.
+Their coat of arms bears a griffin and a cross in midnight blue and silver, beneath the motto *Divide et Impera*, "divide and rule." The current head of the House is [[novak-azimuth|Novak Azimuth]].
 
 ## History
 
@@ -29,7 +30,9 @@ A century later, the Azimuth were the first House to side with [[valeran-voldis|
 
 - [[voldaen|Voldaen]]
 - [[miracles|Miracles]]
+- [[parashiel|Parashiel]]
 - [[divine-relics|Divine Relics]]
+- [[novak-azimuth|Novak Azimuth]]
 - [[cornelia-azimuth|Cornelia Azimuth]]
 - [[victerius-azimuth|Victerius Azimuth]]
 - [[zhenya-azimuth|Zhenya Azimuth]]

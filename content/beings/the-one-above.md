@@ -4,7 +4,7 @@ aliases:
   - setting/the-one-above
 kind: being
 nature: god
-domain: "[[splendor-magic|Splendor]]"
+domain: the Hallows Above
 fate: Departed Althas
 image: the-one-above.jpg
 image_caption: "An artist's rendering, not a likeness. The One Above held no shape for long, and none who claim to have glimpsed the god describe the same figure twice. No true image of it can exist; this is only how one believer pictured him."

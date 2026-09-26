@@ -51,6 +51,8 @@ The ten months carry the names of the faith's liturgical year, which walks the c
 
 So the year is itself a telling of the Divine Age: the faithful pass from vigil through the war to its eve, and the three days that follow are the final battle's own.
 
+Althas has no seasons; the year turns by the liturgy, not the sky. Only the Witherwild knows seasons, turned by Nikta (so claim the locals).
+
 ## The closing holidays
 
 After the tenth month come three days of holiday, each with its own name, that together mark the final battle of the Divine Age.

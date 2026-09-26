@@ -3,8 +3,9 @@ title: Voldaen
 kind: nation
 ruler: "[[valis-voldis|Valis Voldis]]"
 government: Monarchy
+founded: 0 VR
 marker:
-    - coordinates: "900, 900"
+    - coordinates: "1489, 878"
       icon: lucide-landmark
       colour: "#7b97aa"
       category: nation

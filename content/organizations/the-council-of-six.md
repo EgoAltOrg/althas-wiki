@@ -5,6 +5,8 @@ aliases:
 kind: organization
 category: Reconstruction council
 seat: "[[andaluria|Andaluria]]"
+allegiance: "People of Andaluria and [[the-holy-see|the Holy See]]"
+founded: 334 VR
 ---
 
 **Summary**: The **Council of Six**, the six offices that govern [[andaluria|Andaluria's]] reconstruction from the Plaza del Sol in Jesaña. Funded by [[the-holy-see|the Holy See]], its members are the stewards charged with rebuilding the holy capital after the Crisis.

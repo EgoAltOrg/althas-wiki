@@ -19,9 +19,12 @@ _spec = importlib.util.spec_from_file_location(
 _sync = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_sync)
 
-ORDINALS = "First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth"
+# The ten canon month names, in order (the campaign's setting/calendar.md).
+# Headings name the month ("Day 12 of Adventus, 366 VR"); the ordinal
+# "of the Ninth Month" form was retired 2026-09-26.
+MONTHS = "Vigilia|Sacratio|Oblatio|Certamen|Passio|Requiem|Paenitentia|Gratia|Adventus|Vesper"
 MONTH_HEADING_RE = re.compile(
-    rf"^## Day ([1-9]|[12][0-9]|3[0-3]) of the ({ORDINALS}) Month, ([0-9]+) VR$"
+    rf"^## Day ([1-9]|[12][0-9]|3[0-3]) of ({MONTHS}), ([0-9]+) VR$"
 )
 HOLIDAY_HEADING_RE = re.compile(r"^## Day ([1-3]) of the Closing Holidays, ([0-9]+) VR$")
 # Any h2 that *looks like* a date attempt must parse; other h2s are fine.

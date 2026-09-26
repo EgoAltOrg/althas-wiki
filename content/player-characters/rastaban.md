@@ -1,9 +1,12 @@
 ---
 title: Rastaban
 kind: person
+role: "Wizard, School of Knowledge"
 ancestry: giant
 culture: Loreborne
 pronouns: he/him
+nation: "[[polaris|Polaris]]"
+born: 343 VR
 image: rastaban.png
 ---
 

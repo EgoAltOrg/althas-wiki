@@ -37,11 +37,11 @@ KIND_FIELDS = {
     "nation": ("capital", "ruler", "government", "founded"),
     "location": ("category", "nation", "region", "ruler", "population", "faith"),
     "organization": ("category", "leader", "seat", "region", "allegiance", "office", "heir", "words", "relic", "founded"),
-    "magic-system": ("category", "source", "practitioners"),
+    "magic-system": ("source", "practitioners"),
     "being": ("nature", "domain", "fate"),
     "artifact": ("category", "origin", "wielder"),
     "event": ("category", "when", "place", "parties", "commanders", "strength", "casualties", "outcome", "part-of"),
-    "ancestry": ("category", "homeland", "standing"),
+    "ancestry": ("homeland", "standing"),
 }
 ALL_FIELDS = {f for fields in KIND_FIELDS.values() for f in fields}
 

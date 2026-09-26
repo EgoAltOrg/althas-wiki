@@ -1,6 +1,8 @@
 ---
 title: Jestha
 kind: person
+role: "Mother of [[aldric-voldis|Aldric Voldis]]; namesake of [[jesthaen|Jesthaen]]"
+ancestry: human
 pronouns: she/her
 nation: "[[voldaen|Voldaen]]"
 ---

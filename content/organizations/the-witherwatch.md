@@ -4,6 +4,7 @@ kind: organization
 category: Standing garrison
 seat: "[[godless-gate|Godless Gate]]"
 allegiance: "[[voldaen|Voldaen]]"
+founded: 221 VR
 ---
 
 **Summary**: **The Witherwatch**, the standing garrison [[voldaen|Voldaen]] keeps at the [[godless-gate|Godless Gate]], holding the blighted [[witherwild-continent|Witherwild]] frontier back from Althas since the fall of [[haven|Haven]]. A grim, thankless posting, and the wall between Althas and what the Folly left behind.

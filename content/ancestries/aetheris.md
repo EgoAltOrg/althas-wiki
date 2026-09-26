@@ -4,7 +4,6 @@ aliases:
   - ancestries/faeries
   - setting/faeries
 kind: ancestry
-category: Celestial people
 homeland: "The convents and churches of [[the-holy-see|the Holy See]]"
 standing: "Trusted message carriers across all of Althas"
 image: aetheris.webp

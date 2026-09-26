@@ -3,7 +3,6 @@ title: Splendor Magic
 aliases:
   - setting/splendor-magic
 kind: magic-system
-category: Divine
 source: "[[the-one-above|The One Above]]"
 practitioners: "[[the-holy-see|the Holy See]] and its clergy"
 image: splendor-magic.png

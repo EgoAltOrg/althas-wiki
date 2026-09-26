@@ -4,6 +4,7 @@ aliases:
   - locations/crater-lake
 kind: location
 category: Lake
+nation: "[[hilltop|Hilltop]]"
 region: Central Althas
 ---
 

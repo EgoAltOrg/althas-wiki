@@ -1,9 +1,11 @@
 ---
 title: Jesthaen
 kind: nation
+ruler: "[[aldric-voldis|Aldric Voldis]]"
 government: "Republic"
+founded: 351 VR
 marker:
-    - coordinates: "850, 1700"
+    - coordinates: "890, 1867"
       icon: lucide-landmark
       colour: "#84a59d"
       category: nation
