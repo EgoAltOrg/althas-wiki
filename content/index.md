@@ -109,6 +109,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[witherwild-continent|The Witherwild]]: the blighted second continent beyond the northwest pass, grave of the Haven colony ("the Folly")
 - [[haven|Haven]]: the three-power colony lost in the Witherwild to plague and the wild, remembered as "the Folly"
 - [[godless-gate|The Godless Gate]]: the northwest mountain pass joining Althas to the Witherwild, held by the Witherwatch
+- [[serracorte|The Serracorte]]: Andaluria's volcanic wine highlands, crowned by the Condesa's Castillo del Cardenal
 
 ## Factions
 
@@ -143,6 +144,8 @@ All communities are available across nations, but some have unique aspects withi
 - [[the-one-above|The One Above]]: has left Althas
 
 - [[the-ones-below|The Ones Below]]: the gods the One Above fought in the Divine Age, sealed away
+- [[the-faunus|The Faunus]]: the faith of the Wicklings of the Witherwild, as Althan scholars reconstruct it
+- [[caio|The Caio]]: Althas's road folk and Drabalo, the wandering trickster they follow, as Althan scholars reconstruct it
 - [[splendor-magic|Splendor Magic]]: incantation-based magic as a favor granted, not generated
 - [[codex-magic|Codex Magic]]: seal-drawn magic that tears into the Source
 - [[miracles|Miracles]]: hereditary gifts from the One Above

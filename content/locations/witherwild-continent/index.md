@@ -2,7 +2,7 @@
 title: The Witherwild
 kind: location
 category: Continent
-faith: "the Faunus"
+faith: "[[the-faunus|the Faunus]]"
 ---
 
 **Summary**: **The Witherwild**, the blighted continent joined to Althas by a single mountain pass in the northwest. A hostile frontier of unending growth gone wrong, it is known to most Althans only as the grave of [[haven|Haven]], the doomed colony remembered as "the Folly," and as the land the [[the-witherwatch|Witherwatch]] holds the border against.
@@ -30,7 +30,7 @@ Ruin never killed the dream the Folly was built on. Highborn children across the
 
 ### The Faunus
 
-The Wicklings share the Fanewick with the Faunus, beings they hold to be gods that walk the land in the flesh and trade small miracles for worship as readily as they punish with tricks and curses. What little of that faith reached Althas came filtered through the [[house-aquila|House Aquila]] missionary who led the [[the-holy-see|Holy See's]] part of the [[haven|Haven]] colony: bearing the [[miracles|Miracle of Pentecost]], they alone could understand the Wicklings, and it was they who named the beings the **Faunus** and fixed the forms of their names the mainland now uses. The faith Althas reconstructed from those thin records, and the handful of named Faunus it still remembers (the Great Owl Nikta chief among them), are gathered on the Faunus.
+The Wicklings share the Fanewick with the Faunus, beings they hold to be gods that walk the land in the flesh and trade small miracles for worship as readily as they punish with tricks and curses. What little of that faith reached Althas came filtered through the [[house-aquila|House Aquila]] missionary who led the [[the-holy-see|Holy See's]] part of the [[haven|Haven]] colony: bearing the [[miracles|Miracle of Pentecost]], they alone could understand the Wicklings, and it was they who named the beings the **Faunus** and fixed the forms of their names the mainland now uses. The faith Althas reconstructed from those thin records, and the handful of named Faunus it still remembers (the Great Owl Nikta chief among them), are gathered on [[the-faunus|the Faunus]].
 
 ### The changed peoples
 

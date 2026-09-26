@@ -160,6 +160,11 @@ TITLES = {
     # 2026-09-24 ingest, first mapped 2026-09-26 (it had public content but
     # was never added here, so it silently never synced).
     "simiah.md": "Simiah",
+    # Also unlisted since their ingests (2026-08/09); first mapped 2026-09-26
+    # after a humanizer + de-slop pass. The Reaping Eye stays gm-only.
+    "caio.md": "The Caio",
+    "the-faunus.md": "The Faunus",
+    "serracorte.md": "Serracorte",
     "index.md": "Althas",
 }
 
@@ -225,6 +230,11 @@ PAGE_MAP = {
     "hilltop.md": "locations/hilltop/index.md",
     "crater-lake.md": "locations/hilltop/crater-lake.md",
     "andaluria.md": "locations/hilltop/andaluria.md",
+    "serracorte.md": "locations/hilltop/serracorte.md",
+    # The road-folk faith (a people's faith, no infobox kind) sits with the
+    # world-concept pages; the Wickling faith sits with the other beings.
+    "caio.md": "setting/caio.md",
+    "the-faunus.md": "beings/the-faunus.md",
     "convent-of-saint-trefan.md": "locations/jesthaen/convent-of-saint-trefan.md",
     "drinmery.md": "locations/jesthaen/drinmery.md",
     "jesthaen.md": "locations/jesthaen/index.md",

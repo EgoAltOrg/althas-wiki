@@ -20,7 +20,7 @@ Home to a strong Slyborne (criminal organization) presence and looser laws than 
 
 ### The drabardi
 
-Among the Caio, fortune-tellers called **drabardi** are revered for reading the threads of fate, by cards, bones, tea leaves, and the like, a craft passed down within families. Most Armadans take a drabardi's divination seriously, and it is one of the folk-practices the Caio carried with them out of the old Hilltop south. For the drabardi as the road-people's clergy and their place in the Caio faith, see that page.
+Among the [[caio|Caio]], fortune-tellers called **drabardi** are revered for reading the threads of fate, by cards, bones, tea leaves, and the like, a craft passed down within families. Most Armadans take a drabardi's divination seriously, and it is one of the folk-practices the Caio carried with them out of the old Hilltop south. For the drabardi as the road-people's clergy and their place in the [[caio|Caio faith]], see that page.
 
 ## Related pages
 

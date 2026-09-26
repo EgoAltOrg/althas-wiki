@@ -6,13 +6,13 @@ standing: "Freed from bondage, now mostly Caio"
 image: simiah.webp
 ---
 
-**Summary**: A long-limbed people with the features of apes and monkeys, carried off the [[witherwild-continent|Witherwild]] in bondage like the [[firbolg|Firbolg]]. Where the Firbolg were put to the vineyards, the Simiah were put to sea. Freed since, most now live as Caio in [[armada|Armada]].
+**Summary**: A long-limbed people with the features of apes and monkeys, carried off the [[witherwild-continent|Witherwild]] in bondage like the [[firbolg|Firbolg]]. Where the Firbolg were put to the vineyards, the Simiah were put to sea. Freed since, most now live as [[caio|Caio]] in [[armada|Armada]].
 
 ---
 
 ## Overview
 
-The Simiah came to Althas in chains. Like the [[firbolg|Firbolg]], they are a [[witherwild-continent|Witherwild]] people carried off that continent by the colonizers of [[haven|Haven]], but they were not set to work the land. Their agility made them prized at sea, and they were put to the ropes and sails of trading ships and war vessels as slave-sailors. Free now, most live as Caio in [[armada|Armada]].
+The Simiah came to Althas in chains. Like the [[firbolg|Firbolg]], they are a [[witherwild-continent|Witherwild]] people carried off that continent by the colonizers of [[haven|Haven]], but they were not set to work the land. Their agility made them prized at sea, and they were put to the ropes and sails of trading ships and war vessels as slave-sailors. Free now, most live as [[caio|Caio]] in [[armada|Armada]].
 
 ## Appearance
 
@@ -20,7 +20,7 @@ Simiah look like upright monkeys and apes, with long limbs and prehensile feet. 
 
 ## Culture
 
-Like the Firbolg, the freed Simiah found their home among the Caio, and most are Caio today, living in [[armada|Armada]].
+Like the Firbolg, the freed Simiah found their home among the [[caio|Caio]], and most are Caio today, living in [[armada|Armada]].
 
 ## History
 
@@ -35,6 +35,7 @@ The Simiah are free now, and like the Firbolg most of them have become Caio, mak
 ## Related pages
 
 - [[firbolg|Firbolg]]
+- [[caio|the Caio]]
 - [[armada|Armada]]
 - [[haven|Haven]]
 - [[witherwild-continent|the Witherwild]]

@@ -27,7 +27,7 @@ As with any holyblood line, a Miracle surfaces rarely, once or twice in a genera
 
 ### The Word at Haven
 
-Generations before the Ophanim fell, [[voldaen|Voldaen]], [[polaris|Polaris]], and [[hilltop|Hilltop]] together raised the colony of [[haven|Haven]] across the pass in the [[witherwild-continent|Witherwild]], and an Aquila carried the [[the-holy-see|Holy See's]] faith there. Bearing the Miracle of Pentecost, the Aquila missionary alone could understand the Wicklings of that land, and named the Faunus, fixing the forms of their names the mainland still uses. Little of that record survived the Folly, but what Althas holds of the Witherwild's faith, it holds in an Aquila's hand.
+Generations before the Ophanim fell, [[voldaen|Voldaen]], [[polaris|Polaris]], and [[hilltop|Hilltop]] together raised the colony of [[haven|Haven]] across the pass in the [[witherwild-continent|Witherwild]], and an Aquila carried the [[the-holy-see|Holy See's]] faith there. Bearing the Miracle of Pentecost, the Aquila missionary alone could understand the Wicklings of that land, and named the [[the-faunus|Faunus]], fixing the forms of their names the mainland still uses. Little of that record survived the Folly, but what Althas holds of the Witherwild's faith, it holds in an Aquila's hand.
 
 ### Verba Ophanim, and after
 
