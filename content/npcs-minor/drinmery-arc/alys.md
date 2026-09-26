@@ -7,7 +7,7 @@ role: "Townswoman of [[drinmery|Drinmery]]"
 ancestry: human
 pronouns: she/her
 nation: "[[jesthaen|Jesthaen]]"
-image: alys.png
+image: alys.jpg
 ---
 
 **Summary**: A grieving mother of [[drinmery|Drinmery]] who lately lost her young son, Colm.

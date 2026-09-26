@@ -6,7 +6,7 @@ kind: person
 role: "Gravekeeper of the [[convent-of-saint-trefan|Convent of Saint Trefan]]"
 pronouns: he/him
 nation: "[[jesthaen|Jesthaen]]"
-image: aldous-pike.png
+image: aldous-pike.jpg
 ---
 
 **Summary**: The old gravekeeper of the [[convent-of-saint-trefan|Convent of Saint Trefan's]] churchyard in [[drinmery|Drinmery]].

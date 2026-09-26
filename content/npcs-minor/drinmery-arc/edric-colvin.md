@@ -6,7 +6,7 @@ kind: person
 role: "Steward to [[guilmore-fleming|Count Fleming]]"
 pronouns: he/him
 nation: "[[jesthaen|Jesthaen]]"
-image: edric-colvin.png
+image: edric-colvin.jpg
 ---
 
 **Summary**: Steward to [[guilmore-fleming|Count Fleming]] of [[drinmery|Drinmery]].
