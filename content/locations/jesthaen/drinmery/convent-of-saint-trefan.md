@@ -23,7 +23,7 @@ Not a large convent, but its library holds a rare and valuable book collection, 
 
 ### The tomb of Saint Trefan
 
-At the end of the convent cellar, a [[codex-magic|Codex]] seal holds an illusory wall over the tomb of Saint Trefan. To open it, the seal takes what the opener knows of one creature and writes it into Saint Trefan's Lorekeeper, a book left behind in the tomb. When the party opened it, the tomb had already been broken into, the saint's body desecrated and its brain removed. The Lorekeeper's pages now hold [[the-ophanim|the Ophanim]] and [[parashiel|Parashiel]].
+At the end of the convent cellar, a [[codex-magic|Codex]] seal holds an illusory wall over the tomb of Saint Trefan. To open it, the seal takes what the opener knows of one creature and writes it into Saint Trefan's Lorekeeper, a book left behind in the tomb. When the party opened it, the tomb had already been broken into, the saint's body desecrated and its brain removed. The Lorekeeper's pages now hold [[the-ophanim|the Ophanim]] and [[parashiel|Parashiel]]. Whoever carries the Lorekeeper gains an edge against the creatures it records: +1 to action rolls against them.
 
 ## Inhabitants
 

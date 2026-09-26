@@ -28,7 +28,7 @@ She came from House Arcturus, known for its Miracle of Firmament, letting its be
 
 ### Death
 
-She was killed by a giant during her final duel with Izar. News of an archmage of the Triumvirate struck down within her own walls plunged Polaris into riots: fear that giants had grown bold enough to strike at the ruling seats themselves, and anger looking for somewhere to land.
+She was killed by a giant in 363 VR, during her final duel with Izar. News of an archmage of the Triumvirate struck down within her own walls plunged Polaris into riots: fear that giants had grown bold enough to strike at the ruling seats themselves, and anger looking for somewhere to land.
 
 ## Relationships
 

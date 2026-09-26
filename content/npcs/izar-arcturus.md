@@ -26,7 +26,7 @@ Son of [[hesper-arcturus|Hesper]], the eccentric archmage who held a seat on [[p
 
 ### The final duel
 
-Their last duel ended with Hesper struck down within her own walls, killed, as Polaris believes, by a giant. Izar survived. News of an archmage of the Triumvirate cut down in her own home plunged the city into riots: fear that giants had grown bold enough to strike at the ruling seats themselves, and anger looking for somewhere to land.
+Their last duel, in 363 VR, ended with Hesper struck down within her own walls, killed, as Polaris believes, by a giant. Izar survived. News of an archmage of the Triumvirate cut down in her own home plunged the city into riots: fear that giants had grown bold enough to strike at the ruling seats themselves, and anger looking for somewhere to land.
 
 ## Related pages
 
