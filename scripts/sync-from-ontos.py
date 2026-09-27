@@ -231,9 +231,9 @@ PAGE_MAP = {
     "crater-lake.md": "locations/hilltop/crater-lake.md",
     "andaluria.md": "locations/hilltop/andaluria.md",
     "serracorte.md": "locations/hilltop/serracorte.md",
-    # The road-folk faith (a people's faith, no infobox kind) sits with the
-    # world-concept pages; the Wickling faith sits with the other beings.
-    "caio.md": "setting/caio.md",
+    # The Caio (road folk and their faith, no infobox kind) sit with the
+    # organizations; the Wickling faith sits with the other beings.
+    "caio.md": "organizations/caio.md",
     "the-faunus.md": "beings/the-faunus.md",
     "convent-of-saint-trefan.md": "locations/jesthaen/drinmery/convent-of-saint-trefan.md",
     "drinmery.md": "locations/jesthaen/drinmery/index.md",
@@ -351,6 +351,8 @@ PAGE_MAP = {
 # link ambiguous under the "shortest" strategy and break site-wide. See the
 # comment in quartz/plugins/transformers/frontmatter.ts.
 RENAMES = {
+    # 2026-09-27 the Caio move from Setting to Organizations.
+    "organizations/caio.md": ["setting/caio"],
     # 2026-09-26 Drinmery reorg: the minor-NPC folder becomes "Drinmery Arc",
     # and Drinmery becomes a Jesthaen folder whose index.md is the town page,
     # with the convent inside it. Old URLs keep redirecting; carry_forward_source

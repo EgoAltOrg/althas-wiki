@@ -18,7 +18,7 @@ image: mystery-pc-portrait.png
 ---
 
 > [!note] Player character
-> Novak Azimuth is a PC, not an NPC. He revealed his name and House in [[drinmery|Drinmery]] on Adventus 12, 366 VR; beyond that, his appearance and basic mechanics, nothing more is public.
+> Novak Azimuth is a PC, not an NPC. He revealed his name and House in [[drinmery|Drinmery]] on Adventus 12, 366 VR.
 
 ## Appearance
 

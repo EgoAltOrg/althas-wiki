@@ -16,15 +16,15 @@ image: gideon.jpg
 
 ## Appearance
 
-A young man who carries himself like a soldier and not a cleric, dark hair swept back from a face marked twice over. One eye is clouded and scarred, a wound of the [[jesthaen|Jesthaen]] war; the mouth is cut through by a knife-scar that never healed clean, and it drags his speech into a slur he plainly hates. He wears mail under a dark cloak clasped with gold, and keeps his right hand bound and favored, the injury he says has brought him to [[drinmery|Drinmery]] to rest. He speaks little, in short flat words, the habit of a man used to giving orders rather than talk.
+A young man with the bearing of a soldier more than a cleric, dark hair swept back from a face scarred twice. One eye is clouded and scarred, a wound of the [[jesthaen|Jesthaen]] war; the mouth is cut through by a knife-scar that never healed clean, and it drags his speech into a slur he plainly hates. He wears mail under a dark cloak clasped with gold, and keeps his right hand bound and favored, the injury he says has brought him to [[drinmery|Drinmery]] to rest. He speaks little and flatly, like a man more used to giving orders than to talking.
 
 ## Personality
 
-Brutal, exact, and short of temper. Gideon takes an order to its letter and asks nothing of it, and he has no patience to spare for the slow, the evasive, or anyone who wastes his time. Whatever gentleness the faith teaches, he does not counterfeit it well.
+Brutal, exact and quick to anger. Gideon follows an order to the letter without questioning it, and has no patience for anyone slow, evasive or wasting his time. The faith teaches gentleness, and he is bad at faking it.
 
 ## Abilities
 
-Gideon bears no [[miracles|Miracle]] and none of the holyblood that opens the faith's higher offices. He is a common man who rose on obedience and a strong arm, and what he holds instead is a soldier's training and an [[parish-of-inquisition|Inquisitor's]] writ: the authority to question, to judge, and to name a heresy where he finds one.
+Gideon bears no [[miracles|Miracle]] and none of the holyblood that opens the faith's higher offices. He is a commoner who rose through obedience and a strong arm. What he has instead is a soldier's training and an [[parish-of-inquisition|Inquisitor's]] writ, which lets him question, judge, and declare heresy where he finds it.
 
 ## History
 

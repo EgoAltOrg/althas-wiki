@@ -124,6 +124,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[house-azimuth|House Azimuth]]: Great House of Voldaen, hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider; current head [[novak-azimuth|Novak Azimuth]]
 - [[house-olnir|House Olnir]]: ancient Voldaen Great House, bearer of the Miracle of Fames and keeper of the Famesfeast, its ministry stripped after [[lorkhan-olnir|Lorkhan's]] treason
 - [[the-witherwatch|The Witherwatch]]: Voldaen's grim frontier garrison holding the Godless Gate against the blighted Witherwild
+- [[caio|The Caio]]: Althas's road folk and Drabalo, the wandering trickster they follow, as Althan scholars reconstruct it
 
 ## Ancestries
 
@@ -145,7 +146,6 @@ All communities are available across nations, but some have unique aspects withi
 
 - [[the-ones-below|The Ones Below]]: the gods the One Above fought in the Divine Age, sealed away
 - [[the-faunus|The Faunus]]: the faith of the Wicklings of the Witherwild, as Althan scholars reconstruct it
-- [[caio|The Caio]]: Althas's road folk and Drabalo, the wandering trickster they follow, as Althan scholars reconstruct it
 - [[splendor-magic|Splendor Magic]]: incantation-based magic as a favor granted, not generated
 - [[codex-magic|Codex Magic]]: seal-drawn magic that tears into the Source
 - [[miracles|Miracles]]: hereditary gifts from the One Above

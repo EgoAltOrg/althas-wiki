@@ -26,11 +26,11 @@ Like the Firbolg, the freed Simiah found their home among the [[caio|Caio]], and
 
 ### Slave-sailors
 
-The Havenites who took the Simiah valued them for their dexterity. Hands and feet that could work a line, and a body that could move through rigging, made them ideal hands aboard trading ships and warships, and they were bought and sold to crew both.
+The Havenites who took the Simiah valued them for their dexterity. Hands and feet that could work a line and bodies built for rigging made them ideal crew for trading ships and warships alike, and they were bought and sold to man both.
 
 ### Freedom
 
-The Simiah are free now, and like the Firbolg most of them have become Caio, making their lives in Armada.
+The Simiah have since been freed.
 
 ## Related pages
 

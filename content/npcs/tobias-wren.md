@@ -16,11 +16,11 @@ image: tobias-wren.jpg
 
 ## Appearance
 
-An old man worn gaunt and hollow-cheeked, with long, unbound hair gone pale and fine with age and deep-set, shadowed eyes. He keeps the plain dark robes of a country convent priest and a simple pale ruff at the throat, and his hands are long and pale. For all the frailty, his manner is gentle and unhurried, and most read the wear on him as a long life given over to devotion.
+An old man worn gaunt and hollow-cheeked, with long, unbound hair gone pale and fine with age and deep-set, shadowed eyes. He keeps the plain dark robes of a country convent priest and a simple pale ruff at the throat, and his hands are long and pale. Frail as he is, his manner is gentle and unhurried.
 
 ## Personality
 
-Patient and warm: the priest a small town comes to love, who knows every family's griefs, blesses the newborn and sits with the dying, and turns no one from the door.
+Patient and warm. He knows every family's troubles, blesses the newborns, sits with the dying and turns no one away, and the town loves him for it.
 
 ## History
 
