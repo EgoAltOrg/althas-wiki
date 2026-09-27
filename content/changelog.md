@@ -4,11 +4,6 @@ title: Changelog
 
 What's new on the wiki, most recent first.
 
-## 2026-09-27
-
-- **[[caio|The Caio]]** now sit under Organizations instead of Setting. The old link still works. The page has been rewritten to read more easily, and its content is unchanged.
-- **Lighter edits** to the wording on [[the-faunus|the Faunus]], [[gideon|Gideon]], [[tobias-wren|Tobias Wren]], [[alys|Alys]], [[simiah|the Simiah]] and [[novak-azimuth|Novak Azimuth]].
-
 ## 2026-09-26
 
 - **The first day in Drinmery.** The [[chronicle|Chronicle]] opens on Day 12 of Adventus, 366 VR: Uriel and Malak reach the Convent of Saint Trefan, Uriel takes Rastaban into his custody, Novak, Zalmir and Leonard enter the town, bandits raid the market and steal Cornelia Azimuth's ring, General Greene arrives after the fight, and that night the party opens the sealed tomb beneath the convent. The Chronicle's calendar now opens on the current day, and its dates use the calendar's own month names, Vigilia through Vesper, instead of "the Ninth Month".
