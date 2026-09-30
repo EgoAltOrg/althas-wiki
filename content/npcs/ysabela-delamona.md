@@ -17,13 +17,13 @@ image: ysabela-delamona.webp
 
 ## History
 
-House Delamoña are Andaluria's foremost wine-lords, and when [[the-ophanim|the Ophanim's]] fall drove [[the-holy-see|the Holy See]] and the great houses of [[hilltop|Hilltop]] to central Althas, they were the one great family that did not go. Ysabela IV had every reason to follow: her own mother, the previous Condesa, was a high official of the Holy See who perished in the attack. Instead, in the grief after that loss, she made the choice that has defined her, cutting House Delamoña's long ties to the Church and keeping her house, and its fortune, in the ruined region to aid its rebuilding. It was a scandal among the highborn and a redemption in the eyes of everyone else.
+House Delamoña are Andaluria's foremost wine-lords, and when [[the-ophanim|the Ophanim's]] fall drove [[the-holy-see|the Holy See]] and the great houses of [[hilltop|Hilltop]] to central Althas, they were the one great family that did not go. Ysabela IV had every reason to follow: her own mother, the previous Condesa, was a high official of the Holy See who perished in the attack. Instead, in the grief after that loss, she made the choice that has defined her, cutting House Delamoña's long ties to the Church and keeping her house, and its fortune, in the ruined region to aid its rebuilding. It scandalized the highborn.
 
-Her vineyards on the dark volcanic slopes yield the most coveted wine in Andaluria, and the coin it earns has made her the single greatest private patron of the reconstruction, her fortune rebuilding the region alongside the taxes the Church gathers from afar. To the common people she is the one powerful figure who did not abandon them, and they love her for it. She is rarely seen: the Condesa keeps to her hilltop seat, Castillo del Cardenal, and to the masquerades she throws for Andaluria's elite, glittering nights of masks and candlelight held while the countryside beyond her walls grows darker.
+Her vineyards on the dark volcanic slopes yield the most coveted wine in Andaluria, and the coin it earns has made her the single greatest private patron of the reconstruction, her fortune rebuilding the region alongside the taxes the Church gathers from afar. The common people love her for staying. She is rarely seen: the Condesa keeps to her hilltop seat, Castillo del Cardenal, and to the masquerades she throws for Andaluria's elite, glittering nights of masks and candlelight held while the countryside beyond her walls grows darker.
 
 ## Relationships
 
-Of late her name has been joined with the Church's once more. She is betrothed to Archbishop [[mateo-veyra|Mateo Veyra]], and Andaluria reads the match as the Church's long effort to draw House Delamoña, and its purse, back into the fold: faith courting fortune for the good of the region both claim to serve.
+Of late her name has been joined with the Church's once more: she is betrothed to Archbishop [[mateo-veyra|Mateo Veyra]].
 
 ## Depictions
 

@@ -38,7 +38,7 @@ node the-council-of-six | The Council of Six | institution | organizations/the-c
 
 # Edges: source -> target (arrow) or <-> (mutual) | type | label
 edge house-voldis -> voldaen | governance | royal dynasty, rules
-edge the-holy-see -> hilltop | governance | divine regent, governs the faith from
+edge the-holy-see -> hilltop | governance | divine regent, rules from central Althas
 edge parish-of-inquisition -> the-holy-see | governance | investigative and judicial arm of
 edge guild -> armada | governance | governs
 edge armada -> infernis | uneasy | sometimes tolerates
@@ -57,7 +57,7 @@ edge aldric-voldis -> jesthaen | governance | founder, leads
 edge aldric-voldis -> house-voldis | uneasy | spurned baseborn son
 edge lael -> parish-of-inquisition | governance | Lord Commander, leads
 edge lyra-aquila -> polaris | governance | Triumvirate archmage
-edge hesper-arcturus -> polaris | governance | Triumvirate archmage
+edge hesper-arcturus -> polaris | governance | Triumvirate archmage until her death in 363 VR
 edge augustus-corvus -> voldaen | governance | Minister of War
 edge augustus-corvus -> jesthaen | rivalry | led Voldaen's armies against, wants the war renewed
 edge augustus-corvus -> aldric-voldis | war-history | brothers-in-arms in the Ophanim War, then enemies
@@ -75,11 +75,11 @@ The fighting that the Jesthaen Treaty ended had two sides. [[voldaen|Voldaen]] h
 
 ## Rivalries and alliances
 
-[[voldaen|Voldaen]] and [[polaris|Polaris]] were rivals before the war and stayed rivals through it. Polaris began as a group of scholars and mages who broke away from Hilltop, and it sided with the rebels against Voldaen's monarchy. Its alliance with [[armada|Armada]] and Jesthaen carried them through the fighting, but with the common enemy gone that alliance is now called fragile.
+[[voldaen|Voldaen]] and [[polaris|Polaris]] were rivals before the war and stayed rivals through it. Polaris began as a group of scholars and mages who broke away from Voldaen, and it sided with the rebels against Voldaen's monarchy. Its alliance with [[armada|Armada]] and Jesthaen carried them through the fighting, but with the common enemy gone that alliance is now called fragile.
 
 ## Who governs whom
 
-Several powers on the map are not nations but the institutions that run them. [[house-voldis|House Voldis]] is the royal dynasty of Voldaen. [[the-holy-see|The Holy See]] governs the faith from Hilltop and fields the [[parish-of-inquisition|Parish of Inquisition]] as its investigative and judicial arm. [[armada|Armada]] answers to [[guild|the Guild]] rather than to any single ruler. Armada is also the one nation that sometimes tolerates the [[infernis|Infernis]], who are banned almost everywhere else.
+Several powers on the map are not nations but the institutions that run them. [[house-voldis|House Voldis]] is the royal dynasty of Voldaen. [[the-holy-see|The Holy See]] governs the faith and rules Hilltop from central Althas, where it relocated after the Ophanim, and fields the [[parish-of-inquisition|Parish of Inquisition]] as its investigative and judicial arm. [[armada|Armada]] answers to [[guild|the Guild]] rather than to any single ruler. Armada is also the one nation that sometimes tolerates the [[infernis|Infernis]], who are banned almost everywhere else.
 
 ## Organizations
 
@@ -94,42 +94,36 @@ The oldest nation. A proud monarchy of [[house-voldis|House Voldis]], shaken by 
 - **Assets**: divine-right legitimacy (claimed God King descent), the oldest crown on the continent, vast ancestral wealth, House Voldis's dynastic network.
 - **Problems**: post-secession upheaval, having lost the south to [[jesthaen|Jesthaen]]; border settlements exposed to [[polaris|Polaris]] and Jesthaen; Queen [[valis-voldis|Valis Voldis]] reigns but does not truly rule.
 - **Relationships**: [[the-holy-see|Holy See]] +2, [[jesthaen|Jesthaen]] -2, [[polaris|Polaris]] -2, [[armada|Armada]] -1.
-- **Objective**: pending design pass.
 
-**The Council of Great Houses** (Tier 4) *(placeholder name, pending design pass)*
+**The Council of Great Houses** (Tier 4)
 - **Blurb**: The great houses that work the throne's machinery from behind it, holding real power for as long as the fiction of the Crown's rule survives.
 - **Assets**: the great houses' combined wealth, lands, and levies; control of the throne's machinery; an entrenched bureaucratic grip.
 - **Problems**: rivalry between the houses; an authority resting on a fiction it must keep intact; exposure if the queen asserts herself or a rival seizes her.
-- **Relationships** (publicly presents as the Crown's own): [[the-holy-see|Holy See]] +2, [[jesthaen|Jesthaen]] -2, [[polaris|Polaris]] -2, [[armada|Armada]] -1.
-- **Objective**: pending design pass.
+- **Relationships** (the same as the Crown's): [[the-holy-see|Holy See]] +2, [[jesthaen|Jesthaen]] -2, [[polaris|Polaris]] -2, [[armada|Armada]] -1.
 
 **The Ministry of War** ([[augustus-corvus|Augustus Corvus]]) (Tier 3)
 - **Blurb**: [[voldaen|Voldaen]]'s standing army under the undefeated [[augustus-corvus|Augustus Corvus]], chafing at an armistice that forbids the war it was built to fight.
 - **Assets**: Voldaen's standing army; [[augustus-corvus|Augustus]], the undefeated commander who lost no battle in the war; a veteran officer corps and its prestige.
 - **Problems**: leashed by the armistice it despises; the treaty forbids the very war it exists for.
 - **Relationships**: [[jesthaen|Jesthaen]] -3, Crown +2, Council +1.
-- **Objective**: pending design pass.
 
 **[[house-azimuth|House Azimuth]]** (Tier 3)
 - **Blurb**: An ancient [[voldaen|Voldaen]] Great House, first to back the Blessed King against the Mad King's heresy, keeper ever since of the Minister of the Royal Household's office, held now by [[zhenya-azimuth|Zhenya Azimuth]].
 - **Assets**: an ancient Great House's wealth and lands; the hereditary office of Minister of the Royal Household; holyblood and a House Miracle; a long record of loyalty to the Crown.
 - **Problems**: a standing that rests on old service and a young head; rivalry among the Great Houses.
 - **Relationships**: Crown +3, Council +2, [[jesthaen|Jesthaen]] -2.
-- **Objective**: pending design pass.
 
 **[[house-olnir|House Olnir]]** (Tier 2)
-- **Blurb**: An old [[voldaen|Voldaen]] Great House feared for a rite it will not name, stripped of its ministry after its heir [[lorkhan-olnir|Lorkhan]] joined [[aldric-voldis|Aldric's]] revolution, holding its noble standing now only by a newly sworn fealty.
+- **Blurb**: An old [[voldaen|Voldaen]] Great House feared for its cannibal rite, the Famesfeast, stripped of its ministry after its heir [[lorkhan-olnir|Lorkhan]] joined [[aldric-voldis|Aldric's]] revolution, holding its noble standing now only by a newly sworn fealty.
 - **Assets**: the fortress seat of Mambaril; the Miracle of Fames; a fearsome name; ruthless resourcefulness.
 - **Problems**: stripped of its ministry after its heir's defection; noble standing held only by a newly sworn fealty; the dread the House's name carries.
 - **Relationships**: Crown +1, Council +1, [[jesthaen|Jesthaen]] -1.
-- **Objective**: pending design pass.
 
 **[[the-witherwatch|The Witherwatch]]** (Tier 2)
 - **Blurb**: The standing garrison [[voldaen|Voldaen]] keeps at the [[godless-gate|Godless Gate]], holding the blighted [[witherwild-continent|Witherwild]] frontier with condemned men and unwanted heirs, and scarcely thanked for it.
 - **Assets**: the fortress at the [[godless-gate|Godless Gate]]; hardened frontier watchmen; generations of holding the pass.
 - **Problems**: under-resourced and disregarded; ranks filled by condemned men and cast-off heirs; a history of desertion at the top.
 - **Relationships**: Crown +1.
-- **Objective**: pending design pass.
 
 ### Jesthaen
 
@@ -140,82 +134,72 @@ The newest nation. A republic [[aldric-voldis|Aldric Voldis]] broke away from [[
 - **Assets**: a strong land military, natural resources and arable land, a revolutionary mandate, [[aldric-voldis|Aldric]] the war-hero founder.
 - **Problems**: young-nation instability; conservative pro-Voldaen holdouts; fresh, fragile recognition.
 - **Relationships**: [[armada|Armada]] +2, [[polaris|Polaris]] +1, [[voldaen|Voldaen]] -2, [[the-holy-see|Holy See]] -2.
-- **Objective**: pending design pass.
 
 **Revolution-era Slyborne networks** (Tier 3)
 - **Blurb**: The smuggling routes that carried the revolution, now wary as the republic they served courts the legitimacy that would disown them.
 - **Assets**: smuggling routes, a black-market economy, revolution-forged loyalty, cross-border reach into [[armada|Armada]].
 - **Problems**: a republic seeking legitimacy may turn on its old smuggler allies; friction with Armada's pirate families over the same trade.
 - **Relationships**: [[armada|Armada]] +1, Republic +1.
-- **Objective**: pending design pass.
 
 ### Polaris
 
 A magocracy of scholars and mages, its industrial rise built on [[giants|Giant]] labor it later discarded.
 
-**The Triumvirate of Archmages** ([[lyra-aquila|Lyra Aquila]] and [[hesper-arcturus|Hesper Arcturus]]) (Tier 5, ruling)
+**The Triumvirate of Archmages** ([[lyra-aquila|Lyra Aquila]]; [[hesper-arcturus|Hesper Arcturus]]'s seat empty since her death) (Tier 5, ruling)
 - **Blurb**: The archmages who rule the magocracy, rich in magitech and airships but short of labor and raw stock, a restive [[giants|giant]] underclass beneath them.
 - **Assets**: skilled mages, magitech, airships, magical creatures, the academies.
-- **Problems**: a worker shortage, poor raw materials, a restive [[giants|giant]] underclass.
+- **Problems**: a worker shortage, poor raw materials, a restive [[giants|giant]] underclass; a seat left empty until a trial can be arranged for a new Archmage.
 - **Relationships**: [[armada|Armada]] +1, [[jesthaen|Jesthaen]] +1, [[voldaen|Voldaen]] -2, [[the-holy-see|Holy See]] -3.
-- **Objective**: pending design pass.
 
 **The [[giants|Giants]] of Polaris** (labor underclass) (Tier 2)
 - **Blurb**: The giant laborers whose hands built [[polaris|Polaris]], strong in number and grievance yet held without legal standing or a voice.
 - **Assets**: indispensable labor, numbers, physical power, a righteous grievance.
 - **Problems**: a disenfranchised non-magical underclass with no legal standing.
 - **Relationships**: Triumvirate -2.
-- **Objective**: pending design pass.
 
 ### Armada
 
-A merchant federation of pirate-founded trade cities, governed by tokens, looser and more tolerant than its neighbors.
+A merchant federation of trade cities founded by Caio, merchant lords, pirates and southern nobles tired of the Holy See's taxes, governed by tokens, looser and more tolerant than its neighbors.
 
 **[[guild|The Guild]]** (token-holding city-states) (Tier 5, ruling)
 - **Blurb**: The token-holding cities that rule [[armada|Armada]]'s seas, wealthy and well-charted but land-poor, their power resting in tokens that can be taken.
 - **Assets**: a large navy, superior sea charts, allied water monsters, mercantile wealth.
 - **Problems**: a small land area, limited overland access, a pirate reputation; power that sits in physical tokens that can be stolen.
 - **Relationships**: [[jesthaen|Jesthaen]] +2, [[polaris|Polaris]] +1, [[voldaen|Voldaen]] -1, [[the-holy-see|Holy See]] -2.
-- **Objective**: pending design pass.
 
 **The pirate and Slyborne families** (Tier 3)
 - **Blurb**: [[armada|Armada]]'s founding pirate lines, still running the black-market trade the [[guild|Guild]] would rather forget as it reaches for respectability.
 - **Assets**: the founding bloodlines, black-market trade, naval irregulars, smuggling networks.
 - **Problems**: the [[guild|Guild]]'s drive for legitimacy sidelines them; rivalry with Jesthaen's smugglers.
 - **Relationships**: [[guild|Guild]] +1, Jesthaen Slyborne +1.
-- **Objective**: pending design pass.
 
 ### Hilltop
 
-Not a nation but the ruined heart of the One Above's faith: seat of the See, the Parishes, and older, darker things.
+The Church's own nation and the ruined heart of the One Above's faith, once the seat of the See and the Parishes.
 
-**[[the-holy-see|The Holy See]]** (Pontiff [[amalthus-cruoris|Amalthus Cruoris]]) (Tier 5, ruling of the section)
+**[[the-holy-see|The Holy See]]** (Pontiff [[amalthus-cruoris|Amalthus Cruoris]]) (Tier 5, ruling)
 - **Blurb**: The [[the-one-above|One Above]]'s church, wealthy and armed in every nation, its central teaching shaken by [[the-ophanim|the Ophanim]]'s fall and a schism stirring in its own ranks.
 - **Assets**: tithe wealth, a devout army, priests and seraphs, a continent-wide temple network (holdings in every nation), the Parishes, the [[miracles|Miracles]].
 - **Problems**: [[hilltop|Hilltop]] devastated by [[the-ophanim|the Ophanim]]; the angel's fall has thrown the faith's central teaching into question; a schism brewing in its own ranks.
 - **Relationships**: [[voldaen|Voldaen]] +2, [[armada|Armada]] -2, [[jesthaen|Jesthaen]] -2, [[polaris|Polaris]] -3.
-- **Objective**: pending design pass.
 
 **[[parish-of-orthodoxy|The Parish of Orthodoxy]]** (Tier 4)
 - **Blurb**: Keeper of scripture and proper worship for the [[the-holy-see|See]], now pressed to rule on what the fallen [[the-ophanim|Ophanim]] means for the faith.
 - **Assets**: doctrinal authority, control of scripture and proper worship, a scholarly clergy.
 - **Problems**: the [[the-ophanim|Ophanim]] crisis strains orthodox teaching; it must rule on what the fallen angel means.
 - **Relationships**: [[the-holy-see|Holy See]] +3, [[parish-of-inquisition|Parish of Inquisition]] +1.
-- **Objective**: pending design pass.
 
 **[[parish-of-inquisition|The Parish of Inquisition]]** ([[lael|Lael]], Lord Commander) (Tier 4)
 - **Blurb**: The [[the-holy-see|See]]'s feared investigators and judges under [[lael|Lael]], an intelligence arm whose zeal is beginning to outrun the See's control.
 - **Assets**: feared investigators, judicial authority, the Reborn rite, an intelligence network.
 - **Problems**: quietly fracturing from within; its zeal outruns the See's control.
 - **Relationships**: [[the-holy-see|Holy See]] +2, [[parish-of-orthodoxy|Parish of Orthodoxy]] +1.
-- **Objective**: pending design pass.
 
 **[[the-council-of-six|The Council of Six]]** (Tier 3)
-- **Blurb**: The six offices that govern [[andaluria|Andaluria's]] reconstruction from Jesaña, funded by [[the-holy-see|the Holy See]] and the patronage of [[ysabela-delamona|Ysabela IV]] to rebuild the holy capital after the Crisis.
+- **Blurb**: The six offices that govern [[andaluria|Andaluria's]] reconstruction from Jesaña, funded by [[the-holy-see|the Holy See]] and the patronage of [[ysabela-delamona|Ysabela IV]] to rebuild the holy capital after the Ophanim crisis.
 - **Assets**: six offices over Andaluria's reconstruction; funding from the Holy See's merchant-road taxes and the patronage of [[ysabela-delamona|Ysabela IV]]; the standing of the holy capital's government.
-- **Problems**: a ruined capital to rebuild with little daylight and less labor; dependence on outside purses; the weight of restoring the faith's holy seat.
+- **Problems**: a ruined capital to rebuild with little labor, under nights that grow longer with each sunset; dependence on outside purses; the weight of restoring the faith's holy seat.
 - **Relationships**: [[the-holy-see|Holy See]] +2.
-- **Objective**: pending design pass.
 
 ## Related pages
 

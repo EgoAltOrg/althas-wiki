@@ -1,18 +1,18 @@
 ---
 title: Firbolg
 kind: ancestry
-homeland: "[[witherwild-continent|The Witherwild]] by origin; the vineyard country and caravan roads of southern [[hilltop|Hilltop]]"
+homeland: "[[witherwild-continent|The Witherwild]] by origin; the vineyard country and caravan roads of central [[hilltop|Hilltop]]"
 standing: "Freed from bondage, now road-folk among the [[caio|Caio]]"
 image: firbolg.webp
 ---
 
-**Summary**: A bovine-featured people of the [[witherwild-continent|Witherwild]], carried to Althas in bondage to work the vineyards of the south and freed generations ago. Most now live as road-folk among the [[caio|Caio]], keeping the older [[the-faunus|Wickling]] faith of their homeland beside the ways of the road.
+**Summary**: A bovine-featured people of the [[witherwild-continent|Witherwild]], carried to Althas in bondage to work the vineyards of [[andaluria|Andaluria]] and freed generations ago. Most now live as road-folk among the [[caio|Caio]], keeping the older [[the-faunus|Wickling]] faith of their homeland beside the ways of the road.
 
 ---
 
 ## Overview
 
-The Firbolg are a tall, bovine-featured people native to the [[witherwild-continent|Witherwild]]. Those who live on Althas came not by choice: their forebears were carried off the Witherwild in bondage to work the southern vineyards, and their descendants, freed generations ago, have made a home among the [[caio|Caio]] caravans of [[hilltop|Hilltop]], two inheritances, road and homeland, carried in one people.
+The Firbolg are a tall, bovine-featured people native to the [[witherwild-continent|Witherwild]]. Those who live on Althas came not by choice: their forebears were carried off the Witherwild in bondage to work Andaluria's vineyards, and their descendants, freed generations ago, have made a home among the [[caio|Caio]] caravans of [[hilltop|Hilltop]], two inheritances, road and homeland, carried in one people.
 
 ## Appearance
 
@@ -20,7 +20,7 @@ Firbolg are bovine humanoids: broad-nosed, with long drooping ears and faces tha
 
 ## Culture
 
-Two inheritances are carried in one people. From the road the Firbolg have taken the **Dromardo**, the ethic of the open road, and the craft of the **drabardi** fortune-tellers; from the [[witherwild-continent|Witherwild]] they have kept the older [[the-faunus|Wickling ways]], the faith of their homeland, which they never wholly set down. To the [[caio|Caio]] they are proof of what that people most believes about itself: that the open road can give the discarded a home when no throne nor altar will.
+From the road the Firbolg have taken the **Dromardo**, the ethic of the open road, and the craft of the **drabardi** fortune-tellers; from the [[witherwild-continent|Witherwild]] they have kept the older [[the-faunus|Wickling ways]], the faith of their homeland, which they never wholly set down. To the [[caio|Caio]] they are proof of what that people most believes about itself: that the open road can give the discarded a home when no throne nor altar will.
 
 ## History
 

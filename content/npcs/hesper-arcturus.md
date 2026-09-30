@@ -4,21 +4,22 @@ aliases:
   - npcs/hesper
   - npcs/hesper_arcturus
 kind: person
-role: "Archmage of the Triumvirate of [[polaris|Polaris]]"
+role: "Former Archmage of the Triumvirate of [[polaris|Polaris]]"
 pronouns: she/her
 house: House Arcturus
 nation: "[[polaris|Polaris]]"
 allegiance: "[[polaris|Polaris]]"
+died: 363 VR
 image: hesper.jpg
 ---
 
-**Summary**: Archmage of the Triumvirate governing [[polaris|Polaris]], eccentric collector of odd things. Killed by a giant during her final duel with her son Izar, an act that plunged Polaris into riots.
+**Summary**: The late archmage of the Triumvirate governing [[polaris|Polaris]], an eccentric collector of odd things. Killed by a giant during her final duel with her son Izar, an act that plunged Polaris into riots.
 
 ---
 
 ## Personality
 
-An older mage who held a seat on Polaris's ruling Triumvirate of Archmages, though her own reputation in the city leaned more eccentric than powerful: she was known for a quiet, unambitious lifestyle and a habit of collecting odd things purely to study them, rather than for anything resembling political weight. She believed magic was everywhere, for anyone with the eyes (or, as it turned out, the hands) to see it.
+An older mage who held a seat on Polaris's ruling Triumvirate of Archmages, though her own reputation in the city leaned more eccentric than powerful: she was known for a quiet, unambitious lifestyle and a habit of collecting odd things purely to study them, rather than for anything resembling political weight. She believed magic was everywhere, for anyone with the eyes to see it.
 
 ## Abilities
 

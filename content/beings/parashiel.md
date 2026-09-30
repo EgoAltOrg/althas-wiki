@@ -12,7 +12,7 @@ image: parashiel.jpg
 
 ## Overview
 
-Beyond [[house-azimuth|the House]] itself, it is known only as a mysterious gift that somehow empowers body, mind, and soul through familiar spirits. The House is also known to hold a Divine Relic, the [[divine-relics|Rule of The Divider]], though what it does is not.
+Outside [[house-azimuth|the House]], Parashiel is known only as a gift that somehow empowers body, mind, and soul through familiar spirits. The House is also known to hold a Divine Relic, the [[divine-relics|Rule of The Divider]], though what it does is not.
 
 ![[parashiel-gyros.jpg|300]]
 

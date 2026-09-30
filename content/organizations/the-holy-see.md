@@ -11,15 +11,15 @@ founded: Divine Age
 image: the-holy-see.webp
 ---
 
-**Summary**: The divine regent authority that governs the faith of the One Above from [[hilltop|Hilltop]], in the god's continued absence.
+**Summary**: The divine regent authority that governs the faith of the One Above in the god's continued absence, and rules [[hilltop|Hilltop]] from central Althas, where it relocated after the Ophanim's landing.
 
 ---
 
 ## Overview
 
-Claimed authority over [[hilltop|Hilltop]] after the One Above departed, becoming the divine regent of a faith that no longer had its god visibly among mortals. Relocated to central Althas after [[the-ophanim|the Ophanim]]'s landing in 333 VR devastated Hilltop; [[cassio-aquila|Cassio Aquila]] of the Holy See was one of the Five Heroes who died bringing it down the following year.
+The See claimed authority over [[hilltop|Hilltop]] after the One Above departed and became the divine regent of a faith that no longer had its god visibly among mortals. It relocated to central Althas after [[the-ophanim|the Ophanim]]'s landing in 333 VR devastated Hilltop; [[cassio-aquila|Cassio Aquila]] of the Holy See was one of the Five Heroes who died bringing it down the following year.
 
-Ratified the Jesthaen Treaty in 361 VR, ending active combat in the [[jesthaen|Jesthaen]] rebellion.
+In 361 VR it ratified the Jesthaen Treaty, ending active combat in the [[jesthaen|Jesthaen]] rebellion.
 
 The See has held its authority through fractures before, most sharply when a king of Voldaen proclaimed himself the One Above returned and the See named the claim heresy, breaking crown and church into war. The faith teaches that the One Above's return, when it comes, will be heralded by the Ophanim; the angel that fell on [[hilltop|Hilltop]] in 333 VR has thrown that teaching into question rather than settled it.
 
@@ -35,7 +35,7 @@ The Holy See is organized into Parishes, each an arm of the Church governing one
 
 ### The Sleepless Vigil
 
-The faith teaches that the One Above will one day return, heralded by [[the-ophanim|the Ophanim]], and that the faithful must be ready to receive him at any hour. From this comes the Sleepless Vigil: a proper church never goes dark. It keeps at least two priests who stand the watch in turn, so that one is always awake, and the priest who keeps the night is the Vigilan-Insomni, charged to wake through the dark hours and rouse the town should the god come at last. A village too small for a second priest keeps the vigil by its own hands, the townsfolk taking the night-watch between them and waking their single priest if the need arises.
+The faith teaches that the One Above will one day return, heralded by [[the-ophanim|the Ophanim]], and that the faithful must be ready to receive them at any hour. From this comes the Sleepless Vigil: a proper church never goes dark. It keeps at least two priests who stand the watch in turn, so that one is always awake, and the priest who keeps the night is the Vigilan-Insomni, charged to wake through the dark hours and rouse the town should the god come at last. A village too small for a second priest keeps the vigil by its own hands, the townsfolk taking the night-watch between them and waking their single priest if the need arises.
 
 The vigil is also a quiet mercy of ordinary life. In any town, at any hour, a priest can be found awake: to bless a child or a departing ship, to witness a wedding or an oath, to counsel the troubled or sit with the dying. For most people this is the Church as they know it, not the distant Parishes and their rulings, but a lit doorway that is never barred.
 

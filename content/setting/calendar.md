@@ -12,7 +12,7 @@ Where this page sets out the shape of the year, the [[chronicle|Chronicle]] reco
 
 ## The week
 
-Each month is built from three weeks, and every week is eleven days. A week opens and closes on a weekend, and a single day of prayer falls at its center. Eight working days sit on either side of that prayer day.
+Each month is built from three weeks, and every week is eleven days. A week opens and closes on a weekend, and a single day of prayer falls at its center. Four working days sit on either side of that prayer day.
 
 | Day | Role |
 |---|---|
@@ -32,8 +32,7 @@ So each week gives two weekend days at its ends, one day of prayer at its middle
 
 ## The months and the year
 
-A month is three of these weeks laid end to end, 33 days in all. Ten months make up the year proper. The calendar therefore keeps a steady rhythm from the first day of the first month to the last day of the tenth: three weeks to a month, and the same eleven-day pattern repeating throughout.
-
+A month is three of these weeks laid end to end, 33 days in all. Ten months make up the year proper.
 ### The names of the months
 
 The ten months carry the names of the faith's liturgical year, which walks the course of the Divine Age from the first watch to the eve of the last battle. In order:
@@ -60,9 +59,6 @@ After the tenth month come three days of holiday, each with its own name, that t
 The first is **Bellum**, the War, for the battle [[the-one-above|the One Above]] fought against [[the-ones-below|the Ones Below]]. The second is **Sigillum**, the Seal, for the casting-down: the One Above sealed the Ones Below away, and the blow left the crater that became [[crater-lake|the Crater Lake]] at the center of Althas. The third is **Regnum**, the Reign, for the victory that crowned the first God King and founded [[voldaen|Voldaen]], the founding from which the era itself is counted.
 
 The years of this calendar are numbered in the Voldaen Reckoning, written VR, reckoned from that founding at the close of the Divine Age.
-
-> [!note] Still to come
-> The eleven days of the week are not yet named, nor are the Saints to whom the prayer days are given, nor any feast days beyond the three that close the year.
 
 ## Related pages
 

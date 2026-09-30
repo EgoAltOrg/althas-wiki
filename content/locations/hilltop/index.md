@@ -6,7 +6,7 @@ government: "Theocracy"
 founded: 117 VR
 ---
 
-**Summary**: The holy seat of [[the-holy-see|the Holy See]], once home of the One Above, devastated by [[the-ophanim|the Ophanim]]'s landing in 333 VR. Central Hilltop, around the Ophanim's corpse, has never seen daylight since its death.
+**Summary**: The nation of [[the-holy-see|the Holy See]] and its old holy seat, once home of the One Above, devastated by [[the-ophanim|the Ophanim]]'s landing in 333 VR. Around the Ophanim's corpse in central Hilltop, the nights have of late begun to lengthen without end (see [[andaluria|Andaluria]]).
 
 ---
 

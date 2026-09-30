@@ -14,8 +14,7 @@ office: "Customary head of the Parish of Cartography"
 
 House Circinus is one of [[hilltop|Hilltop's]] oldblood houses, of the kind that fused noble rank with holy office and carried its [[miracles|Miracle]] in the blood. Its gift is **Geosensus**: its bearers feel the natural relief of the land around them, the rise of the mountains, the fall of the valleys, and the hollows and veins beneath, within a certain reach. It reads stone and shape and nothing else, but it reads them through the earth as easily as across it.
 
-That one gift made the house twice over. It found the ore, the gemveins, and the buried water that others had to dig blind for, and the wealth of the deep earth made House Circinus landed and comfortable. And it made the house indispensable to the Church's mapmaking, so that Circinus came to hold the customary headship of the Parish of Cartography, much as [[amalthus-cruoris|House Cruoris]] recurs in the Pontiff's chair. Worldly fortune and a Church office, both drawn up out of the same ground.
-
+That one gift made the house twice over. It found the ore, the gemveins, and the buried water that others had to dig blind for, and the wealth of the deep earth made House Circinus landed and comfortable. And it made the house indispensable to the Church's mapmaking, so that Circinus came to hold the customary headship of the Parish of Cartography, much as [[amalthus-cruoris|House Cruoris]] recurs in the Pontiff's chair.
 When [[the-ophanim|the Ophanim]] fell and devastated [[hilltop|Hilltop]], House Circinus withdrew with [[the-holy-see|the Holy See]] to central Althas, a See-bound house following its faith and its office rather than staying behind.
 
 ## History

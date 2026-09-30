@@ -15,8 +15,6 @@ image: divine-relics.jpg
 
 ## Description
 
-### The core idea
-
 Relics from the Divine Age's war against [[the-ones-below|the Ones Below]] can be safely wielded by anyone of holyblood: anyone who carries a [[miracles|Miracle]]. It doesn't matter which one. The Relic answers to the blood, not to any particular gift, so someone whose Miracle is useless in a fight, a healer's blessing, a scholar's small trick, can still be devastating on the battlefield with a Divine Relic in hand.
 
 ## Properties
@@ -27,13 +25,13 @@ Wielding a Divine Relic without holyblood at all is perilous: the unworthy wield
 
 ### Hereditary, and fought over
 
-These Relics are extraordinarily powerful, passed down within families rather than found or crafted freely, and a real driver of war and politics in their own right: houses and nations fight over who holds which Relic, not just what it does in a single fight.
+These Relics are extraordinarily powerful, passed down within families rather than found or crafted freely, and a driver of war and politics in their own right: houses and nations fight over who holds which Relic.
 
-### A specific example: the Voldis armor
+### The Voldis armor
 
-[[voldaen|House Voldis's]] own hereditary Relic is a suit of armor as strong as it is ancient. It was lost when [[edrion-voldis|Edrion Voldis]] fell fighting [[the-ophanim|the Ophanim]] in 334 VR, and has not been recovered since.
+[[house-voldis|House Voldis's]] own hereditary Relic is a suit of armor as strong as it is ancient. It was lost when [[edrion-voldis|Edrion Voldis]] fell fighting [[the-ophanim|the Ophanim]] in 334 VR, and has not been recovered since.
 
-### Another example: the Rule of The Divider
+### The Rule of The Divider
 
 [[house-azimuth|House Azimuth's]] own hereditary Relic is the Rule of The Divider, a weapon that takes a different form for each generation that carries it. That the House holds such a Relic is known; what it does is not, guarded as closely as the [[parashiel|Miracle]] it was granted alongside.
 
@@ -41,5 +39,5 @@ These Relics are extraordinarily powerful, passed down within families rather th
 
 - [[miracles|Miracles]]
 - [[the-ones-below|The Ones Below]]
-- [[voldaen|Voldaen]]
+- [[house-voldis|House Voldis]]
 - [[edrion-voldis|Edrion Voldis]]

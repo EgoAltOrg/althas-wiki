@@ -6,7 +6,7 @@ government: Monarchy
 founded: 0 VR
 ---
 
-**Summary**: The oldest nation of Althas, a proud monarchy of ancient bloodlines ruled by the House of Voldis, currently governed by [[valis-voldis|Valis Voldis]] after the succession crisis that birthed [[jesthaen|Jesthaen]].
+**Summary**: The oldest nation of Althas, a proud monarchy of ancient bloodlines ruled by the House of Voldis, reigned over by [[valis-voldis|Valis Voldis]], figurehead for the noble council, after the succession crisis that birthed [[jesthaen|Jesthaen]].
 
 ---
 

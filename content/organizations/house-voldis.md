@@ -15,7 +15,7 @@ founded: "Divine Age"
 
 ## Overview
 
-The House of Voldis has ruled [[voldaen|Voldaen]] since the nation's founding in the Divine Age. Its monarchs claim rule not by conquest or law, but by divine descent from the God King, and the family holds itself custodian of a sacred inheritance. The house is also known across Althas for holding many [[miracles|Miracles]] at once, the real source of Voldaen's strength.
+The House of Voldis has ruled [[voldaen|Voldaen]] since the nation's founding in the Divine Age. Its monarchs claim rule not by conquest or law, but by divine descent from the God King, and the family holds itself custodian of a sacred inheritance. The house is also known across Althas for holding many [[miracles|Miracles]] at once, the source of Voldaen's strength.
 
 ## History
 
@@ -56,7 +56,7 @@ graph TD
 ```
 
 > [!note] Reading the tree
-> House Voldis rules by claimed divine descent from the God King, [[god-king-voldis|Voldis]] himself, rendered here as the house presents it. The named reigns are [[valerion-voldis|Valerion]] the Mad King, his son [[valeran-voldis|Valeran]] the Blessed King, and Valeran's own sons [[castus-voldis|Castus]], in whose reign [[polaris|Polaris]] seceded, and Castorius, the younger prince who renounced his claim in that same settlement. The line runs on to [[valthis-voldis|Valthis Voldis]] and the modern succession crisis. The dashed lines mark [[aldric-voldis|Aldric]]'s baseborn descent, acknowledged but never legitimized, and Castorius's renunciation of his claim.
+> House Voldis rules by claimed divine descent from the God King, [[god-king-voldis|Voldis]] himself. The named reigns are [[valerion-voldis|Valerion]] the Mad King, his son [[valeran-voldis|Valeran]] the Blessed King, and Valeran's own sons [[castus-voldis|Castus]], in whose reign [[polaris|Polaris]] seceded, and Castorius, the younger prince who renounced his claim in that same settlement. The line runs on to [[valthis-voldis|Valthis Voldis]] and the modern succession crisis. The dashed lines mark [[aldric-voldis|Aldric]]'s baseborn descent, acknowledged but never legitimized, and Castorius's renunciation of his claim.
 
 ### The ancient line
 
@@ -66,9 +66,9 @@ The first is [[valerion-voldis|Valerion]], the Mad King, who proclaimed himself 
 
 ### The succession crisis
 
-The modern line's story is the founding wound of the campaign's present day. In 334 VR the High Prince, [[edrion-voldis|Edrion Voldis]], died fighting the Ophanim as one of the Five Heroes. King [[valthis-voldis|Valthis Voldis]] was assassinated soon after by a killer Voldaen has never identified, remembered only as [[kingslayer|the Kingslayer]]. Both deaths fell within a year, leaving Edrion's young daughter, [[valis-voldis|Valis Voldis]], the last heir of the direct line before she was old enough to rule.
+The modern line's story is the founding wound of the present day. In 334 VR the High Prince, [[edrion-voldis|Edrion Voldis]], died fighting the Ophanim as one of the Five Heroes. King [[valthis-voldis|Valthis Voldis]] was assassinated soon after by a killer Voldaen has never identified, remembered only as [[kingslayer|the Kingslayer]]. Both deaths fell within a year, leaving Edrion's young daughter, [[valis-voldis|Valis Voldis]], the last heir of the direct line before she was old enough to rule.
 
-Edrion's will had named his baseborn half-brother, [[aldric-voldis|Aldric Voldis]], her regent. The capital's oldest noble families would not accept a bastard's hand on the realm: they stripped him of the regency, exiled him to the western borders, and took power themselves, ruling in the child-queen's name. Aldric did not contest the throne. He carried his cause to the common people of the south instead, and over long years of exile built the movement that broke into revolution in 351 VR and founded the [[jesthaen|Jesthaen Republic]], named for his mother, [[jestha|Jestha]].
+Edrion's will had named his baseborn half-brother, [[aldric-voldis|Aldric Voldis]], her regent. The capital's oldest noble families would not accept a bastard's hand on the realm: they stripped him of the regency, exiled him to the northwestern border, and took power themselves, ruling in the child-queen's name. Aldric did not contest the throne. He carried his cause to the common people of the south instead, and over long years of exile built the movement that broke into revolution in 351 VR and founded the [[jesthaen|Jesthaen Republic]], named for his mother, [[jestha|Jestha]].
 
 Voldaen held, diminished, its southern half lost. Queen [[valis-voldis|Valis]] wears the crown to this day, though the council of houses that exiled Aldric governs beneath it. See [[index|Althas]] for the full telling.
 

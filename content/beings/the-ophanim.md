@@ -6,7 +6,7 @@ kind: being
 nature: angelic being
 fate: Slain in 334 VR
 image: the-ophanim.webp
-image_caption: "An artist's rendering, not a likeness. The Ophanim wore no fixed form, and no two who beheld it ever agreed on its shape. No true image of it can exist; this is one soul's guess, set down after the looking."
+image_caption: "The Ophanim wore no fixed form, and no two who beheld it ever agreed on its shape. This is one soul's guess, set down after the looking."
 ---
 
 **Summary**: The angelic being that descended on [[hilltop|Hilltop]] in 333 VR and was slain a year later by the Five Heroes. Its arrival and death reshaped the continent's politics and its faith, and left an unnatural wound over the land around its corpse, whose nights have of late begun to lengthen without end (see [[andaluria|Andaluria]]).
@@ -21,7 +21,7 @@ In 333 VR, the Ophanim landed in central Hilltop, instantly rendering much of th
 
 ### The OphDreams
 
-Those who looked upon the Ophanim while it still lived are not free of it. Each night they share a single vision, the same for every one of them: the OphDreams, cryptic and wordless, showing nothing but ruin, the death and destruction of whatever the dreamer holds most dear. The vision is never quite the same twice, and no waking soul has yet made sense of it.
+Those who looked upon the Ophanim while it still lived are not free of it. Each night they dream the OphDreams: cryptic, wordless visions of ruin, the death and destruction of whatever the dreamer holds most dear. What each dreamer sees is their own and never quite the same twice, and no waking soul has yet made sense of it.
 
 ## Worship
 

@@ -16,7 +16,7 @@ image: clanks.jpg
 
 Clanks are a recent addition to Althas. The first prototypes came out of [[polaris|Polaris]]'s labs and [[hilltop|Hilltop]]'s sacred workshops, and those two origins still frame how the continent argues about them.
 
-Sentient Clanks are rare, and each one is controversial and politically dangerous. Hilltop holds them up as holy instruments of [[the-one-above|the One Above]]. Polaris rejects that reading outright, calling the "awakening" claim theft of a reproducible arcane process.
+Sentient Clanks are rare, and each one is controversial and politically dangerous. Hilltop holds that a sentient Clank is awakened by [[the-one-above|the One Above]], one of the god's holy instruments. Polaris rejects that reading outright, calling the "awakening" theft of a reproducible arcane process.
 
 ## Related pages
 

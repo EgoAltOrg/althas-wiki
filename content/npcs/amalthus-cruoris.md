@@ -15,7 +15,7 @@ image: amalthus-cruoris.jpg
 
 ## Appearance
 
-Tall and gaunt beneath heavy vestments of deep red, his face hidden behind a pale ceremonial mask, Amalthus is more often seen as a silhouette at prayer than as a man. He carries a tall staff crowned with a radiant star, the sign of the One Above, and keeps vigil in candlelight amid drifts of red petals. His hands are thin to the bone. Those who attend him say the office has spent him.
+Tall and gaunt beneath heavy vestments of deep red, his face hidden behind a pale ceremonial mask, Amalthus is more often seen as a silhouette at prayer than as a man. He carries a tall staff crowned with a radiant star, the sign of the One Above, and keeps vigil in candlelight amid drifts of red petals. His hands are thin to the bone.
 
 > [!note] The mask
 > The masks and veils of Orthodoxy's high clergy follow the doctrine of the covered eye (see [[parish-of-orthodoxy|the Parish of Orthodoxy]]): mortal sight should be shielded in the presence of the divine, and the Pontiff, who stands nearest of all to it, goes veiled before his flock.
@@ -28,11 +28,11 @@ Amalthus bears his house's signature [[miracles|Miracle]], the **Miracle of Viat
 
 A Viaticum works because an incantation needs a living channel to carry it, and holyblood is one (see [[splendor-magic|Splendor Magic]]). The prayer he seals into his own blood is his living ask, sent ahead of him, still able to reach the One Above when he is nowhere near. It is by this that the Church grants grace at a distance: a blessing pressed into the hand of a knight before a hopeless errand, a single mercy carried where no priest can follow.
 
-Every Viaticum is made from the Pontiff's own blood, and the giving of it costs him. Each sealed prayer is a measure of himself spent and not returned, and the toll shows in the gaunt frame and the wasted hands. The faithful read it as devotion worn openly. He has never said otherwise.
+Every Viaticum is made from the Pontiff's own blood, and the giving of it costs him. Each sealed prayer is a measure of himself spent and not returned, and the toll shows in the gaunt frame and the wasted hands.
 
 ## History
 
-Amalthus Cruoris is the divine regent of Althas in his god's absence: the supreme authority of [[the-holy-see|the Holy See]], keeper of doctrine, and the last word on what the faith of [[the-one-above|the One Above]] holds to be true. He rose through [[parish-of-orthodoxy|the Parish of Orthodoxy]] as a scholar of rare depth, with genuine incantation discoveries to his own name, before the clerics raised him to the Pontiff's chair.
+Amalthus Cruoris is the divine regent of Althas in his god's absence: the supreme authority of [[the-holy-see|the Holy See]], keeper of doctrine, and the last word on what the faith of [[the-one-above|the One Above]] holds to be true. He rose through [[parish-of-orthodoxy|the Parish of Orthodoxy]] as a scholar of rare depth, with incantation discoveries to his own name, before the clerics raised him to the Pontiff's chair.
 
 ### House Cruoris and the Pontiff's chair
 

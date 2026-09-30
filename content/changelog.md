@@ -4,6 +4,10 @@ title: Changelog
 
 What's new on the wiki, most recent first.
 
+## 2026-09-30
+
+- Minor consistency fixes.
+
 ## 2026-09-26
 
 - **The first day in Drinmery.** The [[chronicle|Chronicle]] opens on Day 12 of Adventus, 366 VR: Uriel and Malak reach the Convent of Saint Trefan, Uriel takes Rastaban into his custody, Novak, Zalmir and Leonard enter the town, bandits raid the market and steal Cornelia Azimuth's ring, General Greene arrives after the fight, and that night the party opens the sealed tomb beneath the convent. The Chronicle's calendar now opens on the current day, and its dates use the calendar's own month names, Vigilia through Vesper, instead of "the Ninth Month".
@@ -36,14 +40,14 @@ What's new on the wiki, most recent first.
 - **Andaluria's Council of Six.** The reconstruction government of [[andaluria|Andaluria]] has its own page: six offices that govern the ruined holy capital from Jesaña's Plaza del Sol, five hereditary and a sixth lately added for the Holy See's own surveyor.
 - **[[sabara|Sabara]], the See's mapmaker.** A new page for the Abbot of the Parish of Cartography, blessed with the Miracle of Geosensus and seated on the Council of Six as its Surveyor.
 - **[[house-circinus|House Circinus]].** A new page for the Hilltop oldblood house whose Miracle finds the shape of the land, made rich off the deep earth and customary head of the Parish of Cartography.
-- **A new player character, [[zalmir-aldarson|Zalmir Aldarson]].** A young traveler newly come to the north. Appearance only for now; the rest is held.
+- **A new player character, [[zalmir-aldarson|Zalmir Aldarson]].** A young traveler newly come to the north.
 - **Diplomacy and Organizations, merged.** The register of Althas's powers now lives on the [[diplomacy|Diplomacy]] page, as per-nation cards showing each group's standing beneath the relationship web. The old Organizations page redirects there.
 - **Two houses at Haven.** [[house-aquila|House Aquila]] and [[house-circinus|House Circinus]] each gain a tie to the lost colony of [[haven|Haven]] in the [[witherwild-continent|Witherwild]]: an Aquila carried the faith there and first set down the land's spirits, and a Circinus read the ground for a colony with no maps of its own.
 - **The most common folk get a page.** [[human|Humans]] join the ancestry roster with a page and a portrait: the people of no single homeland, at home in every nation from the fields to the crowns.
 
 ## 2026-09-03
 
-- **A new ancestry, the [[firbolg|Firbolg]].** The bovine folk of the [[witherwild-continent|Witherwild]], broad-horned and pastel-furred, carried across the sea in bondage to work the southern vineyards and freed generations ago. Most now travel the roads with the Caio, keeping the Wickling faith of their homeland beside the ways of the road.
+- **A new ancestry, the [[firbolg|Firbolg]].** The bovine folk of the [[witherwild-continent|Witherwild]], broad-horned and pastel-furred, carried across the sea in bondage to work Andaluria's vineyards and freed generations ago. Most now travel the roads with the Caio, keeping the Wickling faith of their homeland beside the ways of the road.
 - **The [[aetheris|Aetheris]] have a face.** The church's winged messengers now carry a portrait.
 - **Every page now opens with an info card.** Character, house, place, magic, and ancestry pages carry a card summarizing the essentials at a glance, drawn straight from each page.
 
@@ -90,7 +94,7 @@ What's new on the wiki, most recent first.
 ## 2026-07-22
 
 - **The Diplomacy web maps the powers within the nations**: the [[diplomacy|Diplomacy]] graph now shows more than the five nations. It adds the [[parish-of-orthodoxy|Parish of Orthodoxy]] (the Holy See's doctrinal arm), Pontiff [[amalthus-cruoris|Amalthus Cruoris]] and the [[the-holy-see|Holy See]] he leads, Queen [[valis-voldis|Valis Voldis]] on the throne of [[voldaen|Voldaen]], [[aldric-voldis|Aldric Voldis]] who founded and leads the [[jesthaen|Jesthaen Republic]], and [[lael|Lael]], Lord Commander of the Inquisitors, each placed by where it currently stands toward the rest. Drag any power to rearrange the web.
-- **[[lael|Lael's]] page tells more of his return**: the faith holds him up as the Icon of Shame, its proof that no one who has fallen lies beyond redemption, blessed by [[the-one-above|the One Above]] with the Miracle of Rebirth for his service and restored in time to Lord Commander of the Inquisitors.
+- **[[lael|Lael's]] page tells more of his return**: the faith holds his Rebirth a blessing of [[the-one-above|the One Above]] for his service, and he rose in time to Lord Commander of the Inquisitors.
 
 ## 2026-07-21
 
@@ -111,14 +115,14 @@ What's new on the wiki, most recent first.
 - **New Events pages, gathered under an Events heading**: [[the-divine-age|the Divine Age]], the Mad King's War, and the Polaris Secession each get their own page, linked from the [[timeline|Timeline]].
 - **The [[the-ophanim|Ophanim]] page now carries what the faith teaches of it**: scripture's foretelling of a herald of the One Above's return, to come when the Ones Below strain their seal, and the Parish of Orthodoxy's rule that mortal eyes be covered before an angel. It also records that no one agrees why the Ophanim came, and the **OphDreams**, the shared nightly visions of ruin that haunt everyone who saw it alive.
 - **The [[house-voldis|House Voldis]] family tree, refined**: the God King now shows as ruling from the Divine Age to year 0, and the younger prince who renounced his claim in the Polaris settlement joins the tree.
-- **[[miracles|Miracles]] reorganized**, with the publicly known Miracles gathered up front, now including the Miracle of Rebirth.
+- **[[miracles|Miracles]] reorganized**, with the Miracles gathered up front, now including the Miracle of Rebirth.
 
 ## 2026-07-18
 
 - **New page, the [[worldbuilding-checklist|Worldbuilding Checklist]]**: a running list of parts of Althas still open for the table to help shape, from the names of the months and the thirty Saints of the Divine Age to the songs people sing. Daggerheart invites players into the worldbuilding, so pick anything that draws you and bring it to the table.
 - **"Canton" is now "Parish"**: the arms of [[the-holy-see|the Holy See]] (Inquisition, Orthodoxy, Finance, Resource, and Cartography) are now called Parishes. The [[parish-of-inquisition|Parish of Inquisition]] keeps everything from its old page, and older links to it still work.
 - **House Arcturus**: [[hesper-arcturus|Hesper]] and her son [[izar-arcturus|Izar]] are now known to belong to House Arcturus, an old Polaris family whose signature Miracle, the Miracle of Firmament, lets its bearer draw [[codex-magic|Codex]] seals straight out of open air, as if the sky itself were parchment.
-- **[[miracles|Miracles]] expanded**: the page now names the publicly known Miracles, the Miracle of Firmament and House Voldis's Miracle of Voldis, and adds a short note on House Arcturus's standing in Polaris.
+- **[[miracles|Miracles]] expanded**: the page now names the Miracle of Firmament and House Voldis's Miracle of Voldis, and adds a short note on House Arcturus's standing in Polaris.
 - **The [[diplomacy|Diplomacy]] web is cleaner to read**: hover or tap any power to reveal how it ties to the others. Arrows show which way each tie runs, with double-headed arrows for mutual ones.
 - **Full names**: the archmage [[hesper-arcturus|Hesper Arcturus]] and her son [[izar-arcturus|Izar Arcturus]] now carry their house name in their page titles.
 - **New page, the [[chronicle|Chronicle]]**: a day-by-day record of the campaign with a month grid you can page through. Recorded days are marked and link straight to their entry, the current day is ringed, and the record fills in as the story does, including older days written down once they come to light.
@@ -146,7 +150,7 @@ What's new on the wiki, most recent first.
 - **New pages**: the ancestries of Althas each get their own entry: [[giants|Giants]], [[clanks|Clanks]], and [[infernis|Infernis]] join Faeries.
 - Added art to all four ancestry pages.
 - **New page**: [[house-voldis|House Voldis]], the royal dynasty of Voldaen, with a full family tree from the God King's claimed line down to [[valis-voldis|Valis Voldis]], and the story of the succession crisis in one place.
-- **New player characters**: [[uriel-kenan|Uriel Kenan]] and [[rosestripe|Rosestripe]] join [[rastaban|Rastaban]] on the wiki (appearance and mechanics only for now, each with a portrait).
+- **New player characters**: [[uriel-kenan|Uriel Kenan]] and [[rosestripe|Rosestripe]] join [[rastaban|Rastaban]] on the wiki, each with a portrait.
 - **New pages**: Faeries, the [[convent-of-saint-trefan|Convent of Saint Trefan]], and [[drinmery|Drinmery]].
 - [[the-holy-see|The Holy See]] now lays out how it's organized into Cantons, and the Canton of Inquisition entry was rewritten.
 - Added portraits for [[hesper-arcturus|Hesper]], Uriel, and Rosestripe.
@@ -154,12 +158,11 @@ What's new on the wiki, most recent first.
 - **Renamed** Holy Relics to [[divine-relics|Divine Relics]], and clarified how they work: any Miracle-holder can wield one, whatever their own Miracle.
 - [[drinmery|Drinmery]] and the [[convent-of-saint-trefan|Convent of Saint Trefan]] now appear as pins on the interactive map.
 - Explorer entries that start with "The" now sort by the following word (so "The Holy See" files under H, not T).
-- Trimmed a few "Related pages" links that were showing up before their time. Nothing new revealed, the pages themselves are unchanged.
 
 ## 2026-07-15
 
 - **New page**: [[guild|The Guild]], Armada's governing body: no single ruler, city-states run by whoever holds that seat's token.
 - **Major expansion**: [[miracles|Miracles]], Canton of Inquisition, [[codex-magic|Codex Magic]], [[crater-lake|Crater Lake]], [[divine-relics|Holy Relics]], and [[splendor-magic|Splendor Magic]] are now on the wiki. [[hilltop|Hilltop]], [[the-holy-see|The Holy See]], and [[the-one-above|The One Above]] all got substantially bigger.
-- **New**: a first page for [[rastaban|Rastaban]] (appearance and background only for now, more once the campaign starts), and a page for [[hesper-arcturus|Hesper]], including what's now known about her fate.
+- **New**: a first page for [[rastaban|Rastaban]], and a page for [[hesper-arcturus|Hesper]], including what's now known about her fate.
 - Armada, Polaris, Voldaen, Jesthaen, and Hilltop each got a proper overview page instead of a bare folder listing.
 - The wiki and interactive map went live.

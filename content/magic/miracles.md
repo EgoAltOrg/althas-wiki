@@ -13,18 +13,16 @@ practitioners: "Holyblood noble houses"
 
 ## Overview
 
-### The core idea
-
-During the Divine Age, [[the-one-above|the One Above]] granted Miracles to people who fought alongside him against [[the-ones-below|the Ones Below]]. A Miracle changes the recipient's blood: it becomes "holy," and that inheritance can (but does not always) pass down to their descendants.
+During the Divine Age, [[the-one-above|the One Above]] granted Miracles to people who fought alongside them against [[the-ones-below|the Ones Below]]. A Miracle changes the recipient's blood: it becomes "holy," and that inheritance can (but does not always) pass down to their descendants.
 
 Not all Miracles are directly useful on the battlefield, but those that are consequently grant immense political power to their owners. Holding more than one Miracle naturally is exceptionally rare.
 
 ## How It Works
 
-### Publicly known Miracles
+### The Miracles
 
 - **The Miracle of Firmament**: lets its bearer treat open air as a solid, workable surface, so [[codex-magic|Codex]] seals can be drawn directly into empty space rather than onto any physical surface or medium. House Arcturus's own signature Miracle; see [[hesper-arcturus|Hesper]] and [[izar-arcturus|Izar]].
-- **The Miracle of Voldis**: [[voldaen|House Voldis]]'s own signature Miracle, said to let its bearer hold multiple Miracles at once.
+- **The Miracle of Voldis**: [[house-voldis|House Voldis]]'s own signature Miracle, said to let its bearer hold multiple Miracles at once.
 - **The Miracle of Rebirth**: at its bearer's death, the soul returns to reoccupy its own now-deathless body; only destroying the body ends the bearer for good. Carried by [[lael|Lael]], "the Reborn," one of the Five Heroes who fell fighting [[the-ophanim|the Ophanim]] and rose again.
 - **The Miracle of Viaticum**: the signature Miracle of **House Cruoris**, an oldblood house bound to [[the-holy-see|the Holy See]], and borne by [[amalthus-cruoris|the reigning Pontiff]] when a Cruoris sits the chair. Its bearer can lend a single Splendor working to another person: he writes a prayer in his own holyblood, seals it with wax mixed into that blood, and when the seal is broken the words speak themselves in his voice, so [[the-one-above|the One Above]] answers the bearer's ask once, as though the Pontiff had made it. See [[amalthus-cruoris|Pontiff Amalthus Cruoris]].
 - **The Miracle of Pentecost**: understanding of any word heard spoken, in any tongue, cipher, or voice, and of any notation set before the eye. One of the two signature Miracles of [[house-aquila|House Aquila]]; see [[cassio-aquila|Cassio Aquila]] and [[lyra-aquila|Lyra Aquila]].
@@ -36,11 +34,11 @@ Not all Miracles are directly useful on the battlefield, but those that are cons
 
 ### House Voldis's power
 
-[[voldaen|House Voldis]] is known across Althas for a signature Miracle, popularly called the **Miracle of Voldis**, that lets its bearer hold multiple Miracles at once. Over generations the family has amassed a formidable collection of them, and this, not mere longevity or training, is the real source of Voldaen's strength.
+[[house-voldis|House Voldis]] is known across Althas for a signature Miracle, the **Miracle of Voldis**, that lets its bearer hold multiple Miracles at once. Over generations the family has amassed a formidable collection of them, and this, not mere longevity or training, is the source of Voldaen's strength.
 
 ### House Arcturus's power
 
-House Arcturus is a Polaris family of high standing: the power of the Miracle of Firmament has produced a long line of Triumvirate Archmages across the family's history. [[hesper-arcturus|Hesper]] was born with it. Her son [[izar-arcturus|Izar]] was not, until the day of their final duel.
+House Arcturus is a Polaris family of high standing: the power of the Miracle of Firmament has produced a long line of Triumvirate Archmages across the family's history. [[hesper-arcturus|Hesper]] was born with it. Her son [[izar-arcturus|Izar]] was not.
 
 ### House Cruoris's power
 
@@ -48,7 +46,7 @@ House Cruoris is one of the faith's oldblood houses, ancient and bound tightly t
 
 ### House Aquila's power
 
-[[house-aquila|House Aquila]] is a scholar-house esteemed in both [[polaris|Polaris]] and [[the-holy-see|the Holy See]], and alone among the houses it carries two Miracles in one bloodline: **Pentecost**, the understanding of any spoken word or written notation, and **Anamnesis**, perfect and unfading memory. Ordinarily a child of the house is born with one or neither. The twins [[cassio-aquila|Cassio Aquila]] and [[lyra-aquila|Lyra Aquila]] were the rare exception thrice over: twins, each born with a Miracle where one is a once-a-generation gift, and each with a *different* one, so that each had access to the other's and wielded both. [[polaris|Polaris]] and [[the-holy-see|the Holy See]] alike held that up as proof that great gifts are gifted by [[the-one-above|the One Above]], not the hoarded inheritance of one dynasty, a rebuke aimed at [[house-voldis|House Voldis]]. Cassio fell bringing down [[the-ophanim|the Ophanim]] in 334 VR. See [[house-aquila|House Aquila]].
+[[house-aquila|House Aquila]] is a scholar-house esteemed in both [[polaris|Polaris]] and [[the-holy-see|the Holy See]], and alone among the houses it carries two Miracles in one bloodline: **Pentecost**, the understanding of any spoken word or written notation, and **Anamnesis**, perfect and unfading memory. Ordinarily a child of the house is born with one or neither. The twins [[cassio-aquila|Cassio Aquila]] and [[lyra-aquila|Lyra Aquila]] were the rare exception thrice over: twins, each born with a Miracle where even one is a matter of chance, and each with a *different* one, so that each had access to the other's and wielded both. [[polaris|Polaris]] and [[the-holy-see|the Holy See]] alike held that up as proof that great gifts are gifted by [[the-one-above|the One Above]], not the hoarded inheritance of one dynasty, a rebuke aimed at [[house-voldis|House Voldis]]. Cassio fell bringing down [[the-ophanim|the Ophanim]] in 334 VR. See [[house-aquila|House Aquila]].
 
 ### House Corvus's power
 

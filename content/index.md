@@ -57,7 +57,7 @@ In 334 VR, Voldaen lost its High Prince, [[edrion-voldis|Edrion Voldis]], during
 
 In his will, the late High Prince had named his baseborn half-brother, [[aldric-voldis|Aldric Voldis]], as regent for his daughter. As one of the Five Heroes who fought to slay [[the-ophanim|the Ophanim]], Aldric was respected by soldiers and border lords, but the capital's oldest noble families would not accept a bastard's hand on the realm, all the more after he spoke openly of reform.
 
-Within a few years the capital's most powerful houses organized a quiet coup. Aldric was stripped of the regency and exiled to the western borders under the pretense of military necessity, and the nobles took power themselves, crowning the child Valis and ruling in her name.
+Within a few years the capital's most powerful houses organized a quiet coup. Aldric was stripped of the regency and exiled to the northwestern border under the pretense of military necessity, and the nobles took power themselves, crowning the child Valis and ruling in her name.
 
 Aldric did not raise a claim to the throne. Baseborn, the son of a common woman, he carried his cause to the neglected south and the borderlands instead, where the council's rule fell hardest. Over years of exile he gathered reformers, anti-monarchists, and the war-weary common folk, until in 351 VR that movement broke into open revolution, seeking not to seize the crown but to abolish it.
 
@@ -99,10 +99,10 @@ All communities are available across nations, but some have unique aspects withi
 - [[polaris|Polaris]]: nation of scholars and mages, arcane ambition
 - [[armada|Armada]]: merchant trade federation, southern coast
 - [[jesthaen|Jesthaen]]: the newest nation, born from revolution against Voldaen
+- [[hilltop|Hilltop]]: the Holy See's nation and old holy seat, devastated by the Ophanim
 
 ## Locations
 
-- [[hilltop|Hilltop]]: holy seat of the Holy See, devastated by the Ophanim
 - [[drinmery|Drinmery]]: city in Jesthaen, home of the Convent of Saint Trefan
 - [[convent-of-saint-trefan|Convent of Saint Trefan]]: a convent in Drinmery prized for its rare library
 - [[crater-lake|Crater Lake]]: a massive crater lake at the center of Althas, left by the Divine Age
@@ -113,7 +113,7 @@ All communities are available across nations, but some have unique aspects withi
 
 ## Factions
 
-- [[the-holy-see|The Holy See]]: divine regent authority governing the faith from Hilltop
+- [[the-holy-see|The Holy See]]: divine regent authority governing the faith, seated in central Althas since the Ophanim
 - [[parish-of-inquisition|Parish of Inquisition]]: the Holy See's feared investigative and judicial arm
 - [[parish-of-orthodoxy|Parish of Orthodoxy]]: the Holy See's doctrinal arm, keeper of scripture and the Splendor incantations
 - [[guild|The Guild]]: governs Armada, seats held by token possession, not inheritance or election
@@ -141,26 +141,23 @@ All communities are available across nations, but some have unique aspects withi
 ## Concepts
 
 - [[the-ophanim|The Ophanim]]: the angelic being that devastated Hilltop in 333 VR
-
 - [[the-one-above|The One Above]]: has left Althas
-
 - [[the-ones-below|The Ones Below]]: the gods the One Above fought in the Divine Age, sealed away
 - [[the-faunus|The Faunus]]: the faith of the Wicklings of the Witherwild, as Althan scholars reconstruct it
 - [[splendor-magic|Splendor Magic]]: incantation-based magic as a favor granted, not generated
 - [[codex-magic|Codex Magic]]: seal-drawn magic that tears into the Source
 - [[miracles|Miracles]]: hereditary gifts from the One Above
-
 - [[divine-relics|Divine Relics]]: Divine Age relics any Miracle-holder can wield, whatever their Miracle
 - [[parashiel|Parashiel]]: the Miracle of House Azimuth, a mysterious gift said to work through familiar spirits
 
 ## Player characters
 
 - [[rastaban|Rastaban]]: Loreborne Giant, School of Knowledge Wizard, a Sinner in the charge of [[uriel-kenan|Uriel Kenan]].
-- [[zalmir-aldarson|Zalmir Aldarson]]: a traveler newly come to the north. Appearance only; the rest is held.
-- [[uriel-kenan|Uriel Kenan]]: Orderborne Elf, Divine Wielder Seraph. Appearance and mechanics only.
-- [[rosestripe|Rosestripe]]: Orderborne Aetheris, Poisoner Assassin. Appearance and mechanics only.
-- [[novak-azimuth|Novak Azimuth]]: Highborne Human, "Call of the Slayer" Warrior, head of [[house-azimuth|House Azimuth]]. Name, appearance and mechanics only.
-- [[malak|Malak]]: Seaborne Simiah, Wordsmith Bard, out of Armada. Appearance and mechanics only.
+- [[zalmir-aldarson|Zalmir Aldarson]]: a traveler newly come to the north.
+- [[uriel-kenan|Uriel Kenan]]: Orderborne Elf, Divine Wielder Seraph.
+- [[rosestripe|Rosestripe]]: Orderborne Aetheris, Poisoner Assassin.
+- [[novak-azimuth|Novak Azimuth]]: Highborne Human, "Call of the Slayer" Warrior, head of [[house-azimuth|House Azimuth]].
+- [[malak|Malak]]: Seaborne Simiah, Wordsmith Bard, out of Armada.
 
 ## NPCs
 
@@ -174,7 +171,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[mateo-veyra|Mateo Veyra]]: Archbishop of [[andaluria|Andaluria]] and the highest [[the-holy-see|Holy See]] authority to remain after the Ophanim's fall, betrothed to the Condesa [[ysabela-delamona|Ysabela Delamoña IV]]
 - [[sabara|Sabara]]: cleric of the Holy See's Parish of Cartography, blessed with the Miracle of Geosensus, seated as the Surveyor on [[andaluria|Andaluria's]] [[the-council-of-six|Council of Six]]
 - [[cornelia-azimuth|Cornelia Azimuth]]: late matriarch of [[house-azimuth|House Azimuth]], peerless warrior and master of Splendor magic, fell facing Aldric at Jesthaen in 358 VR
-- [[victerius-azimuth|Victerius Azimuth]]: born of [[house-olnir|House Olnir]], superb duelist and consort-head of House Azimuth, fell in 358 VR cutting down his brother Lorkhan
+- [[victerius-azimuth|Victerius Azimuth]]: born of [[house-olnir|House Olnir]], superb duelist and consort-head of House Azimuth, fell in 358 VR at the hands of his brother Lorkhan, whom he left gravely wounded
 - [[agathia-azimuth|Agathia Azimuth]]: the intrepid, martial twin daughter of House Azimuth
 - [[hestia-azimuth|Hestia Azimuth]]: the quiet, calculating twin daughter of House Azimuth
 - [[zhenya-azimuth|Zhenya Azimuth]]: elder of House Azimuth and Minister of the Royal Household, Novak's grandmother

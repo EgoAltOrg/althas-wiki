@@ -2,7 +2,7 @@
 title: The Faunus
 ---
 
-**Summary**: What little Althan scholars understand of the Wickling faith of the Witherwild. The Wicklings share their land with the Faunus and hold them to be gods; Althan scholars grant only that they are far greater than the ordinary life of the Fanewick. The account rests on one Haven-era missionary's records and the reports of Witherwatch veterans, and it is as disputed as it is cited.
+**Summary**: What little Althan scholars understand of the Wickling faith of the Witherwild. The Wicklings share their land with the Faunus and hold them to be gods; Althan scholars grant only that they are far greater than the ordinary life of the Fanewick. The account rests on one Haven-era missionary's records and the reports of Witherwatch veterans, and much of it is disputed.
 
 ---
 
@@ -27,7 +27,7 @@ The missionary's records named dozens; Althan scholarship has kept only a handfu
 - **Nikta, the Shepherd of the Seasons**, the Great Owl who turns the year with her two eyes, greatest of the Faunus.
 - **Fulg, the Stacker of Stones**, who favors stacked river rocks and grows the shellfish, content to know little.
 - **Hyacynis, They Who Spread Small Blossoms**, friend of bees and small flowers, who welcomed the blight as their domain swelled.
-- **Ikla, the Sky Painter**, who colors the week's lone sunrise and sunset and is idle and sour between them.
+- **Ikla, the Sky Painter**, who colors the rare sunrise and sunset and is idle and sour between them.
 - **Oove, the Watcher of the Night Bloom**, never seen, only heard whispering the night-blooming flowers awake, and said to watch from the moon.
 - **Qui'Gar, Whispered Sweetness for a Thorny End**, who presides over the deaths that happen among the thorns, her quiet undone by the Witherwild.
 - **Rohkin, the Wandering Horn**, warden of the horned herds, who has watched them warp into monsters.

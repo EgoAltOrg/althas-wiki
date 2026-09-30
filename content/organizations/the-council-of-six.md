@@ -9,13 +9,13 @@ allegiance: "People of Andaluria and [[the-holy-see|the Holy See]]"
 founded: 334 VR
 ---
 
-**Summary**: The **Council of Six**, the six offices that govern [[andaluria|Andaluria's]] reconstruction from the Plaza del Sol in Jesaña. Funded by [[the-holy-see|the Holy See]], its members are the stewards charged with rebuilding the holy capital after the Crisis.
+**Summary**: The **Council of Six**, the six offices that govern [[andaluria|Andaluria's]] reconstruction from the Plaza del Sol in Jesaña. Funded by [[the-holy-see|the Holy See]], its members are the stewards charged with rebuilding the holy capital after the Ophanim crisis.
 
 ---
 
 ## Overview
 
-After [[the-ophanim|the Ophanim's]] fall drove [[the-holy-see|the Holy See]] from the region, ruined [[andaluria|Andaluria]] was left to govern itself, and the Council rose to the task: five hereditary offices seated at Jesaña's Plaza del Sol, charged with rebuilding [[hilltop|Hilltop's]] holy capital and keeping its people fed and its trade moving, with a sixth seat lately added for the Holy See's own appointee (see [[sabara|Sabara]], the Surveyor). The Holy See funds their work from the taxes it gathers on the merchant-roads at the continent's centre. To Andaluria, they are the honest stewards of a wounded land.
+After [[the-ophanim|the Ophanim's]] fall drove [[the-holy-see|the Holy See]] from the region, ruined [[andaluria|Andaluria]] was left to govern itself, and the Council rose to the task: five hereditary offices seated at Jesaña's Plaza del Sol, charged with rebuilding [[hilltop|Hilltop's]] holy capital and keeping its people fed and its trade moving, with a sixth seat lately added for the Holy See's own appointee (see [[sabara|Sabara]], the Surveyor). The Holy See funds their work from the taxes it gathers on the merchant-roads at the continent's centre.
 
 ## Notable Members
 

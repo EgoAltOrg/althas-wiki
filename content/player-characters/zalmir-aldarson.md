@@ -5,7 +5,6 @@ role: "Druid, Warden of the Elements"
 ancestry: human
 culture: Wildborne
 pronouns: he/him
-nation: "???"
 ---
 
 **Summary**: Player character.
@@ -17,7 +16,7 @@ nation: "???"
 
 ## Appearance
 
-A tall, well-built man in his prime who reads as human, with a voice he keeps soft that has begun to fall toward a rasp. A bandage wraps the left of his chest up to the base of his neck, which he passes off as an old war wound.
+A tall, well-built man in his prime with a soft, slightly rasping voice. A bandage wraps the left of his chest up to the base of his neck.
 
 ## Personality
 

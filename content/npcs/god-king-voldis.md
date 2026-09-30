@@ -20,7 +20,7 @@ image: the-god-king.jpg
 
 When [[the-one-above|the One Above]] cast down [[the-ones-below|the Ones Below]] and ended the Divine Age, the people of Althas crowned Voldis their first God King and founded [[voldaen|Voldaen]] beneath him. Every monarch of [[house-voldis|House Voldis]] since claims rule by divine descent from him, and holds the crown as a sacred inheritance rather than a worldly one.
 
-His name endures in his house and his nation, but the man behind it does not: little is recorded of Voldis beyond the founding itself. By the tellings of the faith, he passed from the world alongside the One Above himself when the god departed Althas, his work of founding done.
+His name endures in his house and his nation, but the man behind it does not: little is recorded of Voldis beyond the founding itself. By the tellings of the faith, he passed from the world alongside the One Above when the god departed Althas, his work of founding done.
 
 ## Related pages
 

@@ -19,7 +19,7 @@ Archbishop **Mateo Veyra** holds Andaluria's highest holy office, the ranking se
 
 ## Relationships
 
-He is betrothed to the woman who holds the region's purse. Veyra is promised to the Condesa [[ysabela-delamona|Ysabela Delamoña IV]], the reclusive wine-lord whose fortune funds the reconstruction, a match Andaluria reads as its two greatest patrons binding themselves to its recovery. The Archbishop consecrates the rebuilding; the Condesa pays for it.
+He is betrothed to the woman who holds the region's purse, the Condesa [[ysabela-delamona|Ysabela Delamoña IV]], the reclusive wine-lord whose fortune funds the reconstruction. The Archbishop consecrates the rebuilding; the Condesa pays for it.
 
 ## Related pages
 

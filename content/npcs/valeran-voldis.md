@@ -13,7 +13,7 @@ died: 149 VR
 image: the-blessed-king.jpg
 ---
 
-**Summary**: **Valeran Voldis**, remembered as the Blessed King (r. 117-149 VR), who ended his father's heretical war by slaying [[valerion-voldis|the Mad King]] and won [[hilltop|Hilltop]] its independence. Remembered by the faithful as blessed for it.
+**Summary**: **Valeran Voldis**, remembered as the Blessed King (r. 117-149 VR), who ended his father's heretical war by slaying [[valerion-voldis|the Mad King]] and won [[hilltop|Hilltop]] its independence.
 
 ---
 

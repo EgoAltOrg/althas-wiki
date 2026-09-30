@@ -6,13 +6,13 @@ government: Merchant federation
 founded: During the Ophanim crisis
 ---
 
-**Summary**: A merchant federation founded by the Caio people, who declared the trade cities of southern Hilltop independent during the [[the-ophanim|Ophanim]] crisis. Home to a strong Slyborne presence, looser laws than its neighbors, and a living folk tradition of fortune-telling.
+**Summary**: A merchant federation founded during the [[the-ophanim|Ophanim]] crisis, when the Caio, merchant lords, pirates and southern nobles tired of the Holy See's taxes declared the trade cities of southern Hilltop independent. Home to a strong Slyborne presence, looser laws than its neighbors, and a living folk tradition of fortune-telling.
 
 ---
 
 ## Overview
 
-A federation founded by merchant lords who declared the trade cities of Hilltop's south independent during the Ophanim crisis. Those founders were the **Caio**, a people of caravaners and traders with a storied culture: they use family loosely, with no special status for blood, and welcome anyone willing to learn their ways. That openness is why Armada is the one nation where [[infernis|Infernis]] are tolerated in peace, and why it is governed not by a bloodline but by [[guild|the Guild]], a body of city-state rulers who each hold their seat by possession of a physical token rather than by inheritance.
+A federation born when the trade cities of Hilltop's south declared their independence during the Ophanim crisis. Its founders were many: merchant lords, pirate families, southern nobles tired of the Holy See's taxes, and the **Caio**, a people of caravaners and traders with a storied culture: they use family loosely, with no special status for blood, and welcome anyone willing to learn their ways. That openness is why Armada is the one nation where [[infernis|Infernis]] are sometimes tolerated, and why it is governed not by a bloodline but by [[guild|the Guild]], a body of city-state rulers who each hold their seat by possession of a physical token rather than by inheritance.
 
 Home to a strong Slyborne (criminal organization) presence and looser laws than its neighbors, Armada supported the [[jesthaen|Jesthaen]] rebels alongside [[polaris|Polaris]]. It trades, begrudgingly on both sides, with [[andaluria|Andaluria]] to the north, carrying that region's famed wine to foreign markets.
 

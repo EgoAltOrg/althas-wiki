@@ -23,7 +23,7 @@ Lyra was born with the [[miracles|Miracle of Anamnesis]]: she forgets nothing sh
 
 ## History
 
-Lyra Aquila is one of the [[the-five-heroes|Five Heroes]] who fought and brought down [[the-ophanim|the Ophanim]] at [[hilltop|Hilltop]] in 333-334 VR, an Archmage of the Triumvirate of Polaris (see [[polaris|Polaris]]), and, with her twin brother [[cassio-aquila|Cassio Aquila]], one of the two living bearers of [[house-aquila|House Aquila's]] Miracles.
+Lyra Aquila is one of the [[the-five-heroes|Five Heroes]] who fought and brought down [[the-ophanim|the Ophanim]] at [[hilltop|Hilltop]] in 333-334 VR, an Archmage of the Triumvirate of Polaris (see [[polaris|Polaris]]), and, with her twin brother [[cassio-aquila|Cassio Aquila]], one of the two bearers of [[house-aquila|House Aquila's]] Miracles.
 
 ### Verba Ophanim
 

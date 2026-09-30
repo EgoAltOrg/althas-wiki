@@ -28,7 +28,7 @@ The [[miracles|Miracle of Fames]] lets its bearer take the might of the fallen i
 
 ### The Famesfeast
 
-Central to the House is the Famesfeast, a weekly rite preceded by a day-long fast, which every Olnir child is made to attend from the youngest age. Though Fames blesses at most a single child in a generation, all must partake, for the rite hardens and binds the House's young as surely as it serves the gift. It is a cannibal rite: the House feasts on human flesh, and Fames itself is fed by eating a chosen organ of the fallen. The Olnir do little to hide it. Outsiders know the House instead by its creed, resourcefulness, ruthlessness, the rule of might, and the survival of the fittest above all, and by the quiet dread the name Olnir carries.
+Central to the House is the Famesfeast, a weekly rite preceded by a day-long fast, which every Olnir child is made to attend from the youngest age. Though Fames blesses at most a single child in a generation, all must partake, for the rite hardens and binds the House's young as surely as it serves the gift. It is a cannibal rite: the House feasts on human flesh, and Fames itself is fed by eating a chosen organ of the fallen. The Olnir do little to hide it. Outsiders know the House as well by its creed, resourcefulness, ruthlessness, the rule of might, and the survival of the fittest above all, and by the quiet dread the name Olnir carries.
 
 ## History
 

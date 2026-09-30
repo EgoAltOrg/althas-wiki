@@ -13,7 +13,7 @@ founded: 333 VR
 
 ### The battle
 
-In 333 VR the [[the-ophanim|Ophanim]] landed at [[hilltop|Hilltop]] and devastated it, forcing [[the-holy-see|the Holy See]] to relocate to central Althas. The following year, 334 VR, the Five Heroes brought the Ophanim down. Its death shook the faith and Althas itself to their roots. The land around its corpse is still permanently, unnaturally dark.
+In 333 VR the [[the-ophanim|Ophanim]] landed at [[hilltop|Hilltop]] and devastated it, forcing [[the-holy-see|the Holy See]] to relocate to central Althas. The following year, 334 VR, the Five Heroes brought the Ophanim down. Its death shook the faith and Althas itself to their roots. Of late, the nights over the land around its corpse have begun to lengthen without end.
 
 ## Notable Members
 

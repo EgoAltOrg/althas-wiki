@@ -17,7 +17,7 @@ Daggerheart invites players into the worldbuilding, and much of Althas is still 
 - [x] Name the three Closing Holidays that end the year and mark the final battle of the Divine Age. (Done 2026-08-24: Bellum, Sigillum, Regnum.)
 - [ ] Describe how people mark the three Closing Holidays: what is done, eaten, mourned, or celebrated.
 - [ ] Name the thirty Saints of the Divine Age, one for each prayer day of the year: who each was and what they are patron of.
-- [ ] Set out the [[the-holy-see|Parish of Orthodoxy]]'s rules for prayer and conduct in church, its common rites (naming, confession, marriage, funeral), and the everyday beliefs and superstitions of the faithful.
+- [ ] Set out the [[parish-of-orthodoxy|Parish of Orthodoxy]]'s rules for prayer and conduct in church, its common rites (naming, confession, marriage, funeral), and the everyday beliefs and superstitions of the faithful.
 - [ ] Write common prayers, blessings, and hymns of the faith of [[the-one-above|the One Above]].
 
 ## The Church
@@ -43,10 +43,10 @@ Daggerheart invites players into the worldbuilding, and much of Althas is still 
 
 - [ ] Add folk legends and tavern tales told across Althas (the [[kingslayer|Kingslayer]] is already one).
 - [ ] Write songs and ballads of the recent war and of the Divine Age.
-- [ ] What do common people believe became of [[the-one-above|the One Above]] after he departed?
+- [ ] What do common people believe became of [[the-one-above|the One Above]] after they departed?
 
 ## Related pages
 
 - [[index|Althas]]
 - [[calendar|Calendar]]
-- [[the-holy-see|The Holy See]]
+- [[parish-of-orthodoxy|Parish of Orthodoxy]]

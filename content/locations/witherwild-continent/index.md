@@ -19,7 +19,7 @@ What Althas remembers of it is [[haven|Haven]], the colony three of its powers r
 
 Few Althans have crossed the [[godless-gate|Godless Gate]], and fewer have come back, so most of what the mainland holds about the Witherwild is rumor rather than fact. The tales come from the colonists of [[haven|Haven]], from before the Folly, and from [[the-witherwatch|Witherwatch]] veterans since, and they grow taller the farther from the Gate they are told:
 
-- That its days and nights each last weeks, the sun holding the sky seven days and more before a night just as long, past anything an Althan calendar can keep.
+- That its days and nights each run on for days at a time, past anything an Althan calendar can keep.
 - That its beasts grow to monstrous size, its plants hunt and strangle, and nothing there ever stops growing.
 - That the Wicklings share their villages with living spirits they call gods, met on the road in the flesh, as ready to curse as to bless.
 - That the ground itself is holy and cursed, and a grey range the size of mountains is the body of a dead god the colony was mad to quarry.

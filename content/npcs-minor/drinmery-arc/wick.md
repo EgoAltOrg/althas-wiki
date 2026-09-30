@@ -19,7 +19,7 @@ A hard-faced man in a hooded yellow-brown cloak.
 
 ## History
 
-Wick led the bandits who tried to rob [[novak-azimuth|Novak]] in the [[drinmery|Drinmery]] market on Adventus 12, 366 VR. The bandits the party questioned named him as their leader.
+Wick led the bandits who tried to rob [[novak-azimuth|Novak]] in the [[drinmery|Drinmery]] market on Adventus 12, 366 VR. When that failed, they beat the guardsman [[pell|Pell]] as a distraction and stole [[cornelia-azimuth|Cornelia Azimuth's]] ring from [[leonard-moore|Leonard Moore]] instead. The bandits the party questioned named him as their leader.
 
 ## Related pages
 
