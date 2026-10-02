@@ -19,16 +19,27 @@ _spec = importlib.util.spec_from_file_location(
 _sync = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_sync)
 
-# The ten canon month names, in order (the campaign's setting/calendar.md).
-# Headings name the month ("Day 12 of Adventus, 366 VR"); the ordinal
-# "of the Ninth Month" form was retired 2026-09-26.
+# The ten canon month names, then the three named holidays that follow Vesper
+# (days 1 to 3 of the holiday period), in order (the campaign's
+# setting/calendar.md). Headings use the canonical Althas date form, month day,
+# year: "Adventus 12, 366 VR"; a holiday is named, with no day number:
+# "Bellum, 366 VR". Retired forms: "Day 12 of Adventus, 366 VR" (2026-09-30)
+# and the ordinal "Day 12 of the Ninth Month" (2026-09-26).
 MONTHS = "Vigilia|Sacratio|Oblatio|Certamen|Passio|Requiem|Paenitentia|Gratia|Adventus|Vesper"
+HOLIDAYS = "Bellum|Sigillum|Regnum"
 MONTH_HEADING_RE = re.compile(
-    rf"^## Day ([1-9]|[12][0-9]|3[0-3]) of ({MONTHS}), ([0-9]+) VR$"
+    rf"^## ({MONTHS}) ([1-9]|[12][0-9]|3[0-3]), ([0-9]+) VR$"
 )
-HOLIDAY_HEADING_RE = re.compile(r"^## Day ([1-3]) of the Closing Holidays, ([0-9]+) VR$")
+HOLIDAY_HEADING_RE = re.compile(rf"^## ({HOLIDAYS}), ([0-9]+) VR$")
 # Any h2 that *looks like* a date attempt must parse; other h2s are fine.
-DATEISH_RE = re.compile(r"^##\s*day\b", re.IGNORECASE)
+# "Date-like" is deliberately broad (a leading "day", "closing", month or
+# holiday name, a trailing "N VR", or "N, N"), so a typo or a heading still in
+# a retired form fails the publish instead of silently dropping off the grid.
+DATEISH_RE = re.compile(
+    rf"^##(?!#)\s*(day\b|closing\b|({MONTHS}|{HOLIDAYS})\b|.*[0-9]\s*VR\b|.*[0-9],\s*[0-9])",
+    re.IGNORECASE,
+)
+CANONICAL_HINT = "write it as '## Adventus 12, 366 VR' or '## Bellum, 366 VR'"
 CURRENT_DATE_OK_RE = re.compile(r'^current-date:\s*"[0-9]+-(0[1-9]|10|H)-(0[1-9]|[12][0-9]|3[0-3])"\s*$', re.MULTILINE)
 CURRENT_DATE_ANY_RE = re.compile(r"^current-date:", re.MULTILINE)
 
@@ -39,7 +50,7 @@ def check_headings(body):
             continue
         if MONTH_HEADING_RE.match(line) or HOLIDAY_HEADING_RE.match(line):
             continue
-        findings.append(f"unparseable date heading: {line!r}")
+        findings.append(f"unparseable date heading: {line!r} ({CANONICAL_HINT})")
     return findings
 
 def check_current_date(frontmatter_text):
