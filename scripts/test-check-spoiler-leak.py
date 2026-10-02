@@ -42,6 +42,62 @@ def test_perception_framing_is_tier2():
         assert t2, f"expected a Tier 2 hit in: {s!r}"
 
 
+def test_perception_framing_any_subject():
+    # Six lines that were live on the wiki (found 2026-09-30) and slipped past a
+    # perception pattern that only knew seven hard-coded subjects.
+    leaks = [
+        "The faithful read it as devotion worn openly.",
+        "a match Andaluria reads as its two greatest patrons binding themselves to its recovery",
+        "which he passes off as an old war wound",
+        "killed, as Polaris believes, by a giant",
+        "a redemption in the eyes of everyone else",
+        "Appearance only; the rest is held.",
+    ]
+    for s in leaks:
+        t1, t2 = csl.scan_text(s)
+        assert t2 and not t1, f"expected a Tier 2 (not Tier 1) hit in: {s!r} (got {t1} {t2})"
+
+
+def test_secret_existence_phrases_are_tier2():
+    for s in [
+        "Andaluria reads the match as a binding.",
+        "They take him for a god.",
+        "the stranger mistook the old man for a beggar",
+        "a quiet man who reads as harmless",
+        "a wound, as most believe, from the war",
+        "the war, as the Church presents it, was holy",
+        "She is taken to be of that house.",
+        "It is publicly known as a hunting lodge.",
+        "He never said otherwise.",
+        "A homebrew subclass.",
+        "a placeholder name",
+    ]:
+        t1, t2 = csl.scan_text(s)
+        assert t2 and not t1, f"expected a Tier 2 (not Tier 1) hit in: {s!r} (got {t1} {t2})"
+
+
+def test_new_author_terms_are_tier1():
+    for s in ["In-fiction, she is a priest.", "an out-of-character aside", "pending a design pass"]:
+        t1, _ = csl.scan_text(s)
+        assert t1, f"expected a Tier 1 hit in: {s!r}"
+
+
+def test_perception_framing_stays_tight():
+    # Ordinary prose the subject-agnostic patterns must not flag.
+    for s in [
+        "In their absence the Holy See took up authority as steward.",
+        "a hole torn in the shape that makes what comes through read as fire",
+        "The inscription reads as follows.",
+        "the great houses took the regency for themselves",
+        "see that page for how incantation magic works",
+        "a Circinus read the ground for a colony",
+        "a weapon that takes a different form for each generation",
+        "The house takes as its sigil a wolf.",
+    ]:
+        t1, t2 = csl.scan_text(s)
+        assert not t1 and not t2, f"clean prose should not flag: {s!r} -> {t1} {t2}"
+
+
 def test_clean_public_prose_passes():
     clean = (
         "The Holy See governs the faith from Hilltop and fields the Parish of "

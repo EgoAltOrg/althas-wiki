@@ -1,6 +1,24 @@
 {
   "_comment": "Human-cleared Tier-2 exceptions to check-spoiler-leak.py. Each entry is a secret-signaling phrase that is actually legitimate in-world public prose, not a leak. Keyed by content/-relative path, then the exact lowercased matched phrase, with a reason. Tier-1 author-terminology is NEVER allowlistable. Reviewed by Lucas 2026-07-18.",
   "pages": {
+    "changelog.md": {
+      "placeholder": "changelog note that placeholder local maps were removed from two places; describes site maintenance, not a hidden truth. False positive cleared by Lucas 2026-09-30."
+    },
+    "npcs/hesper-arcturus.md": {
+      "read these duels as": "'Polaris society read these duels as' a mercy: legitimate public prose about how Polaris saw the duels, not a secret-existence hint. Cleared by Lucas 2026-09-30."
+    },
+    "npcs/izar-arcturus.md": {
+      "read the ritual as": "'Polaris society mostly read the ritual as' a mercy: legitimate public prose about public opinion of the duels, not a secret-existence hint. Cleared by Lucas 2026-09-30."
+    },
+    "npcs/jestha.md": {
+      "in the eyes of": "'unfit in the eyes of the capital's noble houses': describes the nobles' open prejudice against common blood, not a hidden truth. False positive cleared by Lucas 2026-09-30."
+    },
+    "npcs/sabara.md": {
+      "is taken to be": "'so she is taken to be of that oldblood house': legitimate public prose inferring her house from her known Miracle. Cleared by Lucas 2026-09-30."
+    },
+    "organizations/house-circinus.md": {
+      "reads them through the earth as": "Geosensus 'reads them through the earth as easily as across it': describes how the Miracle senses stone, not perception framing. False positive cleared by Lucas 2026-09-30."
+    },
     "magic/codex-magic.md": {
       "in reality": "in-world public lore: Codex magic 'tears a small hole in reality'. Describes the magic system, not a secret-existence signal."
     }
