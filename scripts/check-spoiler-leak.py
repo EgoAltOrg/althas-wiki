@@ -54,6 +54,9 @@ TIER1 = [
     r"\bin-fiction\b",
     r"\bout-of-character\b",
     r"\bdesign pass\b",
+    # Internal name for the year's last three days; in-world they are only
+    # ever Bellum, Sigillum and Regnum.
+    r"\bclosing holidays?\b",
 ]
 
 # Object slot for the perception-framing patterns below: a pronoun or a short

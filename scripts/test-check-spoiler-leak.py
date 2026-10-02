@@ -115,6 +115,17 @@ def test_new_author_terms_are_tier1():
         assert t1, f"expected a Tier 1 hit in: {s!r}"
 
 
+def test_closing_holidays_is_tier1():
+    # Internal name for the year's last three days (in-world: Bellum, Sigillum,
+    # Regnum); never player-facing, so Tier 1.
+    for s in ["the three Closing Holidays", "the closing holiday"]:
+        t1, _ = csl.scan_text(s)
+        assert t1, f"expected a Tier 1 hit in: {s!r}"
+    for s in ["the closing days of the year", "a holiday closing the market"]:
+        t1, t2 = csl.scan_text(s)
+        assert not t1 and not t2, f"clean prose should not flag: {s!r} -> {t1} {t2}"
+
+
 def test_perception_framing_stays_tight():
     # Ordinary prose the subject-agnostic patterns must not flag.
     for s in [
