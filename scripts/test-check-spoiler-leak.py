@@ -89,6 +89,18 @@ def test_perception_framing_with_hyphenated_or_such_complement():
         assert t2 and not t1, f"expected a Tier 2 (not Tier 1) hit in: {s!r} (got {t1} {t2})"
 
 
+def test_subject_anchored_for_granted_still_caught():
+    # The "granted" idiom is skipped only for the any-subject "take it for";
+    # with a perceiver subject it is the cover-story shape and stays flagged.
+    for s in [
+        "Most took it for granted that he died of fever",
+        "Everyone took it for granted.",
+        "Most took him for granted",
+    ]:
+        t1, t2 = csl.scan_text(s)
+        assert t2 and not t1, f"expected a Tier 2 (not Tier 1) hit in: {s!r} (got {t1} {t2})"
+
+
 def test_spaced_character_and_fiction_are_tier2_not_tier1():
     # Ordinary English, so allowlistable Tier 2; only the hyphenated jargon is Tier 1.
     for s in ["It was out of character for the duke.", "a tale that lives only in fiction"]:

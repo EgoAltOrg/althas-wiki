@@ -116,12 +116,13 @@ TIER2 = [
     # "for" forms: the subject-anchored original, plus "take him for" and
     # "mistook <someone> for" with any subject. Read/see + "for" stays
     # subject-anchored: "see that page for" and "read the ground for" are prose.
-    # "took it for granted" is an idiom, not framing.
+    # With any subject, "took it for granted" is an idiom, not framing; with a
+    # perceiver subject ("Most took it for granted that...") it stays flagged.
     r"\b(?:(?:most|many|others|people|everyone|all|few) (?:read|reads|take|takes|took|see|sees|saw|mistake|mistakes|mistook) "
     + _OBJ
-    + r"(?: \w+){0,4}|(?:take|takes|took) (?:him|her|them|it)|(?:mistake|mistakes|mistook) "
+    + r"(?: \w+){0,4} for\b|(?:take|takes|took) (?:him|her|them|it) for\b(?! granted\b)|(?:mistake|mistakes|mistook) "
     + _OBJ
-    + r"(?: \w+){0,4}) for\b(?! granted\b)",
+    + r"(?: \w+){0,4} for\b)",
     r"\bpass(es|ed)? for\b",
     r"\bpass(es|ed|ing)? (\w+ )?off as\b",
     r"\bas (\w+ ){1,2}believe[sd]?\b",
