@@ -76,6 +76,27 @@ def test_secret_existence_phrases_are_tier2():
         assert t2 and not t1, f"expected a Tier 2 (not Tier 1) hit in: {s!r} (got {t1} {t2})"
 
 
+def test_perception_framing_with_hyphenated_or_such_complement():
+    # "as well-earned" / "as such a man" are perception framing; only the bare
+    # "reads as well" / "reads as such" / "reads as follows" forms are prose.
+    for s in [
+        "most read the wear on him as well-earned",
+        "Most see him as well-meaning.",
+        "Everyone took him as well-born",
+        "most see him as such a man",
+    ]:
+        t1, t2 = csl.scan_text(s)
+        assert t2 and not t1, f"expected a Tier 2 (not Tier 1) hit in: {s!r} (got {t1} {t2})"
+
+
+def test_spaced_character_and_fiction_are_tier2_not_tier1():
+    # Ordinary English, so allowlistable Tier 2; only the hyphenated jargon is Tier 1.
+    for s in ["It was out of character for the duke.", "a tale that lives only in fiction"]:
+        t1, t2 = csl.scan_text(s)
+        assert not t1, f"must not be Tier 1: {s!r} -> {t1}"
+        assert t2, f"expected a Tier 2 hit in: {s!r}"
+
+
 def test_new_author_terms_are_tier1():
     for s in ["In-fiction, she is a priest.", "an out-of-character aside", "pending a design pass"]:
         t1, _ = csl.scan_text(s)
@@ -93,6 +114,9 @@ def test_perception_framing_stays_tight():
         "a Circinus read the ground for a colony",
         "a weapon that takes a different form for each generation",
         "The house takes as its sigil a wolf.",
+        "They took it for granted.",
+        "He took the throne as regent.",
+        "she took her place as head of the house",
     ]:
         t1, t2 = csl.scan_text(s)
         assert not t1 and not t2, f"clean prose should not flag: {s!r} -> {t1} {t2}"

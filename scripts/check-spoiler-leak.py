@@ -49,8 +49,10 @@ TIER1 = [
     r"\bgamemaster\b",
     r"\bgame master\b",
     r"\bdungeon master\b",
-    r"\bin[-\s]fiction\b",
-    r"\bout[-\s]of[-\s]character\b",
+    # Hyphenated jargon spellings only: the spaced forms are ordinary English
+    # ("out of character for the duke") and live in Tier 2.
+    r"\bin-fiction\b",
+    r"\bout-of-character\b",
     r"\bdesign pass\b",
 ]
 
@@ -96,19 +98,30 @@ TIER2 = [
     # live lines found 2026-09-30 slipped through ("The faithful read it as",
     # "a match Andaluria reads as", "passes off as", "as Polaris believes",
     # "in the eyes of", "the rest is held"). The "as" forms are therefore
-    # subject-agnostic, kept tight by requiring a real object, or a
-    # third-person "reads"/"sees" directly before "as" (a fronted object).
-    r"\b(?:(?:read|reads|take|takes|took|see|sees|saw|mistake|mistakes|mistook) "
+    # subject-agnostic too, each kept tight in its own way:
+    #   - the subject-anchored original (any verb, any object) stays first, so
+    #     its matches keep their old phrase;
+    #   - read/see/mistake + a real object, any subject;
+    #   - take + a bare pronoun directly before "as" ("took him as"), so
+    #     succession prose ("took the throne as regent", "took her place as
+    #     head") does not flag;
+    #   - a fronted object ("a match Andaluria reads as", "who reads as"),
+    #     where "reads as follows/such/well" is prose; "as well-born" is not.
+    r"\b(?:(?:most|many|others|people|everyone|all|few) (?:read|reads|take|takes|took|see|sees|saw|mistake|mistakes|mistook) "
     + _OBJ
-    + r"(?: \w+){0,4}|who reads?|reads|sees) as\b(?! (?:follows|well|such)\b)",
+    + r"(?: \w+){0,4} as\b|(?:read|reads|see|sees|saw|mistake|mistakes|mistook) "
+    + _OBJ
+    + r"(?: \w+){0,4} as\b|(?:take|takes|took) (?:him|her|them|it) as\b"
+    + r"|(?:who reads?|reads|sees) as\b(?! (?:follows|such|well(?!-))\b))",
     # "for" forms: the subject-anchored original, plus "take him for" and
     # "mistook <someone> for" with any subject. Read/see + "for" stays
     # subject-anchored: "see that page for" and "read the ground for" are prose.
+    # "took it for granted" is an idiom, not framing.
     r"\b(?:(?:most|many|others|people|everyone|all|few) (?:read|reads|take|takes|took|see|sees|saw|mistake|mistakes|mistook) "
     + _OBJ
     + r"(?: \w+){0,4}|(?:take|takes|took) (?:him|her|them|it)|(?:mistake|mistakes|mistook) "
     + _OBJ
-    + r"(?: \w+){0,4}) for\b",
+    + r"(?: \w+){0,4}) for\b(?! granted\b)",
     r"\bpass(es|ed)? for\b",
     r"\bpass(es|ed|ing)? (\w+ )?off as\b",
     r"\bas (\w+ ){1,2}believe[sd]?\b",
@@ -124,6 +137,9 @@ TIER2 = [
     # Workshop vocabulary that should not survive into finished player prose.
     r"\bhomebrew",
     r"\bplaceholder",
+    # Spaced forms of Tier 1 jargon: ordinary English too, so allowlistable.
+    r"\bout of character\b",
+    r"\bin fiction\b",
 ]
 
 TIER1_RE = [re.compile(p, re.IGNORECASE) for p in TIER1]
