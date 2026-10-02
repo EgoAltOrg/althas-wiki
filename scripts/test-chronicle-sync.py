@@ -17,16 +17,16 @@ spec.loader.exec_module(sync)
 
 SECRET_DAY = """Intro prose.
 
-## Day 4 of Vigilia, 363 VR
+## Vigilia 4, 363 VR
 
 Public event that stays.
 
-## Day 9 of Vigilia, 363 VR
+## Vigilia 9, 363 VR
 
 > [!gm-only]
 > A fully secret event.
 
-## Day 12 of Vigilia, 363 VR
+## Vigilia 12, 363 VR
 
 Another public event.
 """
@@ -34,12 +34,12 @@ Another public event.
 def test_secret_day_leaves_no_trace():
     body = sync.strip_callouts(SECRET_DAY)
     body = sync.drop_empty_headings(body)
-    assert "Day 9" not in body, "secret-only day heading must be dropped"
-    assert "Day 4 of Vigilia" in body
-    assert "Day 12 of Vigilia" in body
+    assert "Vigilia 9," not in body, "secret-only day heading must be dropped"
+    assert "## Vigilia 4, 363 VR" in body
+    assert "## Vigilia 12, 363 VR" in body
     assert "fully secret" not in body
 
-MIXED_DAY = """## Day 2 of Sacratio, 363 VR
+MIXED_DAY = """## Sacratio 2, 363 VR
 
 Public part.
 
@@ -50,7 +50,7 @@ Public part.
 def test_mixed_day_keeps_heading_and_public_part():
     body = sync.strip_callouts(MIXED_DAY)
     body = sync.drop_empty_headings(body)
-    assert "Day 2 of Sacratio" in body
+    assert "## Sacratio 2, 363 VR" in body
     assert "Public part." in body
     assert "Secret part." not in body
 

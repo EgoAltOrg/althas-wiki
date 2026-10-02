@@ -2,6 +2,7 @@
 """Unit tests for check-chronicle.py's validators.
 Run: python3 scripts/test-check-chronicle.py"""
 import importlib.util
+import re
 from pathlib import Path
 
 spec = importlib.util.spec_from_file_location(
@@ -10,22 +11,69 @@ spec = importlib.util.spec_from_file_location(
 cc = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cc)
 
+TS_PATH = Path(__file__).resolve().parent.parent / "quartz/components/scripts/chronicle.inline.ts"
+
 def test_valid_headings():
-    assert cc.check_headings("## Day 1 of Vigilia, 363 VR\n") == []
-    assert cc.check_headings("## Day 12 of Adventus, 366 VR\n") == []
-    assert cc.check_headings("## Day 33 of Vesper, 400 VR\n") == []
-    assert cc.check_headings("## Day 3 of the Closing Holidays, 363 VR\n") == []
+    assert cc.check_headings("## Vigilia 1, 363 VR\n") == []
+    assert cc.check_headings("## Adventus 12, 366 VR\n") == []
+    assert cc.check_headings("## Vesper 33, 400 VR\n") == []
+    assert cc.check_headings("## Closing Holidays 3, 363 VR\n") == []
+    # Passing must mean "parsed", not "ignored as a non-date" (#18).
+    for line in ("## Adventus 12, 366 VR", "## Closing Holidays 3, 363 VR"):
+        assert cc.DATEISH_RE.match(line), f"canonical heading not recognized as a date: {line!r}"
+        assert cc.MONTH_HEADING_RE.match(line) or cc.HOLIDAY_HEADING_RE.match(line), \
+            f"canonical heading not parsed: {line!r}"
     assert cc.check_headings("## The Keeping of This Chronicle\n") == [], \
         "non-date h2s are allowed and ignored"
+    assert cc.check_headings("## Related pages\n") == []
 
 def test_invalid_headings():
-    assert cc.check_headings("## Day 34 of Vigilia, 363 VR\n"), "day > 33"
-    assert cc.check_headings("## Day 4 of the Closing Holidays, 363 VR\n"), "holiday day > 3"
-    assert cc.check_headings("## Day 5 of Brumaire, 363 VR\n"), "not a canon month"
+    assert cc.check_headings("## Vigilia 34, 363 VR\n"), "day > 33"
+    assert cc.check_headings("## Vigilia 0, 363 VR\n"), "day 0"
+    assert cc.check_headings("## Closing Holidays 4, 363 VR\n"), "holiday day > 3"
+    assert cc.check_headings("## Brumaire 5, 363 VR\n"), "not a canon month"
+    assert cc.check_headings("## Adventis 12, 366 VR\n"), "misspelled month"
+    assert cc.check_headings("## Vigilia 05, 363 VR\n"), "zero-padded day in prose heading"
+    assert cc.check_headings("## vigilia 5, 363 VR\n"), "casing"
+    assert cc.check_headings("## Vigilia 5 363 VR\n"), "missing comma"
+    assert cc.check_headings("## Vigilia 5, 363\n"), "missing VR"
+    assert cc.check_headings("## The Closing Holidays 1, 363 VR\n"), "holiday with article"
     assert cc.check_headings("## Day 5 of the Ninth Month, 363 VR\n"), "retired ordinal form"
-    assert cc.check_headings("## Day 05 of Vigilia, 363 VR\n"), "zero-padded day in prose heading"
-    assert cc.check_headings("## day 5 of vigilia, 363 VR\n"), "casing"
-    assert cc.check_headings("## Day 5, Vigilia, 363 VR\n"), "wrong shape"
+
+def test_retired_day_of_month_form_fails_loudly():
+    # Regression (#18): the canonical form is "Adventus 12, 366 VR" (Lucas,
+    # 2026-09-30). The old "Day 12 of Adventus" form must fail the gate rather
+    # than publish a page whose days the calendar grid no longer marks.
+    for old in ("## Day 12 of Adventus, 366 VR\n", "## Day 3 of the Closing Holidays, 363 VR\n"):
+        findings = cc.check_headings(old)
+        assert findings, f"retired form must be flagged: {old!r}"
+        assert "Adventus 12, 366 VR" in findings[0], "finding names the canonical form"
+
+def _ts_regexes():
+    """The calendar script's heading regexes, as Python patterns (the TS
+    source has no '## ' prefix: it matches the rendered h2's text)."""
+    ts = TS_PATH.read_text()
+    months = re.findall(r'^  "(\w+)",$', ts, re.MULTILINE)
+    month_src = re.search(r"const MONTH_HEADING_RE = new RegExp\(\s*`(.*)`,?\s*\)", ts).group(1)
+    month_src = month_src.replace('${MONTHS.join("|")}', "|".join(months))
+    holiday_src = re.search(r"const HOLIDAY_HEADING_RE = /(.*)/\n", ts).group(1)
+    return months, month_src, holiday_src
+
+def test_calendar_script_regexes_match_checker():
+    # The checker's docstring requires its regexes to stay textually
+    # equivalent to chronicle.inline.ts; enforce it so the two cannot drift.
+    months, month_src, holiday_src = _ts_regexes()
+    assert "|".join(months) == cc.MONTHS
+    assert "^## " + month_src[1:] == cc.MONTH_HEADING_RE.pattern
+    assert "^## " + holiday_src[1:] == cc.HOLIDAY_HEADING_RE.pattern
+
+def test_calendar_script_parses_canonical_headings():
+    _, month_src, holiday_src = _ts_regexes()
+    m = re.match(month_src, "Adventus 12, 366 VR")
+    assert m and m.group(1) == "Adventus" and m.group(2) == "12" and m.group(3) == "366"
+    h = re.match(holiday_src, "Closing Holidays 2, 366 VR")
+    assert h and h.group(1) == "2" and h.group(2) == "366"
+    assert not re.match(month_src, "Day 12 of Adventus, 366 VR")
 
 def test_current_date():
     assert cc.check_current_date('current-date: "363-01-01"') == []

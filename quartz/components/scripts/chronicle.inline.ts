@@ -6,7 +6,9 @@
 // (the publish gate / normalized-event seam).
 
 // The ten canon month names, in order (the campaign's setting/calendar.md).
-// The ordinal "of the Ninth Month" heading form was retired 2026-09-26.
+// Headings use the canonical Althas date form, month day, year: "Adventus 12,
+// 366 VR" and "Closing Holidays 1, 366 VR". Retired forms: "Day 12 of
+// Adventus, 366 VR" (2026-09-30) and "Day 12 of the Ninth Month" (2026-09-26).
 const MONTHS = [
   "Vigilia",
   "Sacratio",
@@ -20,9 +22,9 @@ const MONTHS = [
   "Vesper",
 ]
 const MONTH_HEADING_RE = new RegExp(
-  `^Day ([1-9]|[12][0-9]|3[0-3]) of (${MONTHS.join("|")}), ([0-9]+) VR$`,
+  `^(${MONTHS.join("|")}) ([1-9]|[12][0-9]|3[0-3]), ([0-9]+) VR$`,
 )
-const HOLIDAY_HEADING_RE = /^Day ([1-3]) of the Closing Holidays, ([0-9]+) VR$/
+const HOLIDAY_HEADING_RE = /^Closing Holidays ([1-3]), ([0-9]+) VR$/
 const DATE_ATTR_RE = /^([0-9]+)-(0[1-9]|10|H)-(0[1-9]|[12][0-9]|3[0-3])$/
 
 // A month coordinate: year + index 0..9 for months, 10 for the holidays.
@@ -42,7 +44,7 @@ const dayKey = (year: number, monthIndex: number, day: number) =>
 
 function parseHeading(text: string): { year: number; monthIndex: number; day: number } | null {
   const m = MONTH_HEADING_RE.exec(text)
-  if (m) return { year: +m[3], monthIndex: MONTHS.indexOf(m[2]), day: +m[1] }
+  if (m) return { year: +m[3], monthIndex: MONTHS.indexOf(m[1]), day: +m[2] }
   const h = HOLIDAY_HEADING_RE.exec(text)
   if (h) return { year: +h[2], monthIndex: 10, day: +h[1] }
   return null
