@@ -27,6 +27,12 @@ def test_valid_headings():
         "non-date h2s are allowed and ignored"
     assert cc.check_headings("## Related pages\n") == []
 
+def test_deeper_headings_are_not_date_attempts():
+    # Only h2s are date headings; an h3 or deeper that mentions a year is prose.
+    assert cc.check_headings("### Notes from 366 VR\n") == []
+    assert cc.check_headings("### Adventus 12, 366 VR\n") == []
+    assert cc.check_headings("#### Day 4 of the march\n") == []
+
 def test_invalid_headings():
     assert cc.check_headings("## Vigilia 34, 363 VR\n"), "day > 33"
     assert cc.check_headings("## Vigilia 0, 363 VR\n"), "day 0"
@@ -74,6 +80,20 @@ def test_calendar_script_parses_canonical_headings():
     h = re.match(holiday_src, "Closing Holidays 2, 366 VR")
     assert h and h.group(1) == "2" and h.group(2) == "366"
     assert not re.match(month_src, "Day 12 of Adventus, 366 VR")
+
+def test_calendar_script_reads_the_right_capture_groups():
+    # parseHeading must read year/month/day from the groups the regex
+    # actually captures them in; apply its own indices to its own regex.
+    ts = TS_PATH.read_text()
+    line = re.search(
+        r"if \(m\) return \{ year: \+m\[(\d)\], monthIndex: MONTHS\.indexOf\(m\[(\d)\]\), day: \+m\[(\d)\] \}",
+        ts,
+    )
+    assert line, "parseHeading's month return line not found"
+    year_i, month_i, day_i = (int(g) for g in line.groups())
+    _, month_src, _ = _ts_regexes()
+    m = re.match(month_src, "Adventus 12, 366 VR")
+    assert (m.group(year_i), m.group(month_i), m.group(day_i)) == ("366", "Adventus", "12")
 
 def test_current_date():
     assert cc.check_current_date('current-date: "363-01-01"') == []

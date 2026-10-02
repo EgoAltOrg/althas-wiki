@@ -34,7 +34,7 @@ HOLIDAY_HEADING_RE = re.compile(r"^## Closing Holidays ([1-3]), ([0-9]+) VR$")
 # a trailing "N VR", or "N, N"), so a typo or a heading still in a retired
 # form fails the publish instead of silently dropping off the calendar grid.
 DATEISH_RE = re.compile(
-    rf"^##\s*(day\b|closing\b|({MONTHS})\b|.*[0-9]\s*VR\b|.*[0-9],\s*[0-9])",
+    rf"^##(?!#)\s*(day\b|closing\b|({MONTHS})\b|.*[0-9]\s*VR\b|.*[0-9],\s*[0-9])",
     re.IGNORECASE,
 )
 CANONICAL_HINT = "write it as '## Adventus 12, 366 VR' or '## Closing Holidays 1, 366 VR'"
