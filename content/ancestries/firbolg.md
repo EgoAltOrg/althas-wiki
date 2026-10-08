@@ -16,7 +16,7 @@ The Firbolg are a tall, bovine-featured people native to the [[witherwild-contin
 
 ## Appearance
 
-Firbolg are bovine humanoids: broad-nosed, with long drooping ears and faces that blend the human with the ox, cow, or bison. Some, called minotaurs, have heads wholly of cattle. They stand tall, five to seven feet, powerfully built and remarkably strong at any age, and many bear horns they are not shy to lower and charge behind. All are covered in fur, some in the muted browns and greys of ploughland, others in soft pastel pinks and blues. They live roughly a century and a half.
+Firbolg are bovine humanoids: broad-nosed, with long drooping ears and faces that blend the Human with the ox, cow, or bison. Some, called minotaurs, have heads wholly of cattle. They stand tall, five to seven feet, powerfully built and remarkably strong at any age, and many bear horns they are not shy to lower and charge behind. All are covered in fur, some in the muted browns and grays of plowland, others in soft pastel pinks and blues. They live roughly a century and a half.
 
 ## Culture
 

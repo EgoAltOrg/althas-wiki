@@ -4,7 +4,7 @@ aliases:
   - npcs-minor/drinmery/alys
 kind: person
 role: "Townswoman of [[drinmery|Drinmery]]"
-ancestry: human
+ancestry: Human
 pronouns: she/her
 nation: "[[jesthaen|Jesthaen]]"
 image: alys.jpg
@@ -14,7 +14,7 @@ image: alys.jpg
 
 ---
 
-## Overview
+## History
 
 Alys is a townswoman of [[drinmery|Drinmery]] whose young son, Colm, died shortly before the party arrived. She comes to the church of the [[convent-of-saint-trefan|Convent of Saint Trefan]] to grieve for him.
 

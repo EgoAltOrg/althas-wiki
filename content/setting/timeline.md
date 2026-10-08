@@ -22,7 +22,7 @@ timeline
 
 ## Founding Era
 
-Althas once flew under a single banner. In the Divine Age [[the-one-above|the One Above]] protected the continent's mortal creations and fought [[the-ones-below|the Ones Below]], the primordial powers of chaos, and struck them down. The war ended when the One Above cast the Ones Below down and sealed them away, and that blow left the crater that became [[crater-lake|the Crater Lake]] at the center of Althas. With victory secured, the people crowned [[god-king-voldis|Voldis]] their first God King and founded [[voldaen|Voldaen]]. The One Above set their seat at what is now [[hilltop|Hilltop]] and departed soon after for reasons no one records. In their absence [[the-holy-see|the Holy See]] took up authority as divine regent, and later a group of scholars and mages broke away to found [[polaris|Polaris]]. See [[the-divine-age|the Divine Age]] for this era in full.
+Althas once flew under a single banner. In the Divine Age [[the-one-above|the One Above]] protected the continent's mortal creations and fought [[the-ones-below|the Ones Below]], the primordial powers of chaos, and struck them down. The war ended when the One Above cast the Ones Below down and sealed them away, and that blow left the crater that became [[crater-lake|the Crater Lake]] at the center of Althas. With victory secured, the people crowned [[god-king-voldis|Voldis]] their first God King and founded [[voldaen|Voldaen]]. The One Above set their seat at what is now [[hilltop|Hilltop]] and departed soon after for reasons no one records. In their absence [[the-holy-see|the Holy See]] took up authority over [[hilltop|Hilltop]] as its governing body, and later a group of scholars and mages broke away to found [[polaris|Polaris]]. See [[the-divine-age|the Divine Age]] for this era in full.
 
 ## Valerion's Heresy (93-117 VR)
 
@@ -30,7 +30,7 @@ Generations after the founding, [[valerion-voldis|Valerion]], the king remembere
 
 ## The Lodestar Pact (167 VR)
 
-Half a century after the civil war, the northern academies and their mages, a cadre of codexcasters forged into a political power during [[valerions-heresy|Valerion's Heresy]] itself, had grown too great to sit easily under the crown. Rather than repeat the bloodshed so recently ended, [[valeran-voldis|Valeran]]'s heir King [[castus-voldis|Castus]] and the north settled their split by negotiated partition, ratified by the Pontiff of [[the-holy-see|the Holy See]] on the fiftieth anniversary of the Blessed King's victory. Out of it came [[polaris|Polaris]] under its Triumvirate of Archmages. The same treaty also committed the three powers of Althas, [[voldaen|Voldaen]], Polaris, and [[hilltop|Hilltop]], to a shared venture: the joint colonization of the untouched Witherwild. Castus's younger brother, Castorius, renounced his own claim as part of the settlement and afterward passed out of the record. See [[the-lodestar-pact|the Lodestar Pact]].
+In 167 VR, half a century after the civil war, [[valeran-voldis|Valeran]]'s heir King [[castus-voldis|Castus]] settled the north's split from the crown by negotiated partition rather than another war. Out of it came [[polaris|Polaris]] under its Triumvirate of Archmages, a shared venture binding [[voldaen|Voldaen]], Polaris and [[hilltop|Hilltop]] to colonize the untouched Witherwild, and the renunciation of Castus's younger brother, Castorius. See [[the-lodestar-pact|the Lodestar Pact]].
 
 ## 333 VR
 

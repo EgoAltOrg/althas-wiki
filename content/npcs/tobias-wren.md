@@ -2,7 +2,7 @@
 title: Tobias Wren
 kind: person
 role: "Priest of the [[convent-of-saint-trefan|Convent of Saint Trefan]]"
-ancestry: human
+ancestry: Human
 culture: Orderborne
 pronouns: he/him
 nation: "[[jesthaen|Jesthaen]]"
@@ -10,7 +10,7 @@ allegiance: "[[the-holy-see|the Holy See]]"
 image: tobias-wren.jpg
 ---
 
-**Summary**: The elderly, beloved priest of the [[convent-of-saint-trefan|Convent of Saint Trefan]] in [[drinmery|Drinmery]], shepherd of its [[aetheris|aetheris]] flock.
+**Summary**: The elderly, beloved priest of the [[convent-of-saint-trefan|Convent of Saint Trefan]] in [[drinmery|Drinmery]], shepherd of its [[aetheris|Aetheris]] flock.
 
 ---
 

@@ -6,18 +6,17 @@ kind: organization
 category: Church
 leader: "[[amalthus-cruoris|Amalthus Cruoris]]"
 seat: central Althas
-office: Divine Regent
 founded: Divine Age
 image: the-holy-see.webp
 ---
 
-**Summary**: The divine regent authority that governs the faith of the One Above in the god's continued absence, and rules [[hilltop|Hilltop]] from central Althas, where it relocated after the Ophanim's landing.
+**Summary**: The governing body of [[hilltop|Hilltop]] and of the faith of the One Above in the god's continued absence, ruling from central Althas, where it relocated after the Ophanim's landing.
 
 ---
 
 ## Overview
 
-The See claimed authority over [[hilltop|Hilltop]] after the One Above departed and became the divine regent of a faith that no longer had its god visibly among mortals. It relocated to central Althas after [[the-ophanim|the Ophanim]]'s landing in 333 VR devastated Hilltop; [[cassio-aquila|Cassio Aquila]] of the Holy See was one of the Five Heroes who died bringing it down the following year.
+The See claimed authority over [[hilltop|Hilltop]] after the One Above departed and became its governing body, its Pontiff ruling as divine regent for a god no longer visibly among mortals. It relocated to central Althas after [[the-ophanim|the Ophanim]]'s landing in 333 VR devastated Hilltop; [[cassio-aquila|Cassio Aquila]] of the Holy See was one of the Five Heroes who died bringing it down the following year.
 
 In 361 VR it ratified the Jesthaen Treaty, ending active combat in the [[jesthaen|Jesthaen]] rebellion.
 
@@ -38,6 +37,10 @@ The Holy See is organized into Parishes, each an arm of the Church governing one
 The faith teaches that the One Above will one day return, heralded by [[the-ophanim|the Ophanim]], and that the faithful must be ready to receive them at any hour. From this comes the Sleepless Vigil: a proper church never goes dark. It keeps at least two priests who stand the watch in turn, so that one is always awake, and the priest who keeps the night is the Vigilan-Insomni, charged to wake through the dark hours and rouse the town should the god come at last. A village too small for a second priest keeps the vigil by its own hands, the townsfolk taking the night-watch between them and waking their single priest if the need arises.
 
 The vigil is also a quiet mercy of ordinary life. In any town, at any hour, a priest can be found awake: to bless a child or a departing ship, to witness a wedding or an oath, to counsel the troubled or sit with the dying. For most people this is the Church as they know it, not the distant Parishes and their rulings, but a lit doorway that is never barred.
+
+### The Pilgrimage of Penitence
+
+A criminal tried by the Holy See may choose to undergo the Pilgrimage of Penitence so that the One Above may forgive them. Whoever undergoes it is a Penitent. A Penitent dangerous enough to need an Inquisitor's direct supervision through their Pilgrimage is called a Sinner.
 
 ## Related pages
 

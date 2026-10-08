@@ -4,6 +4,17 @@ title: Changelog
 
 What's new on the wiki, most recent first.
 
+## 2026-10-08
+
+- **[[dorothea|Dorothea]].** A page for Thea, a guest player character who joins the party in Drinmery.
+- **The five capitals.** Each nation's info card now names its capital: Voldaenia, Errai, Corsaria, Jesaña and [[jestha|Jestha]], which has a page of its own. The old link to Aldric's mother Jestha now leads to the city.
+- **Errai and the Errai Riots.** The [[giants|Giants]] page tells how Errai, City of Stars, was built, and the riots of 363 VR now have a name on the Giants, [[hesper-arcturus|Hesper]] and [[izar-arcturus|Izar]] pages.
+- **[[drinmery|Drinmery]].** Its Notable Places add the Restful Shade, and [[guilmore-fleming|Count Fleming]] is named as the town's Senator.
+- **[[gideon|Gideon]]** gains a line on what he did soon after reaching Drinmery.
+- **[[the-holy-see|The Holy See]]** explains the Pilgrimage of Penitence, its Penitents and its Sinners, and [[rastaban|Rastaban]]'s page links to it.
+- **[[codex-magic|Codex Magic]]** says what a sealcarver is.
+- **A portrait for [[zalmir-aldarson|Zalmir]].**
+
 ## 2026-09-30
 
 - Minor consistency fixes.
@@ -16,8 +27,8 @@ What's new on the wiki, most recent first.
 - **Four figures of Drinmery.** New pages for [[gideon|Gideon]], the Inquisitor resting a wounded hand at the convent; [[tobias-wren|Father Tobias Wren]], the convent's priest; [[immanuel-greene|Lord Greene]], called General by his men, whose hired guard keeps the town's peace; and [[guilmore-fleming|Count Fleming]], who holds the town.
 - **A new section, NPCs (Minor).** Short pages, with portraits, for the townsfolk the party has met, filed under Drinmery Arc: [[aldous-pike|Aldous Pike]] the gravekeeper, [[alys|Alys]], [[edric-colvin|Edric Colvin]] the Count's steward, [[hollis-brand|Hollis Brand]] of the Wakeful Lamp, [[inkfeather|Inkfeather]] of the convent library, [[maud-tallow|Maud Tallow]] the candle-seller, [[pell|Pell]] of the town guard, and the bandit [[wick|Wick]].
 - **[[novak-azimuth|Novak Azimuth]], unmasked.** The party's masked fourth companion has a name: the young head of [[house-azimuth|House Azimuth]]. His page moved to his own name; the old link still works. The House Azimuth family pages ([[cornelia-azimuth|Cornelia]], [[victerius-azimuth|Victerius]], [[agathia-azimuth|Agathia]], [[hestia-azimuth|Hestia]], [[zhenya-azimuth|Zhenya]] and the House itself) now link to him.
-- **[[leonard-moore|Leonard Moore]] and [[malak|Malak]].** New pages for Novak's counsellor and for the courier from Armada.
-- **[[rastaban|Rastaban]]** gains a History section: his birth date, and his charge as a Sinner under the Inquisitor [[uriel-kenan|Uriel Kenan]] since Adventus 12. The [[giants|Giants]] page adds how its builders raised Polaris, the [[convent-of-saint-trefan|Convent of Saint Trefan]] page says what the Lorekeeper does for whoever carries it, and the [[hesper-arcturus|Hesper]] and [[izar-arcturus|Izar]] pages now date her death to 363 VR. The home page's list of player characters matches, and no longer calls Zalmir young.
+- **[[leonard-moore|Leonard Moore]] and [[malak|Malak]].** New pages for Novak's counselor and for the courier from Armada.
+- **[[rastaban|Rastaban]]** gains a History section: his birth date, and his charge as a Sinner under the Inquisitor [[uriel-kenan|Uriel Kenan]] since Adventus 12. The [[giants|Giants]] page adds how its builders raised Polaris's capital, the [[convent-of-saint-trefan|Convent of Saint Trefan]] page says what the Lorekeeper does for whoever carries it, and the [[hesper-arcturus|Hesper]] and [[izar-arcturus|Izar]] pages now date her death to 363 VR. The home page's list of player characters matches, and no longer calls Zalmir young.
 - **[[caio|The Caio]], [[the-faunus|the Faunus]] and [[serracorte|the Serracorte]].** Three new pages: the faith of Althas's road folk and the trickster Drabalo they follow; what Althan scholars have pieced together of the Wickling faith of the Witherwild and its named Faunus; and the volcanic wine country at the heart of Andaluria. The home page and the Witherwild, Andaluria, Armada, House Aquila, Firbolg and Simiah pages now link to them.
 - **[[simiah|The Simiah]].** A new ancestry page, with a portrait: a long-limbed, ape- and monkey-featured people of the Witherwild, carried to Althas as slave-sailors and freed, now mostly Caio in Armada.
 - **[[parashiel|Parashiel]].** The Miracle of House Azimuth has its own page, with its image on the info card and one of its familiar spirits in the text. The [[miracles|Miracles]] and [[divine-relics|Divine Relics]] pages now link to it.
@@ -60,7 +71,7 @@ What's new on the wiki, most recent first.
 - **Two Great Houses of [[voldaen|Voldaen]].** [[house-azimuth|House Azimuth]] (new page), hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider. [[house-olnir|House Olnir]] (new page), keeper of the Miracle of Fames and the Famesfeast, a rite it keeps to itself, stripped of its own ministry after its heir defected to [[aldric-voldis|Aldric]]. Both Miracles now sit on the [[miracles|Miracles]] page.
 - **The House Azimuth family, in six new pages.** The late matriarch [[cornelia-azimuth|Cornelia Azimuth]], a peerless warrior who fell facing Aldric at [[jesthaen|Jesthaen]]; her consort [[victerius-azimuth|Victerius]], the duelist born of House Olnir; the twin daughters [[agathia-azimuth|Agathia]] and [[hestia-azimuth|Hestia]]; the House elder and minister [[zhenya-azimuth|Zhenya]]; and the missing Olnir heir [[lorkhan-olnir|Lorkhan]].
 - **A fourth adventurer.** A new player-character page joins [[uriel-kenan|Uriel]], [[rastaban|Ras]], and [[rosestripe|Rosestripe]]: a warrior whose name the tale has not yet told.
-- **The [[calendar|Calendar]] has its months and holy days.** Its ten months, Vigilia through Vesper, walk the liturgical year from the first watch of the Divine Age to the eve of its last battle, and the three closing holidays, Bellum, Sigillum, and Regnum, mark that battle itself.
+- **The [[calendar|Calendar]] has its months and holy days.** Its ten months, Vigilia through Vesper, walk the liturgical year from the first watch of the Divine Age to the eve of its last battle, and the three holidays that end the year, Bellum, Sigillum, and Regnum, mark that battle itself.
 - **The old kings' reigns now carry dates.** The [[house-voldis|House Voldis]] line and the [[timeline|Timeline]] now set the Voldis reigns and the founding of [[polaris|Polaris]] (167 VR) on a firm footing, and [[zhenya-azimuth|Zhenya Azimuth]] joins the [[diplomacy|Diplomacy]] web as Minister of the Royal Household.
 
 ## 2026-08-19
@@ -135,7 +146,7 @@ What's new on the wiki, most recent first.
 - **New art**: a portrait for [[izar-arcturus|Izar]], and art for the two magic systems, [[codex-magic|Codex Magic]] and [[splendor-magic|Splendor Magic]].
 - **Portrait captions moved under the art**: on [[the-ophanim|The Ophanim]], [[the-one-above|The One Above]], and [[the-ones-below|The Ones Below]], the "artist's rendering" note now sits beneath the portrait in the reference card instead of in the article.
 - **Map tidy-up**: [[drinmery|Drinmery]] and the [[convent-of-saint-trefan|Convent of Saint Trefan]] no longer carry placeholder local maps or map pins, until real cartography for them exists. (The dog can keep the map.)
-- **New page**: a [[calendar|Calendar]] of Althas, the shape of the year: ten months of 33 days, an eleven-day week with a prayer day at its center, and the three closing holidays that mark the final battle of the Divine Age, 333 days in all.
+- **New page**: a [[calendar|Calendar]] of Althas, the shape of the year: ten months of 33 days, an eleven-day week with a prayer day at its center, and the three holidays at the year's end that mark the final battle of the Divine Age, 333 days in all.
 - **New page**: a [[timeline|Timeline]] gathering the dated history of Althas into one view, from the Divine Age through the founding of Voldaen to the Jesthaen Treaty of 358 VR.
 - **New page**: a [[diplomacy|Diplomacy]] map showing how the five nations and the powers within them stand toward each other after the Jesthaen Treaty, as a labeled diagram you can click through, plus the rivalries and alliances written out below it.
 - **New page**: a [[dice-roller|Dice Roller]] you can use right on the wiki. Type any standard notation, tap a quick button for a single die, or roll the Duality Dice for a Daggerheart check (it tells you Hope, Fear, or a critical). Your recent rolls stay listed even after you leave and come back.

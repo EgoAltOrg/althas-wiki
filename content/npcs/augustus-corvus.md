@@ -2,7 +2,7 @@
 title: Augustus Corvus
 kind: person
 role: "Minister of War of Voldaen"
-ancestry: human
+ancestry: Human
 pronouns: he/him
 house: "[[house-corvus|House Corvus]]"
 nation: "[[voldaen|Voldaen]]"

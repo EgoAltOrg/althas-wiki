@@ -2,7 +2,7 @@
 title: Hestia Azimuth
 kind: person
 role: "Daughter of House Azimuth"
-ancestry: human
+ancestry: Human
 pronouns: she/her
 house: "[[house-azimuth|House Azimuth]]"
 nation: "[[voldaen|Voldaen]]"

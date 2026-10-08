@@ -25,6 +25,8 @@ Two principles govern how a seal works, and they combine cleanly:
 - **Shape determines effect**: a seal has a central sigil (the element/nature of the effect) and surrounding signs (how it manifests: as a column, a burst, a wall, etc.), enclosed in a ring that must be complete for the seal to activate. Seals can be linked, nested inside one another, or drawn in reverse to produce the opposite effect. An incorrectly drawn seal just fizzles rather than doing something unpredictable, magic here is precise, not chaotic.
 - **A keyed, distance-limited conduit**: the power isn't infinite or freely available everywhere, it's drawn through shapes tuned to a specific source and weakening the further a caster strays from wherever that source is anchored, so a caster far from Codex's anchor point is measurably weaker at it.
 
+Any instrument used to carve a seal is called a [[sealcarver|sealcarver]].
+
 ### The seal grammar
 
 A seal is read in three zones. Between them they say what the seal reaches for, how it acts, and what it acts upon.

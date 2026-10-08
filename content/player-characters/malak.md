@@ -2,7 +2,7 @@
 title: Malak
 kind: person
 role: "Bard, Wordsmith"
-ancestry: simiah
+ancestry: Simiah
 culture: Seaborne
 pronouns: he/him
 nation: "[[armada|Armada]]"
@@ -18,9 +18,9 @@ image: malak.png
 
 ## Appearance
 
-A simiah with long golden fur that falls past his shoulders and is bound into a wrapped tail at his back, a pale grey face, and a long tail of his own. He wears a tricorn hat banded in orange, a loose white shirt under a red vest, and dark wraps at his wrists, and carries a cutlass. His portrait shows him taking tea, seated on a barrel.
+A Simiah with long golden fur that falls past his shoulders and is bound into a wrapped tail at his back, a pale gray face, and a long tail of his own. He wears a tricorn hat banded in orange, a loose white shirt under a red vest, and dark wraps at his wrists, and carries a cutlass. His portrait shows him taking tea, seated on a barrel.
 
-## Personality
+## Abilities
 
 ### Character
 

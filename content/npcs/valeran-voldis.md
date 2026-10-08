@@ -4,7 +4,7 @@ aliases:
   - npcs/the-blessed-king
 kind: person
 role: King of Voldaen
-ancestry: human
+ancestry: Human
 pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[voldaen|Voldaen]]"

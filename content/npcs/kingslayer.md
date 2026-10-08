@@ -4,7 +4,7 @@ kind: person
 role: "Assassin of King [[valthis-voldis|Valthis Voldis]]"
 ---
 
-**Summary**: Unidentified assassin of King [[valthis-voldis|Valthis Voldis]], known in Voldaen only by the tavern legend name "the Kingslayer." Many a drunk in many a tavern has claimed to be him.
+**Summary**: Unidentified assassin of King [[valthis-voldis|Valthis Voldis]], known in Voldaen only by the tavern legend name "the Kingslayer." Many a drunk in many a tavern has claimed to be them.
 
 ---
 

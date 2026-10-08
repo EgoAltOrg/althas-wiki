@@ -52,7 +52,7 @@ So the year is itself a telling of the Divine Age: the faithful pass from vigil 
 
 Althas has no seasons; the year turns by the liturgy, not the sky. Only the Witherwild knows seasons, turned by Nikta (so claim the locals).
 
-## The closing holidays
+## Bellum, Sigillum and Regnum
 
 After the tenth month come three days of holiday, each with its own name, that together mark the final battle of the Divine Age.
 

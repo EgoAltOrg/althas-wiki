@@ -2,7 +2,7 @@
 title: Lorkhan Olnir
 kind: person
 role: "Heir of House Olnir (attainted, missing)"
-ancestry: human
+ancestry: Human
 pronouns: he/him
 house: "[[house-olnir|House Olnir]]"
 nation: "[[voldaen|Voldaen]]"

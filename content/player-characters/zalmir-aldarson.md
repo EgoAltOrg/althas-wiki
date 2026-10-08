@@ -2,9 +2,10 @@
 title: Zalmir Aldarson
 kind: person
 role: "Druid, Warden of the Elements"
-ancestry: human
+ancestry: Human
 culture: Wildborne
 pronouns: he/him
+image: zalmir-aldarson.png
 ---
 
 **Summary**: Player character.
@@ -18,7 +19,7 @@ pronouns: he/him
 
 A tall, well-built man in his prime with a soft, slightly rasping voice. A bandage wraps the left of his chest up to the base of his neck.
 
-## Personality
+## Abilities
 
 ### Character
 

@@ -38,7 +38,7 @@ node the-council-of-six | The Council of Six | institution | organizations/the-c
 
 # Edges: source -> target (arrow) or <-> (mutual) | type | label
 edge house-voldis -> voldaen | governance | royal dynasty, rules
-edge the-holy-see -> hilltop | governance | divine regent, rules from central Althas
+edge the-holy-see -> hilltop | governance | governing body, rules from central Althas
 edge parish-of-inquisition -> the-holy-see | governance | investigative and judicial arm of
 edge guild -> armada | governance | governs
 edge armada -> infernis | uneasy | sometimes tolerates
@@ -146,13 +146,13 @@ The newest nation. A republic [[aldric-voldis|Aldric Voldis]] broke away from [[
 A magocracy of scholars and mages, its industrial rise built on [[giants|Giant]] labor it later discarded.
 
 **The Triumvirate of Archmages** ([[lyra-aquila|Lyra Aquila]]; [[hesper-arcturus|Hesper Arcturus]]'s seat empty since her death) (Tier 5, ruling)
-- **Blurb**: The archmages who rule the magocracy, rich in magitech and airships but short of labor and raw stock, a restive [[giants|giant]] underclass beneath them.
+- **Blurb**: The archmages who rule the magocracy, rich in magitech and airships but short of labor and raw stock, a restive [[giants|Giant]] underclass beneath them.
 - **Assets**: skilled mages, magitech, airships, magical creatures, the academies.
-- **Problems**: a worker shortage, poor raw materials, a restive [[giants|giant]] underclass; a seat left empty until a trial can be arranged for a new Archmage.
+- **Problems**: a worker shortage, poor raw materials, a restive [[giants|Giant]] underclass; a seat left empty until a trial can be arranged for a new Archmage.
 - **Relationships**: [[armada|Armada]] +1, [[jesthaen|Jesthaen]] +1, [[voldaen|Voldaen]] -2, [[the-holy-see|Holy See]] -3.
 
 **The [[giants|Giants]] of Polaris** (labor underclass) (Tier 2)
-- **Blurb**: The giant laborers whose hands built [[polaris|Polaris]], strong in number and grievance yet held without legal standing or a voice.
+- **Blurb**: The Giant laborers whose hands built [[polaris|Polaris's]] capital, strong in number and grievance yet held without legal standing or a voice.
 - **Assets**: indispensable labor, numbers, physical power, a righteous grievance.
 - **Problems**: a disenfranchised non-magical underclass with no legal standing.
 - **Relationships**: Triumvirate -2.

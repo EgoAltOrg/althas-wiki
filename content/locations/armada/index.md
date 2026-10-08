@@ -1,6 +1,7 @@
 ---
 title: Armada
 kind: nation
+capital: Corsaria
 ruler: "[[guild|The Guild]]"
 government: Merchant federation
 founded: During the Ophanim crisis

@@ -16,7 +16,7 @@ image_caption: "An artist's rendering, not a likeness. The One Above held no sha
 
 ## Overview
 
-In the Divine Age, the One Above protected Althas's mortal creations, clashing with the primordial powers of chaos, the ones below, and striking them down.
+In the Divine Age, the One Above protected Althas's mortal creations, clashing with the primordial powers of chaos, the Ones Below, and striking them down.
 
 ## Worship
 

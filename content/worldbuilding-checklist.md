@@ -14,10 +14,10 @@ Daggerheart invites players into the worldbuilding, and much of Althas is still 
 
 - [x] Name the ten months of the [[calendar|Calendar]] year. (Done 2026-08-24: Vigilia, Sacratio, Oblatio, Certamen, Passio, Requiem, Paenitentia, Gratia, Adventus, Vesper.)
 - [ ] Name the eleven days of the week (they currently carry only roles: weekend, prayer, work).
-- [x] Name the three Closing Holidays that end the year and mark the final battle of the Divine Age. (Done 2026-08-24: Bellum, Sigillum, Regnum.)
-- [ ] Describe how people mark the three Closing Holidays: what is done, eaten, mourned, or celebrated.
+- [x] Name the three holidays that end the year and mark the final battle of the Divine Age. (Done 2026-08-24: Bellum, Sigillum, Regnum.)
+- [ ] Describe how people mark Bellum, Sigillum and Regnum: what is done, eaten, mourned, or celebrated.
 - [ ] Name the thirty Saints of the Divine Age, one for each prayer day of the year: who each was and what they are patron of.
-- [ ] Set out the [[parish-of-orthodoxy|Parish of Orthodoxy]]'s rules for prayer and conduct in church, its common rites (naming, confession, marriage, funeral), and the everyday beliefs and superstitions of the faithful.
+- [ ] Set out the rest of the [[parish-of-orthodoxy|Parish of Orthodoxy]]'s rules for prayer and conduct in church (commonprayer, the Horacaecum and the covered eye are already on its page, and the Sleepless Vigil is on [[the-holy-see|the Holy See]]'s), its common rites (naming, confession, marriage, funeral), and the everyday beliefs and superstitions of the faithful.
 - [ ] Write common prayers, blessings, and hymns of the faith of [[the-one-above|the One Above]].
 
 ## The Church
@@ -34,7 +34,7 @@ Daggerheart invites players into the worldbuilding, and much of Althas is still 
 
 ## Places and trade
 
-- [ ] Name the capital cities or principal seats of [[voldaen|Voldaen]], [[polaris|Polaris]], [[armada|Armada]], and [[jesthaen|Jesthaen]].
+- [x] Name the capital cities or principal seats of [[voldaen|Voldaen]], [[polaris|Polaris]], [[armada|Armada]], and [[jesthaen|Jesthaen]]: Voldaenia, Errai, Corsaria and [[jestha|Jestha]].
 - [ ] Name the currency and coinage used across Althas, and the goods most traded.
 - [ ] Name notable towns, ports, and landmarks beyond Hilltop and [[drinmery|Drinmery]].
 - [ ] Describe the banner and heraldry of each of the five nations.

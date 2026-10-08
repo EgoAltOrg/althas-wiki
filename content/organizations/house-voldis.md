@@ -80,7 +80,6 @@ Voldaen held, diminished, its southern half lost. Queen [[valis-voldis|Valis]] w
 - [[edrion-voldis|Edrion Voldis]]
 - [[aldric-voldis|Aldric Voldis]]
 - [[valis-voldis|Valis Voldis]]
-- [[jestha|Jestha]]
 - [[jesthaen|Jesthaen]]
 - [[kingslayer|The Kingslayer]]
 - [[miracles|Miracles]]

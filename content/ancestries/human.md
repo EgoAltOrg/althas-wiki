@@ -12,9 +12,9 @@ image: human.webp
 
 ## Overview
 
-Humans are the ancestry of no single place. They fill [[voldaen|Voldaen's]] cities, [[jesthaen|Jesthaen's]] young republic, [[armada|Armada's]] trade-ports, and the courts of [[hilltop|Hilltop]] and beyond, taking on the color of wherever they settle. What they lack in any one birthright they make up in reach and number, and most of Althas's institutions, its crowns and much of [[the-holy-see|the Holy See]], are run by human hands.
+Humans are the ancestry of no single place. They fill [[voldaen|Voldaen's]] cities, [[jesthaen|Jesthaen's]] young republic, [[armada|Armada's]] trade-ports, and the courts of [[hilltop|Hilltop]] and beyond, taking on the color of wherever they settle. What they lack in any one birthright they make up in reach and number, and most of Althas's institutions, its crowns and much of [[the-holy-see|the Holy See]], are run by Human hands.
 
-They are as varied as their spread. Many of the great houses, the royal line of [[house-voldis|House Voldis]] among them, are human, so the ancestry counts both the continent's most exalted [[miracles|Miracle]]-bearers and its most ordinary laborers among its own.
+They are as varied as their spread. Many of the great houses, the royal line of [[house-voldis|House Voldis]] among them, are Human, so the ancestry counts both the continent's most exalted [[miracles|Miracle]]-bearers and its most ordinary laborers among its own.
 
 ## Related pages
 

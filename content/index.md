@@ -41,7 +41,7 @@ A Song of Ice and Fire, Anúna, Attack on Titan, Berserk, Blasphemous, Castlevan
 
 The continent of Althas once flew under one banner. In the Divine Age, the One Above protected their mortal creations, clashing with the primordial powers of chaos, the Ones Below, and striking them down. With victory secured, the people of Althas crowned their first God King and founded the nation of [[voldaen|Voldaen]]. Meanwhile, the One Above established their seat in what is now known as [[hilltop|Hilltop]], but departed soon after for unknown reasons.
 
-Over the next several centuries, factional differences within Voldaen grew untenable. With the One Above absent, [[the-holy-see|the Holy See]] asserted its authority as the divine regent of [[hilltop|Hilltop]]. The reign remembered as the Mad King's broke crown and church into open civil war; it ended only under his successor, the Blessed King, and out of that settlement Hilltop won full independence from the Voldis crown. Later, a group of scholars and mages who wished to push the boundaries of arcane knowledge broke away from Voldaen and founded the nation of [[polaris|Polaris]].
+Over the next several centuries, factional differences within Voldaen grew untenable. With the One Above absent, [[the-holy-see|the Holy See]] asserted its authority as the governing body of [[hilltop|Hilltop]]. The reign remembered as the Mad King's broke crown and church into open civil war; it ended only under his successor, the Blessed King, and out of that settlement Hilltop won full independence from the Voldis crown. Later, a group of scholars and mages who wished to push the boundaries of arcane knowledge broke away from Voldaen and founded the nation of [[polaris|Polaris]].
 
 In 333 VR, [[the-ophanim|the Ophanim]] landed in central [[hilltop|Hilltop]], instantly rendering much of the nation uninhabitable. As [[the-holy-see|the Holy See]] and its refugees relocated to central Althas, each nation mobilized a force to subdue the Ophanim before its influence could spread further. Seizing the opportunity, the merchant lords of the south declared the trade cities of Hilltop an independent nation, forming the federation of [[armada|Armada]]. Finally, in 334 VR, the Ophanim was brought down by the Five Heroes, including the Voldis High Prince, [[edrion-voldis|Edrion Voldis]], and [[cassio-aquila|Cassio Aquila]] of the Holy See, who both perished in the fighting.
 
@@ -103,6 +103,7 @@ All communities are available across nations, but some have unique aspects withi
 
 ## Locations
 
+- [[jestha|Jestha]]: the capital of Jesthaen
 - [[drinmery|Drinmery]]: city in Jesthaen, home of the Convent of Saint Trefan
 - [[convent-of-saint-trefan|Convent of Saint Trefan]]: a convent in Drinmery prized for its rare library
 - [[crater-lake|Crater Lake]]: a massive crater lake at the center of Althas, left by the Divine Age
@@ -113,13 +114,13 @@ All communities are available across nations, but some have unique aspects withi
 
 ## Factions
 
-- [[the-holy-see|The Holy See]]: divine regent authority governing the faith, seated in central Althas since the Ophanim
+- [[the-holy-see|The Holy See]]: the governing body of Hilltop and of the faith, seated in central Althas since the Ophanim
 - [[parish-of-inquisition|Parish of Inquisition]]: the Holy See's feared investigative and judicial arm
 - [[parish-of-orthodoxy|Parish of Orthodoxy]]: the Holy See's doctrinal arm, keeper of scripture and the Splendor incantations
 - [[guild|The Guild]]: governs Armada, seats held by token possession, not inheritance or election
 - [[the-five-heroes|The Five Heroes]]: the five who brought down the Ophanim in 334 VR (Edrion Voldis, Cassio Aquila, Aldric Voldis, Lael the Reborn, Lyra Aquila)
 - [[house-aquila|House Aquila]]: scholar-house of the twins Cassio and Lyra, esteemed in both Polaris and the Holy See, bearer of two Miracles (Pentecost and Anamnesis)
-- [[house-circinus|House Circinus]]: a Hilltop oldblood house bound to the Holy See, bearer of the Miracle of Geosensus and customary head of the Parish of Cartography
+- [[house-circinus|House Circinus]]: a Hilltop pureblooded house bound to the Holy See, bearer of the Miracle of Geosensus and customary head of the Parish of Cartography
 - [[house-corvus|House Corvus]]: Great House of Voldaen holding the hereditary office of Minister of War, risen at [[valerions-heresy|Valerion's Heresy]], bearer of the Miracle of Auspex
 - [[house-azimuth|House Azimuth]]: Great House of Voldaen, hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider; current head [[novak-azimuth|Novak Azimuth]]
 - [[house-olnir|House Olnir]]: ancient Voldaen Great House, bearer of the Miracle of Fames and keeper of the Famesfeast, its ministry stripped after [[lorkhan-olnir|Lorkhan's]] treason
@@ -155,13 +156,14 @@ All communities are available across nations, but some have unique aspects withi
 - [[rastaban|Rastaban]]: Loreborne Giant, School of Knowledge Wizard, a Sinner in the charge of [[uriel-kenan|Uriel Kenan]].
 - [[zalmir-aldarson|Zalmir Aldarson]]: a traveler newly come to the north.
 - [[uriel-kenan|Uriel Kenan]]: Orderborne Elf, Divine Wielder Seraph.
-- [[rosestripe|Rosestripe]]: Orderborne Aetheris, Poisoner Assassin.
+- [[rosestripe|Rosestripe]]: Orderborne Aetheris, Poisoners Guild Assassin.
 - [[novak-azimuth|Novak Azimuth]]: Highborne Human, "Call of the Slayer" Warrior, head of [[house-azimuth|House Azimuth]].
 - [[malak|Malak]]: Seaborne Simiah, Wordsmith Bard, out of Armada.
+- [[dorothea|Dorothea]] (Thea): Loreborne Human, Poisoners Guild Assassin, a guest PC.
 
 ## NPCs
 
-- [[hesper-arcturus|Hesper Arcturus]]: archmage of Polaris's Triumvirate, killed by a giant during her final duel with her son Izar, sparking riots
+- [[hesper-arcturus|Hesper Arcturus]]: archmage of Polaris's Triumvirate, killed by a Giant during her final duel with her son Izar, sparking the Errai Riots
 - [[izar-arcturus|Izar Arcturus]]: Hesper's son, a Polaris mage who challenged her for her Triumvirate seat
 - [[lael|Lael]]: one of the Five Heroes, slain fighting the Ophanim and returned by his Miracle of Rebirth
 - [[amalthus-cruoris|Amalthus Cruoris]]: reigning Pontiff of the Holy See, of House Cruoris, bearer of the Miracle of Viaticum
@@ -176,11 +178,11 @@ All communities are available across nations, but some have unique aspects withi
 - [[hestia-azimuth|Hestia Azimuth]]: the quiet, calculating twin daughter of House Azimuth
 - [[zhenya-azimuth|Zhenya Azimuth]]: elder of House Azimuth and Minister of the Royal Household, Novak's grandmother
 - [[lorkhan-olnir|Lorkhan Olnir]]: eldest of House Olnir and bearer of the Miracle of Fames, defected to Aldric and now missing
-- [[guilmore-fleming|Guilmore Fleming]]: the Count who holds Drinmery
+- [[guilmore-fleming|Guilmore Fleming]]: Senator of Drinmery
 - [[immanuel-greene|Immanuel Greene]]: lord whose hired guard keeps the peace in Drinmery, called "General" by his men
 - [[tobias-wren|Tobias Wren]]: the priest of the Convent of Saint Trefan
 - [[gideon|Gideon]]: a young Inquisitor resting a wounded hand in Drinmery
-- [[leonard-moore|Leonard Moore]]: veteran warrior and strategist raised by [[house-azimuth|House Azimuth]], Novak's counsellor, travelling at his side
+- [[leonard-moore|Leonard Moore]]: veteran warrior and strategist raised by [[house-azimuth|House Azimuth]], Novak's counselor, traveling at his side
 
 ## NPCs (Minor)
 
@@ -207,5 +209,4 @@ All communities are available across nations, but some have unique aspects withi
 - [[house-voldis|House Voldis]]: the royal dynasty, with the family tree from the God King to Valis
 - [[god-king-voldis|Voldis, the God King]], [[valerion-voldis|Valerion, the Mad King]], [[valeran-voldis|Valeran, the Blessed King]], and King [[castus-voldis|Castus]]: the founding king and the ancient reigns the histories remember
 - [[valthis-voldis|Valthis Voldis]], [[edrion-voldis|Edrion Voldis]], [[valis-voldis|Valis Voldis]], [[aldric-voldis|Aldric Voldis]]: the Voldis Succession Crisis cast
-- [[jestha|Jestha]]: the common woman Aldric's Jesthaen Republic is named for
 - [[kingslayer|The Kingslayer]]: unidentified killer of Valthis Voldis, tavern legend in Voldaen

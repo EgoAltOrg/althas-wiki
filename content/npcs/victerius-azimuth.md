@@ -2,7 +2,7 @@
 title: Victerius Azimuth
 kind: person
 role: "Former consort-head of House Azimuth"
-ancestry: human
+ancestry: Human
 pronouns: he/him
 house: "[[house-azimuth|House Azimuth]]"
 nation: "[[voldaen|Voldaen]]"

@@ -22,7 +22,7 @@ Few Althans have crossed the [[godless-gate|Godless Gate]], and fewer have come 
 - That its days and nights each run on for days at a time, past anything an Althan calendar can keep.
 - That its beasts grow to monstrous size, its plants hunt and strangle, and nothing there ever stops growing.
 - That the Wicklings share their villages with living spirits they call gods, met on the road in the flesh, as ready to curse as to bless.
-- That the ground itself is holy and cursed, and a grey range the size of mountains is the body of a dead god the colony was mad to quarry.
+- That the ground itself is holy and cursed, and a gray range the size of mountains is the body of a dead god the colony was mad to quarry.
 
 Ruin never killed the dream the Folly was built on. Highborn children across the five nations still grow up on stories of the Witherwild and its lost riches, and more than a few swear they will be the one to lead its reconquest and succeed where Haven died, the same hunger that sends other men chasing the lost glories of the Divine Age.
 
@@ -34,7 +34,7 @@ The Wicklings share the Fanewick with the Faunus, beings they hold to be gods th
 
 ### The changed peoples
 
-The blight does not spare the Witherwild's peoples. Witherwatch scouts and the odd returning traveler bring back reports of **Drakona** in the deep wild, more than survive anywhere in Althas and stranger, their horns longer and their shapes nearer the dragons of legend; Althan scholars guess they are refugees of the Divine-Age purge that scattered the [[drakona|Drakona]], but no one can say for certain. The same reports tell of **fungril**, the mushroom-folk, grown far past the size of their scattered Althan kin. How much is true and how much the tale-telling of frightened men, no one in Althas is placed to know.
+The blight does not spare the Witherwild's peoples. Witherwatch scouts and the odd returning traveler bring back reports of **Drakona** in the deep wild, more than survive anywhere in Althas and stranger, their horns longer and their shapes nearer the dragons of legend; Althan scholars guess they are refugees of the Divine-Age purge that scattered the [[drakona|Drakona]], but no one can say for certain. The same reports tell of **Fungril**, the mushroom-folk, grown far past the size of their scattered Althan kin. How much is true and how much the tale-telling of frightened men, no one in Althas is placed to know.
 
 ## Related pages
 

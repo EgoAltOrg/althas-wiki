@@ -2,7 +2,7 @@
 title: Edrion Voldis
 kind: person
 role: High Prince of Voldaen
-ancestry: human
+ancestry: Human
 pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[voldaen|Voldaen]]"

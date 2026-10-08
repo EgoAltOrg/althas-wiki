@@ -15,7 +15,7 @@ founded: 334 VR
 
 ## Overview
 
-After [[the-ophanim|the Ophanim's]] fall drove [[the-holy-see|the Holy See]] from the region, ruined [[andaluria|Andaluria]] was left to govern itself, and the Council rose to the task: five hereditary offices seated at Jesaña's Plaza del Sol, charged with rebuilding [[hilltop|Hilltop's]] holy capital and keeping its people fed and its trade moving, with a sixth seat lately added for the Holy See's own appointee (see [[sabara|Sabara]], the Surveyor). The Holy See funds their work from the taxes it gathers on the merchant-roads at the continent's centre.
+After [[the-ophanim|the Ophanim's]] fall drove [[the-holy-see|the Holy See]] from the region, ruined [[andaluria|Andaluria]] was left to govern itself, and the Council rose to the task: five hereditary offices seated at Jesaña's Plaza del Sol, charged with rebuilding [[hilltop|Hilltop's]] holy capital and keeping its people fed and its trade moving, with a sixth seat lately added for the Holy See's own appointee (see [[sabara|Sabara]], the Surveyor). The Holy See funds their work from the taxes it gathers on the merchant-roads at the continent's center.
 
 ## Notable Members
 

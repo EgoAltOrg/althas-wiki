@@ -2,7 +2,7 @@
 title: Uriel Kenan
 kind: person
 role: "Seraph, Divine Wielder"
-ancestry: elf
+ancestry: Elf
 culture: Orderborne
 pronouns: he/him
 nation: "[[hilltop|Hilltop]]"
@@ -20,12 +20,10 @@ image: uriel-kenan.png
 
 Male, with a scarred face and long white hair.
 
-## Personality
+## Abilities
+
+Uriel bears a mysterious [[miracles|Miracle]] of unknown origin.
 
 ### Character
 
 Ancestry: [[elves|Elf]]. Community: Orderborne. Class: Seraph, subclass Divine Wielder.
-
-## Abilities
-
-Uriel bears a mysterious [[miracles|Miracle]] of unknown origin.

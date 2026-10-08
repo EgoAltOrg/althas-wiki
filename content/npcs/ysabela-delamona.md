@@ -3,7 +3,7 @@ title: Ysabela Delamoña
 kind: person
 role: Condesa of Andaluria
 house: House Delamoña
-ancestry: elf
+ancestry: Elf
 culture: Andalurian Nobility (Orderborne)
 pronouns: she/her
 nation: "[[hilltop|Hilltop]]"

@@ -2,7 +2,7 @@
 title: Aldric Voldis
 kind: person
 role: Founder of the Jesthaen Republic
-ancestry: human
+ancestry: Human
 pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[jesthaen|Jesthaen]]"
@@ -16,7 +16,7 @@ image: aldric-voldis.jpg
 
 ## History
 
-Aldric is the bastard son of King [[valthis-voldis|Valthis Voldis]] of [[voldaen|Voldaen]] by a common woman, [[jestha|Jestha]], and so the half-brother of the legitimate heir, [[edrion-voldis|Edrion Voldis]]. He fought beside Edrion as one of the Five Heroes against [[the-ophanim|the Ophanim]] in 334 VR and survived, honored by the soldiery and the smallfolk for it, but never accepted by the capital's oldest noble families, who saw only his birth and his open talk of reform.
+Aldric is the bastard son of King [[valthis-voldis|Valthis Voldis]] of [[voldaen|Voldaen]] by a common woman, Jestha, and so the half-brother of the legitimate heir, [[edrion-voldis|Edrion Voldis]]. He fought beside Edrion as one of the Five Heroes against [[the-ophanim|the Ophanim]] in 334 VR and survived, honored by the soldiery and the smallfolk for it, but never accepted by the capital's oldest noble families, who saw only his birth and his open talk of reform.
 
 When Edrion fell fighting the Ophanim and King Valthis was assassinated soon after ([[kingslayer|the Kingslayer]]), Edrion's will named Aldric regent for his young daughter, [[valis-voldis|Valis Voldis]], the only heir left. The capital's great houses would not suffer a baseborn man holding real power over the realm. Within a few years they stripped him of the regency and packed him off to the far northwest as Lord Commander of the [[the-witherwatch|Witherwatch]], the grim garrison that holds the [[godless-gate|Godless Gate]] against the blighted [[witherwild-continent|Witherwild]], a frontier command dressed as military necessity and meant to bury a baseborn inconvenience at the edge of the world. Then they ruled in the child-queen's name themselves.
 
@@ -27,7 +27,6 @@ The burial did not take. Aldric held the Watch for a time, then abandoned his po
 - [[index|Althas]]
 - [[voldaen|Voldaen]]
 - [[jesthaen|Jesthaen]]
-- [[jestha|Jestha]]
 - [[edrion-voldis|Edrion Voldis]]
 - [[valis-voldis|Valis Voldis]]
 - [[valthis-voldis|Valthis Voldis]]

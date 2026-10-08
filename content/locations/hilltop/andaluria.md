@@ -20,7 +20,7 @@ Of late, something has gone wrong with Andaluria's nights. They lengthen with ea
 
 ### Governed and rebuilt
 
-Andaluria is governed by its [[the-council-of-six|Council of Six]], seated at Jesaña's Plaza del Sol, and rebuilt on the taxes [[the-holy-see|the Holy See]] gathers from the merchant-roads at the continent's centre, in begrudging trade with the now-independent [[armada|Armada]] to the south. Wine remains its lifeblood and its chief export.
+Andaluria is governed by its [[the-council-of-six|Council of Six]], seated at Jesaña's Plaza del Sol, and rebuilt on the taxes [[the-holy-see|the Holy See]] gathers from the merchant-roads at the continent's center, in begrudging trade with the now-independent [[armada|Armada]] to the south. Wine remains its lifeblood and its chief export.
 
 ## History
 

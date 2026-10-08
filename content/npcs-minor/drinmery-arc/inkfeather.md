@@ -4,13 +4,13 @@ aliases:
   - npcs-minor/drinmery/inkfeather
 kind: person
 role: "Librarian and healer of the [[convent-of-saint-trefan|Convent of Saint Trefan]]"
-ancestry: aetheris
+ancestry: Aetheris
 pronouns: she/her
 nation: "[[jesthaen|Jesthaen]]"
 image: inkfeather.jpg
 ---
 
-**Summary**: An [[aetheris|aetheris]] of the [[convent-of-saint-trefan|Convent of Saint Trefan]] who keeps its library and tends its sick.
+**Summary**: An [[aetheris|Aetheris]] of the [[convent-of-saint-trefan|Convent of Saint Trefan]] who keeps its library and tends its sick.
 
 ---
 

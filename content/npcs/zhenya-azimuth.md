@@ -2,7 +2,7 @@
 title: Zhenya Azimuth
 kind: person
 role: "Minister of the Royal Household"
-ancestry: human
+ancestry: Human
 pronouns: she/her
 house: "[[house-azimuth|House Azimuth]]"
 nation: "[[voldaen|Voldaen]]"

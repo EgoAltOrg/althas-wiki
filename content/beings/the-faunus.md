@@ -32,7 +32,7 @@ The missionary's records named dozens; Althan scholarship has kept only a handfu
 - **Qui'Gar, Whispered Sweetness for a Thorny End**, who presides over the deaths that happen among the thorns, her quiet undone by the Witherwild.
 - **Rohkin, the Wandering Horn**, warden of the horned herds, who has watched them warp into monsters.
 
-Not all the Faunus are held to still live. The greatest of the dead is **Shun'Aush the Granite Ophid**, a vast serpent-Faunus said to have been slain in ages past, whose petrified body lies across the land like a range of grey stone. The Wicklings are recorded holding that ground sacred and cursed and warning against breaking it; [[haven|Haven]] was raised from it regardless.
+Not all the Faunus are held to still live. The greatest of the dead is **Shun'Aush the Granite Ophid**, a vast serpent-Faunus said to have been slain in ages past, whose petrified body lies across the land like a range of gray stone. The Wicklings are recorded holding that ground sacred and cursed and warning against breaking it; [[haven|Haven]] was raised from it regardless.
 
 ## Related pages
 

@@ -19,7 +19,7 @@ A young woman with fair hair tied back and pointed ears, in a laced bodice over 
 
 ## History
 
-Hollis keeps the Wakeful Lamp, the tavern at [[drinmery|Drinmery's]] bridgehead, where carters, guards and travellers drink.
+Hollis keeps the Wakeful Lamp, the tavern at [[drinmery|Drinmery's]] bridgehead, where carters, guards and travelers drink.
 
 ## Related pages
 

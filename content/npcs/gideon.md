@@ -2,7 +2,7 @@
 title: Gideon
 kind: person
 role: "Inquisitor of the [[parish-of-inquisition|Parish of Inquisition]]"
-ancestry: human
+ancestry: Human
 culture: Orderborne
 pronouns: he/him
 nation: "[[hilltop|Hilltop]]"
@@ -30,7 +30,7 @@ Gideon bears no [[miracles|Miracle]] and none of the holyblood that opens the fa
 
 ### Drinmery
 
-Gideon came to [[drinmery|Drinmery]] to rest a wounded hand, and keeps the [[the-holy-see|Sleepless Vigil]] at the [[convent-of-saint-trefan|Convent of Saint Trefan]] in turns with [[tobias-wren|Father Tobias]]. He held the Sinner [[rastaban|Rastaban]] until the Inquisitor [[uriel-kenan|Uriel Kenan]] came to take him, and warned Uriel that his own last Sinner had tried to kill him in his sleep. He has no patience for Penitents, and he and Uriel disagree on how far the Holy See's authority should reach in other nations. He has remarked that a convent the size of Saint Trefan's keeps a single priest, and that the priest takes less interest in the town's law than a priest should.
+Gideon came to [[drinmery|Drinmery]] to rest a wounded hand, and keeps the [[the-holy-see|Sleepless Vigil]] at the [[convent-of-saint-trefan|Convent of Saint Trefan]] in turns with [[tobias-wren|Father Tobias]]. He held the Sinner [[rastaban|Rastaban]] until the Inquisitor [[uriel-kenan|Uriel Kenan]] came to take him, and warned Uriel that his own last Sinner had tried to kill him in his sleep. He has no patience for Penitents, and he and Uriel disagree on how far the Holy See's authority should reach in other nations. He has remarked that a convent the size of Saint Trefan's keeps a single priest, and that the priest takes less interest in the town's law than a priest should. Not long after his arrival, he killed two men caught trying to rape a woman.
 
 ## Related pages
 

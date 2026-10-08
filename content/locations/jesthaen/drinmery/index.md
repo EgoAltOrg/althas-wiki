@@ -30,11 +30,12 @@ Drinmery is wary of outsiders. During the [[jesthaen|Jesthaen]] war, [[lorkhan-o
 - The [[convent-of-saint-trefan|Convent of Saint Trefan]], on the rise above the town, with its churchyard.
 - The market at the east bridgehead.
 - The Wakeful Lamp, the tavern beside the market, kept by [[hollis-brand|Hollis Brand]].
+- The Restful Shade, a little-known brothel associated with the Wakeful Lamp.
 - The manned checkpoints on every road into town.
 
 ## Inhabitants
 
-The town is held by [[guilmore-fleming|Count Fleming]], and its peace is kept by the hired guard of [[immanuel-greene|Immanuel Greene]]. Among its people:
+The town's Senator is [[guilmore-fleming|Count Fleming]], who still goes by his title from before the revolution, and its peace is kept by the hired guard of [[immanuel-greene|Immanuel Greene]]. Any local can tell you the two men don't get along. Among its people:
 
 - [[aldous-pike|Aldous Pike]], gravekeeper of the convent churchyard.
 - [[alys|Alys]], a grieving mother.

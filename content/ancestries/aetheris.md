@@ -15,11 +15,11 @@ image: aetheris.webp
 
 ## Appearance
 
-With their round, childlike faces, small frames, and wings, aetheris are the very image of the angels of holy scripture. How they come to be, and how they reproduce, is a closely guarded secret of [[the-holy-see|the Holy See]].
+With their round, childlike faces, small frames, and wings, Aetheris are the very image of the angels of holy scripture. How they come to be, and how they reproduce, is a closely guarded secret of [[the-holy-see|the Holy See]].
 
 ## Culture
 
-Aetheris are peaceful and remarkably uninterested in the world outside their own flock. Even sociable ones manage nothing warmer than a cold, distant friendship with a local church member; most keep to other aetheris entirely. This incuriosity is likely exactly why they became Althas's message carriers: no one else could be trusted not to read a private letter out of curiosity, but an aetheris handed an open letter would rather not bother. The only writing they take real interest in is holy scripture and the (typically dull) writings of other aetheris about flock life and church trivia.
+Aetheris are peaceful and remarkably uninterested in the world outside their own flock. Even sociable ones manage nothing warmer than a cold, distant friendship with a local church member; most keep to other Aetheris entirely. This incuriosity is likely exactly why they became Althas's message carriers: no one else could be trusted not to read a private letter out of curiosity, but an Aetheris handed an open letter would rather not bother. The only writing they take real interest in is holy scripture and the (typically dull) writings of other Aetheris about flock life and church trivia.
 
 Aetheris not bound to a cleric are extremely rare. When it happens, it is usually trauma or survival driving it: a master who exaggerates punishment for late deliveries, or worse.
 

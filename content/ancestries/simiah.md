@@ -12,11 +12,11 @@ image: simiah.webp
 
 ## Overview
 
-The Simiah came to Althas in chains. Like the [[firbolg|Firbolg]], they are a [[witherwild-continent|Witherwild]] people carried off that continent by the colonizers of [[haven|Haven]], but they were not set to work the land. Their agility made them prized at sea, and they were put to the ropes and sails of trading ships and war vessels as slave-sailors. Free now, most live as [[caio|Caio]] in [[armada|Armada]].
+The Simiah came to Althas in chains. Like the [[firbolg|Firbolg]], they are a [[witherwild-continent|Witherwild]] people carried off that continent by the colonizers of [[haven|Haven]], but they were not set to work the land. Their agility made them prized at sea, and they were put to the ropes and sails of trading ships and war vessels as slave-sailors.
 
 ## Appearance
 
-Simiah look like upright monkeys and apes, with long limbs and prehensile feet. They take after every kind of simian, from the great apes to the smallest marmoset, though their height doesn't follow the animal: a simiah stands anywhere from two to six feet. Their feet are as deft as their hands, used for work, for fighting, and for a wordless sign-speech, and some have prehensile tails that grip or steady them. They climb with ease and move freely between walking upright, knuckle-walking, and climbing. They live about a century.
+Simiah look like upright monkeys and apes, with long limbs and prehensile feet. They take after every kind of simian, from the great apes to the smallest marmoset, though their height doesn't follow the animal: a Simiah stands anywhere from two to six feet. Their feet are as deft as their hands, used for work, for fighting, and for a wordless sign-speech, and some have prehensile tails that grip or steady them. They climb with ease and move freely between walking upright, knuckle-walking, and climbing. They live about a century.
 
 ## Culture
 

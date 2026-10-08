@@ -1,15 +1,15 @@
 ---
 title: Rosestripe
 kind: person
-role: "Assassin, Poisoner"
-ancestry: aetheris
+role: "Assassin, Poisoners Guild"
+ancestry: Aetheris
 culture: Orderborne
 pronouns: she/her
 nation: "[[jesthaen|Jesthaen]]"
 image: rosestripe.webp
 ---
 
-**Summary**: Player character. An Orderborne [[aetheris|Aetheris]], Poisoner Assassin.
+**Summary**: Player character. An Orderborne [[aetheris|Aetheris]], Poisoners Guild Assassin.
 
 ---
 
@@ -20,11 +20,11 @@ image: rosestripe.webp
 
 Female, with the angelic look common to her kind: a small frame, a childlike face, and white feathered wings.
 
-## Personality
+## Abilities
 
 ### Character
 
-Ancestry: [[aetheris|Aetheris]]. Community: Orderborne. Class: Assassin, subclass Poisoner.
+Ancestry: [[aetheris|Aetheris]]. Community: Orderborne. Class: Assassin, subclass Poisoners Guild.
 
 ## Related pages
 

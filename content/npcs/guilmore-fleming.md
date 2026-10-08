@@ -1,7 +1,7 @@
 ---
 title: Guilmore Fleming
 kind: person
-role: "Count, ruler of [[drinmery|Drinmery]]"
+role: "Senator of [[drinmery|Drinmery]]"
 pronouns: he/him
 house: "House Fleming"
 nation: "[[jesthaen|Jesthaen]]"
@@ -9,7 +9,7 @@ allegiance: "[[jesthaen|Jesthaen]]"
 image: guilmore-fleming.webp
 ---
 
-**Summary**: The Count who holds [[drinmery|Drinmery]].
+**Summary**: The Senator of [[drinmery|Drinmery]], still called the Count, the title he held before the revolution.
 
 ---
 

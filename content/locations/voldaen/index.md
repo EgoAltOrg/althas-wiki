@@ -1,6 +1,7 @@
 ---
 title: Voldaen
 kind: nation
+capital: Voldaenia
 ruler: "[[valis-voldis|Valis Voldis]]"
 government: Monarchy
 founded: 0 VR

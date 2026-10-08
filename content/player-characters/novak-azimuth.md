@@ -4,7 +4,7 @@ aliases:
   - player-characters/highborne-warrior
 kind: person
 role: "Warrior, Call of the Slayer"
-ancestry: human
+ancestry: Human
 culture: Highborne
 pronouns: he/him
 house: "[[house-azimuth|House Azimuth]]"
@@ -13,7 +13,7 @@ born: 345 VR
 image: mystery-pc-portrait.png
 ---
 
-**Summary**: Player character. Novak Azimuth, head of [[house-azimuth|House Azimuth]], travelling under his first name alone.
+**Summary**: Player character. Novak Azimuth, head of [[house-azimuth|House Azimuth]], traveling under his first name alone.
 
 ---
 
@@ -24,10 +24,10 @@ image: mystery-pc-portrait.png
 
 A tall, athletic young man of pale complexion, with wavy white hair and sky-blue eyes, often shadowed by faint dark circles. He carries himself with a stern, high-headed bearing and speaks in a low, strong voice.
 
-## Personality
+![[mystery-pc-fullbody.jpg|360]]
+
+## Abilities
 
 ### Character
 
 Ancestry: [[human|Human]]. Community: Highborne. Class: Warrior, "Call of the Slayer".
-
-![[mystery-pc-fullbody.jpg|360]]

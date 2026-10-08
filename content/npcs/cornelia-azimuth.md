@@ -2,7 +2,7 @@
 title: Cornelia Azimuth
 kind: person
 role: "Former Matriarch of House Azimuth"
-ancestry: human
+ancestry: Human
 pronouns: she/her
 house: "[[house-azimuth|House Azimuth]]"
 nation: "[[voldaen|Voldaen]]"
