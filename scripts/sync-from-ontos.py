@@ -13,7 +13,8 @@ entirely, trims frontmatter down to `title:` plus the whitelisted typed
 infobox fields (see INFOBOX_KIND_FIELDS below; carrying forward any
 existing `marker:` map-pin data, `submap:` local-map block, and `image:`
 portrait filename already present in the destination file, since those are
-presentation data with no equivalent in the GM's source),
+presentation data owned by content/; a brand-new page instead takes `image:`
+from the source's leading portrait embed and gets that file copied in),
 drops the Sources/Last updated bookkeeping lines, and writes the result
 into content/.
 
@@ -34,6 +35,7 @@ other four) will break across the whole site.
 """
 import os
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -147,6 +149,7 @@ TITLES = {
     "gideon.md": "Gideon",
     "tobias-wren.md": "Tobias Wren",
     "malak.md": "Malak",
+    "dorothea.md": "Dorothea",
     "leonard-moore.md": "Leonard Moore",
     "parashiel.md": "Parashiel",
     "aldous-pike.md": "Aldous Pike",
@@ -238,6 +241,8 @@ PAGE_MAP = {
     "convent-of-saint-trefan.md": "locations/jesthaen/drinmery/convent-of-saint-trefan.md",
     "drinmery.md": "locations/jesthaen/drinmery/index.md",
     "jesthaen.md": "locations/jesthaen/index.md",
+    # 2026-10-05: jestha.md is now Jesthaen's capital city, not Aldric's mother.
+    "jestha.md": "locations/jesthaen/jestha.md",
     "polaris.md": "locations/polaris/index.md",
     "voldaen.md": "locations/voldaen/index.md",
     "aldric-voldis.md": "npcs/aldric-voldis.md",
@@ -251,7 +256,6 @@ PAGE_MAP = {
     # /npcs/hesper_arcturus, /npcs/izar_arcturus) keeps redirecting via RENAMES below.
     "hesper-arcturus.md": "npcs/hesper-arcturus.md",
     "izar-arcturus.md": "npcs/izar-arcturus.md",
-    "jestha.md": "npcs/jestha.md",
     "kingslayer.md": "npcs/kingslayer.md",
     "lael.md": "npcs/lael.md",
     "lyra-aquila.md": "npcs/lyra-aquila.md",
@@ -312,6 +316,8 @@ PAGE_MAP = {
     # redirects via RENAMES. The novak-azimuth dossier stays off the map.
     "novak-pc-stub.md": "player-characters/novak-azimuth.md",
     "malak.md": "player-characters/malak.md",
+    # 2026-10-06 Dorothea (Thea), a guest PC joining in session two.
+    "dorothea.md": "player-characters/dorothea.md",
     # 2026-09-26 session-one publish. The Drinmery figures the party met (their
     # secrets stay gm-only on the pages), Novak's counsellor, and the House
     # Azimuth Miracle's public framing.
@@ -351,6 +357,9 @@ PAGE_MAP = {
 # link ambiguous under the "shortest" strategy and break site-wide. See the
 # comment in quartz/plugins/transformers/frontmatter.ts.
 RENAMES = {
+    # 2026-10-05 jestha.md became Jesthaen's capital city; the old person page's
+    # URL redirects to the city.
+    "locations/jesthaen/jestha.md": ["npcs/jestha"],
     # 2026-09-27 the Caio move from Setting to Organizations.
     "organizations/caio.md": ["setting/caio"],
     # 2026-09-26 Drinmery reorg: the minor-NPC folder becomes "Drinmery Arc",
@@ -457,6 +466,8 @@ NOT_YET_PUBLIC = {
     "thuban.md",
     "castorius-voldis.md",
     "the-stargazers.md",
+    # 2026-10-07 Antares Algol, held back: his page would expose Dorothea's father.
+    "antares-algol.md",
     "sombral-spade.md",
     # 2026-08-27 Witherwild: the cosmology and its keystone secrets. Everything
     # on these is [!gm-only] (the Faunus, the Old Magic Observer, the Reaping
@@ -703,6 +714,38 @@ def clean_blank_runs(text):
 IMAGE_EMBED_RE = re.compile(r"^!\[[^\]]*\]\([^)]+\)\s*$|^!\[\[[^\]|]+(\|[^\]]+)?\]\]\s*$")
 
 
+# A portrait embed: `![[name.jpg]]` or `![[name.jpg|320]]`, image files only.
+PORTRAIT_RE = re.compile(r"^!\[\[(\w[\w .'-]*\.(?:png|jpe?g|webp|gif|avif))(?:\|\d+)?\]\]$", re.IGNORECASE)
+MISSING_PORTRAITS = []
+
+
+def leading_portrait(raw_body):
+    """The portrait filename if the very first line of the source body, read
+    BEFORE the gm-strip, is a portrait embed. An image anywhere below a callout,
+    even one written without `>`, never qualifies."""
+    for line in raw_body.splitlines():
+        if line.strip():
+            m = PORTRAIT_RE.match(line.strip())
+            return m.group(1) if m else None
+    return None
+
+
+def seed_portrait(filename):
+    """A brand-new page has no content/ file to carry image: from, so take it
+    from the source's leading portrait, copying the file in from the campaign's
+    raw/character-art/. Fixed 2026-10-07: the filename used to be thrown away,
+    so every new page published without its portrait."""
+    art = ONTOS_SETTING.parent / "raw" / "character-art" / filename
+    if not art.is_file():
+        MISSING_PORTRAITS.append(filename)
+        return None
+    assets = CONTENT_DIR / "assets"
+    assets.mkdir(parents=True, exist_ok=True)
+    if not (assets / filename).exists():
+        shutil.copy2(art, assets / filename)
+    return f"image: {filename}"
+
+
 def strip_leading_image(body):
     """Drop a standalone image embed if it's the first non-blank line of the
     Ontos body, and capture an italic caption line immediately following it.
@@ -797,6 +840,7 @@ def sync_page(src_name, dest_rel):
     src_fm, body = split_frontmatter(text)
     infobox_lines = extract_infobox_fields(src_fm)
     current_date = extract_current_date(src_fm)
+    portrait = leading_portrait(body)
     body = strip_callouts(body)
     body, image_caption = strip_leading_image(body)
     body = strip_meta_lines(body)
@@ -813,6 +857,8 @@ def sync_page(src_name, dest_rel):
         marker_block = extract_marker_block(existing_fm)
         submap_block = extract_submap_block(existing_fm)
         image_block = extract_image_block(existing_fm)
+    if carry_src is None and portrait:
+        image_block = seed_portrait(portrait)
 
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(
@@ -842,6 +888,12 @@ def main():
     print(f"\nContent-only (hand-maintained in content/, not synced; already live):")
     for name in sorted(CONTENT_ONLY):
         print(f"  {name}")
+
+    if MISSING_PORTRAITS:
+        print("\nERROR: new page portrait(s) not found in raw/character-art/, so the page has no image:")
+        for name in MISSING_PORTRAITS:
+            print(f"  {name}")
+        return 1
     return 0
 
 
