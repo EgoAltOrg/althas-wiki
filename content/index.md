@@ -106,6 +106,10 @@ All communities are available across nations, but some have unique aspects withi
 - [[jestha|Jestha]]: the capital of Jesthaen
 - [[drinmery|Drinmery]]: city in Jesthaen, home of the Convent of Saint Trefan
 - [[convent-of-saint-trefan|Convent of Saint Trefan]]: a convent in Drinmery prized for its rare library
+- [[lampfort|The Lampfort]]: the old fort west of Drinmery where Saint Trefan held off the Mad King's host
+- [[fleming-manor|Fleming Manor]]: Count Fleming's house in Drinmery
+- [[drinmery-market|Drinmery Market]]: the market square at Drinmery's east bridgehead
+- [[restful-shade|The Restful Shade]]: a little-known brothel associated with the Wakeful Lamp
 - [[crater-lake|Crater Lake]]: a massive crater lake at the center of Althas, left by the Divine Age
 - [[witherwild-continent|The Witherwild]]: the blighted second continent beyond the northwest pass, grave of the Haven colony ("the Folly")
 - [[haven|Haven]]: the three-power colony lost in the Witherwild to plague and the wild, remembered as "the Folly"
@@ -193,9 +197,12 @@ All communities are available across nations, but some have unique aspects withi
 - [[edric-colvin|Edric Colvin]]: steward to Count Fleming
 - [[hollis-brand|Hollis Brand]]: keeper of the Wakeful Lamp tavern
 - [[inkfeather|Inkfeather]]: the convent's librarian and healer
+- [[jory-fenn|Jory Fenn]]: a bandit, the party's captive
 - [[maud-tallow|Maud Tallow]]: candle-seller in the market
+- [[mother-wenna|Mother Wenna]]: madam of the Restful Shade
 - [[pell|Pell]]: a young guardsman
 - [[wick|Wick]]: a bandit
+- [[yselda-marrow|Yselda Marrow]]: clerk of the Merchant's Guild Courthouse
 
 ## Events
 

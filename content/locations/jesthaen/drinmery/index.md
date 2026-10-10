@@ -11,6 +11,41 @@ marker:
       icon: lucide-castle
       colour: "#84a59d"
       category: settlement
+submap:
+    # The town map. Pins are in this image's own pixel space ("lat, lng" =
+    # height-from-bottom, x), placed 2026-10-10.
+    # Only places the party has visited get a pin.
+    image: assets/drinmery-map.webp
+    minZoom: -1
+    maxZoom: 2
+    defaultZoom: -1
+    zoomDelta: 0.25
+    markers:
+        - name: Fleming Manor
+          coordinates: "931, 610"
+          link: locations/jesthaen/drinmery/fleming-manor
+          icon: lucide-house
+          colour: "#c98a4b"
+        - name: Convent of Saint Trefan
+          coordinates: "931, 1155"
+          link: locations/jesthaen/drinmery/convent-of-saint-trefan
+          icon: lucide-church
+          colour: "#84a59d"
+        - name: The Churchyard
+          coordinates: "1001, 1000"
+          link: locations/jesthaen/drinmery/convent-of-saint-trefan#the-churchyard
+          icon: lucide-cross
+          colour: "#84a59d"
+        - name: The Restful Shade
+          coordinates: "629, 875"
+          link: locations/jesthaen/drinmery/restful-shade
+          icon: lucide-bed
+          colour: "#b5838d"
+        - name: Drinmery Market
+          coordinates: "586, 762"
+          link: locations/jesthaen/drinmery/drinmery-market
+          icon: lucide-store
+          colour: "#c98a4b"
 ---
 
 **Summary**: A medium-sized city in [[jesthaen|Jesthaen]], best known as the home of the [[convent-of-saint-trefan|Convent of Saint Trefan]].
@@ -28,10 +63,12 @@ Drinmery is wary of outsiders. During the [[jesthaen|Jesthaen]] war, [[lorkhan-o
 ## Notable Places
 
 - The [[convent-of-saint-trefan|Convent of Saint Trefan]], on the rise above the town, with its churchyard.
-- The market at the east bridgehead.
-- The Wakeful Lamp, the tavern beside the market, kept by [[hollis-brand|Hollis Brand]].
-- The Restful Shade, a little-known brothel associated with the Wakeful Lamp.
+- [[fleming-manor|Fleming Manor]], the Count's house, on a low rise overlooking the center of town.
+- The [[drinmery-market|market]] at the east bridgehead.
+- The Wakeful Lamp, the tavern beside the market, kept by [[hollis-brand|Hollis Brand]]. It is named for the lamps of the [[lampfort|Lampfort]].
+- The [[restful-shade|Restful Shade]], a little-known brothel associated with the Wakeful Lamp.
 - The manned checkpoints on every road into town.
+- The [[lampfort|Lampfort]], an old fort a day and a half west along the river, where the bandits laired until the party cleared it.
 
 ## Inhabitants
 
@@ -42,9 +79,12 @@ The town's Senator is [[guilmore-fleming|Count Fleming]], who still goes by his 
 - [[edric-colvin|Edric Colvin]], steward to the Count.
 - [[hollis-brand|Hollis Brand]], keeper of the Wakeful Lamp.
 - [[inkfeather|Inkfeather]], the convent's librarian and healer.
+- [[jory-fenn|Jory Fenn]], a bandit, now the party's captive.
 - [[maud-tallow|Maud Tallow]], a candle-seller in the market.
+- [[mother-wenna|Mother Wenna]], madam of the Restful Shade.
 - [[pell|Pell]], a young guardsman.
 - [[wick|Wick]], a bandit.
+- [[yselda-marrow|Yselda Marrow]], a clerk of the Merchant's Guild Courthouse.
 
 ## Related pages
 

@@ -26,6 +26,10 @@ An attractive woman with dark hair and a tattoo of a plant on her shoulder.
 
 Ancestry: Human. Community: Loreborne. Class: Assassin, subclass Poisoners Guild.
 
+## History
+
+Thea met the party at [[fleming-manor|Fleming Manor]] in [[drinmery|Drinmery]] on Adventus 12, 366 VR, where [[zalmir-aldarson|Zalmir]] recognized the plant tattooed on her shoulder as a local toxic plant. She said her goodbye outside the [[restful-shade|Restful Shade]] before the party set out for the bandits' fort.
+
 ## Related pages
 
 - [[jesthaen|Jesthaen]]

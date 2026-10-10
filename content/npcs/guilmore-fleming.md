@@ -15,7 +15,7 @@ image: guilmore-fleming.webp
 
 ## History
 
-[[tobias-wren|Father Tobias]] sent the courier [[malak|Malak]] to the Count to be paid for the sealed package he carried to the [[convent-of-saint-trefan|convent]]. His steward is [[edric-colvin|Edric Colvin]].
+[[tobias-wren|Father Tobias]] sent the courier [[malak|Malak]] to the Count to be paid for the sealed package he carried to the [[convent-of-saint-trefan|convent]]. His steward is [[edric-colvin|Edric Colvin]]. He paid Malak with the deed to a decommissioned merchant ship, docked in [[jestha|Jestha]], asked the party to deal with the bandits, and hosted them at [[fleming-manor|Fleming Manor]] for dinner and the night of Adventus 12, 366 VR.
 
 ## Related pages
 

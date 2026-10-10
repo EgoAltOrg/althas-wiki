@@ -4,6 +4,15 @@ title: Changelog
 
 What's new on the wiki, most recent first.
 
+## 2026-10-10
+
+- **Session two.** The [[chronicle|Chronicle]] now runs through Adventus 16, 366 VR, and the pages of everyone the party met or fought along the way are updated with what they learned.
+- **Maps within maps.** [[drinmery|Drinmery]]'s town map is now interactive, with pins for the places the party has been: [[fleming-manor|Fleming Manor]], the [[convent-of-saint-trefan|Convent of Saint Trefan]] and its churchyard, [[drinmery-market|Drinmery Market]] and [[restful-shade|the Restful Shade]]. Each pin opens that place's page, which has a map of its own. The [[map|Interactive Map]] of Althas gains pins for [[jestha|Jestha]] and [[lampfort|the Lampfort]], and its layers control can now show or hide settlements and landmarks.
+- **New places.** Pages for Fleming Manor, Drinmery Market, the Restful Shade and the Lampfort, the old fort where Saint Trefan held off the Mad King's host.
+- **[[convent-of-saint-trefan|The Convent of Saint Trefan]]** now says who built it, and gains a section on its churchyard. [[the-holy-see|The Holy See]] says when the Sleepless Vigil began.
+- **[[the-threnodies|The Threnodies]].** A new page for the fragments of ancient scripture, with the one Malak carried to Drinmery.
+- **Three more figures of Drinmery.** New pages under NPCs (Minor) › Drinmery Arc for [[mother-wenna|Mother Wenna]] of the Restful Shade, the bandit [[jory-fenn|Jory Fenn]] and [[yselda-marrow|Yselda Marrow]] of the Merchant's Guild Courthouse. Jory and Yselda have new portraits, different from the art used for them in the first two sessions.
+
 ## 2026-10-08
 
 - **[[dorothea|Dorothea]].** A page for Thea, a guest player character who joins the party in Drinmery.

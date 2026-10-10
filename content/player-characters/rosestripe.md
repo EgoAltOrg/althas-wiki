@@ -26,6 +26,10 @@ Female, with the angelic look common to her kind: a small frame, a childlike fac
 
 Ancestry: [[aetheris|Aetheris]]. Community: Orderborne. Class: Assassin, subclass Poisoners Guild.
 
+## History
+
+Rosestripe was created six years ago.
+
 ## Related pages
 
 - [[aetheris|Aetheris]]

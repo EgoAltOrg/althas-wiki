@@ -6,7 +6,7 @@ import { VFile } from "vfile"
 import { Element } from "hast"
 import { load } from "js-yaml"
 import { BuildCtx } from "../../util/ctx"
-import { FilePath, FullSlug, resolveRelative, transformLink } from "../../util/path"
+import { FilePath, FullSlug, resolveRelative, splitAnchor, transformLink } from "../../util/path"
 
 /**
  * TYPES.TS
@@ -345,8 +345,8 @@ function buildMarkerElement(
     properties: {
       class: ["leaflet-marker"],
       "data-name": marker.name,
-      // A local submap pin's link is already a final href (the map
-      // anchor by default), never a slug to resolve.
+      // A local submap pin's link is already a final href (resolved in
+      // buildSubmapElement, or the map anchor by default), never a slug.
       "data-link":
         marker.local || /https?:/.test(marker.link)
           ? marker.link
@@ -516,7 +516,9 @@ function parseLocalMarker(entry: unknown, anchorLink: string): MarkerEntry | nul
   return {
     ...entry,
     name: entry.name,
-    link: (Validator.string(entry.link) ? entry.link : anchorLink) as FullSlug,
+    link: (Validator.string(entry.link) && entry.link.length > 0
+      ? entry.link
+      : anchorLink) as FullSlug,
     local: true,
   }
 }
@@ -537,9 +539,24 @@ function buildSubmapElement(
   })
 
   const anchorLink = `#${SUBMAP_ANCHOR_ID}`
+  // A pin's `link:` names another page the way a wikilink does (a full or
+  // shortest slug, optionally `#heading`), so a town map's pins open the pages
+  // of the places on it. Resolve it here with Quartz's own wikilink resolver;
+  // anchors and external URLs pass through untouched. A target that matches no
+  // page is warned about at build time, since no link checker sees these hrefs.
   const markers = (Array.isArray(submap.markers) ? submap.markers : [])
     .map((entry) => parseLocalMarker(entry, anchorLink))
     .filter(isNotNull)
+    .map((marker) => {
+      const link = marker.link as string
+      if (link.startsWith("#") || /^[a-z][a-z0-9+.-]*:|^\/\//i.test(link)) return marker
+      const target = splitAnchor(link)[0].replace(/^\/+/, "")
+      if (!ctx.allSlugs.some((s) => s === target || s.endsWith(`/${target}`))) {
+        console.warn(`${file.path}: submap pin "${marker.name}" links to unknown page "${link}"`)
+      }
+      const href = transformLink(currentSlug, link, { strategy: "shortest", allSlugs: ctx.allSlugs })
+      return { ...marker, link: href as string as FullSlug }
+    })
 
   return {
     type: "element",
@@ -573,11 +590,12 @@ function transformMapElement(
     },
   )
 
-  // A page declaring a `submap:` frontmatter block gets its local map
-  // appended after the page body.
+  // A page declaring a `submap:` frontmatter block gets its local map at the
+  // very top of the page body, above the Summary (2026-10-10: every
+  // interactive map sits at the top of its page).
   const submapElement = buildSubmapElement(ctx, options, file)
   if (submapElement) {
-    ;(tree as unknown as Parent).children.push(submapElement)
+    ;(tree as unknown as Parent).children.unshift(submapElement)
   }
 }
 

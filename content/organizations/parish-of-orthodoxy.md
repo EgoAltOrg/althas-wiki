@@ -26,6 +26,8 @@ The faith's supreme authority is the Pontiff, chosen by election of the Church's
 
 Orthodoxy's quiet power comes from what it holds. [[splendor-magic|Splendor Magic]] is not a caster's own strength but a request answered by [[the-one-above|the One Above]], and the words that make a request work are fixed, ancient, and few. They are discovered, not invented, and most of them sit in the Parish's keeping, in scripture the Parish alone is trusted to study and decipher. Whoever controls that research controls what Splendor magic can even do. It is a slow, jealous kind of authority, measured in decades of decoding rather than open displays of force, and it makes Orthodoxy one of the most powerful arms of the Church without ever raising a hand.
 
+Old traditions once held that the last words of the dead could be heard by the living. Any such claim has long since been removed from the Orthodoxy's teachings.
+
 ### Commonprayer
 
 The faithful pray by speaking the sacred words themselves. Orthodoxy holds, and any educated person knows, that a request is answered only in its exact and ancient form, the precise saying the One Above's power will heed (see [[splendor-magic|Splendor Magic]]). The common folk do not know this. They speak the words they have learned as best they can, trusting that to say them at all is to be heard, and where a priest's words take effect and a layman's do not, they lay it to the priest's blessing rather than to any matter of form. This everyday devotion is called commonprayer: the true words, said in the untaught way. Because the faithful hold that the One Above hears most clearly when many ask as one, commonprayer is most often made together, a household or a whole street lifting the same words at once.

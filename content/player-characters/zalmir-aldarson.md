@@ -24,3 +24,9 @@ A tall, well-built man in his prime with a soft, slightly rasping voice. A banda
 ### Character
 
 Ancestry: [[human|Human]]. Community: Wildborne. Class: Druid, subclass Warden of the Elements.
+
+## History
+
+### Drinmery
+
+At [[fleming-manor|Fleming Manor]], Zalmir recognized the plant tattooed on [[dorothea|Dorothea's]] shoulder as a local toxic plant. He guided the party through the countryside to the bandits' fort west of [[drinmery|Drinmery]].

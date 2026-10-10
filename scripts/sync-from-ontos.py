@@ -88,6 +88,12 @@ TITLES = {
     "andaluria.md": "Andaluria",
     "convent-of-saint-trefan.md": "Convent of Saint Trefan",
     "drinmery.md": "Drinmery",
+    # 2026-10-10 session-two publish: the places the party visited in and
+    # around Drinmery, each with its own local map.
+    "fleming-manor.md": "Fleming Manor",
+    "drinmery-market.md": "Drinmery Market",
+    "restful-shade.md": "The Restful Shade",
+    "lampfort.md": "The Lampfort",
     "jesthaen.md": "Jesthaen",
     "polaris.md": "Polaris",
     "voldaen.md": "Voldaen",
@@ -160,6 +166,11 @@ TITLES = {
     "maud-tallow.md": "Maud Tallow",
     "pell.md": "Pell",
     "wick.md": "Wick",
+    # 2026-10-10 session-two publish.
+    "mother-wenna.md": "Mother Wenna",
+    "jory-fenn.md": "Jory Fenn",
+    "yselda-marrow.md": "Yselda Marrow",
+    "the-threnodies.md": "The Threnodies",
     # 2026-09-24 ingest, first mapped 2026-09-26 (it had public content but
     # was never added here, so it silently never synced).
     "simiah.md": "Simiah",
@@ -240,6 +251,11 @@ PAGE_MAP = {
     "the-faunus.md": "beings/the-faunus.md",
     "convent-of-saint-trefan.md": "locations/jesthaen/drinmery/convent-of-saint-trefan.md",
     "drinmery.md": "locations/jesthaen/drinmery/index.md",
+    "fleming-manor.md": "locations/jesthaen/drinmery/fleming-manor.md",
+    "drinmery-market.md": "locations/jesthaen/drinmery/drinmery-market.md",
+    "restful-shade.md": "locations/jesthaen/drinmery/restful-shade.md",
+    # Outside the town, a day and a half west, so it sits in the nation folder.
+    "lampfort.md": "locations/jesthaen/lampfort.md",
     "jesthaen.md": "locations/jesthaen/index.md",
     # 2026-10-05: jestha.md is now Jesthaen's capital city, not Aldric's mother.
     "jestha.md": "locations/jesthaen/jestha.md",
@@ -338,6 +354,12 @@ PAGE_MAP = {
     "maud-tallow.md": "npcs-minor/drinmery-arc/maud-tallow.md",
     "pell.md": "npcs-minor/drinmery-arc/pell.md",
     "wick.md": "npcs-minor/drinmery-arc/wick.md",
+    "mother-wenna.md": "npcs-minor/drinmery-arc/mother-wenna.md",
+    "jory-fenn.md": "npcs-minor/drinmery-arc/jory-fenn.md",
+    "yselda-marrow.md": "npcs-minor/drinmery-arc/yselda-marrow.md",
+    # Public from session two (2026-10-10) with only what the party knows; it
+    # sits with the Divine Relics among the setting's sacred objects.
+    "the-threnodies.md": "magic/the-threnodies.md",
     "index.md": "index.md",
 }
 
@@ -454,7 +476,6 @@ RENAMES = {
 # Drinmery nobles (Guilmore Fleming / Immanuel Greene), Izar, and the Hilltop
 # night zone joined this list as a result.
 NOT_YET_PUBLIC = {
-    "the-threnodies.md",
     "the-threnodites.md",
     "sage-magic.md",
     "ophanim-heresies.md",

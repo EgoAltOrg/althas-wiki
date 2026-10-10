@@ -26,6 +26,8 @@ Their coat of arms bears a griffin and a cross in midnight blue and silver, bene
 
 A century later, the Azimuth were the first House to side with [[valeran-voldis|Valeran Voldis]], later the Blessed King, against [[valerion-voldis|Valerion]], the Mad King, in the course of [[valerions-heresy|the latter's great heresy]]. This raised them to Great House, and thereafter the Azimuth came to hold the post of Minister of the Royal Household, an office kept now by [[zhenya-azimuth|Zhenya Azimuth]]. Their arms were employed when [[the-ophanim|the Ophanim]] descended on central [[hilltop|Hilltop]], and they later fought against [[aldric-voldis|Aldric Voldis]] in the course of his revolution and the founding of the [[jesthaen|Jesthaen Republic]].
 
+According to [[leonard-moore|Leonard Moore]], the House holds a [[the-threnodies|Threnody]], which [[cornelia-azimuth|Cornelia]] spent much time researching.
+
 ## Related pages
 
 - [[voldaen|Voldaen]]
