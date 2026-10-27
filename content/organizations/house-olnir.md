@@ -34,7 +34,7 @@ Central to the House is the Famesfeast, a weekly rite preceded by a day-long fas
 
 ### Standing and history
 
-That same creed likely guided the Olnir when they sided with [[valeran-voldis|Valeran Voldis]], later the Blessed King, against [[valerion-voldis|Valerion]], the Mad King, in the course of [[valerions-heresy|Valerion's Heresy]]. The allegiance earned them the status of Great House, and for generations thereafter the Olnir held the office of Minister of Domestic Affairs.
+That same creed likely guided the Olnir when they sided with [[valeran-voldis|Valeran Voldis]], later the Blessed King, against [[valerion-voldis|Valerion]], the Mad King, in the course of [[valerions-heresy|his great heresy]]. The allegiance earned them the status of Great House, and for generations thereafter the Olnir held the office of Minister of Domestic Affairs.
 
 The office was revoked only recently, as punishment for [[lorkhan-olnir|Lorkhan Olnir]], the House's missing heir, who sided with [[aldric-voldis|Aldric Voldis]] during the revolution that founded the [[jesthaen|Jesthaen Republic]]. The Olnir kept their noble standing only after their new head, Maxim Olnir, swore fealty to the Voldaen Crown.
 

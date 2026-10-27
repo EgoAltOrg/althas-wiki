@@ -14,7 +14,7 @@ Where this page sets out the shape of the year, the [[chronicle|Chronicle]] reco
 
 Each month is built from three weeks, and every week is eleven days. A week opens and closes on a weekend, and a single day of prayer falls at its center. Four working days sit on either side of that prayer day.
 
-Each day but the sixth is named for one plea of a prayer the faithful learn as children. In the Church's tongue the prayer runs *exaudi, memento, custodi, dimitte, libera*, then *benedic, sana, confirma, illumina, revertere*, and everyday speech has worn each plea down into a day's name, the way commonprayer wears down every sacred word (see the [[parish-of-orthodoxy|Parish of Orthodoxy]]). The first five pleas ask for the faithful, the last five ask for the world, and the week ends on the plea that the One Above return. The prayer day between them takes the name of the Saint the week is given to.
+Each day but the sixth is named for one plea of a prayer the faithful learn as children. In the Church's tongue the prayer runs *exaudi, memento, custodi, dimitte, libera*, then *benedic, sana, confirma, illumina, revertere*, and everyday speech has worn each plea down into a day's name, the way [[parish-of-orthodoxy|commonprayer]] wears down every sacred word. The first five pleas ask for the faithful, the last five ask for the world, and the week ends on the plea that the One Above return. The prayer day between them takes the name of the Saint the week is given to.
 
 | Day | Name | Plea | Role |
 |---|---|---|---|
