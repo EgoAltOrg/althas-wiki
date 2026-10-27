@@ -23,7 +23,7 @@ Her vineyards on the dark volcanic slopes yield the most coveted wine in Andalur
 
 ## Relationships
 
-Of late her name has been joined with the Church's once more: she is betrothed to Archbishop [[mateo-veyra|Mateo Veyra]].
+Of late her name has been joined with the Church's once more: she is betrothed to Bishop [[mateo-veyra|Mateo Veyra]].
 
 ## Depictions
 

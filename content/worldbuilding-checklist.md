@@ -13,7 +13,7 @@ Daggerheart invites players into the worldbuilding, and much of Althas is still 
 ## Faith, calendar, and time
 
 - [x] Name the ten months of the [[calendar|Calendar]] year. (Done 2026-08-24: Vigilia, Sacratio, Oblatio, Certamen, Passio, Requiem, Paenitentia, Gratia, Adventus, Vesper.)
-- [ ] Name the eleven days of the week (they currently carry only roles: weekend, prayer, work).
+- [x] Name the eleven days of the week. (Done 2026-10-27: Exauday, Memenday, Custoday, Dimiday, Liberday, the Saint's Day, Beneday, Sanaday, Confirday, Illumiday, Reverday.)
 - [x] Name the three holidays that end the year and mark the final battle of the Divine Age. (Done 2026-08-24: Bellum, Sigillum, Regnum.)
 - [ ] Describe how people mark Bellum, Sigillum and Regnum: what is done, eaten, mourned, or celebrated.
 - [ ] Name the thirty Saints of the Divine Age, one for each prayer day of the year: who each was and what they are patron of.

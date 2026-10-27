@@ -14,21 +14,23 @@ Where this page sets out the shape of the year, the [[chronicle|Chronicle]] reco
 
 Each month is built from three weeks, and every week is eleven days. A week opens and closes on a weekend, and a single day of prayer falls at its center. Four working days sit on either side of that prayer day.
 
-| Day | Role |
-|---|---|
-| 1 | Weekend |
-| 2 | Work |
-| 3 | Work |
-| 4 | Work |
-| 5 | Work |
-| 6 | Prayer |
-| 7 | Work |
-| 8 | Work |
-| 9 | Work |
-| 10 | Work |
-| 11 | Weekend |
+Each day but the sixth is named for one plea of a prayer the faithful learn as children. In the Church's tongue the prayer runs *exaudi, memento, custodi, dimitte, libera*, then *benedic, sana, confirma, illumina, revertere*, and everyday speech has worn each plea down into a day's name, the way [[parish-of-orthodoxy|commonprayer]] wears down every sacred word. The first five pleas ask for the faithful, the last five ask for the world, and the week ends on the plea that the One Above return. The prayer day between them takes the name of the Saint the week is given to.
 
-So each week gives two weekend days at its ends, one day of prayer at its middle, and eight working days between them.
+| Day | Name | Plea | Role |
+|---|---|---|---|
+| 1 | Exauday | Hear us | Weekend |
+| 2 | Memenday | Remember us | Work |
+| 3 | Custoday | Keep us | Work |
+| 4 | Dimiday | Forgive us | Work |
+| 5 | Liberday | Deliver us | Work |
+| 6 | Saint's Day | The week's Saint | Prayer |
+| 7 | Beneday | Bless | Work |
+| 8 | Sanaday | Heal | Work |
+| 9 | Confirday | Make strong | Work |
+| 10 | Illumiday | Give light | Work |
+| 11 | Reverday | Return | Weekend |
+
+So each week gives two weekend days at its ends, one day of prayer at its middle, and eight working days between them. Because a month is exactly three weeks, a date falls on the same day in every month: the 1st, 12th and 23rd are always Exauday, and the 6th, 17th and 28th always the Saint's Day.
 
 ## The months and the year
 

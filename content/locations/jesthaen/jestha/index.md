@@ -2,6 +2,7 @@
 title: Jestha
 aliases:
   - npcs/jestha
+  - locations/jesthaen/jestha
 kind: location
 category: City
 nation: "[[jesthaen|Jesthaen]]"
@@ -20,7 +21,12 @@ marker:
 
 Jestha is the capital of [[jesthaen|Jesthaen]]. After the Civil War, the city was renamed Jestha, after [[aldric-voldis|Aldric's]] lowborn mother. It is a port, and merchant ships dock there.
 
+## Notable Places
+
+- [[basilica-of-saint-avel|The Basilica of Saint Avel]], in the city's center: a basilica of long recoveries founded around Saint [[avel-cruoris|Avel Cruoris's]] infirmary.
+
 ## Related pages
 
 - [[index|Althas]]
 - [[jesthaen|Jesthaen]]
+- [[basilica-of-saint-avel|Basilica of Saint Avel]]

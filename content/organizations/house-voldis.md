@@ -48,7 +48,6 @@ graph TD
     click MAD "../npcs/valerion-voldis" "Valerion, the Mad King"
     click BLESSED "../npcs/valeran-voldis" "Valeran, the Blessed King"
     click CASTUS "../npcs/castus-voldis" "Castus Voldis"
-    click BRO "../npcs/castorius-voldis" "Castorius Voldis"
     click VALTHIS "../npcs/valthis-voldis" "Valthis Voldis"
     click EDRION "../npcs/edrion-voldis" "Edrion Voldis"
     click ALDRIC "../npcs/aldric-voldis" "Aldric Voldis"

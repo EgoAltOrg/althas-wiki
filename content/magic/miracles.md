@@ -31,6 +31,8 @@ Not all Miracles are directly useful on the battlefield, but those that are cons
 - **The Miracle of Fames**: lets its bearer take the might of the fallen into himself, gaining a strength or faculty matched to what is claimed from the dead, at no small cost. The signature Miracle of [[house-olnir|House Olnir]].
 - **The Miracle of Parashiel**: a Miracle shrouded in mystery that empowers body, mind, and soul through familiar spirits. The signature Miracle of [[house-azimuth|House Azimuth]], its secrets known to them alone.
 - **The Miracle of Geosensus**: lets its bearer feel the natural relief of the land within a reach, the mountains and valleys and the hollows and veins beneath. The signature Miracle of [[house-circinus|House Circinus]]; borne now by Abbot [[sabara|Sabara]].
+- **The Miracle of Abrogation**: for a moment, cuts a caster off from the power their magic draws on, so the casting fails before it takes effect; it reaches only what its bearer can see, and cannot touch a Miracle. The signature Miracle of House Algol; borne now by [[antares-algol|Antares Algol]], Archmage of [[polaris|Polaris]].
+- **The Miracle of Raptus**: lets its bearer step from one place to another without crossing the space between, carrying whoever he holds. Borne by [[ezekiel-ashmark|Ezekiel Ashmark]], the Infernis Archbishop of [[jesthaen|Jesthaen]], who kept it to himself through the civil war; it is proof that holyblood can run in an Infernis line.
 
 ### House Voldis's power
 

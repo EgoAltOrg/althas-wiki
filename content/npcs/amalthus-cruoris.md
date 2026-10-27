@@ -1,7 +1,7 @@
 ---
 title: Amalthus Cruoris
 kind: person
-role: Pontiff of the Holy See
+role: Pontiff of the Holy See and Archbishop of Hilltop
 pronouns: he/him
 house: House Cruoris
 nation: "[[hilltop|Hilltop]]"
@@ -28,8 +28,6 @@ Amalthus bears his house's signature [[miracles|Miracle]], the **Miracle of Viat
 
 A Viaticum works because an incantation needs a living channel to carry it, and holyblood is one (see [[splendor-magic|Splendor Magic]]). The prayer he seals into his own blood is his living ask, sent ahead of him, still able to reach the One Above when he is nowhere near. It is by this that the Church grants grace at a distance: a blessing pressed into the hand of a knight before a hopeless errand, a single mercy carried where no priest can follow.
 
-Every Viaticum is made from the Pontiff's own blood, and the giving of it costs him. Each sealed prayer is a measure of himself spent and not returned, and the toll shows in the gaunt frame and the wasted hands.
-
 ## History
 
 Amalthus Cruoris is the divine regent of [[hilltop|Hilltop]] in his god's absence: the supreme authority of [[the-holy-see|the Holy See]], keeper of doctrine, and the last word on what the faith of [[the-one-above|the One Above]] holds to be true. He rose through [[parish-of-orthodoxy|the Parish of Orthodoxy]] as a scholar of rare depth, with incantation discoveries to his own name, before the clerics raised him to the Pontiff's chair.
@@ -47,3 +45,4 @@ The Pontiff's chair is filled by election of the clerics, but election has never
 - [[miracles|Miracles]]
 - [[the-one-above|The One Above]]
 - [[splendor-magic|Splendor Magic]]
+- [[avel-cruoris|Avel Cruoris]]

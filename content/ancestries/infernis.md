@@ -30,3 +30,4 @@ With settled life closed to them, Infernis travel in caravans, trading goods, ne
 - [[aetheris|Aetheris]]
 - [[giants|Giants]]
 - [[clanks|Clanks]]
+- [[ezekiel-ashmark|Ezekiel Ashmark]]

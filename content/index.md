@@ -104,6 +104,7 @@ All communities are available across nations, but some have unique aspects withi
 ## Locations
 
 - [[jestha|Jestha]]: the capital of Jesthaen
+- [[basilica-of-saint-avel|Basilica of Saint Avel]]: a basilica of long recoveries in the center of Jestha, built around Saint Avel's infirmary
 - [[drinmery|Drinmery]]: city in Jesthaen, home of the Convent of Saint Trefan
 - [[convent-of-saint-trefan|Convent of Saint Trefan]]: a convent in Drinmery prized for its rare library
 - [[lampfort|The Lampfort]]: the old fort west of Drinmery where Saint Trefan held off the Mad King's host
@@ -171,10 +172,13 @@ All communities are available across nations, but some have unique aspects withi
 - [[izar-arcturus|Izar Arcturus]]: Hesper's son, a Polaris mage who challenged her for her Triumvirate seat
 - [[lael|Lael]]: one of the Five Heroes, slain fighting the Ophanim and returned by his Miracle of Rebirth
 - [[amalthus-cruoris|Amalthus Cruoris]]: reigning Pontiff of the Holy See, of House Cruoris, bearer of the Miracle of Viaticum
+- [[avel-cruoris|Avel Cruoris]]: Elven saint of House Cruoris who tended the wounded of Valerion's Heresy and founded the Basilica of Saint Avel; missing since 333 VR
 - [[lyra-aquila|Lyra Aquila]]: one of the Five Heroes, archmage of Polaris's Triumvirate, of House Aquila, twin sister to Cassio Aquila, author of *Verba Ophanim*, bearer of the Miracle of Anamnesis
+- [[antares-algol|Antares Algol]]: Archmage of Polaris's Triumvirate and bearer of the Miracle of Abrogation, in practice the power governing Polaris since Hesper's death
 - [[cassio-aquila|Cassio Aquila]]: one of the Five Heroes, scholar of the Holy See, of House Aquila, twin brother to Lyra Aquila, bearer of the Miracle of Pentecost, died fighting the Ophanim
 - [[augustus-corvus|Augustus Corvus]]: Minister of War of Voldaen and lord of [[house-corvus|House Corvus]], called the Red Raven; undefeated commander and bearer of the Miracle of Auspex
-- [[mateo-veyra|Mateo Veyra]]: Archbishop of [[andaluria|Andaluria]] and the highest [[the-holy-see|Holy See]] authority to remain after the Ophanim's fall, betrothed to the Condesa [[ysabela-delamona|Ysabela Delamoña IV]]
+- [[mateo-veyra|Mateo Veyra]]: Bishop of [[andaluria|Andaluria]] and the highest [[the-holy-see|Holy See]] authority to remain after the Ophanim's fall, betrothed to the Condesa [[ysabela-delamona|Ysabela Delamoña IV]]
+- [[ezekiel-ashmark|Ezekiel Ashmark]]: the Infernis Archbishop of [[jesthaen|Jesthaen]], Aldric's right hand in the civil war, bearer of the Miracle of Raptus
 - [[sabara|Sabara]]: cleric of the Holy See's Parish of Cartography, blessed with the Miracle of Geosensus, seated as the Surveyor on [[andaluria|Andaluria's]] [[the-council-of-six|Council of Six]]
 - [[cornelia-azimuth|Cornelia Azimuth]]: late matriarch of [[house-azimuth|House Azimuth]], peerless warrior and master of Splendor magic, fell facing Aldric at Jesthaen in 358 VR
 - [[victerius-azimuth|Victerius Azimuth]]: born of [[house-olnir|House Olnir]], superb duelist and consort-head of House Azimuth, fell in 358 VR at the hands of his brother Lorkhan, whom he left gravely wounded
