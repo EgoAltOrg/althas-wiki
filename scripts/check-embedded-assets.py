@@ -11,8 +11,8 @@ didn't render on the live site. That is exactly how Valerion Voldis's second
 Depictions image went missing (2026-08-18).
 
 Body-embed assets are NOT copied by `sync-from-ontos.py` (only a new page's
-leading portrait is); they live only in `content/` (root CLAUDE.md rule 26)
-and are placed by hand. So a new body embed syncs as
+leading portrait is, on a wiki that sets PORTRAIT_DIR); they live only in
+`content/` (root CLAUDE.md rule 26) and are placed by hand. So a new body embed syncs as
 text while its file is easy to forget. This gate is the mechanical backstop:
 report-only, exits non-zero on any missing asset, no `--fix` (the fix is
 copying a binary in, never a machine edit). Wire it into the publish pipeline's

@@ -12,8 +12,8 @@ spec.loader.exec_module(csl)
 
 
 def test_catches_the_real_leak():
-    # The exact 2026-07-18 leak string must be caught (Tier 1).
-    leak = "said to let its bearer hold multiple Miracles (the truth is otherwise, and is GM-only)."
+    # The shape of the 2026-07-18 leak must be caught (Tier 1).
+    leak = "said to grant its bearer a long life (the truth is otherwise, and is GM-only)."
     t1, t2 = csl.scan_text(leak)
     phrases = {p for _, p in t1}
     assert "gm-only" in phrases, "must catch 'GM-only' author terminology"
@@ -33,8 +33,8 @@ def test_tier2_secret_signals():
 
 
 def test_perception_framing_is_tier2():
-    # The exact 2026-09-27 Tobias Wren leak string must be caught (Tier 2).
-    leak = "his manner is gentle and unhurried, and most read the wear on him as a long life given over to devotion."
+    # The shape of the 2026-09-27 leak must be caught (Tier 2).
+    leak = "his manner is quiet and patient, and most read the scars on him as the marks of an honest trade."
     _, t2 = csl.scan_text(leak)
     assert t2, "must catch perception framing ('most read ... as')"
     for s in ["The old man passes for a hermit.", "By all appearances she is a widow."]:
@@ -42,15 +42,31 @@ def test_perception_framing_is_tier2():
         assert t2, f"expected a Tier 2 hit in: {s!r}"
 
 
+def test_clean_public_prose_passes():
+    clean = (
+        "The Holy See governs the faith from Hilltop and fields the Parish of "
+        "Inquisition as its investigative arm. House Voldis rules Voldaen."
+    )
+    t1, t2 = csl.scan_text(clean)
+    assert not t1 and not t2, f"clean prose should not flag: {t1} {t2}"
+
+
+def test_in_reality_is_tier2_not_tier1():
+    # 'a hole in reality' is legit and only Tier 2 (allowlistable), never Tier 1.
+    t1, t2 = csl.scan_text("Codex tears a small hole in reality.")
+    assert not t1, "'in reality' must not be Tier 1"
+    assert any(p == "in reality" for _, p in t2), "'in reality' should be a Tier 2 hit"
+
+
 def test_perception_framing_any_subject():
-    # Six lines that were live on the wiki (found 2026-09-30) and slipped past a
-    # perception pattern that only knew seven hard-coded subjects.
+    # The shapes of six lines that were live on a wiki (found 2026-09-30) and
+    # slipped past a perception pattern that only knew seven hard-coded subjects.
     leaks = [
-        "The faithful read it as devotion worn openly.",
-        "a match Andaluria reads as its two greatest patrons binding themselves to its recovery",
-        "which he passes off as an old war wound",
-        "killed, as Polaris believes, by a giant",
-        "a redemption in the eyes of everyone else",
+        "The villagers read it as a sign of good harvests.",
+        "a match the city reads as its two richest families making peace",
+        "which he passes off as a riding accident",
+        "drowned, as the village believes, in the spring flood",
+        "a hero in the eyes of the townsfolk",
         "Appearance only; the rest is held.",
     ]
     for s in leaks:
@@ -60,12 +76,12 @@ def test_perception_framing_any_subject():
 
 def test_secret_existence_phrases_are_tier2():
     for s in [
-        "Andaluria reads the match as a binding.",
+        "The city reads the treaty as a surrender.",
         "They take him for a god.",
         "the stranger mistook the old man for a beggar",
         "a quiet man who reads as harmless",
-        "a wound, as most believe, from the war",
-        "the war, as the Church presents it, was holy",
+        "a scar, as most believe, from a hunting trip",
+        "the war, as the crown presents it, was just",
         "She is taken to be of that house.",
         "It is publicly known as a hunting lodge.",
         "He never said otherwise.",
@@ -80,7 +96,7 @@ def test_perception_framing_with_hyphenated_or_such_complement():
     # "as well-earned" / "as such a man" are perception framing; only the bare
     # "reads as well" / "reads as such" / "reads as follows" forms are prose.
     for s in [
-        "most read the wear on him as well-earned",
+        "most read the scars on him as well-earned",
         "Most see him as well-meaning.",
         "Everyone took him as well-born",
         "most see him as such a man",
@@ -93,7 +109,7 @@ def test_subject_anchored_for_granted_still_caught():
     # The "granted" idiom is skipped only for the any-subject "take it for";
     # with a perceiver subject it is the cover-story shape and stays flagged.
     for s in [
-        "Most took it for granted that he died of fever",
+        "Most took it for granted that the bridge would hold",
         "Everyone took it for granted.",
         "Most took him for granted",
     ]:
@@ -115,26 +131,27 @@ def test_new_author_terms_are_tier1():
         assert t1, f"expected a Tier 1 hit in: {s!r}"
 
 
-def test_closing_holidays_is_tier1():
-    # Internal name for the year's last three days (in-world: Bellum, Sigillum,
-    # Regnum); never player-facing, so Tier 1.
-    for s in ["the three Closing Holidays", "the closing holiday"]:
-        t1, _ = csl.scan_text(s)
-        assert t1, f"expected a Tier 1 hit in: {s!r}"
-    for s in ["the closing days of the year", "a holiday closing the market"]:
-        t1, t2 = csl.scan_text(s)
-        assert not t1 and not t2, f"clean prose should not flag: {s!r} -> {t1} {t2}"
+def test_extra_author_terms_join_tier1():
+    # A wiki's own internal names (its allowlist's extra_author_terms) are Tier 1
+    # for that wiki only; clean prose with the same words stays clean.
+    res = csl.tier1_for({"extra_author_terms": [r"\bwinter recess\b"]})
+    t1, _ = csl.scan_text("during the Winter Recess", res)
+    assert t1, "a per-wiki author term must be Tier 1"
+    t1, t2 = csl.scan_text("the recess of a long winter", res)
+    assert not t1 and not t2, f"clean prose should not flag: {t1} {t2}"
+    t1, _ = csl.scan_text("during the Winter Recess")
+    assert not t1, "a per-wiki term must not leak into the default set"
 
 
 def test_perception_framing_stays_tight():
     # Ordinary prose the subject-agnostic patterns must not flag.
     for s in [
-        "In their absence the Holy See took up authority as steward.",
-        "a hole torn in the shape that makes what comes through read as fire",
+        "In their absence the council took up authority as steward.",
+        "a lens that makes what comes through read as fire",
         "The inscription reads as follows.",
         "the great houses took the regency for themselves",
-        "see that page for how incantation magic works",
-        "a Circinus read the ground for a colony",
+        "see that page for how the spell works",
+        "a surveyor read the ground for a colony",
         "a weapon that takes a different form for each generation",
         "The house takes as its sigil a wolf.",
         "They took it for granted.",
@@ -145,20 +162,24 @@ def test_perception_framing_stays_tight():
         assert not t1 and not t2, f"clean prose should not flag: {s!r} -> {t1} {t2}"
 
 
-def test_clean_public_prose_passes():
-    clean = (
-        "The Holy See governs the faith from Hilltop and fields the Parish of "
-        "Inquisition as its investigative arm. House Voldis rules Voldaen."
-    )
-    t1, t2 = csl.scan_text(clean)
-    assert not t1 and not t2, f"clean prose should not flag: {t1} {t2}"
+def test_strict_default_flags_gm_role():
+    # No tier1_res passed -> strict set (author markers + GM role), i.e. the
+    # pre-config default a single-GM wiki relies on. Bare 'GM' is Tier 1.
+    t1, _ = csl.scan_text("the GM decides the outcome")
+    assert any(p == "gm" for _, p in t1), "strict default must flag the GM role term"
 
 
-def test_in_reality_is_tier2_not_tier1():
-    # 'a hole in reality' is legit and only Tier 2 (allowlistable), never Tier 1.
-    t1, t2 = csl.scan_text("Codex tears a small hole in reality.")
-    assert not t1, "'in reality' must not be Tier 1"
-    assert any(p == "in reality" for _, p in t2), "'in reality' should be a Tier 2 hit"
+def test_gm_role_opt_out_still_blocks_author_markers():
+    # An open table opts the GM ROLE words out of Tier 1 (author markers only).
+    role_off = csl.TIER1_AUTHOR_RE
+    t1, _ = csl.scan_text("each session has a different GM", role_off)
+    assert not t1, "with role opt-out, the bare role word must be allowed"
+    t1, _ = csl.scan_text("the GM decides", role_off)
+    assert not t1, "with role opt-out, 'the GM' must be allowed"
+    # The real leak vectors stay Tier 1 no matter what the flag says.
+    for marker in ["> [!gm-only] hidden", "this is GM-only", "the truth is otherwise"]:
+        t1, _ = csl.scan_text(marker, role_off)
+        assert t1, f"author marker must stay Tier 1 under role opt-out: {marker!r}"
 
 
 if __name__ == "__main__":

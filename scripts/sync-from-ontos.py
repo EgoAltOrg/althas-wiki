@@ -1,555 +1,71 @@
 #!/usr/bin/env python3
 """
-Sync the player-facing content/ folder from the GM's private Ontos wiki.
+Sync a wiki's player-facing content/ folder from its source pages in the Ontos
+vault. This is the shared engine for every wiki created from the template; the
+wiki-specific data (source dir, page map, titles, renames, skip-lists, infobox
+schema) lives in sync_config.py, the one file each wiki edits.
 
-The GM's master wiki (in the Ontos vault, not this repo) is annotated with
-two Obsidian callout types: [!gm-only] for in-world secrets not yet revealed
-to players (unwrapped by hand as the campaign plays out), and [!gm-notes]
-for permanent author-side content (real-world citations, planning notes)
-that never reaches players.
-
-This script reads each mapped source page, strips both callout types
-entirely, trims frontmatter down to `title:` plus the whitelisted typed
-infobox fields (see INFOBOX_KIND_FIELDS below; carrying forward any
-existing `marker:` map-pin data, `submap:` local-map block, and `image:`
-portrait filename already present in the destination file, since those are
-presentation data owned by content/; a brand-new page instead takes `image:`
-from the source's leading portrait embed and gets that file copied in),
-drops the Sources/Last updated bookkeeping lines, and writes the result
+Source pages are annotated with two Obsidian callout types: [!gm-only] for
+in-world secrets not yet revealed to players (unwrapped by hand as the campaign
+plays out) and [!gm-notes] for permanent author-side content (real-world
+citations, planning notes) that never reaches players. This script reads each
+mapped source page, strips both callout types entirely, trims frontmatter down
+to `title:` plus the whitelisted typed-infobox fields (carrying forward any
+existing marker:/submap:/image: presentation data already in the destination
+file), drops the Sources/Last updated bookkeeping lines, and writes the result
 into content/.
 
-content/ is a generated build artifact from this point on: don't hand-edit
-files this script writes, edit the Ontos source and re-run this script.
-This is a mechanical strip, not a judgment call: always read `git diff
-content/` yourself before publishing, the same way check-broken-links.py's
---fix mode never replaces a human read.
+content/ is a generated build artifact from this point on: don't hand-edit files
+this script writes, edit the Ontos source and re-run. This is a mechanical strip,
+not a judgment call: always read `git diff content/` yourself before publishing.
 
-Each of the five nations (Armada, Polaris, Voldaen, Jesthaen, Hilltop) syncs
-to its own folder's index.md directly, not to a same-named file alongside
-it — a folder and a page inside it should never share a name. This relies
-on a patched "shortest" link-resolution strategy in quartz/util/path.ts
-that treats a folder's own index.md as satisfying a wikilink to that
-folder's name, and a matching patch in check-broken-links.py's own
-existing_targets(). If either patch is ever reverted, [[armada]] (and the
-other four) will break across the whole site.
+A wiki may map a page to a folder's own index.md (so [[foo]] resolves to
+locations/foo/index.md, keeping a folder and a page inside it from sharing a
+name). That relies on a patched "shortest" link-resolution strategy in
+quartz/util/path.ts and a matching patch in check-broken-links.py; keep both
+patches if you use folder-is-the-page.
 """
-import os
 import re
 import shutil
 import sys
 from pathlib import Path
 
-# Defaults to the GM's live vault; override via ONTOS_SETTING_DIR to sync from a
-# branch worktree (used to preview restructuring work before it merges to main).
-ONTOS_SETTING = Path(
-    os.environ.get(
-        "ONTOS_SETTING_DIR",
-        str(Path.home() / "Desktop/Ontos/Projects/rpgs-and-gest/daggerheart/campaigns/ut-supra-sic-infra/setting"),
-    )
+# All wiki-specific data lives in sync_config.py (the one file a wiki edits),
+# found through wiki_config.py: next to this script by default, or in the folder
+# WIKI_CONFIG_DIR names. Both dirs go on the path so the imports work whether
+# this runs directly or is loaded by a gate via importlib (e.g.
+# check-related-pages-grounding.py).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from wiki_config import CONFIG_DIR, shortest_key  # noqa: E402
+
+sys.path.insert(0, str(CONFIG_DIR))
+from sync_config import (  # noqa: E402
+    ONTOS_SETTING,
+    TITLES,
+    PAGE_MAP,
+    RENAMES,
+    NOT_YET_PUBLIC,
+    CONTENT_ONLY,
+    INFOBOX_KIND_FIELDS,
 )
+
+# Optional per-wiki knob (bilingual wikis only): extra source-basename -> slug
+# link rewrites for content-only stub targets that have no synced source page
+# (e.g. the hand-built interactive map). Monolingual wikis omit it entirely.
+try:
+    from sync_config import LINK_REWRITE  # noqa: E402
+except ImportError:
+    LINK_REWRITE = {}
+
+# Optional per-wiki knob: the folder a brand-new page's leading portrait embed
+# is copied in from (see seed_portrait). Wikis that place every image by hand
+# omit it, and new pages then publish without an image: until one is placed.
+try:
+    from sync_config import PORTRAIT_DIR  # noqa: E402
+except ImportError:
+    PORTRAIT_DIR = None
+
 CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
-
-# Display title for each source page. Kept as an explicit table (not derived
-# from the filename) so it always matches Lucas's own naming choices exactly.
-TITLES = {
-    "diplomacy.md": "Diplomacy",
-    "calendar.md": "Calendar",
-    "chronicle.md": "Chronicle",
-    "timeline.md": "Timeline",
-    "the-divine-age.md": "The Divine Age",
-    "valerions-heresy.md": "Valerion's Heresy",
-    "the-lodestar-pact.md": "The Lodestar Pact",
-    "worldbuilding-checklist.md": "Worldbuilding Checklist",
-    "parish-of-inquisition.md": "Parish of Inquisition",
-    "parish-of-orthodoxy.md": "Parish of Orthodoxy",
-    "amalthus-cruoris.md": "Amalthus Cruoris",
-    "augustus-corvus.md": "Augustus Corvus",
-    "codex-magic.md": "Codex Magic",
-    "aetheris.md": "Aetheris",
-    "elves.md": "Elves",
-    "firbolg.md": "Firbolg",
-    "giants.md": "Giants",
-    "clanks.md": "Clanks",
-    "infernis.md": "Infernis",
-    "human.md": "Human",
-    "divine-relics.md": "Divine Relics",
-    "miracles.md": "Miracles",
-    "splendor-magic.md": "Splendor Magic",
-    "the-holy-see.md": "The Holy See",
-    "the-one-above.md": "The One Above",
-    "the-ones-below.md": "The Ones Below",
-    "the-ophanim.md": "The Ophanim",
-    "armada.md": "Armada",
-    "guild.md": "The Guild",
-    "the-five-heroes.md": "The Five Heroes",
-    "crater-lake.md": "Crater Lake",
-    "draconis.md": "Draconis",
-    "hilltop.md": "Hilltop",
-    "andaluria.md": "Andaluria",
-    "convent-of-saint-trefan.md": "Convent of Saint Trefan",
-    "drinmery.md": "Drinmery",
-    # 2026-10-10 session-two publish: the places the party visited in and
-    # around Drinmery, each with its own local map.
-    "fleming-manor.md": "Fleming Manor",
-    "drinmery-market.md": "Drinmery Market",
-    "restful-shade.md": "The Restful Shade",
-    "lampfort.md": "The Lampfort",
-    "jesthaen.md": "Jesthaen",
-    "polaris.md": "Polaris",
-    "voldaen.md": "Voldaen",
-    "house-voldis.md": "House Voldis",
-    "house-aquila.md": "House Aquila",
-    "house-corvus.md": "House Corvus",
-    "aldric-voldis.md": "Aldric Voldis",
-    "edrion-voldis.md": "Edrion Voldis",
-    "eltanin.md": "Eltanin",
-    "guilmore-fleming.md": "Guilmore Fleming",
-    "hesper-arcturus.md": "Hesper Arcturus",
-    "izar-arcturus.md": "Izar Arcturus",
-    "immanuel-greene.md": "Immanuel Greene",
-    "jestha.md": "Jestha",
-    "kingslayer.md": "The Kingslayer",
-    "god-king-voldis.md": "Voldis",
-    "valerion-voldis.md": "Valerion Voldis",
-    "valeran-voldis.md": "Valeran Voldis",
-    "castus-voldis.md": "Castus Voldis",
-    "lael.md": "Lael",
-    "lyra-aquila.md": "Lyra Aquila",
-    "cassio-aquila.md": "Cassio Aquila",
-    "thuban.md": "Thuban",
-    "valis-voldis.md": "Valis Voldis",
-    "valthis-voldis.md": "Valthis Voldis",
-    "rastaban.md": "Rastaban",
-    "rosestripe.md": "Rosestripe",
-    "uriel-kenan.md": "Uriel Kenan",
-    # 2026-08-27 Andaluria frame decisions
-    "mateo-veyra.md": "Mateo Veyra",
-    "ysabela-delamona.md": "Ysabela Delamoña",
-    "the-council-of-six.md": "The Council of Six",
-    # 2026-09-10/11 USSI character-Inbox + retcon additions (this publish)
-    "sabara.md": "Sabara",
-    "house-circinus.md": "House Circinus",
-    "zalmir-aldarson.md": "Zalmir Aldarson",
-    # 2026-08-27 Witherwild continent
-    "witherwild-continent.md": "The Witherwild",
-    "haven.md": "Haven",
-    "godless-gate.md": "The Godless Gate",
-    "the-witherwatch.md": "The Witherwatch",
-    # 2026-08-27 Weredragon lift
-    "drakona.md": "Drakona",
-    # 2026-08-26 Novak Azimuth ingest (public pages)
-    "house-azimuth.md": "House Azimuth",
-    "house-olnir.md": "House Olnir",
-    "agathia-azimuth.md": "Agathia Azimuth",
-    "cornelia-azimuth.md": "Cornelia Azimuth",
-    "hestia-azimuth.md": "Hestia Azimuth",
-    "victerius-azimuth.md": "Victerius Azimuth",
-    "zhenya-azimuth.md": "Zhenya Azimuth",
-    "lorkhan-olnir.md": "Lorkhan Olnir",
-    # The fourth PC, unmasked after session one (2026-09-26): his name and
-    # House went public. Source is still novak-pc-stub.md (the identity-light
-    # public face); the full novak-azimuth dossier stays off the map.
-    "novak-pc-stub.md": "Novak Azimuth",
-    # 2026-09-26 session-one publish: the Drinmery cast the party met, plus
-    # the two PC-side pages that were held while Novak was masked.
-    "gideon.md": "Gideon",
-    "tobias-wren.md": "Tobias Wren",
-    "malak.md": "Malak",
-    "dorothea.md": "Dorothea",
-    "leonard-moore.md": "Leonard Moore",
-    "parashiel.md": "Parashiel",
-    "aldous-pike.md": "Aldous Pike",
-    "alys.md": "Alys",
-    "edric-colvin.md": "Edric Colvin",
-    "hollis-brand.md": "Hollis Brand",
-    "inkfeather.md": "Inkfeather",
-    "maud-tallow.md": "Maud Tallow",
-    "pell.md": "Pell",
-    "wick.md": "Wick",
-    # 2026-10-10 session-two publish.
-    "mother-wenna.md": "Mother Wenna",
-    "jory-fenn.md": "Jory Fenn",
-    "yselda-marrow.md": "Yselda Marrow",
-    "the-threnodies.md": "The Threnodies",
-    # 2026-09-24 ingest, first mapped 2026-09-26 (it had public content but
-    # was never added here, so it silently never synced).
-    "simiah.md": "Simiah",
-    # Also unlisted since their ingests (2026-08/09); first mapped 2026-09-26
-    # after a humanizer + de-slop pass. The Reaping Eye stays gm-only.
-    "caio.md": "The Caio",
-    "the-faunus.md": "The Faunus",
-    "serracorte.md": "Serracorte",
-    "index.md": "Althas",
-}
-
-# source filename (in Ontos setting/) -> destination path (relative to content/)
-PAGE_MAP = {
-    # Type-based folders (2026-07-16 Explorer/categories reorg, see the
-    # campaign's specs/althas-explorer-categories-design.md in Ontos):
-    # folders answer "what is this" (setting/ = world & concepts,
-    # organizations/, magic/, beings/, ancestries/, locations/ purely
-    # geographic), metadata answers "whose is this" (the generated
-    # per-nation sections, quartz/components/NationIndex.tsx). Every page
-    # moved in that reorg has a RENAMES entry below so its old URL keeps
-    # redirecting.
-    "diplomacy.md": "setting/diplomacy.md",
-    # organizations.md merged into diplomacy.md on 2026-09-10 (the org-cards +
-    # diplomacy merge): the register now renders as per-nation faction cards on
-    # setting/diplomacy (quartz/components/OrgCards.tsx + the orgcards
-    # transformer). The old standalone /setting/organizations URL redirects via
-    # RENAMES below. Kept in the Ontos source only as a redirect stub, so it is
-    # deliberately out of PAGE_MAP (a visible decision, not a silent gap).
-    "calendar.md": "setting/calendar.md",
-    "chronicle.md": "setting/chronicle.md",
-    "timeline.md": "setting/timeline.md",
-    # Lore/event pages live in their own events/ section, kept apart from the
-    # mechanical setting/ pages above (calendar, chronicle, diplomacy,
-    # organizations, timeline). Reorg 2026-08-22 at Lucas's request; the old
-    # setting/ URLs keep redirecting via RENAMES below.
-    "the-divine-age.md": "events/the-divine-age.md",
-    "valerions-heresy.md": "events/valerions-heresy.md",
-    "the-lodestar-pact.md": "events/the-lodestar-pact.md",
-    "worldbuilding-checklist.md": "worldbuilding-checklist.md",
-    "parish-of-inquisition.md": "organizations/parish-of-inquisition.md",
-    "parish-of-orthodoxy.md": "organizations/parish-of-orthodoxy.md",
-    "amalthus-cruoris.md": "npcs/amalthus-cruoris.md",
-    "the-holy-see.md": "organizations/the-holy-see.md",
-    "guild.md": "organizations/guild.md",
-    "house-voldis.md": "organizations/house-voldis.md",
-    "house-aquila.md": "organizations/house-aquila.md",
-    "house-corvus.md": "organizations/house-corvus.md",
-    "the-five-heroes.md": "organizations/the-five-heroes.md",
-    "codex-magic.md": "magic/codex-magic.md",
-    "divine-relics.md": "magic/divine-relics.md",
-    "miracles.md": "magic/miracles.md",
-    "splendor-magic.md": "magic/splendor-magic.md",
-    "the-one-above.md": "beings/the-one-above.md",
-    "the-ones-below.md": "beings/the-ones-below.md",
-    "the-ophanim.md": "beings/the-ophanim.md",
-    "aetheris.md": "ancestries/aetheris.md",
-    "elves.md": "ancestries/elves.md",
-    "firbolg.md": "ancestries/firbolg.md",
-    "giants.md": "ancestries/giants.md",
-    "clanks.md": "ancestries/clanks.md",
-    "infernis.md": "ancestries/infernis.md",
-    "human.md": "ancestries/human.md",
-    "simiah.md": "ancestries/simiah.md",
-    # The five nations (Armada, Polaris, Voldaen, Jesthaen, Hilltop) are each
-    # a folder whose own index.md IS the nation's page, not a separate file
-    # alongside it — [[armada]] resolves to a folder's index.md exactly the
-    # same way it resolves to a same-named file, via the patched "shortest"
-    # link-resolution strategy in quartz/util/path.ts. This avoids ever
-    # having a folder and a page inside it share the same name.
-    "armada.md": "locations/armada/index.md",
-    "hilltop.md": "locations/hilltop/index.md",
-    "crater-lake.md": "locations/hilltop/crater-lake.md",
-    "andaluria.md": "locations/hilltop/andaluria.md",
-    "serracorte.md": "locations/hilltop/serracorte.md",
-    # The Caio (road folk and their faith, no infobox kind) sit with the
-    # organizations; the Wickling faith sits with the other beings.
-    "caio.md": "organizations/caio.md",
-    "the-faunus.md": "beings/the-faunus.md",
-    "convent-of-saint-trefan.md": "locations/jesthaen/drinmery/convent-of-saint-trefan.md",
-    "drinmery.md": "locations/jesthaen/drinmery/index.md",
-    "fleming-manor.md": "locations/jesthaen/drinmery/fleming-manor.md",
-    "drinmery-market.md": "locations/jesthaen/drinmery/drinmery-market.md",
-    "restful-shade.md": "locations/jesthaen/drinmery/restful-shade.md",
-    # Outside the town, a day and a half west, so it sits in the nation folder.
-    "lampfort.md": "locations/jesthaen/lampfort.md",
-    "jesthaen.md": "locations/jesthaen/index.md",
-    # 2026-10-05: jestha.md is now Jesthaen's capital city, not Aldric's mother.
-    "jestha.md": "locations/jesthaen/jestha.md",
-    "polaris.md": "locations/polaris/index.md",
-    "voldaen.md": "locations/voldaen/index.md",
-    "aldric-voldis.md": "npcs/aldric-voldis.md",
-    "edrion-voldis.md": "npcs/edrion-voldis.md",
-    "augustus-corvus.md": "npcs/augustus-corvus.md",
-    # 2026-07-18: the Ontos source files became hesper-arcturus.md / izar-arcturus.md
-    # (House Arcturus canon). First renamed to hesper_arcturus/izar_arcturus via Cowork,
-    # then to kebab-case the same day to satisfy the vault's kebab-case audit. The
-    # setting/ wikilinks all became [[hesper-arcturus]]/[[izar-arcturus]] to match, so
-    # the published slug follows suit and every prior URL (/npcs/hesper, /npcs/izar,
-    # /npcs/hesper_arcturus, /npcs/izar_arcturus) keeps redirecting via RENAMES below.
-    "hesper-arcturus.md": "npcs/hesper-arcturus.md",
-    "izar-arcturus.md": "npcs/izar-arcturus.md",
-    "kingslayer.md": "npcs/kingslayer.md",
-    "lael.md": "npcs/lael.md",
-    "lyra-aquila.md": "npcs/lyra-aquila.md",
-    "cassio-aquila.md": "npcs/cassio-aquila.md",
-    "god-king-voldis.md": "npcs/god-king-voldis.md",
-    "valerion-voldis.md": "npcs/valerion-voldis.md",
-    "valeran-voldis.md": "npcs/valeran-voldis.md",
-    "castus-voldis.md": "npcs/castus-voldis.md",
-    "valis-voldis.md": "npcs/valis-voldis.md",
-    "valthis-voldis.md": "npcs/valthis-voldis.md",
-    "rastaban.md": "player-characters/rastaban.md",
-    "rosestripe.md": "player-characters/rosestripe.md",
-    "uriel-kenan.md": "player-characters/uriel-kenan.md",
-    # 2026-08-27 Andaluria frame decisions: the public Archbishop of Andaluria
-    # (his vampirism / cult leadership is gm-only on the page).
-    "mateo-veyra.md": "npcs/mateo-veyra.md",
-    # The Condesa and Andaluria's reconstruction government: public figures the
-    # region openly knows (Delamoña's patronage, the Council's offices). Their
-    # true natures (Ysabela the vampire progenitor, the Council the Fallen
-    # Houses) stay gm-only on the pages.
-    "ysabela-delamona.md": "npcs/ysabela-delamona.md",
-    "the-council-of-six.md": "organizations/the-council-of-six.md",
-    # 2026-09-10/11 USSI additions (this publish): Sabara (public Cartography
-    # cleric, seated as the Council of Six's Surveyor), House Circinus (her
-    # Geosensus oldblood house), and the new PC Zalmir. Alcota and Valkas are
-    # fully gm-only, so they go to NOT_YET_PUBLIC below, not here.
-    "sabara.md": "npcs/sabara.md",
-    "house-circinus.md": "organizations/house-circinus.md",
-    "zalmir-aldarson.md": "player-characters/zalmir-aldarson.md",
-    # 2026-08-27 Witherwild continent. The Witherwild is a second landmass, its
-    # own locations/ folder mirroring the five nations' folder-is-the-page
-    # pattern (locations/witherwild/index.md IS the continent page). Its places
-    # sit under it; the Faunus/Nikta/Reaping-Eye cosmology stays gm-only.
-    "witherwild-continent.md": "locations/witherwild-continent/index.md",
-    "haven.md": "locations/witherwild-continent/haven.md",
-    "godless-gate.md": "locations/witherwild-continent/godless-gate.md",
-    # The frontier order that garrisons the Gate (a military order, so it lives
-    # with the other organizations).
-    "the-witherwatch.md": "organizations/the-witherwatch.md",
-    # 2026-08-27 Weredragon lift: the dragon-blooded ancestry (the Weredragon /
-    # Pride / unbinding truth is gm-only on the page).
-    "drakona.md": "ancestries/drakona.md",
-    # 2026-08-26 Novak Azimuth ingest. Two Voldaen Great Houses and the Azimuth
-    # family; the houses' secrets (Parashiel's true nature, the Famesfeast
-    # cannibalism) and Novak's own designs stay gm-only. House members follow
-    # the npcs/ convention used for the Voldis and Corvus families.
-    "house-azimuth.md": "organizations/house-azimuth.md",
-    "house-olnir.md": "organizations/house-olnir.md",
-    "agathia-azimuth.md": "npcs/agathia-azimuth.md",
-    "cornelia-azimuth.md": "npcs/cornelia-azimuth.md",
-    "hestia-azimuth.md": "npcs/hestia-azimuth.md",
-    "victerius-azimuth.md": "npcs/victerius-azimuth.md",
-    "zhenya-azimuth.md": "npcs/zhenya-azimuth.md",
-    "lorkhan-olnir.md": "npcs/lorkhan-olnir.md",
-    # The fourth PC. Source is novak-pc-stub.md (name, House, appearance and
-    # mechanics only). Name-free as player-characters/highborne-warrior until
-    # his identity went public after session one (2026-09-26); the old URL
-    # redirects via RENAMES. The novak-azimuth dossier stays off the map.
-    "novak-pc-stub.md": "player-characters/novak-azimuth.md",
-    "malak.md": "player-characters/malak.md",
-    # 2026-10-06 Dorothea (Thea), a guest PC joining in session two.
-    "dorothea.md": "player-characters/dorothea.md",
-    # 2026-09-26 session-one publish. The Drinmery figures the party met (their
-    # secrets stay gm-only on the pages), Novak's counsellor, and the House
-    # Azimuth Miracle's public framing.
-    "gideon.md": "npcs/gideon.md",
-    "tobias-wren.md": "npcs/tobias-wren.md",
-    "guilmore-fleming.md": "npcs/guilmore-fleming.md",
-    "immanuel-greene.md": "npcs/immanuel-greene.md",
-    "leonard-moore.md": "npcs/leonard-moore.md",
-    "parashiel.md": "beings/parashiel.md",
-    # NPCs (Minor), grouped by place: stub pages for the townsfolk the party
-    # has met. The Explorer labels npcs-minor/ and its place subfolders in
-    # quartz.layout.ts.
-    "aldous-pike.md": "npcs-minor/drinmery-arc/aldous-pike.md",
-    "alys.md": "npcs-minor/drinmery-arc/alys.md",
-    "edric-colvin.md": "npcs-minor/drinmery-arc/edric-colvin.md",
-    "hollis-brand.md": "npcs-minor/drinmery-arc/hollis-brand.md",
-    "inkfeather.md": "npcs-minor/drinmery-arc/inkfeather.md",
-    "maud-tallow.md": "npcs-minor/drinmery-arc/maud-tallow.md",
-    "pell.md": "npcs-minor/drinmery-arc/pell.md",
-    "wick.md": "npcs-minor/drinmery-arc/wick.md",
-    "mother-wenna.md": "npcs-minor/drinmery-arc/mother-wenna.md",
-    "jory-fenn.md": "npcs-minor/drinmery-arc/jory-fenn.md",
-    "yselda-marrow.md": "npcs-minor/drinmery-arc/yselda-marrow.md",
-    # Public from session two (2026-10-10) with only what the party knows; it
-    # sits with the Divine Relics among the setting's sacred objects.
-    "the-threnodies.md": "magic/the-threnodies.md",
-    "index.md": "index.md",
-}
-
-# Old URL -> forever-redirect table. A page that has ever moved keeps every
-# path it has ever lived at as a Quartz `aliases:` frontmatter entry (written
-# by render() below on every sync, so re-syncs preserve the redirects
-# forever). Each alias is a root-relative slug (no leading slash, no .md):
-# quartz/plugins/transformers/frontmatter.ts slugifies it as-is and the
-# AliasRedirects emitter then writes a redirect stub at that exact old URL.
-# Keyed by CURRENT destination (the PAGE_MAP value); values are the old
-# destination slugs. If a page moves again, append the newly-old slug here,
-# never remove one: players' bookmarks don't expire.
-#
-# NOTE: frontmatter.ts deliberately does NOT feed these alias slugs into
-# wikilink resolution (allSlugs). An alias by construction shares its
-# basename with the real page, so counting it would make every [[basename]]
-# link ambiguous under the "shortest" strategy and break site-wide. See the
-# comment in quartz/plugins/transformers/frontmatter.ts.
-RENAMES = {
-    # 2026-10-05 jestha.md became Jesthaen's capital city; the old person page's
-    # URL redirects to the city.
-    "locations/jesthaen/jestha.md": ["npcs/jestha"],
-    # 2026-09-27 the Caio move from Setting to Organizations.
-    "organizations/caio.md": ["setting/caio"],
-    # 2026-09-26 Drinmery reorg: the minor-NPC folder becomes "Drinmery Arc",
-    # and Drinmery becomes a Jesthaen folder whose index.md is the town page,
-    # with the convent inside it. Old URLs keep redirecting; carry_forward_source
-    # pulls each page's image:/marker: across.
-    "npcs-minor/drinmery-arc/aldous-pike.md": ["npcs-minor/drinmery/aldous-pike"],
-    "npcs-minor/drinmery-arc/alys.md": ["npcs-minor/drinmery/alys"],
-    "npcs-minor/drinmery-arc/edric-colvin.md": ["npcs-minor/drinmery/edric-colvin"],
-    "npcs-minor/drinmery-arc/hollis-brand.md": ["npcs-minor/drinmery/hollis-brand"],
-    "npcs-minor/drinmery-arc/inkfeather.md": ["npcs-minor/drinmery/inkfeather"],
-    "npcs-minor/drinmery-arc/maud-tallow.md": ["npcs-minor/drinmery/maud-tallow"],
-    "npcs-minor/drinmery-arc/pell.md": ["npcs-minor/drinmery/pell"],
-    "npcs-minor/drinmery-arc/wick.md": ["npcs-minor/drinmery/wick"],
-    "locations/jesthaen/drinmery/index.md": ["locations/jesthaen/drinmery"],
-    "locations/jesthaen/drinmery/convent-of-saint-trefan.md": ["locations/jesthaen/convent-of-saint-trefan"],
-    # 2026-09-26 Novak unmasked after session one: the name-free PC slug moves
-    # to his real name. Keep the old URL redirecting, and let
-    # carry_forward_source pull the old page's image:/marker: across.
-    "player-characters/novak-azimuth.md": ["player-characters/highborne-warrior"],
-    # 2026-09-10 org-cards + diplomacy merge: organizations.md folded into the
-    # Diplomacy page (register now renders as faction cards there). Keep the old
-    # standalone URL redirecting so player bookmarks survive.
-    "setting/diplomacy.md": ["setting/organizations"],
-    # 2026-09-10 Council of Five -> Council of Six retcon (the morally-grey
-    # reconstruction government). Keep the old published URL redirecting, and let
-    # carry_forward_source pull the old page's image:/marker: across the rename.
-    "organizations/the-council-of-six.md": ["organizations/the-council-of-five"],
-    # 2026-07-18 House Arcturus rename: hesper.md/izar.md -> hesper_arcturus/izar_arcturus
-    # (Cowork) -> hesper-arcturus/izar-arcturus (kebab-case, same day). The destination
-    # slug moved with each step; keep every prior published URL redirecting.
-    "npcs/hesper-arcturus.md": ["npcs/hesper", "npcs/hesper_arcturus"],
-    "npcs/izar-arcturus.md": ["npcs/izar", "npcs/izar_arcturus"],
-    # 2026-08-13 House Aquila: lyra.md/cassio.md -> lyra-aquila/cassio-aquila
-    # (firstname-house, per the Arcturus precedent). Keep old URLs redirecting.
-    "npcs/lyra-aquila.md": ["npcs/lyra"],
-    "npcs/cassio-aquila.md": ["npcs/cassio"],
-    # 2026-08-17 Voldis dynasty naming + war renames. Old public URLs keep
-    # redirecting, and carry_forward_source uses these to preserve each page's
-    # content-side image:/marker: block across the rename.
-    "npcs/god-king-voldis.md": ["npcs/the-god-king"],
-    "npcs/valerion-voldis.md": ["npcs/the-mad-king"],
-    "npcs/valeran-voldis.md": ["npcs/the-blessed-king"],
-    # 2026-08-22 events/ reorg: the three lore/event pages moved out of
-    # setting/ into their own events/ section. Old slugs listed oldest-first
-    # (the newly-old setting/ slug appended last), so carry_forward_source
-    # reads the just-superseded content/setting/ file for image:/marker: data.
-    "events/valerions-heresy.md": ["setting/the-mad-kings-war", "setting/valerions-heresy"],
-    "events/the-lodestar-pact.md": ["setting/the-polaris-secession", "setting/the-lodestar-pact"],
-    "events/the-divine-age.md": ["setting/the-divine-age"],
-    # 2026-07-17 landing-page merge: the standalone overview at /setting/althas
-    # was folded into the home page (index.md). Keep that old URL redirecting to
-    # home so player bookmarks survive. All [[althas]] wikilinks in the source
-    # were repointed to [[index]] at the same time.
-    "index.md": ["setting/althas"],
-    # 2026-07-18 moved the Worldbuilding Checklist to the content root (top-level
-    # quick access with map/changelog/dice-roller), out of the setting/ folder.
-    "worldbuilding-checklist.md": ["setting/worldbuilding-checklist"],
-    # 2026-07-16 Explorer/categories reorg
-    "locations/hilltop/crater-lake.md": ["locations/crater-lake"],
-    "organizations/house-voldis.md": ["locations/voldaen/house-voldis"],
-    "organizations/guild.md": ["locations/armada/guild"],
-    "organizations/the-holy-see.md": ["setting/the-holy-see"],
-    "organizations/parish-of-inquisition.md": ["organizations/canton-of-inquisition", "setting/canton-of-inquisition"],
-    "magic/miracles.md": ["setting/miracles"],
-    "magic/codex-magic.md": ["setting/codex-magic"],
-    "magic/splendor-magic.md": ["setting/splendor-magic"],
-    "magic/divine-relics.md": ["setting/divine-relics"],
-    "beings/the-one-above.md": ["setting/the-one-above"],
-    "beings/the-ones-below.md": ["setting/the-ones-below"],
-    "beings/the-ophanim.md": ["setting/the-ophanim"],
-    # 2026-08-19 faeries ancestry reframed and renamed to aetheris (the
-    # church-bound "angels"); a new elves ancestry split off separately. Keep
-    # the old /faeries URLs redirecting to aetheris.
-    "ancestries/aetheris.md": ["ancestries/faeries", "setting/faeries"],
-    "ancestries/giants.md": ["setting/giants"],
-    "ancestries/clanks.md": ["setting/clanks"],
-    "ancestries/infernis.md": ["setting/infernis"],
-}
-
-# Pages that exist in Ontos but produce no public page: everything on them is
-# wrapped [!gm-only] (an in-world secret not yet revealed in play) or [!gm-notes]
-# (author notes), so nothing survives the strip. They are deliberately left out
-# of PAGE_MAP above. Listed here so a skip is a visible decision, not a silent
-# gap. To publish one, unwrap its [!gm-only] material in the Ontos source and add
-# it back to PAGE_MAP + TITLES.
-#
-# 2026-07-16: the former NOT_YET_SHARED list (pages held back despite having
-# public-ready content) was retired at Lucas's request. Those pages' content was
-# wrapped [!gm-only] instead, so "is this page public?" is now answered purely by
-# its tags, one mechanism, not two. The giants (Draconis / Eltanin / Thuban), the
-# Drinmery nobles (Guilmore Fleming / Immanuel Greene), Izar, and the Hilltop
-# night zone joined this list as a result.
-NOT_YET_PUBLIC = {
-    "the-threnodites.md",
-    "sage-magic.md",
-    "ophanim-heresies.md",
-    "the-seven.md",
-    "heresies.md",
-    "oldblood.md",
-    "draconis.md",
-    "eltanin.md",
-    "thuban.md",
-    "castorius-voldis.md",
-    "the-stargazers.md",
-    # 2026-10-07 Antares Algol, held back: his page would expose Dorothea's father.
-    "antares-algol.md",
-    "sombral-spade.md",
-    # 2026-08-27 Witherwild: the cosmology and its keystone secrets. Everything
-    # on these is [!gm-only] (the Faunus, the Old Magic Observer, the Reaping
-    # Eye theft), so nothing survives the strip. Public Witherwild surface is
-    # only witherwild-continent/haven/godless-gate/the-witherwatch above.
-    "nikta.md",
-    "reaping-eye.md",
-    "the-observers.md",
-    # phylax is a decision-capture stub for a future dedicated Phylax/Witherwild
-    # session: its whole body is frame-canon notes and gm-only/gm-notes material,
-    # nothing public-ready. Listed here so its absence from PAGE_MAP is a visible
-    # decision, not a silent gap.
-    "phylax.md",
-    # 2026-08-26 Novak Azimuth ingest, held back. novak-azimuth is the full GM
-    # dossier for the PC (personality, designs on the crown); his public face
-    # is the PC stub (novak-pc-stub.md), not this page. (parashiel.md left this
-    # list 2026-09-26: its mysterious public framing is now on the map.)
-    "novak-azimuth.md",
-    # 2026-09-10 USSI character-Inbox: both fully gm-only, nothing survives the
-    # strip. Alcota (the Beast-of-Alcota town, not widely known in-world) and
-    # Valkas (Zalmir's Witherwild Drakona mentor, all heritage gm-only).
-    "alcota.md",
-    "valkas.md",
-}
-
-# Pages that live in the Ontos setting/ folder but are DELIBERATELY never synced:
-# their content/ counterparts are hand-maintained interactive pages (the dice
-# roller, the Leaflet map, the Sealcarver sigil tool) whose embedded HTML/JS the
-# sync would strip or mangle, so they are edited directly in content/ (the same
-# rule-26 exception that content/changelog.md relies on). The setting/ copies are
-# the GM's Obsidian-side reference. Listed here so "why isn't this page in
-# PAGE_MAP?" is a visible decision, not a silent gap: these are already live via
-# their own content/ files, not withheld like NOT_YET_PUBLIC.
-CONTENT_ONLY = {
-    "dice-roller.md",
-    "map.md",
-    "sealcarver.md",
-}
-
-# The public-fields contract for the typed-infobox pilot (see the campaign's
-# specs/althas-article-templates-design.md in Ontos). These are the ONLY
-# frontmatter keys, besides `title:` and the carried-forward `marker:` block,
-# that are allowed to pass from the GM's source through to the published site.
-# They pass VERBATIM (wikilink values stay raw; the frontend Infobox component
-# parses them). A key not listed here cannot reach the site, so any future
-# vault-side frontmatter field is private by default. Keys only pass for the
-# page's own declared `kind:` (no kind, nothing passes): `date` on a non-event
-# page, for example, is vault bookkeeping, not schema, and stays stripped.
-# Kept in step with quartz/components/Infobox.tsx, scripts/check-infobox-fields.py,
-# and the authoring reference (notes/article-templates.md in the campaign folder).
-INFOBOX_KIND_FIELDS = {
-    "person": ("role", "ancestry", "culture", "pronouns", "house", "nation", "allegiance", "born", "died"),
-    "nation": ("capital", "ruler", "government", "founded"),
-    "location": ("category", "nation", "region", "ruler", "population", "faith"),
-    "organization": ("category", "leader", "seat", "region", "allegiance", "office", "heir", "words", "relic", "founded"),
-    "magic-system": ("source", "practitioners"),
-    "being": ("nature", "domain", "fate"),
-    "artifact": ("category", "origin", "wielder"),
-    "event": ("category", "when", "place", "parties", "commanders", "strength", "casualties", "outcome", "part-of"),
-    "ancestry": ("homeland", "standing"),
-}
 
 CALLOUT_START_RE = re.compile(r"^>\s*\[!(gm-only|gm-notes)\]", re.IGNORECASE)
 # Any callout opener, GM or public. Used to stop stripping at a *public* callout
@@ -557,6 +73,64 @@ CALLOUT_START_RE = re.compile(r"^>\s*\[!(gm-only|gm-notes)\]", re.IGNORECASE)
 CALLOUT_ANY_START_RE = re.compile(r"^>\s*\[!", re.IGNORECASE)
 HEADING_RE = re.compile(r"^#{1,6}\s")
 FRONTMATTER_RE = re.compile(r"^---\n(.*?\n)---\n?", re.DOTALL)
+
+# A wikilink, but never an image embed (![[...]]). Groups: target, optional
+# #heading anchor, optional |alias. Both anchor and alias are preserved as-is.
+WIKILINK_RE = re.compile(r"(?<!!)\[\[([^\]|#]+)((?:#[^\]|]+)?)(\|[^\]]+)?\]\]")
+
+
+def build_link_table():
+    """Map an Obsidian source-page basename to its published slug, but ONLY
+    where the page's file name changes on the way out.
+
+    A bilingual wiki names its source files `<page>.en.md` / `<page>.pt.md` so
+    they never collide in the shared vault, while publishing them at clean slugs
+    (`<page>`, `pt/<page>`). The source therefore links a sibling as
+    `[[gazetteer.en]]` (which resolves in Obsidian); this table rewrites that to
+    `[[gazetteer]]` on the way into content/, where the site resolves it.
+
+    A monolingual wiki publishes most pages under their source file name, even
+    when it files one into a folder (`infernis.md` -> `ancestries/infernis.md`)
+    or makes it a folder's own page (`polaris.md` -> `locations/polaris/
+    index.md`), and Quartz resolves the bare `[[infernis]]` / `[[polaris]]` by
+    that name. Those pairs add nothing here, so their links are copied
+    byte-for-byte. Only a page published under a different name than its source
+    file (a stub source renamed on the way out) gets an entry, which turns a
+    link to the source name into a working link instead of a dangling one.
+    LINK_REWRITE (optional, per-wiki) adds targets that have no synced source
+    page, i.e. content-only stubs like the interactive map.
+    """
+    table = {}
+    for src_name, dest_rel in PAGE_MAP.items():
+        src_key = src_name[:-3]      # drop '.md' -> 'gazetteer.en'
+        dest_slug = dest_rel[:-3]    # drop '.md' -> 'gazetteer'
+        if src_key != shortest_key(dest_slug):
+            table[src_key] = dest_slug
+    table.update(LINK_REWRITE)
+    return table
+
+
+LINK_TABLE = build_link_table()
+
+
+def rewrite_wikilinks(body, table=None):
+    """Rewrite [[source-basename|alias]] links to their published slug per the
+    link table. Image embeds (![[...]]) and any target not in the table are left
+    untouched; the #heading anchor and |alias are preserved exactly. A no-op when
+    the table is empty (the monolingual case), so output stays byte-identical."""
+    if table is None:
+        table = LINK_TABLE
+    if not table:
+        return body
+
+    def repl(m):
+        target, anchor, alias = m.group(1), m.group(2), m.group(3)
+        slug = table.get(target)
+        if slug is None:
+            return m.group(0)
+        return f"[[{slug}{anchor}{alias or ''}]]"
+
+    return WIKILINK_RE.sub(repl, body)
 
 
 def split_frontmatter(text):
@@ -735,38 +309,6 @@ def clean_blank_runs(text):
 IMAGE_EMBED_RE = re.compile(r"^!\[[^\]]*\]\([^)]+\)\s*$|^!\[\[[^\]|]+(\|[^\]]+)?\]\]\s*$")
 
 
-# A portrait embed: `![[name.jpg]]` or `![[name.jpg|320]]`, image files only.
-PORTRAIT_RE = re.compile(r"^!\[\[(\w[\w .'-]*\.(?:png|jpe?g|webp|gif|avif))(?:\|\d+)?\]\]$", re.IGNORECASE)
-MISSING_PORTRAITS = []
-
-
-def leading_portrait(raw_body):
-    """The portrait filename if the very first line of the source body, read
-    BEFORE the gm-strip, is a portrait embed. An image anywhere below a callout,
-    even one written without `>`, never qualifies."""
-    for line in raw_body.splitlines():
-        if line.strip():
-            m = PORTRAIT_RE.match(line.strip())
-            return m.group(1) if m else None
-    return None
-
-
-def seed_portrait(filename):
-    """A brand-new page has no content/ file to carry image: from, so take it
-    from the source's leading portrait, copying the file in from the campaign's
-    raw/character-art/. Fixed 2026-10-07: the filename used to be thrown away,
-    so every new page published without its portrait."""
-    art = ONTOS_SETTING.parent / "raw" / "character-art" / filename
-    if not art.is_file():
-        MISSING_PORTRAITS.append(filename)
-        return None
-    assets = CONTENT_DIR / "assets"
-    assets.mkdir(parents=True, exist_ok=True)
-    if not (assets / filename).exists():
-        shutil.copy2(art, assets / filename)
-    return f"image: {filename}"
-
-
 def strip_leading_image(body):
     """Drop a standalone image embed if it's the first non-blank line of the
     Ontos body, and capture an italic caption line immediately following it.
@@ -807,6 +349,40 @@ def strip_leading_image(body):
             drop.add(j)
     new_lines = [line for k, line in enumerate(lines) if k not in drop]
     return "\n".join(new_lines), caption
+
+
+# A portrait embed: `![[name.jpg]]` or `![[name.jpg|320]]`, image files only.
+PORTRAIT_RE = re.compile(r"^!\[\[(\w[\w .'-]*\.(?:png|jpe?g|webp|gif|avif))(?:\|\d+)?\]\]$", re.IGNORECASE)
+MISSING_PORTRAITS = []
+
+
+def leading_portrait(raw_body):
+    """The portrait filename if the very first line of the source body, read
+    BEFORE the gm-strip, is a portrait embed. An image anywhere below a callout,
+    even one written without `>`, never qualifies."""
+    for line in raw_body.splitlines():
+        if line.strip():
+            m = PORTRAIT_RE.match(line.strip())
+            return m.group(1) if m else None
+    return None
+
+
+def seed_portrait(filename):
+    """A brand-new page has no content/ file to carry image: from, so take it
+    from the source's leading portrait, copying the file in from PORTRAIT_DIR.
+    Fixed 2026-10-07: the filename used to be thrown away, so every new page
+    published without its portrait."""
+    if PORTRAIT_DIR is None:
+        return None
+    art = Path(PORTRAIT_DIR) / filename
+    if not art.is_file():
+        MISSING_PORTRAITS.append(filename)
+        return None
+    assets = CONTENT_DIR / "assets"
+    assets.mkdir(parents=True, exist_ok=True)
+    if not (assets / filename).exists():
+        shutil.copy2(art, assets / filename)
+    return f"image: {filename}"
 
 
 def render(
@@ -867,6 +443,7 @@ def sync_page(src_name, dest_rel):
     body = strip_meta_lines(body)
     body = drop_empty_headings(body)
     body = clean_blank_runs(body)
+    body = rewrite_wikilinks(body)
 
     dest = CONTENT_DIR / dest_rel
     marker_block = None
@@ -911,7 +488,7 @@ def main():
         print(f"  {name}")
 
     if MISSING_PORTRAITS:
-        print("\nERROR: new page portrait(s) not found in raw/character-art/, so the page has no image:")
+        print(f"\nERROR: new page portrait(s) not found in {PORTRAIT_DIR}, so the page has no image:")
         for name in MISSING_PORTRAITS:
             print(f"  {name}")
         return 1

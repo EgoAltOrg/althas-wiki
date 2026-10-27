@@ -42,9 +42,11 @@ moves into [!gm-only] in the Ontos source or joins the allowlist is exactly
 the judgment call a human owns (root CLAUDE.md rule 25). Exits non-zero on
 any FAIL, mirroring check-infobox-fields.py, so it can gate the publish.
 
-Allowlist (scripts/related-pages-allowlist.json): human-owned exceptions,
-small enough to review during every publish; unused entries are reported so
-it never silently accumulates. Structure:
+Allowlist (related-pages-allowlist.json, in scripts/ or, for a wiki whose
+config stays out of the public repo, in the WIKI_CONFIG_DIR folder; never in
+both, see wiki_config.py): human-owned exceptions, small enough to review
+during every publish; unused entries are reported so it never silently
+accumulates. Structure:
   {
     "hub_targets":  ["diplomacy", ...],   // site-wide overview/utility pages
                                           // any page may link without grounding
@@ -67,13 +69,24 @@ import re
 import sys
 from pathlib import Path
 
+from wiki_config import config_path, shortest_key
+
 SCRIPTS_DIR = Path(__file__).resolve().parent
 DEFAULT_CONTENT = SCRIPTS_DIR.parent / "content"
-DEFAULT_ALLOWLIST = SCRIPTS_DIR / "related-pages-allowlist.json"
+DEFAULT_ALLOWLIST = config_path("related-pages-allowlist.json")
 
 # Same target regex family as check-broken-links.py (handles table-escaped \|).
 LINK_RE = re.compile(r"\[\[([^\]|#\\]+)(\\?\|([^\]]+))?\]\]")
-RP_HEADING_RE = re.compile(r"^#{1,6}\s+(related pages|see also)\s*$", re.IGNORECASE)
+# Just a wikilink's target, whatever follows it (alias, escaped pipe, #anchor).
+LINK_TARGET_RE = re.compile(r"\[\[([^\]|#\\]+)")
+# Related-pages heading in every language a wiki publishes: the grounding
+# (spoiler) check only fires on links UNDER this heading, so a language whose
+# heading is missing here would silently escape the gate. Add each new
+# language's heading as the wiki adds the language (EN + European Portuguese
+# today).
+RP_HEADING_RE = re.compile(
+    r"^#{1,6}\s+(related pages|see also|p[áa]ginas relacionadas)\s*$", re.IGNORECASE
+)
 HEADING_RE = re.compile(r"^#{1,6}\s")
 # A list line that is nothing but a wikilink, optionally with ": description".
 BARE_BULLET_RE = re.compile(r"^(\s*-\s*)\[\[([^\]|#\\]+)(\\?\|([^\]]+))?\]\](\s*:\s*(.*))?\s*$")
@@ -82,9 +95,9 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?\n)---\n?", re.DOTALL)
 # Frontmatter keys that are presentation/plumbing, never relational claims.
 FM_SKIP_KEYS = {"title", "aliases", "image", "image_caption", "marker", "submap"}
 
-# Cardinal-number words. A title like "The Seven" whose only word after the
+# Cardinal-number words. A title like "The Twelve" whose only word after the
 # article is a number must not be matched by that bare number in prose (see
-# title_pattern): "seven" appears in ordinary sentences ("five to seven feet").
+# title_pattern): "twelve" appears in ordinary sentences ("ten to twelve feet").
 NUMBER_WORDS = {
     "zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
     "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
@@ -94,18 +107,18 @@ NUMBER_WORDS = {
 }
 
 # Extra surface forms to also flag for a specific secret title (keyed by the
-# lowercased title). Opt-in per entity, NOT a blanket morphological rule: use it
+# lowercased title). Each wiki fills these in its sync_config.py
+# (EXTRA_TITLE_FORMS, optional); main() merges them in. Opt-in per entity, NOT
+# a blanket morphological rule: use it
 # only where the word is archaic enough never to appear in public prose by
 # accident, so matching its singular costs no false positives. 'The Threnodies'
 # qualifies (a threnody is an obscure funeral lament). A common-word secret like
-# 'Heresies' is deliberately NOT here: the singular 'heresy' is ordinary Church
-# vocabulary ('named the claim heresy', 'between faith and heresy') and the
-# public civil war 'Valerion's Heresy' is named across the live wiki, so a y-ies
-# rule there flagged 36 public lines (2026-09-04). The singular/plural split is
-# the firewall that keeps the secret 'Heresies' distinct from the public 'Heresy'.
-EXTRA_TITLE_FORMS = {
-    "the threnodies": ["threnody"],
-}
+# 'Prophecies' is deliberately NOT a candidate: the singular 'prophecy' is
+# ordinary vocabulary, and a public event such as 'the Last Prophecy' may be
+# named across the live wiki, so a y-ies rule there flags public lines (one
+# wiki's version flagged 36, 2026-09-04). The singular/plural split is the
+# firewall that keeps a secret 'Prophecies' distinct from a public 'Prophecy'.
+EXTRA_TITLE_FORMS = {}
 
 
 def load_sync_module():
@@ -156,19 +169,20 @@ def title_pattern(title):
     grounds a link to Miracles; 'a giant' grounds Giants).
 
     There is no blanket y<->ies rule: matching an -ies plural to its -y singular
-    conflates entities the singular/plural split keeps apart (the secret
-    'Heresies' vs the public civil war 'Valerion's Heresy'). EXTRA_TITLE_FORMS
+    conflates entities the singular/plural split keeps apart (a secret
+    'Prophecies' vs a public 'Last Prophecy'). EXTRA_TITLE_FORMS
     instead opts a specific title into extra surface forms where its word is
     archaic enough to be a safe leak signal ('The Threnodies' also catches the
     singular 'threnody'); see that constant for the reasoning."""
     parts = re.split(r"[\s-]+", title.strip())
     variants = [parts]
     # Also match the title without its leading article ('The Hilltop Night Zone'
-    # -> 'Hilltop Night Zone', 'The Stargazers' -> bare 'stargazer' so a leaked
-    # "Castorius is a stargazer" is caught). The one exception: a single-word
-    # remainder that is a NUMBER ('The Seven' -> 'seven') would match the number
-    # in ordinary prose ('five to seven feet', 'seven days'), a false positive
-    # that blocks every publish, so 'The Seven' requires its article. This is
+    # -> 'Hilltop Night Zone', 'The Lamplighters' -> bare 'lamplighter' so a
+    # leaked "the abbot is a lamplighter" is caught). The one exception: a
+    # single-word remainder that is a NUMBER ('The Twelve' -> 'twelve') would
+    # match the number in ordinary prose ('ten to twelve feet', 'twelve days'),
+    # a false positive that blocks every publish, so 'The Twelve' requires its
+    # article. This is
     # the only remainder class common enough in prose to warrant the exception;
     # distinctive proper nouns keep their bare-word leak matching.
     if parts and parts[0].lower() == "the" and len(parts) > 1:
@@ -198,6 +212,52 @@ def render_links(text):
     return LINK_RE.sub(lambda m: (m.group(3) or m.group(1)).strip(), text)
 
 
+def resolve_slug(target, slugs, slug_set):
+    """Resolve an Obsidian wikilink target to a content slug the way Quartz's
+    markdownLinkResolution:"shortest" does (quartz/util/path.ts, transformLink):
+    a UNIQUE last-segment match wins; otherwise the target is an absolute root-
+    relative slug (resolving only if that slug, or that folder's index, exists);
+    a trailing slash is a folder link, resolving only to that folder's index.
+    This is what makes a bilingual wiki's [[pt/world]] resolve to pt/world's own
+    page (title "O Mundo") instead of colliding with the EN "world" by basename.
+    Returns the resolved slug (lowercased) or None.
+
+    Case-INSENSITIVE (lowercases target and slugs): this gate keys titles and
+    slugs lowercase throughout and errs toward grounding, so a casing mismatch
+    never blocks a publish. Its twin resolve_target in check-broken-links.py is
+    case-sensitive to stay faithful to Quartz (which never lowercases); a link
+    that only Quartz breaks is the broken-links gate's job to flag, not this
+    one's. Both gate the same slug list, so on all-lowercase filenames (the
+    convention) they agree."""
+    raw = target.split("#", 1)[0].strip()
+    is_folder = raw.endswith("/")
+    canonical = raw.strip("/").lower()
+    if not canonical:
+        return None
+    if is_folder:
+        return f"{canonical}/index" if f"{canonical}/index" in slug_set else None
+    matches = [s for s in slugs if shortest_key(s) == canonical]
+    if len(matches) == 1:
+        return matches[0]
+    if canonical in slug_set:
+        return canonical
+    if f"{canonical}/index" in slug_set:
+        return f"{canonical}/index"
+    return None
+
+
+def resolve_title(target, titles_by_slug, slugs, slug_set):
+    """Display title of whatever page `target` resolves to, or None. Tries a
+    direct full-slug hit first (covers [[pt/world]] and root [[world]] alike,
+    since a root page's slug is its own basename), then falls back to Quartz's
+    shortest resolver for a bare link to a nested page."""
+    key = target.strip().strip("/").lower()
+    if key in titles_by_slug:
+        return titles_by_slug[key]
+    resolved = resolve_slug(target, slugs, slug_set)
+    return titles_by_slug.get(resolved) if resolved else None
+
+
 class Page:
     def __init__(self, path, content_dir):
         self.path = path
@@ -209,10 +269,12 @@ class Page:
         self.body = body
         self.title = page_title(fm, path.stem)
         self.fields = frontmatter_scalar_fields(fm)
+        # This page's full root-relative slug (POSIX, no .md, lowercase): its
+        # identity for resolution. Keying on the full slug rather than the bare
+        # basename is what keeps world.md and pt/world.md distinct.
+        self.slug = path.relative_to(content_dir).with_suffix("").as_posix().lower()
         # Slugs that count as "this page itself" (self-links are not claims).
-        self.self_slugs = {path.stem.lower()}
-        if path.stem == "index":
-            self.self_slugs.add(path.parent.name.lower())
+        self.self_slugs = {self.slug}
 
         # Partition body lines: RP-section lines / bare bullets / prose.
         lines = body.splitlines()
@@ -248,18 +310,36 @@ class Page:
         self.corpus_rendered = render_links(self.corpus_raw + "\n" + fields_text)
         self.prose_rendered = render_links(self.corpus_raw)
         self.folder = str(Path(self.rel).parent).replace("\\", "/")
+        self._link_index = None
 
-    def _names(self, slug, titles_by_slug, prose_only=False):
+    def _links(self, slugs, slug_set):
+        """This page's prose wikilinks, worked out once per run: the targets as
+        written (lowercased) and the slugs they resolve to."""
+        if self._link_index is None:
+            raw = {m.group(1).strip() for m in LINK_TARGET_RE.finditer(self.corpus_raw)}
+            written = {link.strip("/").lower() for link in raw}
+            resolved = {resolve_slug(link, slugs, slug_set) for link in raw} - {None}
+            self._link_index = (written, resolved)
+        return self._link_index
+
+    def _names(self, target, titles_by_slug, slugs, slug_set, prose_only=False):
         """Does THIS page's own public content (prose + visible infobox values,
-        outside the claim surfaces) name the given slug, by wikilink or title?
+        outside the claim surfaces) name the given target, by wikilink or title?
+        A wikilink counts when it resolves to the same page the target does,
+        however either is written: on a wiki that files pages into folders,
+        [[human]] and [[ancestries/human]] are one page.
         prose_only=True excludes infobox values."""
-        if re.search(r"\[\[" + re.escape(slug) + r"(\]\]|\\?\||#)", self.corpus_raw, re.IGNORECASE):
+        written, resolved = self._links(slugs, slug_set)
+        if target.strip().strip("/").lower() in written:
             return True
-        title = titles_by_slug.get(slug.lower())
+        want = resolve_slug(target, slugs, slug_set)
+        if want and want in resolved:
+            return True
+        title = resolve_title(target, titles_by_slug, slugs, slug_set)
         corpus = self.prose_rendered if prose_only else self.corpus_rendered
         return bool(title and title_pattern(title).search(corpus))
 
-    def grounds(self, target, titles_by_slug, slug_folders=None, by_slug=None, prose_only=False):
+    def grounds(self, target, titles_by_slug, slugs, slug_set, slug_folders=None, by_slug=None, prose_only=False):
         """Is a link from this page to `target` grounded by public content, so
         it is NOT connected only by a still-hidden secret (rule 25)? Grounding
         is bidirectional: the connection counts as public if it's stated on
@@ -267,26 +347,26 @@ class Page:
         public page justifies. Reciprocal Related Pages bullets don't count
         (the RP section is excluded from both corpora), so two ungrounded
         bullets can't circularly ground each other."""
-        slug = target.lower()
-        if slug in self.self_slugs or slug == "index":
+        resolved = resolve_slug(target, slugs, slug_set) or target.strip().strip("/").lower()
+        if resolved in self.self_slugs or resolved == "index":  # self_slugs == {self.slug}
             return True
         # Folder containment: a folder's index page linking a page inside its
         # own folder states the relationship by structure (Jesthaen -> Drinmery).
         if slug_folders is not None and self.path.stem == "index":
-            target_folder = slug_folders.get(slug, "")
+            target_folder = slug_folders.get(resolved, "")
             if target_folder == self.folder or target_folder.startswith(self.folder + "/"):
                 return True
         # Forward: this page's public content names the target.
-        if self._names(target, titles_by_slug, prose_only):
+        if self._names(target, titles_by_slug, slugs, slug_set, prose_only):
             return True
-        # Backward: the target page's public content names THIS page (by any of
-        # this page's own slugs, or its title). A connection publicly stated on
-        # the target's side is public, so the link here is not a leak.
+        # Backward: the target page's public content names THIS page (by its own
+        # slug, or its title). A connection publicly stated on the target's side
+        # is public, so the link here is not a leak.
         if by_slug is not None:
-            target_page = by_slug.get(slug)
+            target_page = by_slug.get(resolved)
             if target_page is not None and target_page is not self:
                 for s in self.self_slugs:
-                    if target_page._names(s, titles_by_slug):
+                    if target_page._names(s, titles_by_slug, slugs, slug_set):
                         return True
                 if title_pattern(self.title).search(target_page.corpus_rendered):
                     return True
@@ -294,24 +374,22 @@ class Page:
 
 
 def build_title_map(content_dir):
-    """slug (lowercase) -> display title, and slug -> containing folder, from
-    content/ itself: a page's stem, plus its folder name when the page is a
-    folder's index.md (matching the patched 'shortest' resolution strategy).
-    The bare stem "index" is never registered: it would collide across every
-    folder index and misattribute titles."""
+    """slug (full root-relative, lowercase, no .md) -> display title, and slug ->
+    containing folder, from content/ itself. Keying by the FULL slug rather than
+    the bare basename is what keeps a bilingual wiki's world -> "The World" and
+    pt/world -> "O Mundo" apart instead of one silently overwriting the other
+    (the collision that made this gate check EN prose against a PT title). Also
+    returns the slug list + set the shortest resolver needs."""
     titles = {}
     folders = {}
     for p in content_dir.rglob("*.md"):
         fm, _ = split_frontmatter(p.read_text())
         title = page_title(fm, p.stem)
-        rel_folder = str(p.parent.relative_to(content_dir)).replace("\\", "/")
-        if p.stem == "index":
-            titles[p.parent.name.lower()] = title
-            folders[p.parent.name.lower()] = rel_folder
-        else:
-            titles[p.stem.lower()] = title
-            folders[p.stem.lower()] = rel_folder
-    return titles, folders
+        slug = p.relative_to(content_dir).with_suffix("").as_posix().lower()
+        folders[slug] = str(p.parent.relative_to(content_dir)).replace("\\", "/")
+        titles[slug] = title
+    slug_set = set(titles)
+    return titles, folders, sorted(slug_set), slug_set
 
 
 def secret_matchers(sync_mod, public_names):
@@ -335,7 +413,7 @@ def main():
     ap.add_argument("--content-dir", type=Path, default=DEFAULT_CONTENT,
                     help="content/ folder to scan (default: repo's)")
     ap.add_argument("--allowlist", type=Path, default=DEFAULT_ALLOWLIST,
-                    help="allowlist JSON (default: scripts/related-pages-allowlist.json)")
+                    help="allowlist JSON (default: related-pages-allowlist.json in the config dir)")
     args = ap.parse_args()
     content_dir = args.content_dir.resolve()
 
@@ -348,7 +426,8 @@ def main():
     used_allowlist = set()
 
     sync_mod = load_sync_module()
-    titles_by_slug, slug_folders = build_title_map(content_dir)
+    EXTRA_TITLE_FORMS.update(getattr(sys.modules["sync_config"], "EXTRA_TITLE_FORMS", {}))
+    titles_by_slug, slug_folders, slugs, slug_set = build_title_map(content_dir)
     secrets = secret_matchers(sync_mod, public_names)
 
     failures = []
@@ -389,7 +468,7 @@ def main():
             if target.lower() in page_allow:
                 used_allowlist.add((page.rel, target.lower()))
                 continue
-            if not page.grounds(target, titles_by_slug, slug_folders, by_slug):
+            if not page.grounds(target, titles_by_slug, slugs, slug_set, slug_folders, by_slug):
                 failures.append(
                     f"{page.rel}:{lineno} Related Pages link [[{target}|{display}]] has no grounding "
                     f"in this page's own public prose (rule 25: either the connecting fact is still "
@@ -403,20 +482,26 @@ def main():
         # SECRET name in a field is caught by check 3 above, which scans the
         # whole file. prose_only: a field value never grounds its own claim.
         for key, value in page.fields.items():
-            claim_slugs = {m.group(1).strip().lower() for m in LINK_RE.finditer(value)}
+            # One claim per page, keyed by the slug it resolves to (so a linked
+            # entity whose title also appears in the value counts once) and
+            # reported as written (a link's own target, or a title's slug).
+            claims = {}
+            for m in LINK_RE.finditer(value):
+                written = m.group(1).strip().lower()
+                claims.setdefault(resolve_slug(written, slugs, slug_set) or written, written)
             rendered_value = render_links(value)
             for slug, title in titles_by_slug.items():
-                if slug in page.self_slugs or slug in claim_slugs:
+                if slug in page.self_slugs or slug in claims:
                     continue
                 if title_pattern(title).search(rendered_value):
-                    claim_slugs.add(slug)
-            for slug in sorted(claim_slugs):
-                if slug in page.self_slugs or slug in hub_targets:
+                    claims[slug] = slug
+            for resolved, slug in sorted(claims.items(), key=lambda kv: kv[1]):
+                if resolved in page.self_slugs or slug in page.self_slugs or slug in hub_targets:
                     continue
                 if slug in page_allow:
                     used_allowlist.add((page.rel, slug))
                     continue
-                if not page.grounds(slug, titles_by_slug, slug_folders, by_slug, prose_only=True):
+                if not page.grounds(slug, titles_by_slug, slugs, slug_set, slug_folders, by_slug, prose_only=True):
                     warnings.append(
                         f"{page.rel} infobox field {key}: {value!r} names [[{slug}]], "
                         f"which the page body never mentions"
@@ -431,7 +516,7 @@ def main():
             if target.lower() in hub_targets:
                 used_allowlist.add(("hub", target.lower()))
                 continue
-            if not page.grounds(target, titles_by_slug, slug_folders, by_slug):
+            if not page.grounds(target, titles_by_slug, slugs, slug_set, slug_folders, by_slug):
                 warnings.append(f"{page.rel}:{lineno} bare list link [[{target}|{display}]] outside Related Pages, not restated in prose")
 
     stale = [
