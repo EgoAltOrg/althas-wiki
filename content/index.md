@@ -104,7 +104,7 @@ All communities are available across nations, but some have unique aspects withi
 ## Locations
 
 - [[jestha|Jestha]]: the capital of Jesthaen
-- [[basilica-of-saint-avel|Basilica of Saint Avel]]: a basilica of long recoveries in the center of Jestha, built around Saint Avel's infirmary
+- [[basilica-of-saint-avel|Basilica of Saint Avel]]: the Parish of Orthodoxy's base in Jesthaen, in the center of Jestha, built around Saint Avel's infirmary
 - [[drinmery|Drinmery]]: city in Jesthaen, home of the Convent of Saint Trefan
 - [[convent-of-saint-trefan|Convent of Saint Trefan]]: a convent in Drinmery prized for its rare library
 - [[lampfort|The Lampfort]]: the old fort west of Drinmery where Saint Trefan held off the Mad King's host
@@ -218,6 +218,6 @@ All communities are available across nations, but some have unique aspects withi
 ## History (Voldaen)
 
 - [[house-voldis|House Voldis]]: the royal dynasty, with the family tree from the God King to Valis
-- [[god-king-voldis|Voldis, the God King]], [[valerion-voldis|Valerion, the Mad King]], [[valeran-voldis|Valeran, the Blessed King]], and King [[castus-voldis|Castus]]: the founding king and the ancient reigns the histories remember
+- [[god-king-voldis|Voldis]] the God King, [[valerion-voldis|Valerion Voldis]] the Mad King, [[valeran-voldis|Valeran Voldis]] the Blessed King, and King [[castus-voldis|Castus Voldis]]: the founding king and the ancient reigns the histories remember
 - [[valthis-voldis|Valthis Voldis]], [[edrion-voldis|Edrion Voldis]], [[valis-voldis|Valis Voldis]], [[aldric-voldis|Aldric Voldis]]: the Voldis Succession Crisis cast
 - [[kingslayer|The Kingslayer]]: unidentified killer of Valthis Voldis, tavern legend in Voldaen

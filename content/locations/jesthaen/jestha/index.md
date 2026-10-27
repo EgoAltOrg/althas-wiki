@@ -23,7 +23,7 @@ Jestha is the capital of [[jesthaen|Jesthaen]]. After the Civil War, the city wa
 
 ## Notable Places
 
-- [[basilica-of-saint-avel|The Basilica of Saint Avel]], in the city's center: a basilica of long recoveries founded around Saint [[avel-cruoris|Avel Cruoris's]] infirmary.
+- [[basilica-of-saint-avel|The Basilica of Saint Avel]], in the city's center, founded around Saint [[avel-cruoris|Avel Cruoris]]'s infirmary.
 
 ## Related pages
 

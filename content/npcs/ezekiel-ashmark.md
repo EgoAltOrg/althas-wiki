@@ -5,7 +5,7 @@ role: "Archbishop of [[jesthaen|Jesthaen]]"
 ancestry: Infernis
 pronouns: he/him
 nation: "[[jesthaen|Jesthaen]]"
-allegiance: "[[the-holy-see|The Holy See]]"
+allegiance: "[[jesthaen|Jesthaen]]"
 image: nightcrawler-ref-1.png
 ---
 
@@ -39,7 +39,7 @@ When the revolution broke out in 351 VR he went to [[aldric-voldis|Aldric]], bec
 
 ### The Ashmark
 
-Soldiers of [[voldaen|Voldaen]] still tell of a night before a battle when every officer in their camp woke with a cross of ash on his brow, though the sentries swore no one had passed. The officers would not march, and the army withdrew without a fight, so the battle never counted against [[augustus-corvus|the Red Raven]]'s unbroken record. Jesthaen's soldiers named him for that night, and he took the name as his own.
+Soldiers of [[voldaen|Voldaen]] still tell of a night before a battle when every officer in their camp woke with a cross of ash on his brow, though the sentries swore no one had passed. The officers would not march, and the army withdrew without a fight, so the battle never counted against the unbroken record of [[augustus-corvus|Augustus Corvus]], the Red Raven. Jesthaen's soldiers named him for that night, and he took the name as his own.
 
 ### Archbishop of Jesthaen
 

@@ -9,7 +9,7 @@ image: avel-cruoris-stained-glass.png
 image_caption: "Saint Avel's window in the original infirmary."
 ---
 
-**Summary**: A basilica of long recoveries in the center of [[jestha|Jestha]], founded around the infirmary of [[avel-cruoris|Saint Avel Cruoris]]: a chapel, infirmaries and a cloister among medicinal gardens and orchards, where patients stay for weeks or months.
+**Summary**: The Basilica of Saint Avel, in the center of [[jestha|Jestha]], founded around the infirmary of Saint [[avel-cruoris|Avel Cruoris]]: a chapel, infirmaries and a cloister among medicinal gardens and orchards, where patients stay for weeks or months.
 
 ---
 

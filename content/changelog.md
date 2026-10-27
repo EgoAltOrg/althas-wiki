@@ -7,8 +7,8 @@ What's new on the wiki, most recent first.
 ## 2026-10-27
 
 - **The days of the week.** The [[calendar|Calendar]] now names the eleven days, each for one plea of a prayer the faithful learn as children, from Exauday to Reverday, with the Saint's Day at the center.
-- **[[jestha|Jestha]]** now heads a section of its own under Jesthaen; its old link still works.
-- **The Basilica of Saint Avel.** A new page for the [[basilica-of-saint-avel|basilica of long recoveries]] at the heart of Jestha, the Parish of Orthodoxy's base in Jesthaen, and one for its founder, [[avel-cruoris|Saint Avel Cruoris]].
+- **[[jestha|Jestha]].** The city now heads a section of its own under Jesthaen; its old link still works.
+- **[[basilica-of-saint-avel|The Basilica of Saint Avel]].** A new page for the Parish of Orthodoxy's base in Jesthaen, at the heart of Jestha, and one for its founder, Saint [[avel-cruoris|Avel Cruoris]].
 - **[[ezekiel-ashmark|Ezekiel Ashmark]].** A new page for the Infernis Archbishop of Jesthaen, Aldric's right hand in the civil war and bearer of the Miracle of Raptus.
 - **[[antares-algol|Antares Algol]].** A new page for the Archmage who governs Polaris while Hesper's seat stands empty and Lyra keeps to her tower. [[miracles|Miracles]] adds his Abrogation and Ezekiel's Raptus, and [[polaris|Polaris]] names him among the Triumvirate.
 
