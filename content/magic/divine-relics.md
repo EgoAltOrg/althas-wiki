@@ -17,6 +17,10 @@ image: divine-relics.jpg
 
 Relics from the Divine Age's war against [[the-ones-below|the Ones Below]] can be safely wielded by anyone of holyblood: anyone who carries a [[miracles|Miracle]]. It doesn't matter which one. The Relic answers to the blood, not to any particular gift, so someone whose Miracle is useless in a fight, a healer's blessing, a scholar's small trick, can still be devastating on the battlefield with a Divine Relic in hand.
 
+Among the Relics Althas has lost are the Twinblades, **Truth** and **Ideal**, the swords of the Voldis kings, lost with King [[castus-voldis|Castus]] at the fall of [[haven|Haven]].
+
+![[twinblades.webp|320]]
+
 ## Properties
 
 ### Consequence for the unworthy

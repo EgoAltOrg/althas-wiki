@@ -37,3 +37,4 @@ Polaris is ruled by a Triumvirate of Archmages. [[lyra-aquila|Lyra Aquila]] hold
 - [[giants|Giants]]
 - [[diplomacy|Diplomacy]]
 - [[the-lodestar-pact|The Lodestar Pact]]
+- [[antares-algol|Antares Algol]]

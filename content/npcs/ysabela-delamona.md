@@ -11,7 +11,7 @@ allegiance: People of Andaluria
 image: ysabela-delamona.webp
 ---
 
-**Summary**: Condesa **Ysabela Delamoña IV**, the wealthiest noble of [[andaluria|Andaluria]] and head of House Delamoña, the one great house of the old holy capital that did not leave when [[the-ophanim|the Ophanim]] fell. Beloved as the patron who stayed, she pours her wine-fortune into the region's reconstruction and is betrothed to Archbishop [[mateo-veyra|Mateo Veyra]].
+**Summary**: Condesa **Ysabela Delamoña IV**, the wealthiest noble of [[andaluria|Andaluria]] and head of House Delamoña, the one great house of the old holy capital that did not leave when [[the-ophanim|the Ophanim]] landed. Beloved as the patron who stayed, she pours her wine-fortune into the region's reconstruction and is betrothed to Bishop [[mateo-veyra|Mateo Veyra]].
 
 ---
 
@@ -38,3 +38,4 @@ Of late her name has been joined with the Church's once more: she is betrothed t
 - [[the-holy-see|The Holy See]]
 - [[hilltop|Hilltop]]
 - [[the-ophanim|The Ophanim]]
+- [[serracorte|Serracorte]]

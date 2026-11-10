@@ -13,19 +13,20 @@ submap:
     zoomDelta: 0.25
 ---
 
-**Summary**: A little-known brothel in [[drinmery|Drinmery]], associated with the Wakeful Lamp.
+**Summary**: A little-known brothel in [[drinmery|Drinmery]], associated with the [[wakeful-lamp|Wakeful Lamp]].
 
 ---
 
 ## History
 
-On Adventus 13, 366 VR, [[alys|Alys]] told the party here how [[tobias-wren|Father Tobias]] passed on her son Colm's last words, [[mother-wenna|Mother Wenna]] told [[uriel-kenan|Uriel]] that the bandits never attack [[immanuel-greene|Greene's]] carriages, and [[dorothea|Dorothea]] said her goodbye.
+On Adventus 13, 366 VR, [[alys|Alys]] told the party here how Father [[tobias-wren|Tobias]] passed on her son Colm's last words, Mother [[wenna|Wenna]] told [[uriel-kenan|Uriel]] that the bandits never attack [[immanuel-greene|Greene's]] carriages, and [[dorothea|Dorothea]] said her goodbye.
 
 ## Inhabitants
 
-- [[mother-wenna|Mother Wenna]], the madam.
+- Mother [[wenna|Wenna]], the madam.
 - [[alys|Alys]].
 
 ## Related pages
 
 - [[drinmery|Drinmery]]
+- [[wakeful-lamp|Wakeful Lamp]]

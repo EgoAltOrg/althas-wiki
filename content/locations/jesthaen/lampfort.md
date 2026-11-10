@@ -18,7 +18,7 @@ submap:
     zoomDelta: 0.25
 ---
 
-**Summary**: An old fort a day and a half west of [[drinmery|Drinmery]] along the river, where Saint Trefan held off the Mad King's host in [[valerions-heresy|Valerion's Heresy]].
+**Summary**: An old fort a day and a half west of [[drinmery|Drinmery]] along the river, where Saint [[trefan|Trefan]] held off the Mad King's host in [[valerions-heresy|Valerion's Heresy]].
 
 ---
 
@@ -33,5 +33,6 @@ Long after, the fort stood abandoned, and a gang of bandits made it their lair a
 - [[drinmery|Drinmery]]
 - [[valerions-heresy|Valerion's Heresy]]
 - [[convent-of-saint-trefan|Convent of Saint Trefan]]
+- [[trefan|Trefan]]
 - [[jory-fenn|Jory Fenn]]
 - [[wick|Wick]]

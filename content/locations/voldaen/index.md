@@ -15,7 +15,7 @@ founded: 0 VR
 
 The oldest nation of Althas, a proud monarchy of ancient bloodlines ruled by the House of Voldis, claiming descent from the God King of the Divine Age. Rival of [[polaris|Polaris]], allied with Hilltop and [[the-holy-see|the Holy See]] during the [[jesthaen|Jesthaen]] rebellion.
 
-Far in the northwest, Voldaen also keeps the [[the-witherwatch|Witherwatch]], the frontier garrison that holds the [[godless-gate|Godless Gate]] against the blighted [[witherwild-continent|Witherwild]] beyond. It is a grim, thankless posting, and the reason the ruin of the Folly has never spilled into Althas.
+Far in the northwest, Voldaen also keeps the [[the-witherwatch|Witherwatch]], the frontier garrison that holds the [[godless-gate|Godless Gate]] against the blighted [[witherwild-continent|Witherwild]] beyond. It is a grim, thankless posting, and the reason the ruin of [[haven|Haven]], Castus's Folly, has never spilled into Althas.
 
 ## History
 

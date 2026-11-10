@@ -33,3 +33,4 @@ Among the [[caio|Caio]], fortune-tellers called **drabardi** are revered for rea
 - [[infernis|Infernis]]
 - [[andaluria|Andaluria]]
 - [[diplomacy|Diplomacy]]
+- [[caio|Caio]]

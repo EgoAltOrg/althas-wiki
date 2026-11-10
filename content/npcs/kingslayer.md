@@ -1,6 +1,7 @@
 ---
 title: The Kingslayer
 kind: person
+pronouns: they/them
 role: "Assassin of King [[valthis-voldis|Valthis Voldis]]"
 ---
 

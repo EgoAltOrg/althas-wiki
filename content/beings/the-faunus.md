@@ -6,7 +6,7 @@ title: The Faunus
 
 ---
 
-Althan scholarship of the Fanewick faith rests on almost no first-hand material. Its one real source is a single [[house-aquila|House Aquila]] missionary who served in the [[haven|Haven]] colony and, bearing the [[miracles|Miracle of Pentecost]], could understand the Wicklings and record the beings they worship in words an Althan could read. That missionary named those beings the **Faunus** and fixed the forms of their names the mainland now uses; the Wicklings call them otherwise, in Wick. Those records and the less reliable reports of [[the-witherwatch|Witherwatch]] veterans make up nearly the whole archive, and modern scholars treat even them with caution. What follows is pieced together from that thin, much-disputed record, and nothing in it is settled.
+Althan scholarship of the Wickling faith rests on almost no first-hand material. Its one real source is a single [[house-aquila|House Aquila]] missionary who served in the [[haven|Haven]] colony and, bearing the [[miracles|Miracle of Pentecost]], could understand the Wicklings and record the beings they worship in words an Althan could read. That missionary named those beings the **Faunus** and fixed the forms of their names the mainland now uses; the Wicklings call them otherwise, in Wick. Those records and the less reliable reports of [[the-witherwatch|Witherwatch]] veterans make up nearly the whole archive, and modern scholars treat even them with caution. What follows is pieced together from that thin, much-disputed record, and nothing in it is settled.
 
 ## What the Wicklings call gods
 
@@ -32,7 +32,7 @@ The missionary's records named dozens; Althan scholarship has kept only a handfu
 - **Qui'Gar, Whispered Sweetness for a Thorny End**, who presides over the deaths that happen among the thorns, her quiet undone by the Witherwild.
 - **Rohkin, the Wandering Horn**, warden of the horned herds, who has watched them warp into monsters.
 
-Not all the Faunus are held to still live. The greatest of the dead is **Shun'Aush the Granite Ophid**, a vast serpent-Faunus said to have been slain in ages past, whose petrified body lies across the land like a range of gray stone. The Wicklings are recorded holding that ground sacred and cursed and warning against breaking it; [[haven|Haven]] was raised from it regardless.
+Not all the Faunus are held to still live. The greatest of the dead is **Shun'Aush the Granite Ophid**, a vast serpent-Faunus that fell on the colony of [[haven|Haven]] in its last days and was slain there by King [[castus-voldis|Castus]] of Voldaen. Its body lies across the ruins like a range of gray stone.
 
 ## Related pages
 

@@ -17,7 +17,11 @@ image: zalmir-aldarson.png
 
 ## Appearance
 
-A tall, well-built man in his prime with a soft, slightly rasping voice. A bandage wraps the left of his chest up to the base of his neck.
+A tall, well-built man in his prime. A bandage wraps the left of his chest up to the base of his neck.
+
+## Personality
+
+He speaks in a soft, slightly rasping voice.
 
 ## Abilities
 

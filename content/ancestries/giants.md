@@ -22,7 +22,7 @@ Errai, City of Stars, was built on the broken backs of overworked Giant slaves.
 
 ## History
 
-The arrangement has grown more volatile recently. When the archmage [[hesper-arcturus|Hesper]] was killed by a Giant in 363 VR, during her final duel with her son Izar, news of a Triumvirate archmage struck down within her own walls plunged Polaris into the Errai Riots: fear that Giants had grown bold enough to strike at the ruling seats themselves, and anger looking for somewhere to land.
+The arrangement has grown more volatile recently. When the Archmage [[hesper-arcturus|Hesper]] was killed by a Giant in 363 VR, during her final duel with her son Izar, news of a Triumvirate Archmage struck down within her own walls plunged Polaris into the Errai Riots: fear that Giants had grown bold enough to strike at the ruling seats themselves, and anger looking for somewhere to land.
 
 ## Related pages
 

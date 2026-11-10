@@ -2,7 +2,7 @@
 title: Timeline
 ---
 
-**Summary**: A chronology of Althas, from the Divine Age to the [[jesthaen|Jesthaen]] Treaty of 361 VR. It gathers the dated history already recorded across the wiki into one view; the [[calendar|Calendar]] page explains how the years are counted.
+**Summary**: A chronology of Althas, from the Divine Age to the Errai Riots of 363 VR. It gathers the dated history already recorded across the wiki into one view; the [[calendar|Calendar]] page explains how the years are counted.
 
 ---
 
@@ -14,10 +14,12 @@ timeline
     Founding Era : The Divine Age, the One Above casts down the Ones Below : Voldaen founded under the God King
     93-117 VR : The Mad King's civil war : Hilltop wins independence under the Blessed King
     167 VR : Polaris secedes under the Lodestar Pact : the three powers begin the Witherwild colony
+    221 VR : Haven falls : King Castus dies defending it : the Witherwatch is founded
     333 VR : The Ophanim lands on Hilltop : Armada secedes
     334 VR : The Five Heroes slay the Ophanim : The king is assassinated
     351 VR : Aldric's revolution founds the Jesthaen Republic
     361 VR : The Jesthaen Treaty ends the war
+    363 VR : Archmage Hesper is killed : the Errai Riots shake Polaris
 ```
 
 ## Founding Era
@@ -31,6 +33,10 @@ Generations after the founding, [[valerion-voldis|Valerion]], the king remembere
 ## The Lodestar Pact (167 VR)
 
 In 167 VR, half a century after the civil war, [[valeran-voldis|Valeran]]'s heir King [[castus-voldis|Castus]] settled the north's split from the crown by negotiated partition rather than another war. Out of it came [[polaris|Polaris]] under its Triumvirate of Archmages, a shared venture binding [[voldaen|Voldaen]], Polaris and [[hilltop|Hilltop]] to colonize the untouched Witherwild, and the renunciation of Castus's younger brother, Castorius. See [[the-lodestar-pact|the Lodestar Pact]].
+
+## 221 VR
+
+In 221 VR the colony of [[haven|Haven]], raised in the [[witherwild-continent|Witherwild]] by Voldaen, Polaris and Hilltop in the years after the Lodestar Pact, was abandoned to plague and the wild. [[voldaen|Voldaen]] raised [[the-witherwatch|the Witherwatch]] the same year to hold the [[godless-gate|Godless Gate]] against the growth that followed. Common speech remembers the venture as Castus's Folly, after the king who permitted it and died defending its colonists.
 
 ## 333 VR
 
@@ -47,6 +53,10 @@ The capital's noble houses had driven the baseborn regent [[aldric-voldis|Aldric
 ## 361 VR
 
 Active combat ran for the better part of a decade, with Hilltop aiding Voldaen while Polaris and Armada backed the Jesthaen rebels. It ended in 361 VR with the Holy See's ratification of the Jesthaen Treaty, though the peace between Voldaen and Jesthaen remains tenuous. The [[diplomacy|Diplomacy]] page maps where the powers stand five years on.
+
+## 363 VR
+
+In 363 VR the Archmage [[hesper-arcturus|Hesper Arcturus]] was killed by a Giant within her own walls, during her final duel with her son [[izar-arcturus|Izar]]. News of a Triumvirate Archmage struck down in her own home plunged [[polaris|Polaris]] into the Errai Riots, and her seat has stood empty since.
 
 ## Related pages
 

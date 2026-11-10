@@ -3,7 +3,7 @@ title: Guilmore Fleming
 kind: person
 role: "Senator of [[drinmery|Drinmery]]"
 pronouns: he/him
-house: "House Fleming"
+house: "[[house-fleming|House Fleming]]"
 nation: "[[jesthaen|Jesthaen]]"
 allegiance: "[[jesthaen|Jesthaen]]"
 image: guilmore-fleming.webp
@@ -15,9 +15,10 @@ image: guilmore-fleming.webp
 
 ## History
 
-[[tobias-wren|Father Tobias]] sent the courier [[malak|Malak]] to the Count to be paid for the sealed package he carried to the [[convent-of-saint-trefan|convent]]. His steward is [[edric-colvin|Edric Colvin]]. He paid Malak with the deed to a decommissioned merchant ship, docked in [[jestha|Jestha]], asked the party to deal with the bandits, and hosted them at [[fleming-manor|Fleming Manor]] for dinner and the night of Adventus 12, 366 VR.
+Father [[tobias-wren|Tobias]] sent the courier [[malak|Malak]] to the Count to be paid for the sealed package he carried to the [[convent-of-saint-trefan|convent]]. His steward is [[edric-colvin|Edric Colvin]]. He paid Malak with the deed to a decommissioned merchant ship, docked in [[jestha|Jestha]], asked the party to deal with the bandits, and hosted them at [[fleming-manor|Fleming Manor]] for dinner and the night of Adventus 12, 366 VR.
 
 ## Related pages
 
 - [[drinmery|Drinmery]]
+- [[house-fleming|House Fleming]]
 - [[jesthaen|Jesthaen]]

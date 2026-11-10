@@ -8,7 +8,7 @@ nation: "[[jesthaen|Jesthaen]]"
 region: "[[drinmery|Drinmery]]"
 faith: "[[the-one-above|the One Above]]"
 image: st-trefans-lorekeeper.webp
-image_caption: "Saint Trefan's Lorekeeper, the book left behind in the saint's tomb beneath the convent."
+image_caption: "Saint [[trefan|Trefan]]'s Lorekeeper, the book left behind in the saint's tomb beneath the convent."
 submap:
     image: assets/convent-map.webp
     caption: "Map: Church Battle Map by Dr Mapzo"
@@ -42,9 +42,10 @@ The convent's churchyard, kept by [[aldous-pike|Aldous Pike]]. On the night of A
 
 A flock of [[aetheris|Aetheris]] lives and works at the convent, using its library and kitchen in exchange for service as messengers and general help around the grounds.
 
-Its one priest is [[tobias-wren|Father Tobias Wren]]. The Aetheris [[inkfeather|Inkfeather]] keeps its library, and [[aldous-pike|Aldous Pike]] tends its churchyard.
+Its one priest is Father [[tobias-wren|Tobias Wren]]. The Aetheris [[inkfeather|Inkfeather]] keeps its library, and [[aldous-pike|Aldous Pike]] tends its churchyard.
 
 ## Related pages
 
 - [[drinmery|Drinmery]]
+- [[trefan|Trefan]]
 - [[aetheris|Aetheris]]

@@ -16,7 +16,7 @@ image: house-azimuth-arms.png
 
 ## History
 
-Zhenya is the elder of [[house-azimuth|House Azimuth]], widow of Alnumir, mother of the late matriarch [[cornelia-azimuth|Cornelia]], and grandmother of [[novak-azimuth|Novak]]. She has long held the House's hereditary office of Minister of the Royal Household, one of the great offices of the Voldaen court. With her grandson still young and newly at the head of the House, it is Zhenya who keeps the ministry and the family's standing at court.
+Zhenya is the elder of [[house-azimuth|House Azimuth]], widow of Alnumir, mother of the late matriarch [[cornelia-azimuth|Cornelia]], and grandmother of [[novak-azimuth|Novak]]. She has long held the House's hereditary office of Minister of the Royal Household, one of the great offices of the Voldaen court. With her grandson still young at the head of the House, it is Zhenya who keeps the ministry and the family's standing at court.
 
 ## Related pages
 

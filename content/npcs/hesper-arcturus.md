@@ -13,7 +13,7 @@ died: 363 VR
 image: hesper.jpg
 ---
 
-**Summary**: The late archmage of the Triumvirate governing [[polaris|Polaris]], an eccentric collector of odd things. Killed by a Giant during her final duel with her son Izar, an act that plunged Polaris into the Errai Riots.
+**Summary**: The late Archmage of the Triumvirate governing [[polaris|Polaris]], an eccentric collector of odd things. Killed by a Giant during her final duel with her son Izar, an act that plunged Polaris into the Errai Riots.
 
 ---
 
@@ -23,13 +23,13 @@ An older mage who held a seat on Polaris's ruling Triumvirate of Archmages, thou
 
 ## Abilities
 
-She came from House Arcturus, known for its Miracle of Firmament, letting its bearer draw seals directly out of open air, as if the sky itself were parchment, rather than needing any surface to draw on. Hesper was born with it. Her son was not.
+She came from House Arcturus, known for its Miracle of Firmament, which lets its bearer interact with open air as if it were solid; a mage of the house can draw seals directly out of the air, as if the sky itself were parchment. Hesper was born with it. Her son was not.
 
 ## History
 
 ### Death
 
-She was killed by a Giant in 363 VR, during her final duel with Izar. News of an archmage of the Triumvirate struck down within her own walls plunged Polaris into the Errai Riots: fear that Giants had grown bold enough to strike at the ruling seats themselves, and anger looking for somewhere to land.
+She was killed by a Giant in 363 VR, during her final duel with Izar. News of an Archmage of the Triumvirate struck down within her own walls plunged Polaris into the Errai Riots: fear that Giants had grown bold enough to strike at the ruling seats themselves, and anger looking for somewhere to land.
 
 ## Relationships
 

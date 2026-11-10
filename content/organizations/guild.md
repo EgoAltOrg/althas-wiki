@@ -17,9 +17,15 @@ image: guild.svg
 
 Armada has no single ruler. Each of its city-states is run by a member of the Guild, and members answer to no higher authority for how they govern their own territory: some rule hands-on, some barely at all, entirely up to the individual.
 
+The Guild keeps a branch in every nation except Armada, which it all but rules.
+
 ## Structure & Governance
 
 Guild membership isn't inherited or elected: it's held through possession of a physical token that marks its bearer as that city-state's Guild member. A would-be member takes the token from whoever holds it, by theft, challenge, or outright battle. The logic is survival of the fittest: whoever keeps the token has earned the seat, and whoever loses it has not. Because of this, a Guild seat changing hands by force, not succession, is simply a fact of life in Armada.
+
+### Syndics
+
+The Guild's Syndics are its officers of law and accounts, part advocate and part auditor, who see that business is done lawfully and efficiently. Their standing reaches well beyond the Guild: governments respect them, and royal courts and powerful noble houses keep a Syndic on retainer.
 
 ## Related pages
 

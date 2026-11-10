@@ -10,7 +10,7 @@ allegiance: "[[voldaen|Voldaen]]"
 died: 334 VR
 ---
 
-**Summary**: High Prince of [[voldaen|Voldaen]], father of Queen [[valis-voldis|Valis Voldis]], and one of the Five Heroes who died fighting [[the-ophanim|the Ophanim]] in 334 VR, which set off the Voldis Succession Crisis.
+**Summary**: High Prince of [[voldaen|Voldaen]], father of Queen [[valis-voldis|Valis Voldis]], and one of the [[the-five-heroes|Five Heroes]] who died fighting [[the-ophanim|the Ophanim]] in 334 VR, which set off the Voldis Succession Crisis.
 
 ---
 

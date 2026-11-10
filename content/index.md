@@ -41,7 +41,7 @@ A Song of Ice and Fire, Anúna, Attack on Titan, Berserk, Blasphemous, Castlevan
 
 The continent of Althas once flew under one banner. In the Divine Age, the One Above protected their mortal creations, clashing with the primordial powers of chaos, the Ones Below, and striking them down. With victory secured, the people of Althas crowned their first God King and founded the nation of [[voldaen|Voldaen]]. Meanwhile, the One Above established their seat in what is now known as [[hilltop|Hilltop]], but departed soon after for unknown reasons.
 
-Over the next several centuries, factional differences within Voldaen grew untenable. With the One Above absent, [[the-holy-see|the Holy See]] asserted its authority as the governing body of [[hilltop|Hilltop]]. The reign remembered as the Mad King's broke crown and church into open civil war; it ended only under his successor, the Blessed King, and out of that settlement Hilltop won full independence from the Voldis crown. Later, a group of scholars and mages who wished to push the boundaries of arcane knowledge broke away from Voldaen and founded the nation of [[polaris|Polaris]].
+Over the next generations, factional differences within Voldaen grew untenable. With the One Above absent, [[the-holy-see|the Holy See]] asserted its authority as the governing body of [[hilltop|Hilltop]]. The reign remembered as the Mad King's broke crown and church into open civil war; it ended only under his successor, the Blessed King, and out of that settlement Hilltop won full independence from the Voldis crown. Later, a group of scholars and mages who wished to push the boundaries of arcane knowledge broke away from Voldaen and founded the nation of [[polaris|Polaris]].
 
 In 333 VR, [[the-ophanim|the Ophanim]] landed in central [[hilltop|Hilltop]], instantly rendering much of the nation uninhabitable. As [[the-holy-see|the Holy See]] and its refugees relocated to central Althas, each nation mobilized a force to subdue the Ophanim before its influence could spread further. Seizing the opportunity, the merchant lords of the south declared the trade cities of Hilltop an independent nation, forming the federation of [[armada|Armada]]. Finally, in 334 VR, the Ophanim was brought down by the Five Heroes, including the Voldis High Prince, [[edrion-voldis|Edrion Voldis]], and [[cassio-aquila|Cassio Aquila]] of the Holy See, who both perished in the fighting.
 
@@ -105,17 +105,19 @@ All communities are available across nations, but some have unique aspects withi
 
 - [[jestha|Jestha]]: the capital of Jesthaen
 - [[basilica-of-saint-avel|Basilica of Saint Avel]]: the Parish of Orthodoxy's base in Jesthaen, in the center of Jestha, built around Saint Avel's infirmary
-- [[drinmery|Drinmery]]: city in Jesthaen, home of the Convent of Saint Trefan
+- [[drinmery|Drinmery]]: small city in Jesthaen, home of the Convent of Saint Trefan
 - [[convent-of-saint-trefan|Convent of Saint Trefan]]: a convent in Drinmery prized for its rare library
-- [[lampfort|The Lampfort]]: the old fort west of Drinmery where Saint Trefan held off the Mad King's host
+- [[lampfort|The Lampfort]]: the old fort west of Drinmery where Saint [[trefan|Trefan]] held off the Mad King's host
 - [[fleming-manor|Fleming Manor]]: Count Fleming's house in Drinmery
 - [[drinmery-market|Drinmery Market]]: the market square at Drinmery's east bridgehead
-- [[restful-shade|The Restful Shade]]: a little-known brothel associated with the Wakeful Lamp
+- [[restful-shade|The Restful Shade]]: a little-known brothel associated with the [[wakeful-lamp|Wakeful Lamp]]
+- [[wakeful-lamp|The Wakeful Lamp]]: the tavern at Drinmery's bridgehead, kept by Hollis Brand
 - [[crater-lake|Crater Lake]]: a massive crater lake at the center of Althas, left by the Divine Age
-- [[witherwild-continent|The Witherwild]]: the blighted second continent beyond the northwest pass, grave of the Haven colony ("the Folly")
-- [[haven|Haven]]: the three-power colony lost in the Witherwild to plague and the wild, remembered as "the Folly"
+- [[witherwild-continent|The Witherwild]]: the blighted second continent beyond the northwest pass, grave of the Haven colony (Castus's Folly)
+- [[haven|Haven]]: the three-power colony lost in the Witherwild to plague and the wild, remembered as Castus's Folly
 - [[godless-gate|The Godless Gate]]: the northwest mountain pass joining Althas to the Witherwild, held by the Witherwatch
 - [[serracorte|The Serracorte]]: Andaluria's volcanic wine highlands, crowned by the Condesa's Castillo del Cardenal
+- [[andaluria|Andaluria]]: the capital region of Hilltop around the Ophanim's corpse, a wine country rebuilt under its Council of Six, where the nights have lately grown long
 
 ## Factions
 
@@ -123,13 +125,16 @@ All communities are available across nations, but some have unique aspects withi
 - [[parish-of-inquisition|Parish of Inquisition]]: the Holy See's feared investigative and judicial arm
 - [[parish-of-orthodoxy|Parish of Orthodoxy]]: the Holy See's doctrinal arm, keeper of scripture and the Splendor incantations
 - [[guild|The Guild]]: governs Armada, seats held by token possession, not inheritance or election
+- [[the-freehands|The Freehands]]: the army Aldric rallied from the cells of Voldaen's south to win Jesthaen's revolution, now the name of the anarchists who refused the peace
 - [[the-five-heroes|The Five Heroes]]: the five who brought down the Ophanim in 334 VR (Edrion Voldis, Cassio Aquila, Aldric Voldis, Lael the Reborn, Lyra Aquila)
 - [[house-aquila|House Aquila]]: scholar-house of the twins Cassio and Lyra, esteemed in both Polaris and the Holy See, bearer of two Miracles (Pentecost and Anamnesis)
 - [[house-circinus|House Circinus]]: a Hilltop pureblooded house bound to the Holy See, bearer of the Miracle of Geosensus and customary head of the Parish of Cartography
 - [[house-corvus|House Corvus]]: Great House of Voldaen holding the hereditary office of Minister of War, risen at [[valerions-heresy|Valerion's Heresy]], bearer of the Miracle of Auspex
 - [[house-azimuth|House Azimuth]]: Great House of Voldaen, hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider; current head [[novak-azimuth|Novak Azimuth]]
 - [[house-olnir|House Olnir]]: ancient Voldaen Great House, bearer of the Miracle of Fames and keeper of the Famesfeast, its ministry stripped after [[lorkhan-olnir|Lorkhan's]] treason
+- [[house-fleming|House Fleming]]: the house that holds Drinmery, led by Count Guilmore Fleming, the city's Senator
 - [[the-witherwatch|The Witherwatch]]: Voldaen's grim frontier garrison holding the Godless Gate against the blighted Witherwild
+- [[the-council-of-six|The Council of Six]]: the six offices that govern Andaluria's reconstruction from Jesaña, funded by the Holy See
 - [[caio|The Caio]]: Althas's road folk and Drabalo, the wandering trickster they follow, as Althan scholars reconstruct it
 
 ## Ancestries
@@ -150,6 +155,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[the-one-above|The One Above]]: has left Althas
 - [[the-ones-below|The Ones Below]]: the gods the One Above fought in the Divine Age, sealed away
 - [[the-faunus|The Faunus]]: the faith of the Wicklings of the Witherwild, as Althan scholars reconstruct it
+- [[the-threnodies|The Threnodies]]: fragments of an ancient scripture, which some scholars believe are the last words of the One Above
 - [[splendor-magic|Splendor Magic]]: incantation-based magic as a favor granted, not generated
 - [[codex-magic|Codex Magic]]: seal-drawn magic that tears into the Source
 - [[miracles|Miracles]]: hereditary gifts from the One Above
@@ -168,19 +174,20 @@ All communities are available across nations, but some have unique aspects withi
 
 ## NPCs
 
-- [[hesper-arcturus|Hesper Arcturus]]: archmage of Polaris's Triumvirate, killed by a Giant during her final duel with her son Izar, sparking the Errai Riots
+- [[hesper-arcturus|Hesper Arcturus]]: Archmage of Polaris's Triumvirate, killed by a Giant during her final duel with her son Izar, sparking the Errai Riots
 - [[izar-arcturus|Izar Arcturus]]: Hesper's son, a Polaris mage who challenged her for her Triumvirate seat
 - [[lael|Lael]]: one of the Five Heroes, slain fighting the Ophanim and returned by his Miracle of Rebirth
 - [[amalthus-cruoris|Amalthus Cruoris]]: reigning Pontiff of the Holy See, of House Cruoris, bearer of the Miracle of Viaticum
 - [[avel-cruoris|Avel Cruoris]]: Elven saint of House Cruoris who tended the wounded of Valerion's Heresy and founded the Basilica of Saint Avel; missing since 333 VR
-- [[lyra-aquila|Lyra Aquila]]: one of the Five Heroes, archmage of Polaris's Triumvirate, of House Aquila, twin sister to Cassio Aquila, author of *Verba Ophanim*, bearer of the Miracle of Anamnesis
+- [[lyra-aquila|Lyra Aquila]]: one of the Five Heroes, Archmage of Polaris's Triumvirate, of House Aquila, twin sister to Cassio Aquila, author of *Verba Ophanim*, bearer of the Miracle of Anamnesis
 - [[antares-algol|Antares Algol]]: Archmage of Polaris's Triumvirate and bearer of the Miracle of Abrogation, in practice the power governing Polaris since Hesper's death
 - [[cassio-aquila|Cassio Aquila]]: one of the Five Heroes, scholar of the Holy See, of House Aquila, twin brother to Lyra Aquila, bearer of the Miracle of Pentecost, died fighting the Ophanim
 - [[augustus-corvus|Augustus Corvus]]: Minister of War of Voldaen and lord of [[house-corvus|House Corvus]], called the Red Raven; undefeated commander and bearer of the Miracle of Auspex
-- [[mateo-veyra|Mateo Veyra]]: Bishop of [[andaluria|Andaluria]] and the highest [[the-holy-see|Holy See]] authority to remain after the Ophanim's fall, betrothed to the Condesa [[ysabela-delamona|Ysabela Delamoña IV]]
+- [[mateo-veyra|Mateo Veyra]]: Bishop of [[andaluria|Andaluria]] and the highest [[the-holy-see|Holy See]] authority to remain after the Ophanim's landing, betrothed to the Condesa [[ysabela-delamona|Ysabela Delamoña IV]]
+- [[ysabela-delamona|Ysabela Delamoña]]: Condesa of Andaluria, its wealthiest noble and the patron who stayed, pouring her wine-fortune into its reconstruction
 - [[ezekiel-ashmark|Ezekiel Ashmark]]: the Infernis Archbishop of [[jesthaen|Jesthaen]], Aldric's right hand in the civil war, bearer of the Miracle of Raptus
 - [[sabara|Sabara]]: cleric of the Holy See's Parish of Cartography, blessed with the Miracle of Geosensus, seated as the Surveyor on [[andaluria|Andaluria's]] [[the-council-of-six|Council of Six]]
-- [[cornelia-azimuth|Cornelia Azimuth]]: late matriarch of [[house-azimuth|House Azimuth]], peerless warrior and master of Splendor magic, fell facing Aldric at Jesthaen in 358 VR
+- [[cornelia-azimuth|Cornelia Azimuth]]: late matriarch of [[house-azimuth|House Azimuth]], peerless warrior and master of Splendor Magic, fell facing Aldric at Jesthaen in 358 VR
 - [[victerius-azimuth|Victerius Azimuth]]: born of [[house-olnir|House Olnir]], superb duelist and consort-head of House Azimuth, fell in 358 VR at the hands of his brother Lorkhan, whom he left gravely wounded
 - [[agathia-azimuth|Agathia Azimuth]]: the intrepid, martial twin daughter of House Azimuth
 - [[hestia-azimuth|Hestia Azimuth]]: the quiet, calculating twin daughter of House Azimuth
@@ -189,8 +196,9 @@ All communities are available across nations, but some have unique aspects withi
 - [[guilmore-fleming|Guilmore Fleming]]: Senator of Drinmery
 - [[immanuel-greene|Immanuel Greene]]: lord whose hired guard keeps the peace in Drinmery, called "General" by his men
 - [[tobias-wren|Tobias Wren]]: the priest of the Convent of Saint Trefan
+- [[trefan|Trefan]]: the saint who held the Lampfort in Valerion's Heresy and built the convent that bears his name
 - [[gideon|Gideon]]: a young Inquisitor resting a wounded hand in Drinmery
-- [[leonard-moore|Leonard Moore]]: veteran warrior and strategist raised by [[house-azimuth|House Azimuth]], Novak's counselor, traveling at his side
+- [[leonard-moore|Leonard Moore]]: veteran warrior and strategist raised by [[house-azimuth|House Azimuth]], Novak's counselor, found hanged in Drinmery in 366 VR
 
 ## NPCs (Minor)
 
@@ -203,7 +211,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[inkfeather|Inkfeather]]: the convent's librarian and healer
 - [[jory-fenn|Jory Fenn]]: a bandit, the party's captive
 - [[maud-tallow|Maud Tallow]]: candle-seller in the market
-- [[mother-wenna|Mother Wenna]]: madam of the Restful Shade
+- [[wenna|Wenna]]: madam of the Restful Shade
 - [[pell|Pell]]: a young guardsman
 - [[wick|Wick]]: a bandit
 - [[yselda-marrow|Yselda Marrow]]: clerk of the Merchant's Guild Courthouse

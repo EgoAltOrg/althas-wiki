@@ -12,13 +12,13 @@ category: Scripture
 
 ## Description
 
-The courier [[malak|Malak]] carried one to [[tobias-wren|Father Tobias]] in [[drinmery|Drinmery]], and Father Tobias showed it to [[novak-azimuth|Novak]]. It reads: *"In holy hands, sin may yet become virtue."* According to [[leonard-moore|Leonard Moore]], [[house-azimuth|House Azimuth]] holds another, which [[cornelia-azimuth|Cornelia Azimuth]] spent much time researching.
+The courier [[malak|Malak]] carried one to Father [[tobias-wren|Tobias]] in [[drinmery|Drinmery]], and Father Tobias showed it to [[novak-azimuth|Novak]]. It reads: *"In holy hands, sin may yet become virtue."* According to [[leonard-moore|Leonard Moore]], [[house-azimuth|House Azimuth]] holds another, which [[cornelia-azimuth|Cornelia Azimuth]] spent much time researching.
 
 ## Related pages
 
 - [[index|Althas]]
 - [[the-one-above|The One Above]]
-- [[tobias-wren|Father Tobias]]
+- [[tobias-wren|Tobias Wren]]
 - [[malak|Malak]]
 - [[house-azimuth|House Azimuth]]
 - [[leonard-moore|Leonard Moore]]

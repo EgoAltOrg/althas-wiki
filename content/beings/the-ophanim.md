@@ -27,7 +27,7 @@ Those who looked upon the Ophanim while it still lived are not free of it. Each 
 
 ### What scripture says
 
-Holy scripture names the Ophanim a herald: a defender of [[the-one-above|the One Above]] foretold to descend when [[the-ones-below|the Ones Below]] strain the seal that holds them, come to lead the fight and to herald the One Above's own return. The [[the-holy-see|Holy See's]] Parish of Orthodoxy teaches that mortal eyes should be covered before such an angel, holding blindness as reverence and fear as humility. That the Ophanim came in 333 VR and the One Above did not return with it has troubled the faithful ever since. Why the Ophanim turned on Althas at all, no one agrees: there are as many readings of its coming as there are living souls on the continent, from the penitent to the apocalyptic, some far more extreme than others.
+Holy scripture names the Ophanim a herald: a defender of [[the-one-above|the One Above]] foretold to descend when [[the-ones-below|the Ones Below]] strain the seal that holds them, come to lead the fight and to herald the One Above's own return. The [[the-holy-see|Holy See's]] [[parish-of-orthodoxy|Parish of Orthodoxy]] teaches that mortal eyes should be covered before such an angel, holding blindness as reverence and fear as humility. That the Ophanim came in 333 VR and the One Above did not return with it has troubled the faithful ever since. Why the Ophanim turned on Althas at all, no one agrees: there are as many readings of its coming as there are living souls on the continent, from the penitent to the apocalyptic, some far more extreme than others.
 
 ## Related pages
 

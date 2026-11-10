@@ -26,3 +26,6 @@ Before the Ophanim's descent, Hilltop was home to old noble houses that fused no
 - [[the-holy-see|The Holy See]]
 - [[armada|Armada]]
 - [[diplomacy|Diplomacy]]
+- [[andaluria|Andaluria]]
+- [[crater-lake|Crater Lake]]
+- [[serracorte|Serracorte]]

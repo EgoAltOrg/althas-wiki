@@ -4,6 +4,18 @@ title: Changelog
 
 What's new on the wiki, most recent first.
 
+## 2026-11-10
+
+- **Castus's Folly.** King [[castus-voldis|Castus]]'s page now tells his whole story: Valeran's twin sons, the Twinblades Truth and Ideal, his royal visit to [[haven|Haven]] in 221 VR, the great serpent Shun'Aush he slew there, and his death holding the line while the colonists fled. [[haven|Haven]], [[the-faunus|the Faunus]], [[valeran-voldis|Valeran]], [[divine-relics|Divine Relics]] and the [[house-voldis|House Voldis]] family tree all tell the same story. Valeran now reigns until 165 VR, and Castus from 165 to 221 VR.
+- **[[the-freehands|The Freehands]].** A new page for the army Aldric raised from the south's scattered cells to win Jesthaen's revolution, and for the hardliners who still carry the name. [[diplomacy|Diplomacy]] lists them in place of the old revolution-era networks, and names [[antares-algol|Antares Algol]] on the Triumvirate.
+- **[[aldric-voldis|Aldric Voldis]]** has a new Abilities section on the Miracles scholars suspect he holds. His History now covers the Freehands, his war council and his election by the Senate. [[lorkhan-olnir|Lorkhan Olnir]]'s page records his seat on that council and Aldric's hunt for him. [[miracles|Miracles]] explains why House Voldis never confirms what its members hold.
+- **[[bram-tolliver|Bram Tolliver]].** A new page for the Marshal of [[jestha|Jestha]], the former southern rebel Aldric made commander of the capital's watch. The Jestha page now names it Jesthaen's biggest city.
+- **New in Drinmery.** [[trefan|Saint Trefan]], who held the Lampfort in Valerion's Heresy and lies in the convent he built; [[house-fleming|House Fleming]], the Count's house; and [[wakeful-lamp|the Wakeful Lamp]], [[hollis-brand|Hollis Brand]]'s tavern. Mother Wenna's page is now [[wenna|Wenna]], and its old link still works.
+- **[[novak-azimuth|Novak Azimuth]]**'s page gains his personality, his history, his days in Drinmery and his relationships, and names him the bearer of [[parashiel|Parashiel]].
+- **[[guild|The Guild]]** has a branch in every nation except Armada, which it all but rules, and a new section on its Syndics.
+- **The Miracle of Firmament** is described more fully on the [[hesper-arcturus|Hesper]] and [[izar-arcturus|Izar]] pages: its bearer can treat open air as if it were solid. [[miracles|Miracles]] adds that more than one person can bear the same Miracle at once.
+- **The [[timeline|Timeline]]** now runs to 363 VR. It adds the fall of Haven and the founding of the Witherwatch in 221 VR, and the Errai Riots. [[the-holy-see|The Holy See]] dates its sovereignty over Hilltop to 117 VR, and [[lael|Lael]] is named Lord Commander of the Inquisitors.
+
 ## 2026-10-27
 
 - **The days of the week.** The [[calendar|Calendar]] now names the eleven days, each for one plea of a prayer the faithful learn as children, from Exauday to Reverday, with the Saint's Day at the center.
@@ -19,7 +31,7 @@ What's new on the wiki, most recent first.
 - **New places.** Pages for Fleming Manor, Drinmery Market, the Restful Shade and the Lampfort, the old fort where Saint Trefan held off the Mad King's host.
 - **[[convent-of-saint-trefan|The Convent of Saint Trefan]]** now says who built it, and gains a section on its churchyard. [[the-holy-see|The Holy See]] says when the Sleepless Vigil began.
 - **[[the-threnodies|The Threnodies]].** A new page for the fragments of ancient scripture, with the one Malak carried to Drinmery.
-- **Three more figures of Drinmery.** New pages under NPCs (Minor) › Drinmery Arc for [[mother-wenna|Mother Wenna]] of the Restful Shade, the bandit [[jory-fenn|Jory Fenn]] and [[yselda-marrow|Yselda Marrow]] of the Merchant's Guild Courthouse. Jory and Yselda have new portraits, different from the art used for them in the first two sessions.
+- **Three more figures of Drinmery.** New pages under NPCs (Minor) › Drinmery Arc for [[wenna|Mother Wenna]] of the Restful Shade, the bandit [[jory-fenn|Jory Fenn]] and [[yselda-marrow|Yselda Marrow]] of the Merchant's Guild Courthouse. Jory and Yselda have new portraits, different from the art used for them in the first two sessions.
 
 ## 2026-10-08
 
@@ -67,7 +79,7 @@ What's new on the wiki, most recent first.
 
 - **Andaluria's Council of Six.** The reconstruction government of [[andaluria|Andaluria]] has its own page: six offices that govern the ruined holy capital from Jesaña's Plaza del Sol, five hereditary and a sixth lately added for the Holy See's own surveyor.
 - **[[sabara|Sabara]], the See's mapmaker.** A new page for the Abbot of the Parish of Cartography, blessed with the Miracle of Geosensus and seated on the Council of Six as its Surveyor.
-- **[[house-circinus|House Circinus]].** A new page for the Hilltop oldblood house whose Miracle finds the shape of the land, made rich off the deep earth and customary head of the Parish of Cartography.
+- **[[house-circinus|House Circinus]].** A new page for the Hilltop pureblooded house whose Miracle finds the shape of the land, made rich off the deep earth and customary head of the Parish of Cartography.
 - **A new player character, [[zalmir-aldarson|Zalmir Aldarson]].** A young traveler newly come to the north.
 - **Diplomacy and Organizations, merged.** The register of Althas's powers now lives on the [[diplomacy|Diplomacy]] page, as per-nation cards showing each group's standing beneath the relationship web. The old Organizations page redirects there.
 - **Two houses at Haven.** [[house-aquila|House Aquila]] and [[house-circinus|House Circinus]] each gain a tie to the lost colony of [[haven|Haven]] in the [[witherwild-continent|Witherwild]]: an Aquila carried the faith there and first set down the land's spirits, and a Circinus read the ground for a colony with no maps of its own.

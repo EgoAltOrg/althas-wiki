@@ -13,7 +13,7 @@ submap:
     zoomDelta: 0.25
 ---
 
-**Summary**: The house of [[guilmore-fleming|Count Fleming]] in [[drinmery|Drinmery]].
+**Summary**: The house of Count [[guilmore-fleming|Fleming]] in [[drinmery|Drinmery]].
 
 ---
 
@@ -27,10 +27,11 @@ The party dined and slept here as the Count's guests on Adventus 12, 366 VR. The
 
 ## Inhabitants
 
-- [[guilmore-fleming|Count Fleming]], Senator of Drinmery.
+- [[guilmore-fleming|Guilmore Fleming]], Senator of Drinmery.
 - [[edric-colvin|Edric Colvin]], his steward.
 
 ## Related pages
 
 - [[drinmery|Drinmery]]
 - [[guilmore-fleming|Guilmore Fleming]]
+- [[house-fleming|House Fleming]]

@@ -13,13 +13,13 @@ marker:
       category: settlement
 ---
 
-**Summary**: Jestha, the capital city of [[jesthaen|Jesthaen]].
+**Summary**: Jestha, the capital and biggest city of [[jesthaen|Jesthaen]], renamed after the Jesthaen Civil War for [[aldric-voldis|Aldric's]] mother.
 
 ---
 
 ## Overview
 
-Jestha is the capital of [[jesthaen|Jesthaen]]. After the Civil War, the city was renamed Jestha, after [[aldric-voldis|Aldric's]] lowborn mother. It is a port, and merchant ships dock there.
+Jestha is the capital of [[jesthaen|Jesthaen]]. After the Jesthaen Civil War, the city was renamed Jestha, after [[aldric-voldis|Aldric's]] lowborn mother. It is a port, and merchant ships dock there. It is the biggest city in Jesthaen. [[bram-tolliver|Bram Tolliver]] is the city's Marshal, commander of its watch.
 
 ## Notable Places
 
@@ -30,3 +30,5 @@ Jestha is the capital of [[jesthaen|Jesthaen]]. After the Civil War, the city wa
 - [[index|Althas]]
 - [[jesthaen|Jesthaen]]
 - [[basilica-of-saint-avel|Basilica of Saint Avel]]
+- [[the-freehands|The Freehands]]
+- [[bram-tolliver|Bram Tolliver]]

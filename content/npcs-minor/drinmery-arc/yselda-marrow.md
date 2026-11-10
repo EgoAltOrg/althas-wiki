@@ -14,3 +14,4 @@ image: yselda-marrow.jpeg
 ## Related pages
 
 - [[drinmery|Drinmery]]
+- [[guild|Guild]]

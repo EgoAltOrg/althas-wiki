@@ -34,7 +34,7 @@ Daggerheart invites players into the worldbuilding, and much of Althas is still 
 
 ## Places and trade
 
-- [x] Name the capital cities or principal seats of [[voldaen|Voldaen]], [[polaris|Polaris]], [[armada|Armada]], and [[jesthaen|Jesthaen]]: Voldaenia, Errai, Corsaria and [[jestha|Jestha]].
+- [x] Name the capital cities or principal seats of the five nations: Voldaenia ([[voldaen|Voldaen]]), Errai ([[polaris|Polaris]]), Corsaria ([[armada|Armada]]), Jesaña ([[hilltop|Hilltop]]) and [[jestha|Jestha]] ([[jesthaen|Jesthaen]]).
 - [ ] Name the currency and coinage used across Althas, and the goods most traded.
 - [ ] Name notable towns, ports, and landmarks beyond Hilltop and [[drinmery|Drinmery]].
 - [ ] Describe the banner and heraldry of each of the five nations.

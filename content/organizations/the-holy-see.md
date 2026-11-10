@@ -16,7 +16,7 @@ image: the-holy-see.webp
 
 ## Overview
 
-The See claimed authority over [[hilltop|Hilltop]] after the One Above departed and became its governing body, its Pontiff ruling as divine regent for a god no longer visibly among mortals. It relocated to central Althas after [[the-ophanim|the Ophanim]]'s landing in 333 VR devastated Hilltop; [[cassio-aquila|Cassio Aquila]] of the Holy See was one of the Five Heroes who died bringing it down the following year.
+The See claimed authority over [[hilltop|Hilltop]] after the One Above departed and became its governing body under the Voldis crown, winning it full sovereignty at the end of [[valerions-heresy|Valerion's Heresy]] in 117 VR. Its Pontiff rules as divine regent for a god no longer visibly among mortals. It relocated to central Althas after [[the-ophanim|the Ophanim]]'s landing in 333 VR devastated Hilltop; [[cassio-aquila|Cassio Aquila]] of the Holy See was one of the Five Heroes who died bringing it down the following year.
 
 In 361 VR it ratified the Jesthaen Treaty, ending active combat in the [[jesthaen|Jesthaen]] rebellion.
 

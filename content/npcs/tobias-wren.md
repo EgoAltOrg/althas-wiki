@@ -16,17 +16,17 @@ image: tobias-wren.jpg
 
 ## Appearance
 
-An old man worn gaunt and hollow-cheeked, with long, unbound hair gone pale and fine with age and deep-set, shadowed eyes. He keeps the plain dark robes of a country convent priest and a simple pale ruff at the throat, and his hands are long and pale. Frail as he is, his manner is gentle and unhurried.
+An old man worn gaunt and hollow-cheeked, with long, unbound hair gone pale and fine with age and deep-set, shadowed eyes. He keeps the plain dark robes of a country convent priest and a simple pale ruff at the throat, and his hands are long and pale.
 
 ## Personality
 
-Patient and warm. He knows every family's troubles, blesses the newborns, sits with the dying and turns no one away, and the town loves him for it.
+Frail as he is, his manner is gentle and unhurried. Patient and warm. He knows every family's troubles, blesses the newborns, sits with the dying and turns no one away, and the town loves him for it.
 
 ## History
 
 Father Tobias has been the priest of the [[convent-of-saint-trefan|Convent of Saint Trefan]] since before the [[jesthaen|Jesthaen]] war, and is the only priest it keeps. He received [[malak|Malak's]] sealed package on Adventus 12, 366 VR, and tended the guardsman [[pell|Pell]] after bandits beat him in the market. From him the party learned of [[lorkhan-olnir|Lorkhan Olnir's]] time in [[drinmery|Drinmery]] during the war.
 
-On the night of Adventus 12, [[gideon|Gideon]] and [[malak|Malak]] dug up the unmarked grave in the convent churchyard and found a body with a locket: inside, an old picture worn away by time, and the initials TW. When [[rosestripe|Rosestripe]] told Father Tobias of it, he asked her where such a thing had been found. He told her, and later [[novak-azimuth|Novak]], that he means to leave Drinmery for [[andaluria|Andaluria]] to right his past wrongs, as soon as his affairs are in order, and he showed Novak the [[the-threnodies|Threnody]] Malak had delivered. [[alys|Alys]] told the party that at her son Colm's funeral, Father Tobias put his ear to the boy's mouth and passed his last words on to her.
+On the night of Adventus 12, [[gideon|Gideon]] dug up the unmarked grave in the convent churchyard while [[malak|Malak]] watched, and found a body with a locket: inside, an old picture worn away by time, and the initials TW. When [[rosestripe|Rosestripe]] told Father Tobias of it, he asked her where such a thing had been found. He told her, and later [[novak-azimuth|Novak]], that he means to leave Drinmery for [[andaluria|Andaluria]] to right his past wrongs, as soon as his affairs are in order, and he showed Novak the [[the-threnodies|Threnody]] Malak had delivered. [[alys|Alys]] told the party that at her son Colm's funeral, Father Tobias put his ear to the boy's mouth and passed his last words on to her.
 
 ## Related pages
 

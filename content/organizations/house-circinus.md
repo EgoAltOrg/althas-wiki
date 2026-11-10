@@ -16,7 +16,7 @@ House Circinus is one of [[hilltop|Hilltop's]] pureblooded houses, of the kind t
 
 That one gift made the house twice over. It found the ore, the gemveins, and the buried water that others had to dig blind for, and the wealth of the deep earth made House Circinus landed and comfortable. And it made the house indispensable to the Church's mapmaking, so that Circinus came to hold the customary headship of the Parish of Cartography, much as House Cruoris recurs in the Pontiff's chair.
 
-When [[the-ophanim|the Ophanim]] fell and devastated [[hilltop|Hilltop]], House Circinus withdrew with [[the-holy-see|the Holy See]] to central Althas, a See-bound house following its faith and its office rather than staying behind.
+When [[the-ophanim|the Ophanim]] landed and devastated [[hilltop|Hilltop]], House Circinus withdrew with [[the-holy-see|the Holy See]] to central Althas, a See-bound house following its faith and its office rather than staying behind.
 
 ## History
 

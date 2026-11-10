@@ -1,7 +1,7 @@
 ---
 title: Lael
 kind: person
-role: "One of the Five Heroes"
+role: "Lord Commander of the Inquisitors, one of the Five Heroes"
 pronouns: he/him
 nation: "[[hilltop|Hilltop]]"
 allegiance: "[[the-holy-see|The Holy See]]"
@@ -24,7 +24,7 @@ The Miracle of Rebirth triggers at its bearer's death: the soul reoccupies its o
 
 ### The Reborn Inquisitor
 
-Lael was a high-ranking Inquisitor of [[the-holy-see|the Holy See]] and one of the Five Heroes who fought and brought down [[the-ophanim|the Ophanim]] at [[hilltop|Hilltop]] in 333-334 VR, alongside the Voldis High Prince [[edrion-voldis|Edrion Voldis]] and [[cassio-aquila|Cassio Aquila]] (both of whom died) and [[aldric-voldis|Aldric Voldis]] (who survived). Lael led the Inquisitors into the final battle in 334 VR and fell in the fighting too. He did not stay dead.
+Lael was a high-ranking Inquisitor of [[the-holy-see|the Holy See]] and one of the Five Heroes who fought and brought down [[the-ophanim|the Ophanim]] at [[hilltop|Hilltop]] in 333-334 VR, alongside the Voldaen High Prince [[edrion-voldis|Edrion Voldis]] and [[cassio-aquila|Cassio Aquila]] (both of whom died) and [[aldric-voldis|Aldric Voldis]] (who survived). Lael led the Inquisitors into the final battle in 334 VR and fell in the fighting too. He did not stay dead.
 
 His [[miracles|Miracle of Rebirth]] returned his soul to his own body, which the Miracle keeps from ever truly dying. What rose was Lael again, in a form that no longer ages and cannot be laid to rest by any ordinary wound. It is from this that his epithet comes: the Reborn.
 

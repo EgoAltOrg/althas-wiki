@@ -48,7 +48,7 @@ submap:
           colour: "#c98a4b"
 ---
 
-**Summary**: A medium-sized city in [[jesthaen|Jesthaen]], best known as the home of the [[convent-of-saint-trefan|Convent of Saint Trefan]].
+**Summary**: A small city in [[jesthaen|Jesthaen]], best known as the home of the [[convent-of-saint-trefan|Convent of Saint Trefan]].
 
 ---
 
@@ -58,21 +58,21 @@ The biggest local urban center in its stretch of [[jesthaen|Jesthaen]], and wher
 
 ## History
 
-Drinmery is wary of outsiders. During the [[jesthaen|Jesthaen]] war, [[lorkhan-olnir|Lorkhan Olnir]] quartered his men in the town and ate townsfolk, and the town has not forgotten.
+Drinmery is wary of outsiders. During the [[jesthaen|Jesthaen]] war, [[lorkhan-olnir|Lorkhan Olnir]] quartered his men in the city and ate townsfolk, and the city has not forgotten.
 
 ## Notable Places
 
-- The [[convent-of-saint-trefan|Convent of Saint Trefan]], on the rise above the town, with its churchyard.
+- The [[convent-of-saint-trefan|Convent of Saint Trefan]], on the rise above the city, with its churchyard.
 - [[fleming-manor|Fleming Manor]], the Count's house, on a low rise overlooking the center of town.
 - The [[drinmery-market|market]] at the east bridgehead.
-- The Wakeful Lamp, the tavern beside the market, kept by [[hollis-brand|Hollis Brand]]. It is named for the lamps of the [[lampfort|Lampfort]].
+- The [[wakeful-lamp|Wakeful Lamp]], the tavern beside the market, kept by [[hollis-brand|Hollis Brand]]. It is named for the lamps of the [[lampfort|Lampfort]].
 - The [[restful-shade|Restful Shade]], a little-known brothel associated with the Wakeful Lamp.
 - The manned checkpoints on every road into town.
 - The [[lampfort|Lampfort]], an old fort a day and a half west along the river, where the bandits laired until the party cleared it.
 
 ## Inhabitants
 
-The town's Senator is [[guilmore-fleming|Count Fleming]], who still goes by his title from before the revolution, and its peace is kept by the hired guard of [[immanuel-greene|Immanuel Greene]]. Any local can tell you the two men don't get along. Among its people:
+The city's Senator is Count [[guilmore-fleming|Fleming]], who still goes by his title from before the revolution, and its peace is kept by the hired guard of [[immanuel-greene|Immanuel Greene]]. Any local can tell you the two men don't get along. Among its people:
 
 - [[aldous-pike|Aldous Pike]], gravekeeper of the convent churchyard.
 - [[alys|Alys]], a grieving mother.
@@ -81,15 +81,16 @@ The town's Senator is [[guilmore-fleming|Count Fleming]], who still goes by his 
 - [[inkfeather|Inkfeather]], the convent's librarian and healer.
 - [[jory-fenn|Jory Fenn]], a bandit, now the party's captive.
 - [[maud-tallow|Maud Tallow]], a candle-seller in the market.
-- [[mother-wenna|Mother Wenna]], madam of the Restful Shade.
+- Mother [[wenna|Wenna]], madam of the Restful Shade.
 - [[pell|Pell]], a young guardsman.
-- [[wick|Wick]], a bandit.
+- [[wick|Wick]], a bandit, killed when the party destroyed the bandits' fort.
 - [[yselda-marrow|Yselda Marrow]], a clerk of the Merchant's Guild Courthouse.
 
 ## Related pages
 
 - [[jesthaen|Jesthaen]]
 - [[convent-of-saint-trefan|Convent of Saint Trefan]]
+- [[wakeful-lamp|Wakeful Lamp]]
 - [[guilmore-fleming|Guilmore Fleming]]
 - [[immanuel-greene|Immanuel Greene]]
 - [[lorkhan-olnir|Lorkhan Olnir]]

@@ -47,7 +47,7 @@ The hand must also be unaided. A ruler for the straight lines or a compass for t
 
 Then there is beauty, which here does real work. A seal drawn with care and ornament is stronger than a plain one drawn to the same specification. This is why no two accomplished casters draw quite alike, and why a practiced eye can know a caster by their hand much as it knows handwriting.
 
-Players can practice carving seals of their own on the wiki's [[sealcarver|Sealcarver]] page.
+Seals can be practiced on the [[sealcarver|Sealcarver]].
 
 > [!info] On this notation
 > The seal grammar described above follows the system set out in *Codex of Arcane Arts* by Roc Humet Vidal, adapted here under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

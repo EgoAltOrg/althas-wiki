@@ -8,13 +8,13 @@ practitioners: "[[the-holy-see|the Holy See]] and its clergy"
 image: splendor-magic.png
 ---
 
-**Summary**: How Splendor magic actually works in Althas: not a caster's own power, but a favor granted by [[the-one-above|the One Above]] to whoever knows the correct incantation. Casting a spell is asking, not commanding.
+**Summary**: How Splendor Magic works in Althas: not a caster's own power, but a favor granted by [[the-one-above|the One Above]] to whoever knows the correct incantation. Casting a spell is asking, not commanding.
 
 ---
 
 ## Overview
 
-A Splendor caster speaks a precise incantation, correctly, and the One Above grants the effect. The power is never the caster's own. What looks like a spell from the outside is a request that was answered. A caster with the "wrong words" for a desired effect simply cannot produce it, no matter how skilled or determined they are: skill in Splendor magic is fluency, not force.
+A Splendor caster speaks a precise incantation, correctly, and the One Above grants the effect. The power is never the caster's own. What looks like a spell from the outside is a request that was answered. A caster with the "wrong words" for a desired effect simply cannot produce it, no matter how skilled or determined they are: skill in Splendor Magic is fluency, not force.
 
 [[codex-magic|Codex Magic]] works the other way: Splendor asks a person (a god) for magic; Codex tears a hole to reach it directly.
 
@@ -22,14 +22,14 @@ A Splendor caster speaks a precise incantation, correctly, and the One Above gra
 
 ### A living channel
 
-An incantation also needs a living channel to carry it. Correct wording alone is not enough: the words must be borne by something living to reach [[the-one-above|the One Above]]. Ordinarily this is trivial, a living voice speaking a living ask, so casters rarely notice it as a separate requirement at all. It only becomes visible at the edges of the practice, as with the blood-borne prayers of the [[miracles|Miracle of Viaticum]], where the Pontiff's own holyblood serves as the living channel in his place.
+An incantation also needs a living channel to carry it. Correct wording alone is not enough: the words must be borne by something living to reach [[the-one-above|the One Above]]. Ordinarily this is trivial, a living voice speaking a living ask, so casters rarely notice it as a separate requirement at all. It only becomes visible at the edges of the practice, as with the blood-borne prayers of the [[miracles|Miracle of Viaticum]], where the bearer's own holyblood serves as the living channel in place of a living voice.
 
 ### Where the words come from
 
 Incantations aren't invented by casters. They're discovered. In Althas, this means:
 
 - The correct words for a given effect are fixed and pre-existing, not something a caster can improvise or invent.
-- Finding a new incantation is a discovery, not something a caster trains into. That makes incantation research a prize for [[the-holy-see|the Holy See]]: whoever controls it controls what Splendor magic can even do.
+- Finding a new incantation is a discovery, not something a caster trains into. That makes incantation research a prize for [[the-holy-see|the Holy See]]: whoever controls it controls what Splendor Magic can even do.
 - Most known incantations are old and few in number.
 
 ### The words, and the saying of them

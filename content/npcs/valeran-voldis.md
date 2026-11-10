@@ -9,11 +9,12 @@ pronouns: he/him
 house: "[[house-voldis|House Voldis]]"
 nation: "[[voldaen|Voldaen]]"
 allegiance: "[[voldaen|Voldaen]]"
-died: 149 VR
+born: 96 VR
+died: 165 VR
 image: the-blessed-king.jpg
 ---
 
-**Summary**: **Valeran Voldis**, remembered as the Blessed King (r. 117-149 VR), who ended his father's heretical war by slaying [[valerion-voldis|the Mad King]] and won [[hilltop|Hilltop]] its independence.
+**Summary**: **Valeran Voldis**, remembered as the Blessed King (r. 117-165 VR), who ended his father's heretical war by slaying [[valerion-voldis|the Mad King]] and won [[hilltop|Hilltop]] its independence.
 
 ---
 
@@ -21,7 +22,11 @@ image: the-blessed-king.jpg
 
 Valeran, son of [[valerion-voldis|the Mad King]], ended the civil war his father had started by striking the man down himself and denouncing his heresy before the faithful. For turning against a blasphemer king, even his own father, the [[the-holy-see|Holy See]] and the common people named him the Blessed King, and the epithet outlasted his birth name.
 
-Out of the settlement that ended the war, [[hilltop|Hilltop]], long the seat of the [[the-holy-see|Holy See]], passed fully into the Church's keeping as a sovereign nation rather than a holding of the Voldis crown. The [[house-voldis|House Voldis]] line continued through his sons. Breaking the house's ancient habit of names begun with Vol and Val, he called them [[castus-voldis|Castus]] and Castorius, setting his heirs apart from the disgraced father he had struck down. Under Castus the northern academies seceded to found [[polaris|Polaris]] by [[the-lodestar-pact|the Lodestar Pact]]; Castorius, the younger, renounced his claim in that same settlement.
+Out of the settlement that ended the war, [[hilltop|Hilltop]], long the seat of the [[the-holy-see|Holy See]], passed fully into the Church's keeping as a sovereign nation rather than a holding of the Voldis crown. The [[house-voldis|House Voldis]] line continued through his twin sons. Breaking the house's ancient habit of names begun with Vol and Val, he called them [[castus-voldis|Castus]] and Castorius, setting his heirs apart from the disgraced father he had struck down. Under Castus the northern academies seceded to found [[polaris|Polaris]] by [[the-lodestar-pact|the Lodestar Pact]]; Castorius, the younger, renounced his claim in that same settlement.
+
+Valeran gave each of his twins one of his Twinblades, the swords **Truth** and **Ideal**. Castorius surrendered his with his claim; both went with Castus to [[haven|Haven]] and were lost in its fall. The Twinblades are thought to lie somewhere in the [[witherwild-continent|Witherwild]] still, and of the adventurers who have gone after them, none has come back.
+
+![[twinblades.webp|320]]
 
 ## Related pages
 

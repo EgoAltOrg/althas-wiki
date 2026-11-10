@@ -6,7 +6,7 @@ leader: "[[amalthus-cruoris|Amalthus Cruoris]]"
 allegiance: "[[the-holy-see|the Holy See]]"
 ---
 
-**Summary**: The arm of [[the-holy-see|the Holy See]] that presides over doctrine, scripture, and the proper form of worship. Where [[parish-of-inquisition|the Inquisition]] judges sin, Orthodoxy defines it, and guards the sacred words that Splendor magic itself depends on.
+**Summary**: The arm of [[the-holy-see|the Holy See]] that presides over doctrine, scripture, and the proper form of worship. Where [[parish-of-inquisition|the Inquisition]] judges sin, Orthodoxy defines it, and guards the sacred words that Splendor Magic itself depends on.
 
 ---
 
@@ -24,7 +24,7 @@ The faith's supreme authority is the Pontiff, chosen by election of the Church's
 
 ### Keepers of the Word
 
-Orthodoxy's quiet power comes from what it holds. [[splendor-magic|Splendor Magic]] is not a caster's own strength but a request answered by [[the-one-above|the One Above]], and the words that make a request work are fixed, ancient, and few. They are discovered, not invented, and most of them sit in the Parish's keeping, in scripture the Parish alone is trusted to study and decipher. Whoever controls that research controls what Splendor magic can even do. It is a slow, jealous kind of authority, measured in decades of decoding rather than open displays of force, and it makes Orthodoxy one of the most powerful arms of the Church without ever raising a hand.
+Orthodoxy's quiet power comes from what it holds. [[splendor-magic|Splendor Magic]] is not a caster's own strength but a request answered by [[the-one-above|the One Above]], and the words that make a request work are fixed, ancient, and few. They are discovered, not invented, and most of them sit in the Parish's keeping, in scripture the Parish alone is trusted to study and decipher. Whoever controls that research controls what Splendor Magic can even do. It is a slow, jealous kind of authority, measured in decades of decoding rather than open displays of force, and it makes Orthodoxy one of the most powerful arms of the Church without ever raising a hand.
 
 Old traditions once held that the last words of the dead could be heard by the living. Any such claim has long since been removed from the Orthodoxy's teachings.
 
@@ -38,7 +38,7 @@ Orthodox doctrine teaches that mortal eyes should be covered before the divine, 
 
 Once each week, on Dies Splendoris, the faithful gather to make their prayers in common, and the heart of that gathering is the Horacaecum, the Hour of Blindness. For that hour every eye is veiled and the congregation recites as one, waiting rather than mourning: no mortal sight is fit for the divine until the One Above returns, and only then will the veils be lifted and the faithful permitted to look at last. To keep the Horacaecum unveiled is to claim a worthiness no living person holds.
 
-The fall of [[the-ophanim|the Ophanim]] on [[hilltop|Hilltop]] has made the doctrine a fault line rather than a comfort: some now ask whether the angel was a herald to be beheld or a judgment no one should have survived seeing.
+The descent of [[the-ophanim|the Ophanim]] on [[hilltop|Hilltop]] has made the doctrine a fault line rather than a comfort: some now ask whether the angel was a herald to be beheld or a judgment no one should have survived seeing.
 
 ## Related pages
 

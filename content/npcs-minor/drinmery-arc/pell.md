@@ -19,7 +19,7 @@ A young man with shoulder-length fair hair, in a high-collared coat over mail, a
 
 ## History
 
-Pell stands [[drinmery|Drinmery's]] checkpoints. During the market raid on Adventus 12, 366 VR, bandits beat him to the ground as a distraction, and [[tobias-wren|Father Tobias]] healed his bruised ribs. He told [[zalmir-aldarson|Zalmir]] that the bandits' blades look like barracks steel, all from the same smith.
+Pell stands [[drinmery|Drinmery's]] checkpoints. During the market raid on Adventus 12, 366 VR, bandits beat him to the ground as a distraction, and Father [[tobias-wren|Tobias]] healed his bruised ribs. He told [[zalmir-aldarson|Zalmir]] that the bandits' blades look like barracks steel, all from the same smith.
 
 ## Related pages
 

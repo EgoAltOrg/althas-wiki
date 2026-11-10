@@ -13,7 +13,7 @@ faith: "[[the-faunus|the Faunus]]"
 
 The Witherwild is the second landmass of the known world, reachable from Althas only through the [[godless-gate|Godless Gate]], the pass that joins the two in the northwest. Where Althas is settled and mapped, the Witherwild is neither: a wilderness of choking, endless growth, its seasons stalled, its wildlife swollen and hostile, pressing forever outward against any border set to hold it.
 
-What Althas remembers of it is [[haven|Haven]], the colony three of its powers raised there generations ago and lost to plague and the wild. Since that ruin, called "the Folly" in common speech, the Witherwild has been a place to be walled out rather than walked into, and the [[the-witherwatch|Witherwatch]] keeps the [[godless-gate|Gate]] shut against what still comes out of it.
+What Althas remembers of it is [[haven|Haven]], the colony three of its powers raised there generations ago and lost to plague and the wild. Since that ruin, called Castus's Folly in common speech, the Witherwild has been a place to be walled out rather than walked into, and the [[the-witherwatch|Witherwatch]] keeps the [[godless-gate|Gate]] shut against what still comes out of it.
 
 ### A land of rumor
 
@@ -30,7 +30,7 @@ Ruin never killed the dream the Folly was built on. Highborn children across the
 
 ### The Faunus
 
-The Wicklings share the Fanewick with the Faunus, beings they hold to be gods that walk the land in the flesh and trade small miracles for worship as readily as they punish with tricks and curses. What little of that faith reached Althas came filtered through the [[house-aquila|House Aquila]] missionary who led the [[the-holy-see|Holy See's]] part of the [[haven|Haven]] colony: bearing the [[miracles|Miracle of Pentecost]], they alone could understand the Wicklings, and it was they who named the beings the **Faunus** and fixed the forms of their names the mainland now uses. The faith Althas reconstructed from those thin records, and the handful of named Faunus it still remembers (the Great Owl Nikta chief among them), are gathered on [[the-faunus|the Faunus]].
+The Wicklings share the Fanewick, a forest of the Witherwild, with the Faunus, beings they hold to be gods that walk the land in the flesh and trade small miracles for worship as readily as they punish with tricks and curses. What little of that faith reached Althas came filtered through the [[house-aquila|House Aquila]] missionary who led the [[the-holy-see|Holy See's]] part of the [[haven|Haven]] colony: bearing the [[miracles|Miracle of Pentecost]], they alone could understand the Wicklings, and it was they who named the beings the **Faunus** and fixed the forms of their names the mainland now uses. The faith Althas reconstructed from those thin records, and the handful of named Faunus it still remembers (the Great Owl Nikta chief among them), are gathered on [[the-faunus|the Faunus]].
 
 ### The changed peoples
 
@@ -45,3 +45,4 @@ The blight does not spare the Witherwild's peoples. Witherwatch scouts and the o
 - [[drakona|Drakona]]
 - [[house-aquila|House Aquila]]
 - [[the-holy-see|The Holy See]]
+- [[the-faunus|The Faunus]]

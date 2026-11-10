@@ -48,6 +48,7 @@ After the war [[the-holy-see|the Holy See]] raised him to Archbishop of Jesthaen
 ## Relationships
 
 - **[[aldric-voldis|Aldric Voldis]]**: his commander in the civil war, whose right hand he became.
+- **[[the-freehands|The Freehands]]**: he helped lead their army in the civil war; those who refused the peace now count him a traitor for taking the Archbishop's chair.
 
 ## Depictions
 
@@ -66,3 +67,4 @@ After the war [[the-holy-see|the Holy See]] raised him to Archbishop of Jesthaen
 - [[miracles|Miracles]]
 - [[infernis|Infernis]]
 - [[augustus-corvus|Augustus Corvus]]
+- [[the-freehands|The Freehands]]

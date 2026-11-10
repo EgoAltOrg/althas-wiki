@@ -9,7 +9,7 @@ nation: "[[jesthaen|Jesthaen]]"
 image: hollis-brand.jpg
 ---
 
-**Summary**: The keeper of the Wakeful Lamp, the tavern at [[drinmery|Drinmery's]] bridgehead.
+**Summary**: The keeper of the [[wakeful-lamp|Wakeful Lamp]], the tavern at [[drinmery|Drinmery's]] bridgehead.
 
 ---
 
@@ -24,3 +24,4 @@ Hollis keeps the Wakeful Lamp, the tavern at [[drinmery|Drinmery's]] bridgehead,
 ## Related pages
 
 - [[drinmery|Drinmery]]
+- [[wakeful-lamp|Wakeful Lamp]]

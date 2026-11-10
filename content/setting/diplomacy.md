@@ -28,6 +28,7 @@ node valis-voldis | Valis Voldis | people | npcs/valis-voldis
 node aldric-voldis | Aldric Voldis | people | npcs/aldric-voldis
 node lael | Lael | people | npcs/lael
 node lyra-aquila | Lyra Aquila | people | npcs/lyra-aquila
+node antares-algol | Antares Algol | people | npcs/antares-algol
 node hesper-arcturus | Hesper Arcturus | people | npcs/hesper-arcturus
 node augustus-corvus | Augustus Corvus | people | npcs/augustus-corvus
 node zhenya-azimuth | Zhenya Azimuth | people | npcs/zhenya-azimuth
@@ -35,6 +36,7 @@ node house-azimuth | House Azimuth | institution | organizations/house-azimuth
 node house-olnir | House Olnir | institution | organizations/house-olnir
 node the-witherwatch | The Witherwatch | institution | organizations/the-witherwatch
 node the-council-of-six | The Council of Six | institution | organizations/the-council-of-six
+node the-freehands | The Freehands | institution | organizations/the-freehands
 
 # Edges: source -> target (arrow) or <-> (mutual) | type | label
 edge house-voldis -> voldaen | governance | royal dynasty, rules
@@ -58,6 +60,7 @@ edge aldric-voldis -> house-voldis | uneasy | spurned baseborn son
 edge lael -> parish-of-inquisition | governance | Lord Commander, leads
 edge lyra-aquila -> polaris | governance | Triumvirate archmage
 edge hesper-arcturus -> polaris | governance | Triumvirate archmage until her death in 363 VR
+edge antares-algol -> polaris | governance | Triumvirate Archmage
 edge augustus-corvus -> voldaen | governance | Minister of War
 edge augustus-corvus -> jesthaen | rivalry | led Voldaen's armies against, wants the war renewed
 edge augustus-corvus -> aldric-voldis | war-history | brothers-in-arms in the Ophanim War, then enemies
@@ -67,6 +70,7 @@ edge house-olnir -> voldaen | governance | Great House, sworn to the Crown
 edge the-witherwatch -> voldaen | governance | frontier garrison, raised by
 edge the-holy-see -> the-council-of-six | governance | funds Andaluria's reconstruction
 edge the-council-of-six -> hilltop | governance | governs Andaluria in
+edge the-freehands -> jesthaen | uneasy | won its revolution, refused its peace
 ```
 
 ## The two sides of the war
@@ -135,17 +139,17 @@ The newest nation. A republic [[aldric-voldis|Aldric Voldis]] broke away from [[
 - **Problems**: young-nation instability; conservative pro-Voldaen holdouts; fresh, fragile recognition.
 - **Relationships**: [[armada|Armada]] +2, [[polaris|Polaris]] +1, [[voldaen|Voldaen]] -2, [[the-holy-see|Holy See]] -2.
 
-**Revolution-era Slyborne networks** (Tier 3)
-- **Blurb**: The smuggling routes that carried the revolution, now wary as the republic they served courts the legitimacy that would disown them.
-- **Assets**: smuggling routes, a black-market economy, revolution-forged loyalty, cross-border reach into [[armada|Armada]].
-- **Problems**: a republic seeking legitimacy may turn on its old smuggler allies; friction with Armada's pirate families over the same trade.
-- **Relationships**: [[armada|Armada]] +1, Republic +1.
+**[[the-freehands|The Freehands]]** (Tier 3)
+- **Blurb**: The army that won the revolution, and now the anarchists who refused its peace. The smuggling routes that carried the revolution are theirs, and the Republic, courting legitimacy, would rather they were gone.
+- **Assets**: smuggling routes, a black-market economy, revolution-forged loyalty, cross-border reach into [[armada|Armada]], cells no one has rooted out of [[jestha|Jestha]].
+- **Problems**: a republic seeking legitimacy turns on its old allies; friction with Armada's pirate families over the same trade; no leaders to bargain with.
+- **Relationships**: [[armada|Armada]] +1, Republic -2.
 
 ### Polaris
 
 A magocracy of scholars and mages, its industrial rise built on [[giants|Giant]] labor it later discarded.
 
-**The Triumvirate of Archmages** ([[lyra-aquila|Lyra Aquila]]; [[hesper-arcturus|Hesper Arcturus]]'s seat empty since her death) (Tier 5, ruling)
+**The Triumvirate of Archmages** ([[lyra-aquila|Lyra Aquila]]; [[antares-algol|Antares Algol]]; [[hesper-arcturus|Hesper Arcturus]]'s seat empty since her death) (Tier 5, ruling)
 - **Blurb**: The archmages who rule the magocracy, rich in magitech and airships but short of labor and raw stock, a restive [[giants|Giant]] underclass beneath them.
 - **Assets**: skilled mages, magitech, airships, magical creatures, the academies.
 - **Problems**: a worker shortage, poor raw materials, a restive [[giants|Giant]] underclass; a seat left empty until a trial can be arranged for a new Archmage.
@@ -170,8 +174,8 @@ A merchant federation of trade cities founded by Caio, merchant lords, pirates a
 **The pirate and Slyborne families** (Tier 3)
 - **Blurb**: [[armada|Armada]]'s founding pirate lines, still running the black-market trade the [[guild|Guild]] would rather forget as it reaches for respectability.
 - **Assets**: the founding bloodlines, black-market trade, naval irregulars, smuggling networks.
-- **Problems**: the [[guild|Guild]]'s drive for legitimacy sidelines them; rivalry with Jesthaen's smugglers.
-- **Relationships**: [[guild|Guild]] +1, Jesthaen Slyborne +1.
+- **Problems**: the [[guild|Guild]]'s drive for legitimacy sidelines them; a friendly rivalry with [[the-freehands|the Freehands]], the one organized power they would still rather work with.
+- **Relationships**: [[guild|Guild]] +1, [[the-freehands|the Freehands]] +1.
 
 ### Hilltop
 

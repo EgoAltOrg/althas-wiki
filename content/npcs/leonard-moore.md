@@ -11,17 +11,17 @@ died: 366 VR
 image: leonard-moore.png
 ---
 
-**Summary**: A veteran warrior and strategist raised by [[house-azimuth|House Azimuth]], now counselor, sword and shield to its young head, [[novak-azimuth|Novak]], and the only father figure Novak has left.
+**Summary**: A veteran warrior and strategist raised by [[house-azimuth|House Azimuth]], who was counselor, sword and shield to its young head, [[novak-azimuth|Novak]], and the only father figure Novak had left.
 
 ---
 
 ## Appearance
 
-Good-willed amber eyes, stubborn furrows to match his rough silver hair, and the occasional opportunistically candid smile.
+Amber eyes, a furrowed brow, rough silver hair and an occasional candid smile.
 
 ## Personality
 
-Cultivated, strong, and fearsomely flawless in the presence of anyone he finds himself among. Above all else he is grateful and loyal as few others are, with a deep and abiding affection for Rigel and all who descend from him. He will rise to any task in the hope of relieving Novak of his impossible burdens.
+Cultivated, strong, and fearsomely flawless in the presence of anyone he found himself among. Above all else he was grateful and loyal as few others were, with a deep and abiding affection for Rigel and all who descended from him. He would rise to any task in the hope of relieving Novak of his impossible burdens.
 
 ## Abilities
 
@@ -31,13 +31,13 @@ An exceptional fighter and strategist, distinguished both on the field of battle
 
 Leonard was born in [[voldaen|Voldaen]] in 289 VR, the son of a once-revered warrior who served beneath House Azimuth's banners. Shortly before Leonard turned four, his father was mortally wounded in battle, leaving the child with little to fend for himself. His hardship did not last: Rigel, then head of House Azimuth, took notice of the boy and took him into his care, raising him alongside his own infant son, Alnumir.
 
-Under the Azimuths he grew into an exceptional fighter and strategist. He came to admire [[cornelia-azimuth|Cornelia]] without measure, and her death was a sorrow he carried ever after. He now serves [[novak-azimuth|Novak]] as counselor, sword and shield, eyes and ears.
+Under the Azimuths he grew into an exceptional fighter and strategist. He came to admire [[cornelia-azimuth|Cornelia]] without measure, and her death was a sorrow he carried ever after. He served [[novak-azimuth|Novak]] as counselor, sword and shield, eyes and ears.
 
 In [[drinmery|Drinmery]], Leonard told Novak that [[house-azimuth|House Azimuth]] holds a [[the-threnodies|Threnody]], which Cornelia spent much time researching, and that he believed it was what led to her experiments with [[parashiel|Parashiel]]. He left the party to stay as a guest at [[fleming-manor|Fleming Manor]] and learn what [[guilmore-fleming|the Count]] wanted with the Threnody [[malak|Malak]] had delivered. When the party returned from the bandits' fort on Adventus 16, 366 VR, they found him hanged naked in Drinmery's town square, a sign reading "Death to Queensmen" around his neck and Cornelia's ring on his hand.
 
 ## Relationships
 
-He cares for [[novak-azimuth|Novak]] as much as he did for the late matriarch, and is Novak's only living semblance of a father. He admired [[cornelia-azimuth|Cornelia]] above all others of her line, and owes everything to Rigel, who raised him beside Alnumir, the husband of [[zhenya-azimuth|Zhenya]].
+He cared for [[novak-azimuth|Novak]] as much as he had for the late matriarch, and was Novak's only living semblance of a father. He admired [[cornelia-azimuth|Cornelia]] above all others of her line, and owed everything to Rigel, who raised him beside Alnumir, the husband of [[zhenya-azimuth|Zhenya]].
 
 ## Related pages
 

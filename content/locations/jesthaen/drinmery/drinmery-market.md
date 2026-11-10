@@ -12,7 +12,7 @@ submap:
     zoomDelta: 0.25
 ---
 
-**Summary**: The market square at [[drinmery|Drinmery's]] east bridgehead, where most of the town's trade passes.
+**Summary**: The market square at [[drinmery|Drinmery's]] east bridgehead, where most of the city's trade passes.
 
 ---
 
