@@ -349,15 +349,21 @@ def test_gm_only_portrait_is_never_seeded(tmp_path):
 
 def test_image_lazily_continuing_a_gm_callout_is_never_seeded(tmp_path):
     """An embed written without `>` straight under a gm-only callout renders
-    inside the callout in Obsidian but survives the strip. It must not become
-    the public portrait."""
-    fm, body, content = _sync_one(
-        tmp_path,
-        "---\ntitle: Thea\nkind: person\n---\n\n> [!gm-only] Secret\n> text\n![[secret.jpg]]\n\nBody.\n",
-        asset_name="secret.jpg",
-    )
-    assert sync.extract_image_block(fm) is None
+    inside the callout in Obsidian, so the sync refuses the page outright: no
+    public portrait, no copied asset, no page written."""
+    try:
+        _sync_one(
+            tmp_path,
+            "---\ntitle: Thea\nkind: person\n---\n\n> [!gm-only] Secret\n> text\n![[secret.jpg]]\n\nBody.\n",
+            asset_name="secret.jpg",
+        )
+    except sync.LazyGMContinuation:
+        pass
+    else:
+        raise AssertionError("lazy GM embed was not refused")
+    content = tmp_path / "content"
     assert not (content / "assets" / "secret.jpg").exists()
+    assert not (content / "npcs" / "thea.md").exists()
 
 
 def test_non_image_leading_embed_is_never_seeded(tmp_path):

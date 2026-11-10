@@ -15,6 +15,12 @@ existing marker:/submap:/image: presentation data already in the destination
 file), drops the Sources/Last updated bookkeeping lines, and writes the result
 into content/.
 
+Every line of a GM callout must start with `>`. Obsidian can render a
+`>`-less line sitting directly under one inside the callout (a lazy
+continuation of its last paragraph), so the sync refuses every such line
+outright: it names the page and line and writes nothing, rather than guess
+whether the line was meant public.
+
 content/ is a generated build artifact from this point on: don't hand-edit files
 this script writes, edit the Ontos source and re-run. This is a mechanical strip,
 not a judgment call: always read `git diff content/` yourself before publishing.
@@ -227,7 +233,22 @@ def extract_infobox_fields(frontmatter_text):
     return out
 
 
+class LazyGMContinuation(ValueError):
+    """A nonblank line written without `>` directly under gm-only/gm-notes
+    content. Obsidian can render it inside the callout (a lazy continuation), so
+    the author sees it as GM-only, but it is not a `>` line. The sync refuses
+    rather than guess whether it was meant to be public. `line` is 1-based in
+    the body passed to strip_callouts."""
+
+    def __init__(self, line, text):
+        super().__init__(f"line {line}: {text}")
+        self.line = line
+        self.text = text
+
+
 def strip_callouts(body):
+    """Drop every gm-only/gm-notes callout from body. Raises LazyGMContinuation
+    at the first `>`-less line that would render inside one."""
     lines = body.splitlines()
     out = []
     i, n = 0, len(lines)
@@ -252,7 +273,10 @@ def strip_callouts(body):
                     if j < n and CALLOUT_START_RE.match(lines[j]):
                         i = j
                         continue
-                break
+                    break
+                # Nonblank, no `>`, straight under GM content: a lazy
+                # continuation that would publish what renders as GM-only.
+                raise LazyGMContinuation(i + 1, lines[i])
             continue
         out.append(line)
         i += 1
@@ -469,7 +493,35 @@ def sync_page(src_name, dest_rel):
     return dest
 
 
+def lazy_gm_lines():
+    """(source, file line, text) for the first lazy GM continuation in each
+    mapped source. Checked across every page before any page is written, so a
+    refusal leaves content/ exactly as it was."""
+    found = []
+    for src_name in PAGE_MAP:
+        text = (ONTOS_SETTING / src_name).read_text()
+        _, body = split_frontmatter(text)
+        offset = text[: len(text) - len(body)].count("\n")
+        try:
+            strip_callouts(body)
+        except LazyGMContinuation as e:
+            found.append((src_name, offset + e.line, e.text))
+    return found
+
+
 def main():
+    lazy = lazy_gm_lines()
+    if lazy:
+        print(
+            "ERROR: a line without `>` sits directly under gm-only/gm-notes content.\n"
+            "Obsidian can render it inside the callout, so it may publish GM text.\n"
+            "Prefix it with `>` to keep it GM-only, or put a blank line above it to\n"
+            "make it public. Nothing was written."
+        )
+        for src_name, line, text in lazy:
+            print(f"  {src_name}:{line}: {text}")
+        return 1
+
     written = []
     for src_name, dest_rel in PAGE_MAP.items():
         dest = sync_page(src_name, dest_rel)
