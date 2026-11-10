@@ -114,7 +114,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[wakeful-lamp|The Wakeful Lamp]]: the tavern at Drinmery's bridgehead, kept by Hollis Brand
 - [[crater-lake|Crater Lake]]: a massive crater lake at the center of Althas, left by the Divine Age
 - [[witherwild-continent|The Witherwild]]: the blighted second continent beyond the northwest pass, grave of the Haven colony (Castus's Folly)
-- [[haven|Haven]]: the three-power colony lost in the Witherwild to plague and the wild, remembered as Castus's Folly
+- [[haven|Haven]]: the three-power colony in the Witherwild, abandoned after the great serpent Shun'Aush fell on it, remembered as Castus's Folly
 - [[godless-gate|The Godless Gate]]: the northwest mountain pass joining Althas to the Witherwild, held by the Witherwatch
 - [[serracorte|The Serracorte]]: Andaluria's volcanic wine highlands, crowned by the Condesa's Castillo del Cardenal
 - [[andaluria|Andaluria]]: the capital region of Hilltop around the Ophanim's corpse, a wine country rebuilt under its Council of Six, where the nights have lately grown long

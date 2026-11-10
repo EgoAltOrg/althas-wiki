@@ -36,7 +36,7 @@ In 167 VR, half a century after the civil war, [[valeran-voldis|Valeran]]'s heir
 
 ## 221 VR
 
-In 221 VR the colony of [[haven|Haven]], raised in the [[witherwild-continent|Witherwild]] by Voldaen, Polaris and Hilltop in the years after the Lodestar Pact, was abandoned to plague and the wild. [[voldaen|Voldaen]] raised [[the-witherwatch|the Witherwatch]] the same year to hold the [[godless-gate|Godless Gate]] against the growth that followed. Common speech remembers the venture as Castus's Folly, after the king who permitted it and died defending its colonists.
+In 221 VR the colony of [[haven|Haven]], raised in the [[witherwild-continent|Witherwild]] by Voldaen, Polaris and Hilltop in the years after the Lodestar Pact, was abandoned after the great serpent Shun'Aush fell on it and King [[castus-voldis|Castus]] died fighting it. [[voldaen|Voldaen]] raised [[the-witherwatch|the Witherwatch]] the same year to hold the [[godless-gate|Godless Gate]] against the growth that followed. Common speech remembers the venture as Castus's Folly, after the king who permitted it and died defending its colonists.
 
 ## 333 VR
 
