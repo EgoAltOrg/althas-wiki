@@ -21,6 +21,12 @@ continuation of its last paragraph), so the sync refuses every such line
 outright: it names the page and line and writes nothing, rather than guess
 whether the line was meant public.
 
+The sync also refuses, naming the paths and writing nothing, when any page it
+would write is already modified, staged or untracked in git: that edit is not
+part of this publish, and overwriting it would destroy it. Commit or discard it
+first. A later re-sync in the same publish, whose dirt is this run's own sync
+output, passes --resync to skip the check.
+
 content/ is a generated build artifact from this point on: don't hand-edit files
 this script writes, edit the Ontos source and re-run. This is a mechanical strip,
 not a judgment call: always read `git diff content/` yourself before publishing.
@@ -33,6 +39,7 @@ patches if you use folder-is-the-page.
 """
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -509,7 +516,60 @@ def lazy_gm_lines():
     return found
 
 
-def main():
+def dirty_destinations():
+    """Repo-relative paths of mapped destinations that git shows as modified,
+    staged or untracked (a sorted list), or git's error message (a str)
+    when git status cannot run (not a repo, no git, dubious ownership).
+    Checked before any page is written, so a refusal leaves content/
+    exactly as it was (debugger #42)."""
+    paths = [f":(literal)content/{rel}" for rel in PAGE_MAP.values()]
+    try:
+        out = subprocess.run(
+            ["git", "status", "--porcelain", "-z", "--untracked-files=all", "--", *paths],
+            cwd=CONTENT_DIR.parent, capture_output=True, text=True, check=True,
+        ).stdout
+    except OSError as e:
+        return str(e)
+    except subprocess.CalledProcessError as e:
+        return (e.stderr or "").strip() or f"git exited {e.returncode}"
+    dirty = []
+    entries = iter(out.split("\0"))
+    for entry in entries:
+        if not entry:
+            continue
+        dirty.append(entry[3:])
+        if "R" in entry[:2] or "C" in entry[:2]:
+            next(entries, None)  # -z gives a rename's source path its own field
+    return sorted(dirty)
+
+
+def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    if "--resync" not in argv:
+        dirty = dirty_destinations()
+        if isinstance(dirty, str):
+            print(
+                "ERROR: could not run `git status` in the wiki repo, so the sync cannot\n"
+                "check that the pages it writes hold no uncommitted edits. Nothing was written.\n"
+                f"  git: {dirty}"
+            )
+            return 1
+        if dirty:
+            print(
+                "ERROR: these pages the sync would overwrite already have uncommitted\n"
+                "changes (modified, staged or untracked). They are not part of this\n"
+                "publish, and syncing would destroy them. Commit or discard each one,\n"
+                "then re-run. Nothing was written."
+            )
+            for path in dirty:
+                print(f"  {path}")
+            print(
+                "\n--resync skips this check. Use it only for a re-sync later in a publish\n"
+                "whose first sync ran on a clean content/, when every path above is that\n"
+                "publish's own output. Never use it to clear dirt that was there before."
+            )
+            return 1
+
     lazy = lazy_gm_lines()
     if lazy:
         print(

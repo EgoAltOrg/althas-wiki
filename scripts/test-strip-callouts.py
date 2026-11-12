@@ -14,6 +14,7 @@ content/. Run from the repo root:
 """
 import importlib.util
 import io
+import subprocess
 import sys
 from contextlib import redirect_stdout
 from pathlib import Path
@@ -125,6 +126,9 @@ def _run_main(root, sources):
     content = root / "content"
     setting.mkdir(parents=True)
     content.mkdir()
+    # The sync checks git status before writing (debugger #42); an empty repo
+    # leaves every destination clean.
+    subprocess.run(["git", "init", "-q"], cwd=root, check=True)
     for name, text in sources.items():
         (setting / name).write_text(text)
     names = (
