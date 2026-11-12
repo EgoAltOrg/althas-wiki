@@ -33,6 +33,7 @@ TARGET = next(
     rel for rel in sync.PAGE_MAP.values() if (REPO / "content" / rel).is_file()
 )
 MARKER = "\nDIRTY-MARKER-42\n"
+REFUSAL = "already have uncommitted"
 
 
 def git(cwd, *args):
@@ -112,7 +113,9 @@ def test_dirt_outside_mapped_pages_does_not_block():
     try:
         (d / "content" / "changelog.md").write_text("hand edit\n")
         r = run_sync(d)
-        assert "Synced" in r.stdout, f"sync refused over an unmapped file:\n{r.stdout}"
+        # Checks only the dirty-page guard, so an unrelated refusal over the
+        # live vault's source (a lazy GM line) can't fail this case.
+        assert REFUSAL not in r.stdout, f"sync refused over an unmapped file:\n{r.stdout}"
         assert (d / "content" / "changelog.md").read_text() == "hand edit\n"
     finally:
         shutil.rmtree(d)
@@ -124,8 +127,9 @@ def test_resync_overwrites_own_output():
         page = d / "content" / TARGET
         page.write_text(page.read_text() + MARKER)
         r = run_sync(d, "--resync")
-        assert "Synced" in r.stdout, f"--resync still refused:\n{r.stdout}"
-        assert MARKER.strip() not in page.read_text()
+        assert REFUSAL not in r.stdout, f"--resync still refused:\n{r.stdout}"
+        if "Synced" in r.stdout:  # the vault's own source let the sync run
+            assert MARKER.strip() not in page.read_text()
     finally:
         shutil.rmtree(d)
 

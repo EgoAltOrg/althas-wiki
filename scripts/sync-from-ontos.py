@@ -519,7 +519,8 @@ def lazy_gm_lines():
 def dirty_destinations():
     """Repo-relative paths of mapped destinations that git shows as modified,
     staged or untracked (a sorted list), or git's error message (a str)
-    when git status cannot run (not a repo, no git, dubious ownership). Checked before any page is written, so a refusal leaves content/
+    when git status cannot run (not a repo, no git, dubious ownership).
+    Checked before any page is written, so a refusal leaves content/
     exactly as it was (debugger #42)."""
     paths = [f":(literal)content/{rel}" for rel in PAGE_MAP.values()]
     try:
