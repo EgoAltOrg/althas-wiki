@@ -67,8 +67,11 @@ def test_modified_destination_is_refused_and_kept():
     try:
         page = d / "content" / TARGET
         page.write_text(page.read_text() + MARKER)
+        before = page.read_bytes()
         r = run_sync(d)
-        assert MARKER.strip() in page.read_text(), "sync overwrote a dirty mapped page"
+        assert page.read_bytes() == before, "sync changed a dirty mapped page"
+        status = git(d, "status", "--porcelain", "--untracked-files=all").stdout.splitlines()
+        assert status == [f" M content/{TARGET}"], f"sync wrote other files:\n{status}"
         assert r.returncode != 0, "sync exited 0 despite refusing"
         assert f"content/{TARGET}" in r.stdout, f"refusal does not name the path:\n{r.stdout}"
         assert "Synced" not in r.stdout, "sync reported writing pages"
@@ -136,6 +139,7 @@ def test_not_a_git_repo_is_refused():
         r = run_sync(d)
         assert MARKER.strip() in page.read_text(), "sync wrote without being able to check git"
         assert r.returncode != 0
+        assert "git:" in r.stdout, f"refusal does not say why git failed:\n{r.stdout}"
     finally:
         shutil.rmtree(d)
 

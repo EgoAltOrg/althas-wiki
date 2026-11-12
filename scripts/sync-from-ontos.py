@@ -518,8 +518,8 @@ def lazy_gm_lines():
 
 def dirty_destinations():
     """Repo-relative paths of mapped destinations that git shows as modified,
-    staged or untracked, or None when git status cannot run (not a repo, no
-    git). Checked before any page is written, so a refusal leaves content/
+    staged or untracked (a sorted list), or git's error message (a str) when
+    git status cannot run (not a repo, no git, dubious ownership). Checked before any page is written, so a refusal leaves content/
     exactly as it was (debugger #42)."""
     paths = [f":(literal)content/{rel}" for rel in PAGE_MAP.values()]
     try:
@@ -527,8 +527,10 @@ def dirty_destinations():
             ["git", "status", "--porcelain", "-z", "--untracked-files=all", "--", *paths],
             cwd=CONTENT_DIR.parent, capture_output=True, text=True, check=True,
         ).stdout
-    except (OSError, subprocess.CalledProcessError):
-        return None
+    except OSError as e:
+        return str(e)
+    except subprocess.CalledProcessError as e:
+        return (e.stderr or "").strip() or f"git exited {e.returncode}"
     dirty = []
     entries = iter(out.split("\0"))
     for entry in entries:
@@ -544,10 +546,11 @@ def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     if "--resync" not in argv:
         dirty = dirty_destinations()
-        if dirty is None:
+        if isinstance(dirty, str):
             print(
                 "ERROR: could not run `git status` in the wiki repo, so the sync cannot\n"
-                "check that the pages it writes hold no uncommitted edits. Nothing was written."
+                "check that the pages it writes hold no uncommitted edits. Nothing was written.\n"
+                f"  git: {dirty}"
             )
             return 1
         if dirty:
@@ -560,8 +563,9 @@ def main(argv=None):
             for path in dirty:
                 print(f"  {path}")
             print(
-                "\nIf these are this publish's own earlier sync output (a re-sync after\n"
-                "a source fix), re-run with --resync."
+                "\n--resync skips this check. Use it only for a re-sync later in a publish\n"
+                "whose first sync ran on a clean content/, when every path above is that\n"
+                "publish's own output. Never use it to clear dirt that was there before."
             )
             return 1
 
