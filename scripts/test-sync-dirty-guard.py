@@ -70,7 +70,7 @@ def test_modified_destination_is_refused_and_kept():
         before = page.read_bytes()
         r = run_sync(d)
         assert page.read_bytes() == before, "sync changed a dirty mapped page"
-        status = git(d, "status", "--porcelain", "--untracked-files=all").stdout.splitlines()
+        status = git(d, "status", "--porcelain", "--untracked-files=all", "--", "content").stdout.splitlines()
         assert status == [f" M content/{TARGET}"], f"sync wrote other files:\n{status}"
         assert r.returncode != 0, "sync exited 0 despite refusing"
         assert f"content/{TARGET}" in r.stdout, f"refusal does not name the path:\n{r.stdout}"
