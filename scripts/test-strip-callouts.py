@@ -5,8 +5,10 @@ Unit tests for sync-from-ontos.py's GM-callout strip.
 A nonblank line written without `>` directly under [!gm-only]/[!gm-notes]
 content is a lazy continuation: Obsidian renders it inside the callout, so the
 author reads it as GM-only, yet a strip that stops at the first `>`-less line
-would publish it. The sync never guesses which one the author meant: it refuses
-the whole run, naming the page and line, and writes nothing.
+would publish it. A public callout opener (`> [!info]`) written directly under
+GM content, with no blank line above it, is the same blockquote and renders
+inside the GM callout too. The sync never guesses which one the author meant:
+it refuses the whole run, naming the page and line, and writes nothing.
 
 Pure fixtures in temp dirs; never reads the Ontos vault and never touches
 content/. Run from the repo root:

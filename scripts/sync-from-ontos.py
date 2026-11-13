@@ -83,8 +83,9 @@ except ImportError:
 CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
 
 CALLOUT_START_RE = re.compile(r"^>\s*\[!(gm-only|gm-notes)\]", re.IGNORECASE)
-# Any callout opener, GM or public. Used to stop stripping at a *public* callout
-# that follows a GM block, so it is never swallowed (e.g. a CC-BY attribution).
+# Any callout opener, GM or public. A *public* opener directly under GM content
+# (no blank line above it) still renders inside the GM callout, so the strip
+# refuses it; after a blank line it is a separate callout and survives.
 CALLOUT_ANY_START_RE = re.compile(r"^>\s*\[!", re.IGNORECASE)
 HEADING_RE = re.compile(r"^#{1,6}\s")
 FRONTMATTER_RE = re.compile(r"^---\n(.*?\n)---\n?", re.DOTALL)
@@ -259,7 +260,8 @@ class LazyGMContinuation(ValueError):
 
 def strip_callouts(body):
     """Drop every gm-only/gm-notes callout from body. Raises LazyGMContinuation
-    at the first `>`-less line that would render inside one."""
+    at the first line that would render inside one without being GM text: a
+    `>`-less line, or a public callout opener with no blank line above it."""
     lines = body.splitlines()
     out = []
     i, n = 0, len(lines)
@@ -506,8 +508,9 @@ def sync_page(src_name, dest_rel):
 
 
 def lazy_gm_lines():
-    """(source, file line, text) for the first lazy GM continuation in each
-    mapped source. Checked across every page before any page is written, so a
+    """(source, file line, text) for the first line in each mapped source that
+    strip_callouts refuses (a lazy GM continuation or a public callout opener
+    directly under GM content). Checked across every page before any page is written, so a
     refusal leaves content/ exactly as it was."""
     found = []
     for src_name in PAGE_MAP:
@@ -580,9 +583,10 @@ def main(argv=None):
         print(
             "ERROR: a line sits directly under gm-only/gm-notes content that Obsidian\n"
             "renders inside the callout: a line without `>`, or a public callout\n"
-            "opener such as `> [!info]`. Publishing it may publish GM text. Prefix a\n"
-            "line without `>` with `>` to keep it GM-only, or put a blank line above\n"
-            "either to make it public. Nothing was written."
+            "opener such as `> [!info]`. Publishing it may publish GM text. To keep\n"
+            "it GM-only, prefix a line without `>` with `>`, or nest a callout as\n"
+            "`> > [!info]`. To make either public, put a blank line above it.\n"
+            "Nothing was written."
         )
         for src_name, line, text in lazy:
             print(f"  {src_name}:{line}: {text}")
