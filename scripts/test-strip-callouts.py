@@ -5,8 +5,10 @@ Unit tests for sync-from-ontos.py's GM-callout strip.
 A nonblank line written without `>` directly under [!gm-only]/[!gm-notes]
 content is a lazy continuation: Obsidian renders it inside the callout, so the
 author reads it as GM-only, yet a strip that stops at the first `>`-less line
-would publish it. The sync never guesses which one the author meant: it refuses
-the whole run, naming the page and line, and writes nothing.
+would publish it. A public callout opener (`> [!info]`) written directly under
+GM content, with no blank line above it, is the same blockquote and renders
+inside the GM callout too. The sync never guesses which one the author meant:
+it refuses the whole run, naming the page and line, and writes nothing.
 
 Pure fixtures in temp dirs; never reads the Ontos vault and never touches
 content/. Run from the repo root:
@@ -86,6 +88,26 @@ def test_lowercase_and_spacing_variants_are_refused():
     assert e is not None and e.line == 3
 
 
+def test_public_callout_opener_inside_gm_block_is_refused():
+    # No blank line above it, so Obsidian renders the [!info] block inside the
+    # GM callout: publishing it would leak what the author reads as GM-only.
+    e = _refused(
+        "> [!gm-only] Note\n> Secret.\n> [!info] Attribution\n"
+        "> The heir is a changeling.\n"
+    )
+    assert e is not None, "public callout inside a GM block survived the strip"
+    assert e.line == 3
+    assert "[!info]" in e.text
+
+
+def test_public_callout_opener_after_chained_gm_callout_is_refused():
+    e = _refused(
+        "> [!gm-only] One\n> First.\n\n> [!gm-notes] Two\n> Second.\n"
+        "> [!tip] Leak\n> Hidden.\n"
+    )
+    assert e is not None and e.line == 6
+
+
 # --- what must keep working ---------------------------------------------------
 
 
@@ -98,9 +120,9 @@ def test_blank_line_ends_the_callout_and_public_text_survives():
     assert "Before." in out
 
 
-def test_public_callout_right_after_gm_block_survives():
+def test_public_callout_after_a_blank_line_survives():
     out = sync.strip_callouts(
-        "> [!gm-only] Note\n> Secret.\n> [!info] Attribution\n> CC-BY art.\n"
+        "> [!gm-only] Note\n> Secret.\n\n> [!info] Attribution\n> CC-BY art.\n"
     )
     assert "Secret" not in out
     assert "> [!info] Attribution" in out and "CC-BY art." in out
