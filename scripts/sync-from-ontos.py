@@ -17,9 +17,11 @@ into content/.
 
 Every line of a GM callout must start with `>`. Obsidian can render a
 `>`-less line sitting directly under one inside the callout (a lazy
-continuation of its last paragraph), so the sync refuses every such line
+continuation of its last paragraph), and a public callout opener such as
+`> [!info]` with no blank line above it is still the same blockquote, so
+Obsidian shows it inside the GM callout too. The sync refuses every such line
 outright: it names the page and line and writes nothing, rather than guess
-whether the line was meant public.
+whether the line was meant public. A blank line above either makes it public.
 
 The sync also refuses, naming the paths and writing nothing, when any page it
 would write is already modified, staged or untracked in git: that edit is not
@@ -241,11 +243,13 @@ def extract_infobox_fields(frontmatter_text):
 
 
 class LazyGMContinuation(ValueError):
-    """A nonblank line written without `>` directly under gm-only/gm-notes
-    content. Obsidian can render it inside the callout (a lazy continuation), so
-    the author sees it as GM-only, but it is not a `>` line. The sync refuses
-    rather than guess whether it was meant to be public. `line` is 1-based in
-    the body passed to strip_callouts."""
+    """A line directly under gm-only/gm-notes content that Obsidian renders
+    inside the callout but that is not plain GM text: a nonblank line written
+    without `>` (a lazy continuation), or a public callout opener such as
+    `> [!info]` with no blank line above it (still the same blockquote). The
+    author sees it as GM-only, so the sync refuses rather than guess whether it
+    was meant to be public. `line` is 1-based in the body passed to
+    strip_callouts."""
 
     def __init__(self, line, text):
         super().__init__(f"line {line}: {text}")
@@ -264,10 +268,11 @@ def strip_callouts(body):
         if CALLOUT_START_RE.match(line):
             i += 1
             while i < n:
-                # A new *public* callout ends the strip: it must survive (a GM
-                # block must never swallow the public callout that follows it).
+                # A public callout opener with no blank line above it is still
+                # the GM blockquote, so Obsidian renders it inside the GM
+                # callout. Refuse rather than publish what reads as GM-only.
                 if CALLOUT_ANY_START_RE.match(lines[i]) and not CALLOUT_START_RE.match(lines[i]):
-                    break
+                    raise LazyGMContinuation(i + 1, lines[i])
                 if lines[i].startswith(">"):
                     i += 1
                     continue
@@ -573,10 +578,11 @@ def main(argv=None):
     lazy = lazy_gm_lines()
     if lazy:
         print(
-            "ERROR: a line without `>` sits directly under gm-only/gm-notes content.\n"
-            "Obsidian can render it inside the callout, so it may publish GM text.\n"
-            "Prefix it with `>` to keep it GM-only, or put a blank line above it to\n"
-            "make it public. Nothing was written."
+            "ERROR: a line sits directly under gm-only/gm-notes content that Obsidian\n"
+            "renders inside the callout: a line without `>`, or a public callout\n"
+            "opener such as `> [!info]`. Publishing it may publish GM text. Prefix a\n"
+            "line without `>` with `>` to keep it GM-only, or put a blank line above\n"
+            "either to make it public. Nothing was written."
         )
         for src_name, line, text in lazy:
             print(f"  {src_name}:{line}: {text}")

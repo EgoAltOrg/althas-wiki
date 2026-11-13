@@ -86,6 +86,26 @@ def test_lowercase_and_spacing_variants_are_refused():
     assert e is not None and e.line == 3
 
 
+def test_public_callout_opener_inside_gm_block_is_refused():
+    # No blank line above it, so Obsidian renders the [!info] block inside the
+    # GM callout: publishing it would leak what the author reads as GM-only.
+    e = _refused(
+        "> [!gm-only] Note\n> Secret.\n> [!info] Attribution\n"
+        "> The heir is a changeling.\n"
+    )
+    assert e is not None, "public callout inside a GM block survived the strip"
+    assert e.line == 3
+    assert "[!info]" in e.text
+
+
+def test_public_callout_opener_after_chained_gm_callout_is_refused():
+    e = _refused(
+        "> [!gm-only] One\n> First.\n\n> [!gm-notes] Two\n> Second.\n"
+        "> [!tip] Leak\n> Hidden.\n"
+    )
+    assert e is not None and e.line == 6
+
+
 # --- what must keep working ---------------------------------------------------
 
 
@@ -98,9 +118,9 @@ def test_blank_line_ends_the_callout_and_public_text_survives():
     assert "Before." in out
 
 
-def test_public_callout_right_after_gm_block_survives():
+def test_public_callout_after_a_blank_line_survives():
     out = sync.strip_callouts(
-        "> [!gm-only] Note\n> Secret.\n> [!info] Attribution\n> CC-BY art.\n"
+        "> [!gm-only] Note\n> Secret.\n\n> [!info] Attribution\n> CC-BY art.\n"
     )
     assert "Secret" not in out
     assert "> [!info] Attribution" in out and "CC-BY art." in out
