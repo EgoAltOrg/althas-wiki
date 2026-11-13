@@ -31,13 +31,15 @@ That credit currently lives in an `[!info]` callout on the published
 `Projects/rpgs-and-gest/daggerheart/campaigns/ut-supra-sic-infra/setting/codex-magic.md`
 (never edited in `content/` directly, which the sync regenerates).
 
-> **Do not move that callout below a `[!gm-only]` or `[!gm-notes]` callout.**
-> `scripts/sync-from-ontos.py`'s `strip_callouts()` keeps consuming lines across
-> blank gaps for as long as the next non-blank line starts with `>`, so a public
-> callout placed after a GM block is silently deleted from the published page.
-> This already happened once to this exact attribution, on 2026-08-06, and no
-> automated gate caught it: `check-spoiler-leak.py` only looks for content that
-> should be absent, never for content that must be present.
+> **Keep that callout above any `[!gm-only]` or `[!gm-notes]` callout, or put a
+> blank line between them.** `scripts/sync-from-ontos.py`'s `strip_callouts()`
+> keeps a public callout that follows a GM block after a blank line. Written
+> directly under the GM lines with no blank line, it is the same blockquote and
+> Obsidian shows it inside the GM callout, so the sync refuses to run and names
+> the page and line. An older sync deleted such a callout silently: that
+> happened to this exact attribution on 2026-08-06, and no automated gate
+> caught it, since `check-spoiler-leak.py` only looks for content that should be
+> absent, never for content that must be present.
 
 Any new page built from these assets (a Sealmaker tool page, for example) needs
 its own visible attribution. It does not inherit the one on `codex-magic`.
