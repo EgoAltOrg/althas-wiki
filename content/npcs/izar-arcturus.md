@@ -12,7 +12,7 @@ allegiance: "[[polaris|Polaris]]"
 image: izar.png
 ---
 
-**Summary**: Son of the Archmage [[hesper-arcturus|Hesper]] and an ambitious mage of [[polaris|Polaris]] in his own right, who for years challenged his mother for her seat on the ruling Triumvirate, despite being born without House Arcturus's Miracle of Firmament, unlike her. Present at her death during their final duel.
+**Summary**: Son of the Archmage [[hesper-arcturus|Hesper]] and an ambitious mage of [[polaris|Polaris]] in his own right, who for years challenged his mother for her seat on the ruling [[the-triumvirate|Triumvirate]], despite being born without House Arcturus's Miracle of Firmament, unlike her. Present at her death during their final duel.
 
 ---
 

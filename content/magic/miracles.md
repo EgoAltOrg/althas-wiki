@@ -33,6 +33,7 @@ Not all Miracles are directly useful on the battlefield, but those that are cons
 - **The Miracle of Geosensus**: lets its bearer feel the natural relief of the land within a reach, the mountains and valleys and the hollows and veins beneath. The signature Miracle of [[house-circinus|House Circinus]]; borne now by Abbot [[sabara|Sabara]].
 - **The Miracle of Abrogation**: for a moment, cuts a caster off from the power their magic draws on, so the casting fails before it takes effect; it reaches only what its bearer can see, and cannot touch a Miracle. The signature Miracle of House Algol; borne now by [[antares-algol|Antares Algol]], Archmage of [[polaris|Polaris]].
 - **The Miracle of Raptus**: lets its bearer step from one place to another without crossing the space between, carrying whoever he holds. Borne by [[ezekiel-ashmark|Ezekiel Ashmark]], the Infernis Archbishop of [[jesthaen|Jesthaen]], who kept it to himself through the civil war; it is proof that holyblood can run in an Infernis line.
+
 - **The Miracle of Pathos**: when its bearer tells a story, those who listen live it, feeling what was felt as if they had been there. Scholars suspect, from stories of the battlefield, that [[aldric-voldis|Aldric Voldis]] of [[house-voldis|House Voldis]] bears it.
 
 ### House Voldis's power
@@ -43,7 +44,7 @@ The house has never confirmed which Miracles its members hold, and it has never 
 
 ### House Arcturus's power
 
-House Arcturus is a Polaris family of high standing: the power of the Miracle of Firmament has produced a long line of Triumvirate Archmages across the family's history. [[hesper-arcturus|Hesper]] was born with it. Her son [[izar-arcturus|Izar]] was not.
+House Arcturus is a Polaris family of high standing: the power of the Miracle of Firmament has produced a long line of [[the-triumvirate|Triumvirate]] Archmages across the family's history. [[hesper-arcturus|Hesper]] was born with it. Her son [[izar-arcturus|Izar]] was not.
 
 ### House Cruoris's power
 

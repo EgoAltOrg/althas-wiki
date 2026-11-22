@@ -31,6 +31,10 @@ Ancestry: [[giants|Giant]]. Community: Loreborne. Class: Wizard, subclass School
 
 Born on Oblatio 25, 343 VR. Ras travels as a Sinner on [[the-holy-see#The Pilgrimage of Penitence|Pilgrimage of Penitence]], in the charge of the Inquisitor [[uriel-kenan|Uriel Kenan]], who took him over from [[gideon|Gideon]] at [[drinmery|Drinmery]] on Adventus 12, 366 VR.
 
+### Drinmery
+
+After the battle at the [[convent-of-saint-trefan|Convent of Saint Trefan]] on the night of Adventus 16, 366 VR, Ras took General [[immanuel-greene|Greene's]] warhammer, and he healed [[uriel-kenan|Uriel]]. At [[fustierhall|Fustierhall]] he was terrified of the stranger [[caz-the-wanderer|Caz]], who looks to him like a man made of stars.
+
 ## Related pages
 
 - [[uriel-kenan|Uriel Kenan]]

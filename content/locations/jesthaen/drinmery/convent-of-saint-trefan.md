@@ -8,7 +8,7 @@ nation: "[[jesthaen|Jesthaen]]"
 region: "[[drinmery|Drinmery]]"
 faith: "[[the-one-above|the One Above]]"
 image: st-trefans-lorekeeper.webp
-image_caption: "Saint [[trefan|Trefan]]'s Lorekeeper, the book left behind in the saint's tomb beneath the convent."
+image_caption: "Saint Trefan's Lorekeeper, the book left behind in the saint's tomb beneath the convent."
 submap:
     image: assets/convent-map.webp
     caption: "Map: Church Battle Map by Dr Mapzo"
@@ -38,11 +38,13 @@ At the end of the convent cellar, a [[codex-magic|Codex]] seal holds an illusory
 
 The convent's churchyard, kept by [[aldous-pike|Aldous Pike]]. On the night of Adventus 12, 366 VR, [[gideon|Gideon]] dug up the unmarked grave there.
 
+On the night of Adventus 16, 366 VR, the churchyard was a battlefield. [[immanuel-greene|Greene's]] men came to arrest its priest, who was unmasked at the gate as the heretic Ambrose Mourne. He raised the churchyard's dead, and both Greene and the priest died among the graves. On Adventus 25, [[greed|Greed]] killed the gravekeeper, [[aldous-pike|Aldous Pike]], in the same churchyard and took Ambrose's headless body.
+
 ## Inhabitants
 
 A flock of [[aetheris|Aetheris]] lives and works at the convent, using its library and kitchen in exchange for service as messengers and general help around the grounds.
 
-Its one priest is Father [[tobias-wren|Tobias Wren]]. The Aetheris [[inkfeather|Inkfeather]] keeps its library, and [[aldous-pike|Aldous Pike]] tends its churchyard.
+Its one priest, Father [[ambrose-mourne|Tobias Wren]], was unmasked as Ambrose Mourne and killed on the night of Adventus 16, 366 VR, and the convent has no priest now. The Aetheris [[inkfeather|Inkfeather]] keeps its library.
 
 ## Related pages
 

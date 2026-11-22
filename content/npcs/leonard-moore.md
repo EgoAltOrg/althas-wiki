@@ -35,6 +35,8 @@ Under the Azimuths he grew into an exceptional fighter and strategist. He came t
 
 In [[drinmery|Drinmery]], Leonard told Novak that [[house-azimuth|House Azimuth]] holds a [[the-threnodies|Threnody]], which Cornelia spent much time researching, and that he believed it was what led to her experiments with [[parashiel|Parashiel]]. He left the party to stay as a guest at [[fleming-manor|Fleming Manor]] and learn what [[guilmore-fleming|the Count]] wanted with the Threnody [[malak|Malak]] had delivered. When the party returned from the bandits' fort on Adventus 16, 366 VR, they found him hanged naked in Drinmery's town square, a sign reading "Death to Queensmen" around his neck and Cornelia's ring on his hand.
 
+That night [[novak-azimuth|Novak]] took the ring from his hand, and Father [[ambrose-mourne|Tobias]] gave Novak his last words: protect your sisters, go home and look into your mother's research, and find [[lorkhan-olnir|Lorkhan]]. When the priest raised the churchyard dead in the battle that followed, Leonard rose with them, resisted the priest's control, and fought to protect Novak. His body was burned afterward.
+
 ## Relationships
 
 He cared for [[novak-azimuth|Novak]] as much as he had for the late matriarch, and was Novak's only living semblance of a father. He admired [[cornelia-azimuth|Cornelia]] above all others of her line, and owed everything to Rigel, who raised him beside Alnumir, the husband of [[zhenya-azimuth|Zhenya]].

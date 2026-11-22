@@ -1,4 +1,5 @@
-// Chronicle month-grid behavior. Indexes the page's rendered h2 date headings
+// Chronicle month-grid behavior. Indexes the page's rendered h3 date headings
+// (each day is an h3 under its arc's h2, since 2026-11-22)
 // and renders one month at a time as a 3x11 grid (the canon week structure:
 // days 1 and 11 weekend, day 6 prayer). The script renders NO content: day
 // detail is the page's own sections; clicking a recorded day scrolls to it.
@@ -93,10 +94,10 @@ function setupChronicle() {
   // Index the rendered date sections.
   const index: DayIndex = new Map()
   let minKey = mk(363, 0) // campaign anchor: Vigilia, 363 VR
-  for (const h2 of Array.from(document.querySelectorAll<HTMLElement>("article h2"))) {
-    const parsed = parseHeading(h2.textContent?.trim() ?? "")
-    if (!parsed || !h2.id) continue
-    index.set(dayKey(parsed.year, parsed.monthIndex, parsed.day), { id: h2.id })
+  for (const h3 of Array.from(document.querySelectorAll<HTMLElement>("article h3"))) {
+    const parsed = parseHeading(h3.textContent?.trim() ?? "")
+    if (!parsed || !h3.id) continue
+    index.set(dayKey(parsed.year, parsed.monthIndex, parsed.day), { id: h3.id })
     minKey = Math.min(minKey, mk(parsed.year, parsed.monthIndex))
   }
   const maxKey = todayKey // the future does not exist yet in-world

@@ -32,7 +32,7 @@ Generations after the founding, [[valerion-voldis|Valerion]], the king remembere
 
 ## The Lodestar Pact (167 VR)
 
-In 167 VR, half a century after the civil war, [[valeran-voldis|Valeran]]'s heir King [[castus-voldis|Castus]] settled the north's split from the crown by negotiated partition rather than another war. Out of it came [[polaris|Polaris]] under its Triumvirate of Archmages, a shared venture binding [[voldaen|Voldaen]], Polaris and [[hilltop|Hilltop]] to colonize the untouched Witherwild, and the renunciation of Castus's younger brother, Castorius. See [[the-lodestar-pact|the Lodestar Pact]].
+In 167 VR, half a century after the civil war, [[valeran-voldis|Valeran]]'s heir King [[castus-voldis|Castus]] settled the north's split from the crown by negotiated partition rather than another war. Out of it came [[polaris|Polaris]] under its [[the-triumvirate|Triumvirate of Archmages]], a shared venture binding [[voldaen|Voldaen]], Polaris and [[hilltop|Hilltop]] to colonize the untouched Witherwild, and the renunciation of Castus's younger brother, Castorius. See [[the-lodestar-pact|the Lodestar Pact]].
 
 ## 221 VR
 

@@ -72,19 +72,19 @@ Drinmery is wary of outsiders. During the [[jesthaen|Jesthaen]] war, [[lorkhan-o
 
 ## Inhabitants
 
-The city's Senator is Count [[guilmore-fleming|Fleming]], who still goes by his title from before the revolution, and its peace is kept by the hired guard of [[immanuel-greene|Immanuel Greene]]. Any local can tell you the two men don't get along. Among its people:
+The city's Senator is Count [[guilmore-fleming|Fleming]], who still goes by his title from before the revolution. [[immanuel-greene|Immanuel Greene's]] hired guard kept its peace until Greene died at the convent on the night of Adventus 16, 366 VR, with nearly all his company. Among its people:
 
-- [[aldous-pike|Aldous Pike]], gravekeeper of the convent churchyard.
+- [[aldous-pike|Aldous Pike]], gravekeeper of the convent churchyard, killed in the churchyard by [[greed|Greed]] on Adventus 25, 366 VR.
 - [[alys|Alys]], a grieving mother.
 - [[edric-colvin|Edric Colvin]], steward to the Count.
+- [[garrick-thorne|Garrick Thorne]], the barracks smith, held in the town's jail.
 - [[hollis-brand|Hollis Brand]], keeper of the Wakeful Lamp.
 - [[inkfeather|Inkfeather]], the convent's librarian and healer.
-- [[jory-fenn|Jory Fenn]], a bandit, now the party's captive.
 - [[maud-tallow|Maud Tallow]], a candle-seller in the market.
 - Mother [[wenna|Wenna]], madam of the Restful Shade.
-- [[pell|Pell]], a young guardsman.
 - [[wick|Wick]], a bandit, killed when the party destroyed the bandits' fort.
-- [[yselda-marrow|Yselda Marrow]], a clerk of the Merchant's Guild Courthouse.
+
+Gone south with the party: [[pell|Pell]], [[jory-fenn|Jory Fenn]] and [[yselda-marrow|Yselda Marrow]], a Syndic of the [[guild|Guild]].
 
 ## Related pages
 

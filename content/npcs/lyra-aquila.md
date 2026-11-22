@@ -11,7 +11,7 @@ allegiance: "[[polaris|Polaris]]"
 image: lyra-aquila.png
 ---
 
-**Summary**: Lyra Aquila, Archmage of the Triumvirate of [[polaris|Polaris]] and twin sister to [[cassio-aquila|Cassio Aquila]]. One of the [[the-five-heroes|Five Heroes]] who brought down [[the-ophanim|the Ophanim]] in 334 VR, bearer of the [[miracles|Miracle of Anamnesis]], and author of *Verba Ophanim*. Seldom seen in public now.
+**Summary**: Lyra Aquila, Archmage of [[the-triumvirate|the Triumvirate]] of [[polaris|Polaris]] and twin sister to [[cassio-aquila|Cassio Aquila]]. One of the [[the-five-heroes|Five Heroes]] who brought down [[the-ophanim|the Ophanim]] in 334 VR, bearer of the [[miracles|Miracle of Anamnesis]], and author of *Verba Ophanim*. Seldom seen in public now.
 
 ---
 

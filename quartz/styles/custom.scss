@@ -66,3 +66,18 @@ hr {
   background: linear-gradient(90deg, transparent, var(--secondary), transparent);
   opacity: 0.45;
 }
+
+// On desktop the right sidebar (infobox, graph, backlinks) is sticky and
+// exactly one screen tall, so a tall infobox was cut off with no way to reach
+// the rest. Give the sidebar its own scroll, and stop its blocks from
+// shrinking to fit (backlinks shrank to nothing), so they overflow instead.
+@media all and (min-width: 1200px) {
+  #quartz-body .sidebar.right {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+}

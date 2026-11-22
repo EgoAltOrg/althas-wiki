@@ -112,6 +112,8 @@ All communities are available across nations, but some have unique aspects withi
 - [[drinmery-market|Drinmery Market]]: the market square at Drinmery's east bridgehead
 - [[restful-shade|The Restful Shade]]: a little-known brothel associated with the [[wakeful-lamp|Wakeful Lamp]]
 - [[wakeful-lamp|The Wakeful Lamp]]: the tavern at Drinmery's bridgehead, kept by Hollis Brand
+- [[fustierhall|Fustierhall]]: a manor the locals call the Larder, above the empty village of Treveth, about a week south of Drinmery
+- [[treveth|Treveth]]: the empty village below Fustierhall
 - [[crater-lake|Crater Lake]]: a massive crater lake at the center of Althas, left by the Divine Age
 - [[witherwild-continent|The Witherwild]]: the blighted second continent beyond the northwest pass, grave of the Haven colony (Castus's Folly)
 - [[haven|Haven]]: the three-power colony in the Witherwild, abandoned after the great serpent Shun'Aush fell on it, remembered as Castus's Folly
@@ -125,6 +127,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[parish-of-inquisition|Parish of Inquisition]]: the Holy See's feared investigative and judicial arm
 - [[parish-of-orthodoxy|Parish of Orthodoxy]]: the Holy See's doctrinal arm, keeper of scripture and the Splendor incantations
 - [[guild|The Guild]]: governs Armada, seats held by token possession, not inheritance or election
+- [[the-triumvirate|The Triumvirate]]: the three Archmages who rule Polaris; a seat is won by witnessed challenge, and one has stood empty since 363 VR
 - [[the-freehands|The Freehands]]: the army Aldric rallied from the cells of Voldaen's south to win Jesthaen's revolution, now the name of the anarchists who refused the peace
 - [[the-five-heroes|The Five Heroes]]: the five who brought down the Ophanim in 334 VR (Edrion Voldis, Cassio Aquila, Aldric Voldis, Lael the Reborn, Lyra Aquila)
 - [[house-aquila|House Aquila]]: scholar-house of the twins Cassio and Lyra, esteemed in both Polaris and the Holy See, bearer of two Miracles (Pentecost and Anamnesis)
@@ -133,6 +136,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[house-azimuth|House Azimuth]]: Great House of Voldaen, hereditary Minister of the Royal Household, bearer of the Miracle of Parashiel and the Rule of The Divider; current head [[novak-azimuth|Novak Azimuth]]
 - [[house-olnir|House Olnir]]: ancient Voldaen Great House, bearer of the Miracle of Fames and keeper of the Famesfeast, its ministry stripped after [[lorkhan-olnir|Lorkhan's]] treason
 - [[house-fleming|House Fleming]]: the house that holds Drinmery, led by Count Guilmore Fleming, the city's Senator
+- [[house-mourne|House Mourne]]: a Hilltop pureblooded house, keepers of the Miracle of Testament, all but destroyed when the Ophanim fell; its last member, Ambrose Mourne, died in Drinmery in 366 VR
 - [[the-witherwatch|The Witherwatch]]: Voldaen's grim frontier garrison holding the Godless Gate against the blighted Witherwild
 - [[the-council-of-six|The Council of Six]]: the six offices that govern Andaluria's reconstruction from Jesaña, funded by the Holy See
 - [[caio|The Caio]]: Althas's road folk and Drabalo, the wandering trickster they follow, as Althan scholars reconstruct it
@@ -155,6 +159,7 @@ All communities are available across nations, but some have unique aspects withi
 - [[the-one-above|The One Above]]: has left Althas
 - [[the-ones-below|The Ones Below]]: the gods the One Above fought in the Divine Age, sealed away
 - [[the-faunus|The Faunus]]: the faith of the Wicklings of the Witherwild, as Althan scholars reconstruct it
+- [[greed|Greed]]: a being of red robes and many hands who killed Aldous Pike and walks in Ambrose Mourne's body
 - [[the-threnodies|The Threnodies]]: fragments of an ancient scripture, which some scholars believe are the last words of the One Above
 - [[splendor-magic|Splendor Magic]]: incantation-based magic as a favor granted, not generated
 - [[codex-magic|Codex Magic]]: seal-drawn magic that tears into the Source
@@ -194,27 +199,30 @@ All communities are available across nations, but some have unique aspects withi
 - [[zhenya-azimuth|Zhenya Azimuth]]: elder of House Azimuth and Minister of the Royal Household, Novak's grandmother
 - [[lorkhan-olnir|Lorkhan Olnir]]: eldest of House Olnir and bearer of the Miracle of Fames, defected to Aldric and now missing
 - [[guilmore-fleming|Guilmore Fleming]]: Senator of Drinmery
-- [[immanuel-greene|Immanuel Greene]]: lord whose hired guard keeps the peace in Drinmery, called "General" by his men
-- [[tobias-wren|Tobias Wren]]: the priest of the Convent of Saint Trefan
+- [[immanuel-greene|Immanuel Greene]]: General whose hired guard kept the peace in Drinmery, killed at the convent in 366 VR
+- [[ambrose-mourne|Ambrose Mourne]]: last of House Mourne, who lived as Father Tobias Wren, priest of the Convent of Saint Trefan, until his death in 366 VR; Greed now wears his body
 - [[trefan|Trefan]]: the saint who held the Lampfort in Valerion's Heresy and built the convent that bears his name
-- [[gideon|Gideon]]: a young Inquisitor resting a wounded hand in Drinmery
+- [[gideon|Gideon]]: a young Inquisitor who unmasked Drinmery's priest and took his head to the Holy See
 - [[leonard-moore|Leonard Moore]]: veteran warrior and strategist raised by [[house-azimuth|House Azimuth]], Novak's counselor, found hanged in Drinmery in 366 VR
+- [[pell|Pell]]: a young guardsman of Greene's company, now Novak's squire
+- [[jory-fenn|Jory Fenn]]: a bandit, on the road to Jestha to testify against Greene
+- [[yselda-marrow|Yselda Marrow]]: a Syndic of the Guild, once under cover as a clerk in Drinmery
+- [[d-the-bard|D, the Bard]]: a Caio fiddler met at the crossroads before Treveth
+- [[caz-the-wanderer|Caz, the Wanderer]]: a wanderer who looks like a man made of stars
 
 ## NPCs (Minor)
 
-### Drinmery Arc
+### Dead Men in Drinmery
 
-- [[aldous-pike|Aldous Pike]]: gravekeeper of the convent churchyard
+- [[aldous-pike|Aldous Pike]]: gravekeeper of the convent churchyard, killed by Greed in 366 VR
 - [[alys|Alys]]: a grieving mother
 - [[edric-colvin|Edric Colvin]]: steward to Count Fleming
+- [[garrick-thorne|Garrick Thorne]]: the barracks smith, held in the town's jail
 - [[hollis-brand|Hollis Brand]]: keeper of the Wakeful Lamp tavern
 - [[inkfeather|Inkfeather]]: the convent's librarian and healer
-- [[jory-fenn|Jory Fenn]]: a bandit, the party's captive
 - [[maud-tallow|Maud Tallow]]: candle-seller in the market
 - [[wenna|Wenna]]: madam of the Restful Shade
-- [[pell|Pell]]: a young guardsman
 - [[wick|Wick]]: a bandit
-- [[yselda-marrow|Yselda Marrow]]: clerk of the Merchant's Guild Courthouse
 
 ## Events
 

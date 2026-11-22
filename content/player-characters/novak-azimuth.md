@@ -44,9 +44,11 @@ Novak is the firstborn of [[cornelia-azimuth|Cornelia]] and [[victerius-azimuth|
 
 ### Drinmery
 
-On Adventus 12, 366 VR, Novak came into [[drinmery|Drinmery]] through the north checkpoint with [[zalmir-aldarson|Zalmir]] and his counselor [[leonard-moore|Leonard Moore]]. Bandits tried to rob him in the market and failed; later that day they stole his mother's ring from Leonard. That night, at the [[convent-of-saint-trefan|Convent of Saint Trefan]], he revealed that he is Novak Azimuth. In the convent cellar he paid the toll of the seal on Saint [[trefan|Trefan]]'s tomb with what he knew of Parashiel, and Father [[tobias-wren|Tobias]] told him that his uncle Lorkhan had quartered his men in Drinmery during the war.
+On Adventus 12, 366 VR, Novak came into [[drinmery|Drinmery]] through the north checkpoint with [[zalmir-aldarson|Zalmir]] and his counselor [[leonard-moore|Leonard Moore]]. Bandits tried to rob him in the market and failed; later that day they stole his mother's ring from Leonard. That night, at the [[convent-of-saint-trefan|Convent of Saint Trefan]], he revealed that he is Novak Azimuth. In the convent cellar he paid the toll of the seal on Saint [[trefan|Trefan]]'s tomb with what he knew of Parashiel, and Father [[ambrose-mourne|Tobias]] told him that his uncle Lorkhan had quartered his men in Drinmery during the war.
 
 Leonard told him that House Azimuth holds a [[the-threnodies|Threnody]], which Cornelia spent much time researching, and that he believed it was what led to her experiments with Parashiel. At dawn on Adventus 15 the party attacked the bandits' fort at the [[lampfort|Lampfort]], and Novak killed its leader almost at once. When they returned on Adventus 16, they found Leonard hanged in Drinmery's town square, with Cornelia's ring on his hand.
+
+That night the party killed the two guards over Leonard's body, and Novak took the ring from his hand. Father Tobias gave him Leonard's last words: protect his sisters, look into his mother's research, and find Lorkhan. In the battle at the convent, Leonard rose with the dead and fought to protect him. [[pell|Pell]] became his squire, and he and [[uriel-kenan|Uriel]] agreed to work together.
 
 ## Relationships
 

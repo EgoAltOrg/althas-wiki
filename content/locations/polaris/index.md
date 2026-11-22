@@ -25,7 +25,7 @@ Polaris's prosperity was built on [[giants|Giant]] labor, yet in the modern mago
 
 ### Governance: the Triumvirate of Archmages
 
-Polaris is ruled by a Triumvirate of Archmages. [[lyra-aquila|Lyra Aquila]] holds one seat. [[hesper-arcturus|Hesper Arcturus]]'s has stood empty since her death in 363 VR, until a trial can be arranged for a new Archmage. [[antares-algol|Antares Algol]] holds the third, and with Hesper's seat empty and Lyra seldom seen outside her tower, he is in practice the power that governs Polaris.
+Polaris is ruled by [[the-triumvirate|a Triumvirate of Archmages]]. [[lyra-aquila|Lyra Aquila]] holds one seat. [[hesper-arcturus|Hesper Arcturus]]'s has stood empty since her death in 363 VR, until a trial can be arranged for a new Archmage. [[antares-algol|Antares Algol]] holds the third, and with Hesper's seat empty and Lyra seldom seen outside her tower, he is in practice the power that governs Polaris.
 
 ## Related pages
 
@@ -38,3 +38,4 @@ Polaris is ruled by a Triumvirate of Archmages. [[lyra-aquila|Lyra Aquila]] hold
 - [[diplomacy|Diplomacy]]
 - [[the-lodestar-pact|The Lodestar Pact]]
 - [[antares-algol|Antares Algol]]
+- [[the-triumvirate|The Triumvirate]]

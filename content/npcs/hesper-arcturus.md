@@ -13,7 +13,7 @@ died: 363 VR
 image: hesper.jpg
 ---
 
-**Summary**: The late Archmage of the Triumvirate governing [[polaris|Polaris]], an eccentric collector of odd things. Killed by a Giant during her final duel with her son Izar, an act that plunged Polaris into the Errai Riots.
+**Summary**: The late Archmage of [[the-triumvirate|the Triumvirate]] governing [[polaris|Polaris]], an eccentric collector of odd things. Killed by a Giant during her final duel with her son Izar, an act that plunged Polaris into the Errai Riots.
 
 ---
 

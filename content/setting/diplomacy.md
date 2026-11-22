@@ -37,6 +37,7 @@ node house-olnir | House Olnir | institution | organizations/house-olnir
 node the-witherwatch | The Witherwatch | institution | organizations/the-witherwatch
 node the-council-of-six | The Council of Six | institution | organizations/the-council-of-six
 node the-freehands | The Freehands | institution | organizations/the-freehands
+node the-triumvirate | The Triumvirate | institution | organizations/the-triumvirate
 
 # Edges: source -> target (arrow) or <-> (mutual) | type | label
 edge house-voldis -> voldaen | governance | royal dynasty, rules
@@ -71,6 +72,7 @@ edge the-witherwatch -> voldaen | governance | frontier garrison, raised by
 edge the-holy-see -> the-council-of-six | governance | funds Andaluria's reconstruction
 edge the-council-of-six -> hilltop | governance | governs Andaluria in
 edge the-freehands -> jesthaen | uneasy | won its revolution, refused its peace
+edge the-triumvirate -> polaris | governance | rules
 ```
 
 ## The two sides of the war
@@ -138,6 +140,8 @@ The newest nation. A republic [[aldric-voldis|Aldric Voldis]] broke away from [[
 - **Assets**: a strong land military, natural resources and arable land, a revolutionary mandate, [[aldric-voldis|Aldric]] the war-hero founder.
 - **Problems**: young-nation instability; conservative pro-Voldaen holdouts; fresh, fragile recognition.
 - **Relationships**: [[armada|Armada]] +2, [[polaris|Polaris]] +1, [[voldaen|Voldaen]] -2, [[the-holy-see|Holy See]] -2.
+- **Primary objective** (major, public): an alliance with [[polaris|Polaris]] through a trade compact negotiated by [[guild|Guild]] Syndics, Jesthaen's grain and ore for Polaris's magitech. The compact doubles as a promise from each nation to defend the other's interests from foreign interference.
+- **Secondary objective** (major, public): keep the peace the Jesthaen Treaty won.
 
 **[[the-freehands|The Freehands]]** (Tier 3)
 - **Blurb**: The army that won the revolution, and now the anarchists who refused its peace. The smuggling routes that carried the revolution are theirs, and the Republic, courting legitimacy, would rather they were gone.
@@ -149,7 +153,7 @@ The newest nation. A republic [[aldric-voldis|Aldric Voldis]] broke away from [[
 
 A magocracy of scholars and mages, its industrial rise built on [[giants|Giant]] labor it later discarded.
 
-**The Triumvirate of Archmages** ([[lyra-aquila|Lyra Aquila]]; [[antares-algol|Antares Algol]]; [[hesper-arcturus|Hesper Arcturus]]'s seat empty since her death) (Tier 5, ruling)
+**[[the-triumvirate|The Triumvirate of Archmages]]** ([[lyra-aquila|Lyra Aquila]]; [[antares-algol|Antares Algol]]; [[hesper-arcturus|Hesper Arcturus]]'s seat empty since her death) (Tier 5, ruling)
 - **Blurb**: The archmages who rule the magocracy, rich in magitech and airships but short of labor and raw stock, a restive [[giants|Giant]] underclass beneath them.
 - **Assets**: skilled mages, magitech, airships, magical creatures, the academies.
 - **Problems**: a worker shortage, poor raw materials, a restive [[giants|Giant]] underclass; a seat left empty until a trial can be arranged for a new Archmage.

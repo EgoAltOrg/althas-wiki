@@ -19,7 +19,7 @@ submap:
 
 ## History
 
-On Adventus 13, 366 VR, [[alys|Alys]] told the party here how Father [[tobias-wren|Tobias]] passed on her son Colm's last words, Mother [[wenna|Wenna]] told [[uriel-kenan|Uriel]] that the bandits never attack [[immanuel-greene|Greene's]] carriages, and [[dorothea|Dorothea]] said her goodbye.
+On Adventus 13, 366 VR, [[alys|Alys]] told the party here how Father [[ambrose-mourne|Tobias]] passed on her son Colm's last words, Mother [[wenna|Wenna]] told [[uriel-kenan|Uriel]] that the bandits never attack [[immanuel-greene|Greene's]] carriages, and [[dorothea|Dorothea]] said her goodbye.
 
 ## Inhabitants
 

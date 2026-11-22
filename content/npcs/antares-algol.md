@@ -10,7 +10,7 @@ allegiance: "[[polaris|Polaris]]"
 image: antares-algol.webp
 ---
 
-**Summary**: **Antares Algol**, Archmage of the Triumvirate of [[polaris|Polaris]] and bearer of House Algol's [[miracles|Miracle of Abrogation]]. With [[hesper-arcturus|Hesper Arcturus]]'s seat empty since her death and [[lyra-aquila|Lyra Aquila]] seldom leaving her tower, he is in practice the power that governs Polaris.
+**Summary**: **Antares Algol**, Archmage of [[the-triumvirate|the Triumvirate]] of [[polaris|Polaris]] and bearer of House Algol's [[miracles|Miracle of Abrogation]]. With [[hesper-arcturus|Hesper Arcturus]]'s seat empty since her death and [[lyra-aquila|Lyra Aquila]] seldom leaving her tower, he is in practice the power that governs Polaris.
 
 ---
 
